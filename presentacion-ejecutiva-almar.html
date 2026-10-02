@@ -1,0 +1,3531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALMAR Rosario — Presentación Ejecutiva: Solución Tecnológica Integral (18 Diapositivas)</title>
+  
+  <!-- Tipografía Corporativa Oficial: Montserrat & Open Sans & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       TOKENS DE DISEÑO CANÓNICOS DE CLAVE CONSULTORA & ALMAR ROSARIO
+       Estilo claro, prestigioso y editorial (idéntico a INFORME_COTIZACIONES_ALMAR_2026.html)
+       ========================================================================== */
+    :root {
+      --clave-green:          #1e3d2f; /* Verde Bosque Institucional */
+      --clave-green-light:    #2c5442; /* Verde Medio */
+      --clave-green-dark:     #13271e; /* Verde Oscuro Profundo */
+      --clave-green-soft:     #eef4f0; /* Fondo verde soporte */
+      --clave-gold:           #c29320; /* Dorado Clave Consultora */
+      --clave-gold-light:     #fefcf5; /* Crema Dorado para alertas */
+      --clave-gold-border:    #eedaa2; /* Borde dorado suave */
+      --clave-gold-dark:      #9a7416; /* Dorado oscuro */
+      --clave-navy:           #081433; /* Azul Noche Profundo */
+      --clave-border:         #cbd5e1; /* Borde gris elegante */
+      --clave-border-light:   #e2e8f0; /* Borde suave */
+      --clave-muted:          #64748b; /* Gris medio formal */
+      --clave-bg-light:       #f8fafc; /* Fondo blanco humo suave */
+      --clave-text:           #1e293b; /* Texto principal carbón */
+      --success-green:        #059669;
+      --danger-red:           #e11d48;
+      --warning-gold:         #d97706;
+
+      --font-heading:         'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body:            'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --font-mono:            'Fira Code', 'Courier New', monospace;
+    }
+
+    /* Reset Universal */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #f1f5f9; /* Fondo gris platino ejecutivo */
+      color: var(--clave-text);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Contenedor Principal */
+    .deck-app {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Barra Superior Institucional */
+    .top-bar {
+      height: 50px;
+      background: #ffffff;
+      border-bottom: 2px solid var(--clave-green);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+      z-index: 50;
+      box-shadow: 0 2px 8px rgba(8, 20, 51, 0.04);
+    }
+
+    .top-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .top-brand img {
+      height: 25px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .top-brand-text {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--clave-green);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .top-brand-sep {
+      color: var(--clave-gold);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .top-brand-sub {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--clave-muted);
+      font-weight: 600;
+    }
+
+    .top-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .top-pill {
+      background: var(--clave-gold-light);
+      border: 1px solid var(--clave-gold-border);
+      color: var(--clave-green);
+      font-family: var(--font-heading);
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+
+    /* Escenario Principal y Canvas 16:9 con Escalado Adaptativo para Proyección */
+    .stage-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #slideCanvas {
+      width: 1180px;
+      height: 660px;
+      flex-shrink: 0;
+      aspect-ratio: 16 / 9;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--clave-border);
+      box-shadow: 0 16px 36px rgba(8, 20, 51, 0.08);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform-origin: center center;
+      transition: transform 0.1s ease-out;
+    }
+
+    /* Acentos Geométricos SVG Canónicos */
+    .svg-top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 165px;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .svg-bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 220px;
+      height: 165px;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    /* Diapositivas */
+    .slide-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 16px 28px 14px 28px;
+      display: none;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.22s ease-in-out;
+      z-index: 10;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .slide-item.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    /* Cabecera de Diapositiva */
+    .slide-header {
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--clave-border-light);
+      position: relative;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .slide-pretitle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+
+    .slide-momento-badge {
+      display: inline-block;
+      background: var(--clave-gold-light);
+      border: 1px solid var(--clave-gold);
+      color: var(--clave-green);
+      font-family: var(--font-heading);
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .slide-header-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .slide-id-tag {
+      font-size: 10px;
+      color: var(--clave-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .slide-title {
+      font-family: var(--font-heading);
+      font-size: 18.5px;
+      font-weight: 800;
+      color: var(--clave-green);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .slide-subtitle {
+      font-family: var(--font-body);
+      font-size: 11.5px;
+      color: var(--clave-muted);
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    /* Cuerpo de la Diapositiva */
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    /* Grillas Editoriales */
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .grid-2-1 {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 14px;
+    }
+
+    .grid-1-12 {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 14px;
+      align-items: stretch;
+      height: 100%;
+    }
+
+    /* Tarjetas KPI con Borde Superior de Color */
+    .kpi-card {
+      background: linear-gradient(135deg, #ffffff 0%, var(--clave-bg-light) 100%);
+      border: 1px solid var(--clave-border);
+      border-top: 4px solid var(--clave-green);
+      border-radius: 8px;
+      padding: 10px 14px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .kpi-card.gold-top {
+      border-top-color: var(--clave-gold);
+    }
+
+    .kpi-card.navy-top {
+      border-top-color: var(--clave-navy);
+    }
+
+    .kpi-card.red-top {
+      border-top-color: var(--danger-red);
+    }
+
+    .kpi-title {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--clave-muted);
+      margin-bottom: 2px;
+    }
+
+    .kpi-value {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--clave-navy);
+      line-height: 1.15;
+      margin-bottom: 2px;
+    }
+
+    .kpi-value.green {
+      color: var(--clave-green);
+    }
+
+    .kpi-value.gold {
+      color: var(--clave-gold-dark);
+    }
+
+    .kpi-value.red {
+      color: var(--danger-red);
+    }
+
+    .kpi-desc {
+      font-size: 11px;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    /* Callouts */
+    .callout-box {
+      border-radius: 6px;
+      padding: 7px 12px;
+      font-size: 11px;
+      line-height: 1.35;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .callout-gold {
+      background-color: var(--clave-gold-light);
+      border: 1px solid var(--clave-gold-border);
+      border-left: 4px solid var(--clave-gold);
+      color: var(--clave-text);
+    }
+
+    .callout-danger {
+      background-color: #fff5f5;
+      border: 1px solid #fecaca;
+      border-left: 4px solid var(--danger-red);
+      color: #7f1d1d;
+    }
+
+    .callout-success {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid var(--clave-green);
+      color: #14532d;
+    }
+
+    .callout-navy {
+      background-color: #f8fafc;
+      border: 1px solid var(--clave-border);
+      border-left: 4px solid var(--clave-navy);
+      color: var(--clave-navy);
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-family: var(--font-heading);
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .badge-green {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+    }
+
+    .badge-gold {
+      background: var(--clave-gold-light);
+      color: var(--clave-gold-dark);
+      border: 1px solid var(--clave-gold);
+    }
+
+    .badge-red {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fca5a5;
+    }
+
+    .badge-navy {
+      background: #e0f2fe;
+      color: #075985;
+      border: 1px solid #7dd3fc;
+    }
+
+    /* ==========================================================================
+       COMPONENTE: STEPPER DE TRAZABILIDAD DE EXTREMO A EXTREMO (.traceability-stepper)
+       ========================================================================== */
+    .traceability-stepper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--clave-bg-light);
+      border: 1px solid var(--clave-border);
+      border-radius: 6px;
+      padding: 5px 12px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.55;
+      transition: all 0.2s ease;
+    }
+
+    .step-item.completed {
+      opacity: 1;
+    }
+
+    .step-item.active {
+      opacity: 1;
+    }
+
+    .step-circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--clave-border);
+      color: var(--clave-navy);
+      font-family: var(--font-heading);
+      font-size: 9.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-item.completed .step-circle {
+      background: var(--clave-green);
+      color: #ffffff;
+    }
+
+    .step-item.active .step-circle {
+      background: var(--clave-gold);
+      color: #ffffff;
+      box-shadow: 0 0 0 2px var(--clave-gold-border);
+    }
+
+    .step-label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-label strong {
+      font-family: var(--font-heading);
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--clave-green);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .step-item.active .step-label strong {
+      color: var(--clave-gold-dark);
+    }
+
+    .step-label span {
+      font-size: 9px;
+      color: var(--clave-muted);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    .step-arrow {
+      color: var(--clave-border);
+      font-size: 11px;
+      font-weight: 700;
+      margin: 0 2px;
+    }
+
+    /* ==========================================================================
+       COMPONENTE: TARJETA DE OBJECIONES DIRECTIVAS (.objection-card)
+       ========================================================================== */
+    .objection-card {
+      background: #ffffff;
+      border: 1px solid var(--clave-border);
+      border-top: 4px solid var(--clave-green);
+      border-radius: 8px;
+      padding: 10px 12px;
+      box-shadow: 0 2px 8px rgba(8, 20, 51, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .objection-card.gold-top {
+      border-top-color: var(--clave-gold);
+    }
+
+    .objection-card.navy-top {
+      border-top-color: var(--clave-navy);
+    }
+
+    .objection-director {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--clave-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .objection-role {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: var(--clave-muted);
+    }
+
+    .objection-question {
+      background: #f8fafc;
+      border-left: 3px solid var(--clave-gold);
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin: 5px 0;
+      font-style: italic;
+      font-size: 10.5px;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    .objection-response {
+      font-size: 10.5px;
+      color: var(--clave-text);
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+
+    .objection-response strong {
+      color: var(--clave-green);
+    }
+
+    .objection-benefit {
+      background: var(--clave-gold-light);
+      border: 1px solid var(--clave-gold-border);
+      border-radius: 4px;
+      padding: 4px 6px;
+      font-size: 9.5px;
+      color: var(--clave-green);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       COMPONENTE: DIAGRAMA DE ARQUITECTURA DE PRODUCCIÓN (.arch-flow-diagram)
+       ========================================================================== */
+    .arch-flow-diagram {
+      display: grid;
+      grid-template-columns: 1fr 30px 1.15fr 30px 1fr 30px 1.15fr;
+      align-items: center;
+      background: #f8fafc;
+      border: 1px solid var(--clave-border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 8px rgba(8, 20, 51, 0.04);
+    }
+
+    .arch-node {
+      background: #ffffff;
+      border: 1.5px solid var(--clave-border);
+      border-radius: 6px;
+      padding: 7px 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .arch-node.firebase {
+      border-color: #0284c7;
+      background: #f0f9ff;
+    }
+
+    .arch-node.vercel {
+      border-color: var(--clave-green);
+      background: #f0fdf4;
+    }
+
+    .arch-node.openai {
+      border-color: var(--clave-gold);
+      background: var(--clave-gold-light);
+    }
+
+    .arch-node.persistence {
+      border-color: var(--clave-navy);
+      background: #f8fafc;
+    }
+
+    .arch-node-title {
+      font-family: var(--font-heading);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .arch-node-subtitle {
+      font-family: var(--font-mono);
+      font-size: 8.5px;
+      font-weight: 700;
+      color: var(--clave-muted);
+      margin-bottom: 1px;
+    }
+
+    .arch-node-list {
+      font-size: 8.5px;
+      color: var(--clave-text);
+      line-height: 1.3;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .arch-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--clave-gold-dark);
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      gap: 2px;
+    }
+
+    .arch-arrow-label {
+      font-family: var(--font-mono);
+      font-size: 6.5px;
+      font-weight: 800;
+      color: var(--clave-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       MARCOS DE VENTANA Y PREVIEWS VISUALES DE LA SOLUCIÓN
+       ========================================================================== */
+    .browser-mockup {
+      background: #ffffff;
+      border: 1px solid var(--clave-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(8, 20, 51, 0.08);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .browser-mockup-header {
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--clave-border-light);
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .browser-mockup-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .browser-mockup-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    .browser-mockup-dot.red { background: #ef4444; }
+    .browser-mockup-dot.yellow { background: #f59e0b; }
+    .browser-mockup-dot.green { background: #10b981; }
+
+    .browser-mockup-url {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: #475569;
+      flex: 1;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .browser-mockup-badge {
+      font-family: var(--font-heading);
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--clave-green);
+      padding: 1px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .browser-mockup-body {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #f8fafc;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    .browser-mockup-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .browser-mockup-footer {
+      background: #ffffff;
+      padding: 5px 10px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 10.5px;
+      color: var(--clave-muted);
+      flex-shrink: 0;
+    }
+
+    /* Lightbox Modal de Alta Resolución para Capturas */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 20, 51, 0.94);
+      backdrop-filter: blur(10px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .lightbox-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-container {
+      background: #ffffff;
+      border: 1px solid var(--clave-border);
+      border-radius: 12px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      max-width: 95vw;
+      max-height: 95vh;
+      width: 1400px;
+      overflow: hidden;
+      animation: lightboxZoomIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes lightboxZoomIn {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox-header {
+      background: #f8fafc;
+      border-bottom: 1px solid var(--clave-border);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .lightbox-tag {
+      font-family: var(--font-heading);
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--clave-gold-dark);
+      background: var(--clave-gold-light);
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      margin-bottom: 2px;
+    }
+
+    .lightbox-title {
+      font-family: var(--font-heading);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--clave-navy);
+      margin: 0;
+    }
+
+    .lightbox-close-btn {
+      background: #ffffff;
+      border: 1px solid var(--clave-border);
+      color: var(--clave-navy);
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lightbox-close-btn:hover {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #991b1b;
+    }
+
+    .lightbox-body {
+      flex: 1;
+      overflow: auto;
+      background: #0b1329;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      min-height: 250px;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: calc(88vh - 90px);
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      background: #ffffff;
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .lightbox-img.zoomed {
+      max-width: none;
+      max-height: none;
+      cursor: zoom-out;
+      transform: scale(1.4);
+      transform-origin: center center;
+    }
+
+    .lightbox-footer {
+      background: #f8fafc;
+      border-top: 1px solid var(--clave-border);
+      padding: 8px 18px;
+      font-size: 11px;
+      color: var(--clave-muted);
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Badge de Zoom en Mockups */
+    .browser-mockup {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .browser-mockup:hover .browser-mockup-zoom-badge {
+      background: var(--clave-gold);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(194, 147, 32, 0.4);
+    }
+
+    .browser-mockup-zoom-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(8, 20, 51, 0.88);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-size: 8.5px;
+      font-weight: 700;
+      padding: 4px 9px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 20;
+      pointer-events: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Portada */
+    .cover-layout {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 40px;
+    }
+
+    .cover-logo-img {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 16px;
+    }
+
+    .cover-pill {
+      display: inline-block;
+      background-color: var(--clave-gold-light);
+      color: var(--clave-green);
+      border: 1.5px solid var(--clave-gold);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .cover-main-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--clave-green);
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      max-width: 880px;
+    }
+
+    .cover-sub-title {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--clave-muted);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      max-width: 760px;
+    }
+
+    .cover-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background-color: #fdfcf9;
+      border: 1px solid var(--clave-gold-border);
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-align: left;
+      width: 100%;
+      max-width: 880px;
+    }
+
+    .cover-meta-item strong {
+      display: block;
+      color: var(--clave-green);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .cover-meta-item span {
+      font-size: 11.5px;
+      color: var(--clave-text);
+      font-weight: 600;
+    }
+
+    /* Barra Inferior de Control */
+    .control-bar {
+      height: 50px;
+      background: #ffffff;
+      border-top: 1px solid var(--clave-border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 50;
+      box-shadow: 0 -2px 8px rgba(8, 20, 51, 0.03);
+    }
+
+    .progress-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--clave-border-light);
+    }
+
+    #progressBar {
+      height: 100%;
+      width: 5.55%;
+      background: var(--clave-gold);
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav {
+      background: #ffffff;
+      border: 1px solid var(--clave-border);
+      color: var(--clave-green);
+      font-family: var(--font-heading);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      background: var(--clave-green);
+      color: #ffffff;
+      border-color: var(--clave-green);
+    }
+
+    .btn-nav.primary {
+      background: var(--clave-green);
+      color: #ffffff;
+      border-color: var(--clave-green);
+    }
+
+    .btn-nav.primary:hover {
+      background: var(--clave-green-light);
+    }
+
+    #slideCounter {
+      font-family: var(--font-heading);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--clave-navy);
+      letter-spacing: 0.05em;
+      min-width: 70px;
+      text-align: center;
+    }
+
+    .hotkey-hints {
+      font-size: 10.5px;
+      color: var(--clave-muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hotkey-tag {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--clave-text);
+      font-size: 9.5px;
+    }
+
+    /* Modal de Visión General */
+    .overview-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(8, 20, 51, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .overview-modal.open {
+      display: flex;
+    }
+
+    .overview-container {
+      background: #ffffff;
+      border: 1px solid var(--clave-border);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 1140px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 20px 26px;
+      box-shadow: 0 20px 45px rgba(8, 20, 51, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .overview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--clave-green);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    .overview-header h3 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--clave-green);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+
+    .overview-card {
+      background: var(--clave-bg-light);
+      border: 1px solid var(--clave-border);
+      border-radius: 6px;
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 94px;
+    }
+
+    .overview-card:hover {
+      border-color: var(--clave-gold);
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(8, 20, 51, 0.08);
+    }
+
+    .overview-card.active {
+      border-color: var(--clave-green);
+      background: #ffffff;
+      box-shadow: 0 0 0 2px var(--clave-green);
+    }
+
+    .overview-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .overview-card-num {
+      font-family: var(--font-heading);
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--clave-gold-dark);
+      background: var(--clave-gold-light);
+      padding: 1px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--clave-gold-border);
+    }
+
+    .overview-card-momento {
+      font-size: 8.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--clave-muted);
+    }
+
+    .overview-card-title {
+      font-family: var(--font-heading);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--clave-navy);
+      line-height: 1.25;
+    }
+  </style>
+</head>
+<body>
+
+<div class="deck-app">
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-brand">
+      <img src="logo_clave.png" alt="Clave Consultora" />
+      <span class="top-brand-text">CLAVE CONSULTORA</span>
+      <span class="top-brand-sep">|</span>
+      <span class="top-brand-sub">ALMAR ROSARIO S.R.L.</span>
+    </div>
+    <div class="top-meta">
+      <span class="top-pill">DEMO TÉCNICA ANTE DIRECTORIO · 18 DIAPOSITIVAS · 2026</span>
+    </div>
+  </header>
+
+  <!-- Stage Area -->
+  <main class="stage-area">
+    <div id="slideCanvas">
+
+      <!-- ====================================================================
+           SLIDE 01: PORTADA EJECUTIVA
+           ==================================================================== -->
+      <section class="slide-item active" data-slide="1">
+        <svg class="svg-top-left" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-40 -40 L280 -40 L-40 220 Z" fill="#1e3d2f" />
+          <path d="M-40 220 L300 -40 L315 -40 L-40 232 Z" fill="#c29320" />
+          <path d="M-40 232 L315 -40 L320 -40 L-40 236 Z" fill="#2c5442" />
+        </svg>
+
+        <svg class="svg-bottom-right" viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M360 280 L40 280 L360 20 Z" fill="#1e3d2f" />
+          <path d="M360 20 L20 280 L5 280 L360 8 Z" fill="#c29320" />
+          <path d="M360 8 L5 280 L0 280 L360 4 Z" fill="#2c5442" />
+        </svg>
+
+        <div class="cover-layout">
+          <img src="logo_clave.png" alt="Clave Consultora" class="cover-logo-img" />
+          <div class="cover-pill">DEMO OFICIAL DE LA SOLUCIÓN TECNOLÓGICA · 2026</div>
+          <h1 class="cover-main-title">AUTOMATIZACIÓN INTELIGENTE DE FACTURACIÓN Y PROCESAMIENTO DE COMPROBANTES</h1>
+          <p class="cover-sub-title">Plataforma de Extracción con IA, Escudo Financiero y Arquitectura Productiva para ALMAR Rosario S.R.L.</p>
+          
+          <div class="cover-meta-grid">
+            <div class="cover-meta-item">
+              <strong>ORGANIZACIÓN:</strong>
+              <span>ALMAR Rosario S.R.L.</span>
+            </div>
+            <div class="cover-meta-item">
+              <strong>DESARROLLO &amp; CONSULTORÍA:</strong>
+              <span>Clave Consultora</span>
+            </div>
+            <div class="cover-meta-item">
+              <strong>PRESENTADOR:</strong>
+              <span>Ing. Fran Bondino</span>
+            </div>
+            <div class="cover-meta-item">
+              <strong>DESTINATARIOS:</strong>
+              <span>Directorio Ejecutivo — ALMAR Rosario S.R.L.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 02: DIAGNÓSTICO OPERATIVO & COMERCIAL
+           ==================================================================== -->
+      <section class="slide-item" data-slide="2">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 1: EL DIAGNÓSTICO REAL</span>
+            <span class="slide-id-tag">AUDITORÍA OPERATIVA &amp; FUERZA COMERCIAL</span>
+          </div>
+          <h2 class="slide-title">DIAGNÓSTICO OPERATIVO &amp; COMERCIAL: FACTURACIÓN Y PROCESOS</h2>
+          <p class="slide-subtitle">Relevamiento integral de flujos de trabajo, dispersión de comprobantes y cuellos de botella en el circuito actual.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-3" style="margin-bottom: 4px;">
+            <div class="kpi-card" style="padding: 9px 12px; justify-content: space-between;">
+              <div>
+                <span class="kpi-title">FLUJO DE COMPROBANTES</span>
+                <span class="kpi-value green" style="font-size: 19px;">FRAGMENTADO</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.35; margin-bottom: 4px;">Facturas y notas de débito de armadores (<strong>Maersk</strong>, <strong>MSC</strong>), terminales portuarias y transportistas recibidas por casillas aisladas sin repositorio centralizado.</p>
+              </div>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px; padding: 3px 6px; font-size: 7.8px; font-weight: 700; color: #166534; margin-top: 3px;">
+                Riesgo de omisión y dispersión documental
+              </div>
+            </div>
+            <div class="kpi-card gold-top" style="padding: 9px 12px; justify-content: space-between;">
+              <div>
+                <span class="kpi-title">CARGA EN SISTEMA DE GESTIÓN</span>
+                <span class="kpi-value gold" style="font-size: 19px;">MANUAL</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.35; margin-bottom: 4px;">Digitación manual de comprobantes, CUITs, alícuotas y conceptos en <strong>Kipintoch</strong> con demoras operativas e incremento del riesgo de error humano.</p>
+              </div>
+              <div style="background: var(--clave-gold-light); border: 1px solid var(--clave-gold-border); border-radius: 4px; padding: 3px 6px; font-size: 7.8px; font-weight: 700; color: var(--clave-gold-dark); margin-top: 3px;">
+                Cuello de botella y riesgo de carga fiscal
+              </div>
+            </div>
+            <div class="kpi-card navy-top" style="padding: 9px 12px; justify-content: space-between;">
+              <div>
+                <span class="kpi-title">SEGUIMIENTO COMERCIAL</span>
+                <span class="kpi-value" style="color: var(--clave-navy); font-size: 19px;">DISCONTINUO</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.35; margin-bottom: 4px;">Emisión de cotizaciones centralizada en el equipo comercial, con presupuestos que quedan sin seguimiento estructurado posterior ni registro de motivos de rechazo.</p>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 3px 6px; font-size: 7.8px; font-weight: 700; color: var(--clave-navy); margin-top: 3px;">
+                Ventas que se enfrían sin trazabilidad
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 EJES OPERATIVOS IDENTIFICADOS EN EL RELEVAMIENTO -->
+          <div class="grid-3" style="margin: 6px 0; flex: 1;">
+            <div class="kpi-card" style="border-top: 3px solid var(--clave-green); padding: 10px 12px; justify-content: space-between;">
+              <div style="display: flex; flex-direction: column; justify-content: space-between; flex: 1; margin-bottom: 7px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
+                    <span class="badge badge-green">DESPACHO &amp; OPERACIONES</span>
+                    <span style="font-size: 8px; color: var(--clave-muted); font-weight: 700;">CIRCUITO DE INGESTA</span>
+                  </div>
+                  <div style="font-family: var(--font-heading); font-size: 11.5px; font-weight: 800; color: var(--clave-green); margin-bottom: 5px;">Dispersión en Comprobantes y Fletes</div>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-green); padding: 6px 8px; border-radius: 4px; margin-bottom: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Recepción Multicanal:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Comprobantes dispersos en portales de armadores (Maersk, MSC), agentes marítimos y casillas individuales sin bandeja unificada.</span>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-green); padding: 6px 8px; border-radius: 4px; margin-bottom: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Heterogeneidad de Conceptos:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Múltiples nomenclaturas de combustible y gastos portuarios (BAF, EBS, BRC, THC) que demoran la identificación e imputación.</span>
+                </div>
+
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-green); padding: 6px 8px; border-radius: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Conciliación Operativa:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Cruce manual del comprobante contra la carpeta de embarque y el forwarder para verificar que corresponda a la operación.</span>
+                </div>
+              </div>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px; padding: 4px 6px; font-size: 8px; font-weight: 700; color: #166534;">
+                ⚠️ Fuga: Tiempo improductivo en recolección y clasificación manual.
+              </div>
+            </div>
+
+            <div class="kpi-card" style="border-top: 3px solid var(--clave-gold); padding: 10px 12px; justify-content: space-between;">
+              <div style="display: flex; flex-direction: column; justify-content: space-between; flex: 1; margin-bottom: 7px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
+                    <span class="badge badge-gold">ADMINISTRACIÓN &amp; FINANZAS</span>
+                    <span style="font-size: 8px; color: var(--clave-muted); font-weight: 700;">GESTIÓN CONTABLE</span>
+                  </div>
+                  <div style="font-family: var(--font-heading); font-size: 11.5px; font-weight: 800; color: var(--clave-gold-dark); margin-bottom: 5px;">Digitación Manual en Kipintoch</div>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-gold); padding: 6px 8px; border-radius: 4px; margin-bottom: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Carga Campo por Campo:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Transcripción manual de CUITs, números de comprobante, alícuotas fiscales y centros de costo en el sistema de gestión.</span>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-gold); padding: 6px 8px; border-radius: 4px; margin-bottom: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Control Tardío de Márgenes:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Sobrecostos de armadores detectados de forma tardía, sin cotejo automático en tiempo real contra la cotización pactada.</span>
+                </div>
+
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-gold); padding: 6px 8px; border-radius: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Exposición a Descalces:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Incertidumbre en la liquidación de divisas oficiales y costos diferidos que impactan en la previsibilidad de los resultados.</span>
+                </div>
+              </div>
+              <div style="background: var(--clave-gold-light); border: 1px solid var(--clave-gold-border); border-radius: 4px; padding: 4px 6px; font-size: 8px; font-weight: 700; color: var(--clave-gold-dark);">
+                ⚠️ Fuga: Riesgo de inconsistencias impositivas y absorción de sobrecostos.
+              </div>
+            </div>
+
+            <div class="kpi-card" style="border-top: 3px solid var(--clave-navy); padding: 10px 12px; justify-content: space-between;">
+              <div style="display: flex; flex-direction: column; justify-content: space-between; flex: 1; margin-bottom: 7px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
+                    <span class="badge badge-navy">FUERZA COMERCIAL</span>
+                    <span style="font-size: 8px; color: var(--clave-muted); font-weight: 700;">PROCESO COMERCIAL</span>
+                  </div>
+                  <div style="font-family: var(--font-heading); font-size: 11.5px; font-weight: 800; color: var(--clave-navy); margin-bottom: 5px;">Concentración &amp; Cotizaciones Inactivas</div>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-navy); padding: 6px 8px; border-radius: 4px; margin-bottom: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Centralización Operativa:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Emisión de presupuestos concentrada en el equipo comercial, resolviendo cotizaciones complejas en planillas auxiliares.</span>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-navy); padding: 6px 8px; border-radius: 4px; margin-bottom: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Control de Tarifarios:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Modificaciones quincenales en tarifas de armadores sin alertas de vigencia, arriesgando cotizar con costos vencidos.</span>
+                </div>
+
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3.5px solid var(--clave-navy); padding: 6px 8px; border-radius: 4px;">
+                  <strong style="color: var(--clave-navy); font-size: 8.8px; display: block; margin-bottom: 1px;">Seguimiento Discontinuo:</strong>
+                  <span style="font-size: 8.2px; color: var(--clave-text); line-height: 1.35; display: block;">Presupuestos enviados que quedan sin contacto estructurado posterior ni registro sistemático de motivos de no concreción.</span>
+                </div>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px 6px; font-size: 8px; font-weight: 700; color: var(--clave-navy);">
+                ⚠️ Fuga: Pérdida de oportunidades de cierre y falta de métricas comerciales.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-box callout-gold">
+            <div>
+              <strong style="color: var(--clave-gold-dark); display: block; margin-bottom: 2px;">OBJETIVO DE LA SOLUCIÓN INTEGRAL:</strong>
+              Erradicar el re-tipeo manual a Kipintoch, frenar sobrecostos de armadores que erosionan el margen neto, y dotar al área Comercial de un tablero ágil con control de vigencias y seguimiento proactivo.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 03: PORTAL CENTRALIZADO DE FACTURACIÓN IA
+           ==================================================================== -->
+      <section class="slide-item" data-slide="3">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 1: SOLUCIÓN INTEGRAL</span>
+            <span class="slide-id-tag">PORTAL DE FACTURACIÓN INTELIGENTE</span>
+          </div>
+          <h2 class="slide-title">PORTAL CENTRALIZADO DE FACTURACIÓN ASISTIDO POR IA</h2>
+          <p class="slide-subtitle">Plataforma integral para recepción, extracción asistida, validación de reglas de negocio y control contable.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Los 3 Pilares -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">1. EXTRACCIÓN CON IA</span>
+                <p class="kpi-desc">Ingesta automática de PDFs de navieras con lectura instantánea de emisor, CUIT, importes, recargos y alícuotas fiscales.</p>
+              </div>
+
+              <div class="kpi-card navy-top" style="padding: 10px 14px;">
+                <span class="kpi-title">2. ESCUDO FINANCIERO</span>
+                <p class="kpi-desc">Cruce en tiempo real contra la carpeta de Kipintoch: bloqueo ante sobrecostos de armadores y semáforos de rentabilidad.</p>
+              </div>
+
+              <div class="kpi-card gold-top" style="padding: 10px 14px;">
+                <span class="kpi-title">3. COPIADO EN 1-CLIC</span>
+                <p class="kpi-desc">Transferencia directa a Kipintoch en 15 segundos, ahorrando más de <strong>$6.000.000</strong> ARS/año frente a APIs cerradas.</p>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Preview Real del Dashboard -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">http://localhost:3000/ · Dashboard Operativo ALMAR</div>
+                <span class="browser-mockup-badge">SISTEMA EN VIVO</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 295px;">
+                <img src="screenshots/dashboard_corporate_light.png" alt="Centro Operativo ALMAR" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 04: ARQUITECTURA DEL PIPELINE CON .traceability-stepper
+           ==================================================================== -->
+      <section class="slide-item" data-slide="4">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 1: ARQUITECTURA TÉCNICA</span>
+            <span class="slide-id-tag">TRAZABILIDAD DE EXTREMO A EXTREMO · AUDITORÍA DE CALIDAD</span>
+          </div>
+          <h2 class="slide-title">ARQUITECTURA DEL PIPELINE: DE LA FACTURA A LA CARPETA Y BANCO</h2>
+          <p class="slide-subtitle">Flujo continuo de cinco etapas automatizadas para garantizar consistencia contable, fiscal y bancaria.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- Stepper E2E Completo -->
+          <div class="traceability-stepper">
+            <div class="step-item completed">
+              <div class="step-circle">1</div>
+              <div class="step-label">
+                <strong>1. ORIGEN</strong>
+                <span>Email / PDF Proveedor</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">2</div>
+              <div class="step-label">
+                <strong>2. EXTRACCIÓN IA</strong>
+                <span>Parsing Semántico</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">3</div>
+              <div class="step-label">
+                <strong>3. REGLAS &amp; ESCUDO</strong>
+                <span>Auditoría de Margen</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">4</div>
+              <div class="step-label">
+                <strong>4. KIPINTOCH</strong>
+                <span>Copiado 1-Clic</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">5</div>
+              <div class="step-label">
+                <strong>5. BANCO MACRO</strong>
+                <span>Conciliación Extracto</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-5" style="margin-top: 6px; margin-bottom: 6px; flex: 1;">
+            <div class="kpi-card" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-green" style="width: fit-content; margin-bottom: 3px;">FASE 1</span>
+                <span class="kpi-title">INGESTA SEGURA</span>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--clave-muted); font-weight: 700; margin-bottom: 3px;">SLA: &lt; 5 seg · SHA-256</div>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Webhook de correo y drop PDF.<br>• Filtro anti-spam y deduplicación.<br>• Respaldo digital inmutable.</p>
+              </div>
+              <div style="background: #f0fdf4; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: #166534; margin-top: 3px;">
+                PDF original resguardado
+              </div>
+            </div>
+
+            <div class="kpi-card gold-top" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-gold" style="width: fit-content; margin-bottom: 3px;">FASE 2</span>
+                <span class="kpi-title">PARSING &amp; IA</span>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--clave-muted); font-weight: 700; margin-bottom: 3px;">OpenAI ZDR (§ 3.2)</div>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Lectura de CUIT y alícuotas AFIP.<br>• Normalización BUFF/BAF y flete.<br>• Parámetro <code>store:false</code>.</p>
+              </div>
+              <div style="background: var(--clave-gold-light); border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: var(--clave-gold-dark); margin-top: 3px;">
+                Cero retención de secretos
+              </div>
+            </div>
+
+            <div class="kpi-card navy-top" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-navy" style="width: fit-content; margin-bottom: 3px;">FASE 3</span>
+                <span class="kpi-title">REGLAS &amp; ESCUDO</span>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--clave-muted); font-weight: 700; margin-bottom: 3px;">Motor de Reglas ISO 9001</div>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Alerta preventiva &lt; USD 200.<br>• Bloqueo estricto &lt; USD 3.00.<br>• Provisión Sancor a 150 días.</p>
+              </div>
+              <div style="background: #f8fafc; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: var(--clave-navy); margin-top: 3px;">
+                Protección del margen neto
+              </div>
+            </div>
+
+            <div class="kpi-card" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-green" style="width: fit-content; margin-bottom: 3px;">FASE 4</span>
+                <span class="kpi-title">KIPINTOCH</span>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--clave-muted); font-weight: 700; margin-bottom: 3px;">Copiado en 1-Clic</div>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Formato tabular estructurado.<br>• Asiento contable en 15 seg.<br>• Cero costos de APIs cerradas.</p>
+              </div>
+              <div style="background: #f0fdf4; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: #166534; margin-top: 3px;">
+                Ahorro $6M ARS/año
+              </div>
+            </div>
+
+            <div class="kpi-card navy-top" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-navy" style="width: fit-content; margin-bottom: 3px;">FASE 5</span>
+                <span class="kpi-title">BANCO MACRO</span>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--clave-muted); font-weight: 700; margin-bottom: 3px;">Conciliación Extracto</div>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Validación obligatoria en cuenta.<br>• Recibo oficial con hash inmutable.<br>• Liberación comisiones reales.</p>
+              </div>
+              <div style="background: #f8fafc; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: var(--clave-navy); margin-top: 3px;">
+                Caja y cobranzas blindadas
+              </div>
+            </div>
+          </div>
+
+          <!-- BARRA DE GOBERNANZA Y AUDITORÍA TRANSVERSAL -->
+          <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-radius: 8px; padding: 6px 12px; margin-bottom: 6px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 14px;">🔒</span>
+              <div>
+                <strong style="color: var(--clave-green); font-size: 9px; display: block;">SELLO CRIPTOGRÁFICO SHA-256</strong>
+                <span style="font-size: 8px; color: var(--clave-muted);">Hash único inmutable en cada paso del pipeline.</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 14px;">⚡</span>
+              <div>
+                <strong style="color: var(--clave-gold-dark); font-size: 9px; display: block;">AGILIDAD DE COPIADO 1-CLIC</strong>
+                <span style="font-size: 8px; color: var(--clave-muted);">De 12 minutos manuales a 15 segundos hacia Kipintoch.</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 14px;">🛡️</span>
+              <div>
+                <strong style="color: var(--clave-navy); font-size: 9px; display: block;">CONCILIACIÓN EN BANCO MACRO</strong>
+                <span style="font-size: 8px; color: var(--clave-muted);">Comisiones retenidas hasta acreditación en extracto.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-box callout-navy">
+            <div>
+              <strong style="display: block; margin-bottom: 2px;">TRAZABILIDAD DE EXTREMO A EXTREMO:</strong>
+              Cada dato cargado en Kipintoch mantiene un vínculo inmutable con el comprobante PDF original y su verificación en extracto bancario, eliminando descalces fiscales y de caja.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 05: TABLERO COMERCIAL Y CONTROL DE VIGENCIA DE TARIFAS
+           ==================================================================== -->
+      <section class="slide-item" data-slide="5">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 2: MÓDULO COMERCIAL FLEXIBLE</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-gold">CONTROL DE COSTOS Y VIGENCIAS</span>
+              <span class="badge badge-green">CONTROL DE TARIFAS VENCIDAS</span>
+            </div>
+          </div>
+          <h2 class="slide-title">TABLERO COMERCIAL Y CONTROL DE VIGENCIA DE TARIFAS NAVIERAS</h2>
+          <p class="slide-subtitle">Semáforo de vigencias (15/30 días) para impedir cotizaciones desactualizadas que generen quebranto económico.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Reglas de Vigencia -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card gold-top" style="padding: 10px 14px;">
+                <span class="kpi-title">SEMÁFORO DE VIGENCIA TEMPORAL (15 / 30 DÍAS)</span>
+                <p class="kpi-desc" style="margin-top: 4px;">
+                  • <strong style="color: var(--success-green);">Vigente (verde):</strong> Tarifa dentro de la ventana de validez del armador.<br>
+                  • <strong style="color: var(--warning-gold);">Por Vencer (amarillo):</strong> Alerta a 3 días del vencimiento.<br>
+                  • <strong style="color: var(--danger-red);">Vencida (rojo):</strong> Bloqueo automático para impedir cotizar con fletes caducados.
+                </p>
+              </div>
+
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">PROTECCIÓN CONTRA INCREMENTOS SPOT</span>
+                <p class="kpi-desc">
+                  Las navieras modifican fletes quincenalmente. Se erradica la emisión de propuestas comerciales con costos antiguos que luego absorbe la rentabilidad de ALMAR.
+                </p>
+              </div>
+
+              <div class="callout-box callout-gold">
+                <div>
+                  <strong style="color: var(--clave-gold-dark); display: block; margin-bottom: 2px;">CONSIDERACIÓN DE CONTROL FINANCIERO:</strong>
+                  "El semáforo de vigencias frena de raíz el problema de cotizar con tarifas viejas de armadores que luego aumentan antes de la confirmación del embarque."
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup Real de Cotizaciones con Vigencia -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/cotizaciones · Tablero Comercial y Semáforo de Vigencias</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-gold-dark);">TARIFAS VÁLIDAS</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 295px;">
+                <img src="screenshots/cotizaciones_vigencia_tarifas_light.png" alt="Tablero Comercial y Control de Vigencia de Tarifas" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 06: CALCULADORA PARAMÉTRICA CON PERFILES DINÁMICOS DE MARGEN
+           ==================================================================== -->
+      <section class="slide-item" data-slide="6">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 2: MÓDULO COMERCIAL FLEXIBLE</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-green">FLEXIBILIDAD Y AGILIDAD EN PRICING</span>
+              <span class="badge badge-gold">POLÍTICA COMERCIAL</span>
+            </div>
+          </div>
+          <h2 class="slide-title">CALCULADORA PARAMÉTRICA CON PERFILES DINÁMICOS DE MARGEN</h2>
+          <p class="slide-subtitle">Agilidad para cotizar en segundos adaptando el margen al tipo de cliente, sin rigideces ni pérdida de control.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Perfiles Dinámicos -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">SELECTORES DE RENTABILIDAD POR CLIENTE</span>
+                <p class="kpi-desc" style="margin-top: 4px;">
+                  • <strong>CUENTA_ESTRATEGICA:</strong> Margen fino y competitivo para grandes clientes.<br>
+                  • <strong>ESTANDAR:</strong> Margen corporativo de equilibrio.<br>
+                  • <strong>SPOT_ALTO_RIESGO:</strong> Mayor cobertura para cargas spot volátiles.<br>
+                  • <strong>PERSONALIZADO:</strong> Ajuste libre con supervisión gerencial.
+                </p>
+              </div>
+
+              <div class="kpi-card red-top" style="padding: 10px 14px;">
+                <span class="kpi-title">LÍMITES PREVENTIVOS DE SEGURIDAD</span>
+                <p class="kpi-desc">
+                  • <strong style="color: var(--warning-gold);">Alerta preventiva &lt; USD 200:</strong> Semáforo amarillo ante descalces cambiarios y gastos locales.<br>
+                  • <strong style="color: var(--danger-red);">Bloqueo estricto &lt; USD 3.00:</strong> Candado que prohíbe operar a pérdida neta.
+                </p>
+              </div>
+
+              <div class="callout-box callout-success">
+                <div>
+                  <strong style="color: var(--clave-green); display: block; margin-bottom: 2px;">POLÍTICA DE AGILIDAD COMERCIAL:</strong>
+                  "Cotizaciones ágiles en 45 segundos con margen adaptado a cada cliente, cuidando la rentabilidad sin atar de pies y manos al comercial."
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup Calculadora con Perfiles -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/cotizaciones/calculadora · Selector de Perfiles de Margen</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-green);">PRICING DINÁMICO</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 295px;">
+                <img src="screenshots/modulo_comercial_calculadora_perfiles_light.png" alt="Calculadora Paramétrica con Perfiles de Margen" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 07: REGISTRO DE FEEDBACK CUALITATIVO & SMART FOLLOW-UP A 48 HS
+           ==================================================================== -->
+      <section class="slide-item" data-slide="7">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 2: MÓDULO COMERCIAL FLEXIBLE</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-navy">AUDITORÍA COMERCIAL LUCÍA LAJE (54,1%)</span>
+              <span class="badge badge-green">SEGUIMIENTO EN 1-CLIC</span>
+            </div>
+          </div>
+          <h2 class="slide-title">REGISTRO DE FEEDBACK CUALITATIVO &amp; SMART FOLLOW-UP A 48 HS</h2>
+          <p class="slide-subtitle">Estandarización del seguimiento comercial y captura sistemática de pérdidas para renegociar contratos de volumen.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Smart Follow-Up & Feedback -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card navy-top" style="padding: 10px 14px;">
+                <span class="kpi-title">SMART FOLLOW-UP > 48 HORAS</span>
+                <p class="kpi-desc">
+                  Filtro automático de presupuestos sin respuesta por más de 48 hs. Generación con 1 clic de plantilla formal personalizada lista para enviar por Gmail, con copia archivada bajo auditoría inmutable.
+                </p>
+              </div>
+
+              <div class="kpi-card gold-top" style="padding: 10px 14px;">
+                <span class="kpi-title">REGISTRO DE FEEDBACK DE PÉRDIDAS</span>
+                <p class="kpi-desc">
+                  Registro cualitativo: <em>"Competencia cotizó USD 150 menos"</em>, <em>"Carga diferida"</em>, <em>"En evaluación"</em>. Métrica acumulada para que el área comercial renegocie acuerdos de volumen con Maersk y MSC.
+                </p>
+              </div>
+
+              <div class="callout-box callout-navy">
+                <div>
+                  <strong style="color: var(--clave-navy); display: block; margin-bottom: 2px;">DESAHOGO DE LA FUERZA DE VENTAS (54,1% DEL VOLUMEN CONCENTRADO):</strong>
+                  Permite realizar el seguimiento de 20 cotizaciones en 10 minutos sin redactar correos manuales, recuperando ventas dormidas y optimizando la tasa de conversión.
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup Smart Follow-Up -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/cotizaciones · Panel de Smart Follow-Up y Feedback Comercial</div>
+                <span class="browser-mockup-badge" style="background: #0284c7;">CONVERSIÓN COMERCIAL</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 295px;">
+                <img src="screenshots/03_smart_follow_up_modal_desktop.png" alt="Smart Follow-Up y Feedback Comercial" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 08: TABLERO KANBAN & VISOR SIDE-BY-SIDE
+           ==================================================================== -->
+      <section class="slide-item" data-slide="8">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: EL ESCUDO FINANCIERO &amp; OPERATIVO</span>
+            <span class="slide-id-tag">EXPERIENCIA OPERATIVA INTEGRAL</span>
+          </div>
+          <h2 class="slide-title">CONTROL OPERATIVO: TABLERO KANBAN &amp; VISOR SIDE-BY-SIDE</h2>
+          <p class="slide-subtitle">Captura real de las dos interfaces centrales con las que opera el equipo de Administración y Finanzas.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2" style="height: 100%;">
+            <!-- Preview 1: Tablero Kanban -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/comprobantes · Tablero Kanban Operativo</div>
+                <span class="browser-mockup-badge">KANBAN OPERATIVO</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 275px;">
+                <img src="screenshots/kanban_corporate_light.png" alt="Tablero Kanban de Comprobantes" class="browser-mockup-img" />
+              </div>
+              <div class="browser-mockup-footer">
+                Columnas: <em>1. Ingesta (Mails)</em> → <em>2. Listas Kipintoch</em> → <em>3. Con Desvío de Tarifa</em> → <em>4. Asentadas</em>.
+              </div>
+            </div>
+
+            <!-- Preview 2: Visor Dual Side-by-Side -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/comprobantes/7554566633 · Modal Side-by-Side</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-gold-dark);">VISOR DUAL</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 275px;">
+                <img src="screenshots/modal_comprobante_detalle_light.png" alt="Visor Dual Side-by-Side" class="browser-mockup-img" />
+              </div>
+              <div class="browser-mockup-footer">
+                PDF original del armador a la izquierda y datos normalizados con botones de <em>Copiado 1-Clic</em> a la derecha.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 09: CASO C367: NORMALIZACIÓN SEMÁNTICA BUFF
+           ==================================================================== -->
+      <section class="slide-item" data-slide="9">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: CASOS CRÍTICOS AUDITADOS</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-gold">CASO C367 · LCL IMPORTACIÓN</span>
+              <span class="badge badge-green">BLINDAJE AFIP: BUFF CANÓNICO</span>
+            </div>
+          </div>
+          <h2 class="slide-title">CASO C367: NORMALIZACIÓN SEMÁNTICA DE COMBUSTIBLE NAVIERO (BUFF)</h2>
+          <p class="slide-subtitle">Unificación de 15 variantes de Bunker bajo el código canónico BUFF y auditoría contra cotización FCA Guangzhou.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- Stepper E2E Caso C367 -->
+          <div class="traceability-stepper">
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>1. ORIGEN</strong>
+                <span>Invoice MSL / BAF</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">2</div>
+              <div class="step-label">
+                <strong>2. EXTRACCIÓN IA</strong>
+                <span>Mapeo Canónico BUFF</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">3</div>
+              <div class="step-label">
+                <strong>3. REGLAS &amp; ESCUDO</strong>
+                <span>Cruce Cotiz. USD 80</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+              <div class="step-circle">4</div>
+              <div class="step-label">
+                <strong>4. KIPINTOCH</strong>
+                <span>Copiado 1-Clic</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+              <div class="step-circle">5</div>
+              <div class="step-label">
+                <strong>5. BANCO MACRO</strong>
+                <span>Conciliación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Análisis del Caso -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card gold-top" style="padding: 10px 14px;">
+                <span class="kpi-title">DISCREPANCIA DETECTADA EN CORREOS</span>
+                <p class="kpi-desc">
+                  Co-loader MSL facturó conceptos de combustible con nomenclaturas no estándar (BAF, BRC, EBS). En el circuito manual generó demoras de imputación y riesgo de no trasladar el cargo al cliente final.
+                </p>
+              </div>
+
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">NORMALIZACIÓN INTELIGENTE CON IA</span>
+                <p class="kpi-desc">
+                  Mapeo semántico inmediato al concepto canónico fiscal <strong>BUFF</strong> exigido por AFIP. Cruce instantáneo contra lo cotizado: desvío detectado de <strong>USD 80.00 + BUFF</strong> bloqueado previo a emisión.
+                </p>
+              </div>
+
+              <div class="callout-box callout-success">
+                <div>
+                  <strong style="color: var(--clave-green); display: block; margin-bottom: 2px;">QUEBRANTO EVITADO:</strong>
+                  USD 80 + recargo de combustible no absorbido por ALMAR. Cero inconsistencias impositivas en AFIP y DGA.
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup C367 Dual BUFF -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/carpetas/C367 · Normalización BUFF &amp; Visor Dual</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-gold-dark);">CASO C367</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 260px;">
+                <img src="screenshots/caso_c367_dual_buff_light.png" alt="Caso C367 Normalización Semántica BUFF" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 10: CASO C620: MÓDULO MULTIMONEDA BNA OFICIAL PARA GBP
+           ==================================================================== -->
+      <section class="slide-item" data-slide="10">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: CASOS CRÍTICOS AUDITADOS</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-gold">CUMPLIMIENTO CAMBIARIO &amp; DGA</span>
+              <span class="badge badge-navy">DIVISA: LIBRAS ESTERLINAS (GBP)</span>
+            </div>
+          </div>
+          <h2 class="slide-title">CASO C620: MÓDULO MULTIMONEDA BNA OFICIAL PARA DIVISAS COMPLEJAS (GBP)</h2>
+          <p class="slide-subtitle">Ingesta del tipo de cambio oficial vendedor del Banco Nación (BNA) a fecha de embarque con respaldo digital.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- Stepper E2E Caso C620 -->
+          <div class="traceability-stepper">
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>1. ORIGEN</strong>
+                <span>Prefactura GBP £543</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>2. EXTRACCIÓN IA</strong>
+                <span>Lectura GBP</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">3</div>
+              <div class="step-label">
+                <strong>3. REGLAS &amp; ESCUDO</strong>
+                <span>BNA Oficial: USD 740</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+              <div class="step-circle">4</div>
+              <div class="step-label">
+                <strong>4. KIPINTOCH</strong>
+                <span>Copiado USD</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+              <div class="step-circle">5</div>
+              <div class="step-label">
+                <strong>5. BANCO MACRO</strong>
+                <span>Conciliación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Análisis Cambiario -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card red-top" style="padding: 10px 14px;">
+                <span class="kpi-title">EL RIESGO CAMBIARIO Y ADUANERO</span>
+                <p class="kpi-desc">
+                  Flete facturado en Libras Esterlinas (£543 GBP). Kipintoch no gestiona conversión cruzada automática GBP/USD. Riesgo de cálculo manual inconsistente o manipulación del Permiso de Embarque con penalidades aduaneras de la DGA.
+                </p>
+              </div>
+
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">CONVERSIÓN BNA &amp; CONSTANCIA DIGITAL</span>
+                <p class="kpi-desc">
+                  Ingesta obligatoria del tipo de cambio oficial vendedor BNA a la fecha de operación (£543 GBP @ 1.3628 = <strong>USD 740.00</strong>). Adjunto automático de la constancia digital oficial como respaldo documental inmutable para AFIP.
+                </p>
+              </div>
+
+              <div class="callout-box callout-gold">
+                <div>
+                  <strong style="color: var(--clave-gold-dark); display: block; margin-bottom: 2px;">COMPLIANCE ADUANERO Y CAMBIARIO:</strong>
+                  "Erradica de raíz el riesgo de sanciones aduaneras y cambiarias por manipulación manual de comprobantes multimoneda."
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup C620 Multimoneda BNA -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/carpetas/C620 · Módulo Multimoneda Oficial BNA (GBP)</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-gold-dark);">CASO C620</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 260px;">
+                <img src="screenshots/caso_c620_multimoneda_bna_light.png" alt="Caso C620 Módulo Multimoneda BNA Oficial" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 11: CASO SANCOR SEGUROS: PROVISIÓN DIFERIDA 150 DÍAS
+           ==================================================================== -->
+      <section class="slide-item" data-slide="11">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: CASOS CRÍTICOS AUDITADOS</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-gold">BLINDAJE DE COMISIONES · DIRECTIVA FINANCIERA</span>
+              <span class="badge badge-navy">PROVISIÓN 0,55% FOB</span>
+            </div>
+          </div>
+          <h2 class="slide-title">CASO SANCOR SEGUROS: PROVISIÓN DIFERIDA AUTOMÁTICA A 150 DÍAS</h2>
+          <p class="slide-subtitle">Blindaje de comisiones comerciales e imputación de costos pendientes ante demoras de pólizas de hasta 5 meses.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- Stepper E2E Sancor Seguros -->
+          <div class="traceability-stepper">
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>1. ORIGEN</strong>
+                <span>Embarque FOB</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>2. EXTRACCIÓN IA</strong>
+                <span>Cálculo Seguro</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">3</div>
+              <div class="step-label">
+                <strong>3. REGLAS &amp; ESCUDO</strong>
+                <span>Provisión 0,55% 150d</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">4</div>
+              <div class="step-label">
+                <strong>4. KIPINTOCH</strong>
+                <span>Holdback Comisión</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+              <div class="step-circle">5</div>
+              <div class="step-label">
+                <strong>5. BANCO MACRO</strong>
+                <span>Conciliación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Análisis de Provisión -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card red-top" style="padding: 10px 14px;">
+                <span class="kpi-title">LA FALLA HISTÓRICA RELEVADA</span>
+                <p class="kpi-desc">
+                  Sancor Seguros demora entre 120 y 150 días en remitir las pólizas definitivas. Liquidación prematura de comisiones comerciales a vendedores a fin de mes sobre utilidades irreales que omitían el costo real del seguro.
+                </p>
+              </div>
+
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">PROVISIÓN CONTABLE Y HOLDBACK COMERCIAL</span>
+                <p class="kpi-desc">
+                  Devengamiento automático del <strong>0,55% sobre el valor FOB</strong> en el ledger de la carpeta. Estado de comisión: <code style="font-family: var(--font-mono); font-size: 10px; color: var(--danger-red);">RETENIDA_COSTOS_PENDIENTES</code> hasta el arribo de la póliza real.
+                </p>
+              </div>
+
+              <div class="callout-box callout-success">
+                <div>
+                  <strong style="color: var(--clave-green); display: block; margin-bottom: 2px;">CONTROL DE RESULTADOS FINANCIEROS:</strong>
+                  "No se pagan comisiones sobre utilidades ficticias que omiten el seguro. El margen real de la empresa queda 100% blindado."
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup Sancor Seguros -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/carpetas/Sancor · Provisión Diferida 150 Días</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-navy);">SEGURO 150D</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 260px;">
+                <img src="screenshots/caso_sancor_seguros_provision_light.png" alt="Caso Sancor Seguros Provisión Diferida" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 12: CASO C1234: ALERTA PREVENTIVA & AUTORIZACIÓN BIOMÉTRICA
+           ==================================================================== -->
+      <section class="slide-item" data-slide="12">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: CASOS CRÍTICOS AUDITADOS</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-green">GOBERNANZA Y AUTORIZACIÓN GERENCIAL</span>
+              <span class="badge badge-navy">FIDO2 / WEBAUTHN SHA-256</span>
+            </div>
+          </div>
+          <h2 class="slide-title">CASO C1234: ALERTA PREVENTIVA &amp; AUTORIZACIÓN BIOMÉTRICA WEBAUTHN</h2>
+          <p class="slide-subtitle">Gestión de descalces de rentabilidad (&lt; USD 200) y aprobación gerencial con firma criptográfica SHA-256.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- Stepper E2E C1234 -->
+          <div class="traceability-stepper">
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>1. ORIGEN</strong>
+                <span>Invoice Armador</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>2. EXTRACCIÓN IA</strong>
+                <span>Cálculo Margen</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">3</div>
+              <div class="step-label">
+                <strong>3. REGLAS &amp; ESCUDO</strong>
+                <span>Alerta &lt; USD 200</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">4</div>
+              <div class="step-label">
+                <strong>4. KIPINTOCH</strong>
+                <span>WebAuthn SHA-256</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+              <div class="step-circle">5</div>
+              <div class="step-label">
+                <strong>5. BANCO MACRO</strong>
+                <span>Conciliación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: WebAuthn y Alerta -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card gold-top" style="padding: 10px 14px;">
+                <span class="kpi-title">ALERTA PREVENTIVA DE MARGEN CRÍTICO</span>
+                <p class="kpi-desc">
+                  Carpeta C1234 con margen proyectado de USD 142.50 (&lt; USD 200). Semáforo preventivo por descalce cambiario en gastos locales (almacenaje / acarreo en pesos vs flete en dólares).
+                </p>
+              </div>
+
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">AUTORIZACIÓN BIOMÉTRICA EN 1 TOQUE</span>
+                <p class="kpi-desc">
+                  Override gerencial mediante huella digital (Windows Hello / Touch ID). Cero contraseñas compartidas. Generación de hash SHA-256 de 64 caracteres asentado en el log inmutable.
+                </p>
+              </div>
+
+              <div class="callout-box callout-navy">
+                <div>
+                  <strong style="color: var(--clave-navy); display: block; margin-bottom: 2px;">SEGURIDAD Y AGILIDAD CONCILIADAS:</strong>
+                  Velocidad operativa para la gestión comercial (autorización en 3 segundos) y máxima solidez probatoria para la Dirección General y Legal (validez jurídica Ley 25.506).
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup C1234 WebAuthn -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/carpetas/C1234 · Autorización Biométrica WebAuthn</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-green);">WEBAUTHN SHA-256</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 260px;">
+                <img src="screenshots/caso_c1234_webauthn_sha256_light.png" alt="Caso C1234 Autorización Biométrica WebAuthn" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 13: CASO TRIANGULACIÓN (NET TRADE MIAMI) & BANCO MACRO
+           ==================================================================== -->
+      <section class="slide-item" data-slide="13">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: CASOS CRÍTICOS AUDITADOS</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-gold">NET TRADE LLC (MIAMI)</span>
+              <span class="badge badge-navy">BANCO MACRO · CTA CTE</span>
+            </div>
+          </div>
+          <h2 class="slide-title">CASO TRIANGULACIÓN (NET TRADE MIAMI) &amp; CONCILIACIÓN BANCO MACRO</h2>
+          <p class="slide-subtitle">Trazabilidad de prefacturas Net Trade LLC y validación en extracto de Banco Macro antes del recibo definitivo.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- Stepper E2E Triangulación & Macro -->
+          <div class="traceability-stepper">
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>1. ORIGEN</strong>
+                <span>Prefactura Net Trade</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>2. EXTRACCIÓN IA</strong>
+                <span>Costos Rosario</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item completed">
+              <div class="step-circle">✓</div>
+              <div class="step-label">
+                <strong>3. REGLAS &amp; ESCUDO</strong>
+                <span>Validación Reembolso</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">4</div>
+              <div class="step-label">
+                <strong>4. KIPINTOCH</strong>
+                <span>Enlace Net Trade</span>
+              </div>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item active">
+              <div class="step-circle">5</div>
+              <div class="step-label">
+                <strong>5. BANCO MACRO</strong>
+                <span>Extracto Conciliado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Triangulación y Banco Macro -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card navy-top" style="padding: 10px 14px;">
+                <span class="kpi-title">TRIANGULACIÓN NET TRADE LLC (IFB MIAMI)</span>
+                <p class="kpi-desc">
+                  Enlace de prefacturas emitidas en el exterior con la carpeta operativa local en Kipintoch. Validación del recupero de costos locales antes de permitir el cierre contable (Precios de Transferencia y BCRA).
+                </p>
+              </div>
+
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">CONCILIACIÓN EN EXTRACTO BANCO MACRO</span>
+                <p class="kpi-desc">
+                  Flujo de cobranzas: <code>EMITIDA_PENDIENTE_COBRO</code> → <code>EN_VERIFICACION_BANCARIA</code> → <code>COBRADA_CONCILIADA</code>. Prohibición de emitir recibo o liberar comisiones sin acreditación efectiva en cuenta.
+                </p>
+              </div>
+
+              <div class="callout-box callout-success">
+                <div>
+                  <strong style="color: var(--clave-green); display: block; margin-bottom: 2px;">BLINDAJE DE TESORERÍA Y CAJA:</strong>
+                  Sólo se consideran cobradas las operaciones validadas en el extracto bancario de Banco Macro, protegiendo la liquidez real de ALMAR.
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup Banco Macro -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">/finanzas/banco-macro · Conciliación Bancaria y Extractos</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-green);">CONCILIACIÓN BANCO</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 260px;">
+                <img src="screenshots/banco_macro_conciliacion_extracto_light.png" alt="Caso Triangulación Net Trade Miami y Conciliación Banco Macro" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 14: DEMOSTRACIÓN EN VIVO EN FUNCIONAMIENTO
+           ==================================================================== -->
+      <section class="slide-item" data-slide="14">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 3: DEMO INTERACTIVA EN TIEMPO REAL</span>
+            <span class="slide-id-tag">ENTORNO ACTIVO · PRUEBA EN VIVO ANTE DIRECTORIO</span>
+          </div>
+          <h2 class="slide-title">DEMOSTRACIÓN EN VIVO DE LA SOLUCIÓN EN FUNCIONAMIENTO</h2>
+          <p class="slide-subtitle">Transición al navegador (http://localhost:3000): prueba integral del circuito de facturación, comercial y cobranzas.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-1-12">
+            <!-- Columna Izquierda: Los Pasos de la Demo -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card" style="padding: 10px 14px;">
+                <span class="kpi-title">1. INGESTA EN TIEMPO REAL</span>
+                <p class="kpi-desc">Carga de facturas reales de <strong>Maersk</strong> y <strong>MSC</strong> en PDF. Extracción automática en pantalla en menos de 5 segundos.</p>
+              </div>
+
+              <div class="kpi-card red-top" style="padding: 10px 14px;">
+                <span class="kpi-title">2. DETECCIÓN DE DESVÍO</span>
+                <p class="kpi-desc">Activación del semáforo preventivo y bloqueo de emisión ante sobrecosto no presupuestado.</p>
+              </div>
+
+              <div class="kpi-card gold-top" style="padding: 10px 14px;">
+                <span class="kpi-title">3. OVERRIDE BIOMÉTRICO &amp; KIPINTOCH</span>
+                <p class="kpi-desc">Aprobación con huella digital (WebAuthn), sello SHA-256 y transferencia de datos a Kipintoch en 1 solo clic.</p>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Preview del Entorno Activo -->
+            <div class="browser-mockup">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">http://localhost:3000/comprobantes · Tablero en Vivo</div>
+                <span class="browser-mockup-badge" style="background: var(--success-green);">● EN VIVO</span>
+              </div>
+              <div class="browser-mockup-body" style="height: 295px;">
+                <img src="screenshots/kanban_corporate_light.png" alt="Entorno en Vivo ALMAR" class="browser-mockup-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 15: GESTIÓN DEL PILOTO: WIDGET FLOTANTE DE TRIAGE OPERATIVO
+           ==================================================================== -->
+      <section class="slide-item" data-slide="15">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 4: ETAPA PILOTO &amp; MEJORA CONTINUA</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-green">CHATBOT COPILOT IA ACTIVO</span>
+              <span class="slide-id-tag">AGILIDAD &amp; FEEDBACK EN VIVO</span>
+            </div>
+          </div>
+          <h2 class="slide-title">PILOTO ASISTIDO: CHATBOT COPILOT DE IA &amp; TRIAGE OPERATIVO (#TKT-XXX)</h2>
+          <p class="slide-subtitle">Asistente conversacional de inteligencia artificial para resolución inmediata de dudas operativas y captura ágil de feedback y mejoras.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2" style="height: 100%;">
+            <!-- Columna Izquierda: Fundamento del Chatbot y Triage -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+              <div class="kpi-card" style="border-top: 3px solid var(--clave-green);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                  <span class="kpi-title">CHATBOT COPILOT CONVERSACIONAL DE PROCESOS</span>
+                  <span class="badge badge-green">DISPONIBLE 24/7 EN CADA PANTALLA</span>
+                </div>
+                <div style="font-family: var(--font-heading); font-size: 14.5px; font-weight: 800; color: var(--clave-green); margin: 2px 0;">
+                  Asistencia Inteligente &amp; Feedback Inmediato
+                </div>
+                <p class="kpi-desc">
+                  Agente interactivo con IA embebido en el portal. Responde en lenguaje natural sobre causales de bloqueo, cálculo de márgenes, provisión de Sancor Seguros, tipo de cambio oficial BNA para GBP y desvíos navieros. Permite al personal consultar y registrar sugerencias de mejora sin burocracia.
+                </p>
+              </div>
+
+              <div class="kpi-card gold-top">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                  <span class="kpi-title">WIDGET FLOTANTE NO INVASIVO (#TKT-XXX)</span>
+                  <span class="badge badge-gold">REPORTE EN 5 SEGUNDOS</span>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 15px; font-weight: 800; color: var(--clave-gold-dark); margin: 2px 0;">
+                  Diagnóstico Automático de Casos Borde
+                </div>
+                <p class="kpi-desc">
+                  Captura con 1 solo clic la pantalla actual, usuario activo, carpeta operativa y datos del comprobante, estampando un identificador inmutable <strong>#TKT-XXX</strong> en el <code>audit_log</code> para que soporte calibre reglas en horas.
+                </p>
+              </div>
+
+              <div class="callout-box callout-success">
+                <div>
+                  <strong style="display: block; margin-bottom: 2px; color: var(--clave-green);">CÓMO AGILIZA EL FEEDBACK Y LA EVOLUCIÓN DEL SISTEMA:</strong>
+                  El personal no depende de reuniones semanales ni correos cruzados: dialoga con el Copilot para resolver excepciones en el acto o genera un ticket para calibrar el algoritmo ese mismo día.
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup Visual del Chatbot Copilot & FeedbackWidget -->
+            <div class="browser-mockup" style="background: #ffffff; height: 100%; display: flex; flex-direction: column;">
+              <div class="browser-mockup-header">
+                <div class="browser-mockup-dots">
+                  <span class="browser-mockup-dot red"></span>
+                  <span class="browser-mockup-dot yellow"></span>
+                  <span class="browser-mockup-dot green"></span>
+                </div>
+                <div class="browser-mockup-url">FeedbackWidget · Copilot IA &amp; Triage de Mejoras</div>
+                <span class="browser-mockup-badge" style="background: var(--clave-green);">● EN LÍNEA</span>
+              </div>
+              
+              <!-- Tab Selector Visual del Widget -->
+              <div style="display: flex; border-bottom: 1px solid #e2e8f0; background: #f8fafc; font-size: 10.5px; font-weight: 700;">
+                <div style="flex: 1; padding: 6px 10px; text-align: center; background: #ffffff; color: var(--clave-green); border-bottom: 2px solid var(--clave-green); display: flex; align-items: center; justify-content: center; gap: 5px;">
+                  <span>✨</span> Copilot IA Operativo
+                </div>
+                <div style="flex: 1; padding: 6px 10px; text-align: center; color: var(--clave-muted); display: flex; align-items: center; justify-content: center; gap: 5px; border-left: 1px solid #e2e8f0;">
+                  <span>⚠️</span> Reportar Caso / Ajuste (#TKT)
+                </div>
+              </div>
+
+              <!-- Ventana de Chat Interactiva -->
+              <div style="padding: 9px 11px; display: flex; flex-direction: column; gap: 6px; font-size: 10px; flex: 1; justify-content: space-between; background: #fcfcfd;">
+                <!-- Historial de Conversación -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                  <!-- Mensaje Copilot 1 -->
+                  <div style="align-self: flex-start; max-width: 92%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px 8px 8px 2px; padding: 5px 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 1px;">
+                      <strong style="color: var(--clave-green); font-size: 9px;">COPILOT IA ALMAR</strong>
+                      <span style="color: var(--clave-muted); font-size: 8px;">14:32</span>
+                    </div>
+                    <span style="color: var(--clave-text); line-height: 1.25;">¡Hola! Asistente activo para consultas de carpetas, márgenes, provisión de seguros diferidos o desvíos navieros.</span>
+                  </div>
+
+                  <!-- Mensaje Usuario 1 -->
+                  <div style="align-self: flex-end; max-width: 88%; background: var(--clave-navy); color: #ffffff; border-radius: 8px 8px 2px 8px; padding: 5px 8px;">
+                    <div style="display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 1px;">
+                      <span style="font-size: 8px; opacity: 0.85;">Operador Facturación · 14:33</span>
+                    </div>
+                    <span style="line-height: 1.25;">¿Por qué la carpeta C1234 tiene alerta preventiva y cómo la autorizamos?</span>
+                  </div>
+
+                  <!-- Mensaje Copilot 2 -->
+                  <div style="align-self: flex-start; max-width: 92%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px 8px 8px 2px; padding: 5px 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 1px;">
+                      <strong style="color: var(--clave-green); font-size: 9px;">COPILOT IA ALMAR</strong>
+                      <span class="badge badge-gold" style="font-size: 7px; padding: 0 3px;">MARGEN &lt; USD 200</span>
+                    </div>
+                    <span style="color: var(--clave-text); line-height: 1.25;">Margen de USD 142.50. Podés autorizarla con <strong>Firma Biométrica WebAuthn</strong> gerencial o ajustar el markup spot en la Calculadora Comercial.</span>
+                  </div>
+
+                  <!-- Mensaje Usuario 2 -->
+                  <div style="align-self: flex-end; max-width: 88%; background: var(--clave-navy); color: #ffffff; border-radius: 8px 8px 2px 8px; padding: 5px 8px;">
+                    <span style="line-height: 1.25;">Maersk facturó "Cleaning Fee" USD 45 no presupuestado. ¿Cómo lo asiento?</span>
+                  </div>
+
+                  <!-- Mensaje Copilot 3 (Ticket generado) -->
+                  <div style="align-self: flex-start; max-width: 95%; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px 8px 8px 2px; padding: 5px 8px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1px;">
+                      <strong style="color: #166534; font-size: 9px;">✓ REPORTE ASENTADO EN AUDIT_LOG</strong>
+                      <span class="badge badge-green" style="font-size: 7px; padding: 0 3px;">#TKT-8421</span>
+                    </div>
+                    <span style="color: #14532d; line-height: 1.25;">Sobrecosto derivado a la columna <strong>Desvíos</strong> del Kanban. Soporte técnico calibró la regla de extracción para futuros comprobantes.</span>
+                  </div>
+                </div>
+
+                <!-- Chips Rápidos & Barra de Entrada -->
+                <div style="border-top: 1px solid #e2e8f0; padding-top: 5px;">
+                  <div style="display: flex; gap: 4px; margin-bottom: 4px; overflow-x: hidden;">
+                    <span style="background: #f1f5f9; color: #475569; font-size: 8px; padding: 2px 5px; border-radius: 8px; border: 1px solid #cbd5e1;">¿Por qué se bloqueó C1234?</span>
+                    <span style="background: #f1f5f9; color: #475569; font-size: 8px; padding: 2px 5px; border-radius: 8px; border: 1px solid #cbd5e1;">Provisión Sancor 150d</span>
+                    <span style="background: #f1f5f9; color: #475569; font-size: 8px; padding: 2px 5px; border-radius: 8px; border: 1px solid #cbd5e1;">Derivar Desvío</span>
+                  </div>
+                  <div style="display: flex; gap: 5px; align-items: center;">
+                    <input type="text" value="Consultar al Copilot o reportar ajuste..." readonly style="flex: 1; font-size: 9px; padding: 4px 7px; border: 1px solid #cbd5e1; border-radius: 4px; background: #ffffff; color: #64748b;" />
+                    <button style="background: var(--clave-green); color: #ffffff; font-size: 9px; font-weight: 700; border: none; padding: 4px 9px; border-radius: 4px; cursor: pointer;">ENVIAR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 16: MATRIZ DE PREGUNTAS Y OBJECIONES DIRECTIVAS
+           ==================================================================== -->
+      <section class="slide-item" data-slide="16">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 4: RESPUESTAS AL DIRECTORIO</span>
+            <span class="slide-id-tag">SOLVENCIA TÉCNICA ANTE PREGUNTAS ESTRATÉGICAS</span>
+          </div>
+          <h2 class="slide-title">MATRIZ DE RESOLUCIÓN DE DESAFÍOS OPERATIVOS Y ESTRATÉGICOS</h2>
+          <p class="slide-subtitle">Respuestas sistémicas y estructuradas a los principales desafíos de pricing comercial, control financiero y soberanía tecnológica.</p>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-3" style="height: 100%;">
+            <!-- Tarjeta Gestión Comercial -->
+            <div class="objection-card" style="padding: 10px; justify-content: space-between;">
+              <div>
+                <div class="objection-director">
+                  <span>GESTIÓN COMERCIAL</span>
+                  <span class="badge badge-green">PRICING &amp; VENTAS</span>
+                </div>
+                <div class="objection-role" style="font-size: 8.5px; margin-bottom: 6px;">Agilidad Comercial y Cierre de Operaciones</div>
+
+                <!-- Bloque 1 -->
+                <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-gold); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="font-size: 9px; font-weight: 700; color: var(--clave-navy); margin-bottom: 2px;">
+                    "¿Un control de margen tan estricto nos va a quitar velocidad para cerrar negocios spot?"
+                  </div>
+                  <div style="font-size: 8.5px; color: var(--clave-text); line-height: 1.35;">
+                    <strong>Respuesta del Sistema:</strong> Con el selector dinámico <code>SPOT_ALTO_RIESGO</code> cotizás en 45 segundos. El semáforo advierte en amarillo (&lt; USD 200) sin bloquear. Sólo se aplica bloqueo si da pérdida neta (&lt; USD 3) o si la tarifa naviera está vencida.
+                  </div>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-green); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="font-size: 9px; font-weight: 700; color: var(--clave-navy); margin-bottom: 2px;">
+                    "¿Cómo evitamos cotizar fletes vencidos y reactivamos presupuestos sin respuesta?"
+                  </div>
+                  <div style="font-size: 8.5px; color: var(--clave-text); line-height: 1.35;">
+                    <strong>Respuesta del Sistema:</strong> Semáforo de vigencias (15/30 días) que bloquea cotizaciones vencidas de armadores. Smart Follow-Up a 48 hs con 1 clic para reactivar oportunidades dormidas con plantilla formalizada.
+                  </div>
+                </div>
+
+                <!-- Métrica -->
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px; padding: 4px 6px; font-size: 8px; color: #166534; margin-bottom: 4px;">
+                  <strong>Métricas de Impacto:</strong> Cotizaciones en 45 seg · Reducción 100% de fletes vencidos · Seguimiento sistemático a 48 hs.
+                </div>
+              </div>
+              <div class="objection-benefit" style="font-size: 8px; padding: 3px 5px;">
+                ✓ Registro cualitativo de pérdidas para renegociar contratos de volumen con armadores.
+              </div>
+            </div>
+
+            <!-- Tarjeta Control Financiero -->
+            <div class="objection-card gold-top" style="padding: 10px; justify-content: space-between;">
+              <div>
+                <div class="objection-director">
+                  <span>CONTROL FINANCIERO</span>
+                  <span class="badge badge-gold">RENTABILIDAD REAL</span>
+                </div>
+                <div class="objection-role" style="font-size: 8.5px; margin-bottom: 6px;">Gestión de Costos y Flujo de Fondos</div>
+
+                <!-- Bloque 1 -->
+                <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-gold); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="font-size: 9px; font-weight: 700; color: var(--clave-navy); margin-bottom: 2px;">
+                    "¿Cómo frenamos los sobrecostos de armadores y el desfasaje de 5 meses de Sancor Seguros?"
+                  </div>
+                  <div style="font-size: 8.5px; color: var(--clave-text); line-height: 1.35;">
+                    <strong>Respuesta del Sistema:</strong> Normalización semántica de conceptos navieros (BUFF/BAF) y provisión automática del 0,55% FOB retenida por 150 días en el ledger de la carpeta, impidiendo liquidar comisiones sobre utilidades irreales.
+                  </div>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-navy); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="font-size: 9px; font-weight: 700; color: var(--clave-navy); margin-bottom: 2px;">
+                    "¿Cómo garantizamos que no se paguen comisiones sobre cobranzas pendientes?"
+                  </div>
+                  <div style="font-size: 8.5px; color: var(--clave-text); line-height: 1.35;">
+                    <strong>Respuesta del Sistema:</strong> Conciliación bancaria obligatoria en extracto de cuenta corriente de Banco Macro antes de emitir recibo oficial definitivo o liberar comisiones comerciales.
+                  </div>
+                </div>
+
+                <!-- Métrica -->
+                <div style="background: var(--clave-gold-light); border: 1px solid var(--clave-gold-border); border-radius: 4px; padding: 4px 6px; font-size: 8px; color: var(--clave-gold-dark); margin-bottom: 4px;">
+                  <strong>Métricas de Impacto:</strong> Cero descalces cambiarios · Provisión devengada a 150d · 100% comisiones atadas a cobro real.
+                </div>
+              </div>
+              <div class="objection-benefit" style="font-size: 8px; padding: 3px 5px;">
+                ✓ Blindaje contable de comisiones y conciliación bancaria obligatoria en Banco Macro.
+              </div>
+            </div>
+
+            <!-- Tarjeta Gobernanza y Legal -->
+            <div class="objection-card navy-top" style="padding: 10px; justify-content: space-between;">
+              <div>
+                <div class="objection-director">
+                  <span>GOBERNANZA Y LEGAL</span>
+                  <span class="badge badge-navy">SEGURIDAD DE DATOS</span>
+                </div>
+                <div class="objection-role" style="font-size: 8.5px; margin-bottom: 6px;">Cumplimiento Normativo y Soberanía Tecnológica</div>
+
+                <!-- Bloque 1 -->
+                <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-gold); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="font-size: 9px; font-weight: 700; color: var(--clave-navy); margin-bottom: 2px;">
+                    "¿Qué respaldo jurídico tienen las autorizaciones y qué garantías de privacidad hay en OpenAI?"
+                  </div>
+                  <div style="font-size: 8.5px; color: var(--clave-text); line-height: 1.35;">
+                    <strong>Respuesta del Sistema:</strong> Firma biométrica WebAuthn (FIDO2) con hash SHA-256 inmutable de validez pericial plena (Ley 25.506). Cuenta directa ALMAR con política Zero Data Retention (<code>store: false</code>, cero reentrenamiento).
+                  </div>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div style="background: #f8fafc; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-green); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="font-size: 9px; font-weight: 700; color: var(--clave-navy); margin-bottom: 2px;">
+                    "¿Es factible integrarlo en nuestra Intranet actual sin generar fricción de claves?"
+                  </div>
+                  <div style="font-size: 8.5px; color: var(--clave-text); line-height: 1.35;">
+                    <strong>Respuesta del Sistema:</strong> 100% integrable como solapa dentro de la Intranet de Firebase de ALMAR mediante Iframe seguro con CSP y Single Sign-On (SSO) vía JWT de Firebase Auth. Cero claves extras.
+                  </div>
+                </div>
+
+                <!-- Métrica -->
+                <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px 6px; font-size: 8px; color: var(--clave-navy); margin-bottom: 4px;">
+                  <strong>Métricas de Impacto:</strong> Validez pericial plena · Soberanía de datos ZDR § 3.2 · Acceso automático con Intranet.
+                </div>
+              </div>
+              <div class="objection-benefit" style="font-size: 8px; padding: 3px 5px;">
+                ✓ Soberanía de datos absoluta, cero entrenamiento con secretos y trazabilidad legal.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 17: ARQUITECTURA DE PRODUCCIÓN, DIAGRAMA E INTEGRACIÓN EN FIREBASE
+           ==================================================================== -->
+      <section class="slide-item" data-slide="17">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 4: ARQUITECTURA DE PRODUCCIÓN &amp; INTEGRACIÓN</span>
+            <div class="slide-header-badges">
+              <span class="badge badge-navy">EMBEBIBLE EN INTRANET FIREBASE</span>
+              <span class="badge badge-green">OPENAI ZDR SOBERANO</span>
+              <span class="slide-id-tag">DIAGRAMA TÉCNICO E2E</span>
+            </div>
+          </div>
+          <h2 class="slide-title">ARQUITECTURA DE PRODUCCIÓN, DIAGRAMA E INTEGRACIÓN EN INTRANET FIREBASE</h2>
+          <p class="slide-subtitle">Diagrama integral de componentes, soberanía Zero Data Retention (§ 3.2) y especificación técnica para embeber la solución en la Intranet de ALMAR.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- DIAGRAMA VISUAL DE ARQUITECTURA E2E (4 CAPAS CONECTADAS) -->
+          <div class="arch-flow-diagram">
+            <!-- Nodo 1: Capa de Entrada & Intranet Firebase -->
+            <div class="arch-node firebase">
+              <div class="arch-node-title" style="color: #0369a1;">
+                <span>1. INTRANET &amp; ACCESO</span>
+                <span class="badge badge-navy" style="font-size: 7px; padding: 0 4px;">FIREBASE</span>
+              </div>
+              <div class="arch-node-subtitle">intranet.almar.com.ar</div>
+              <div class="arch-node-list">
+                <div>• <strong>Embebido Iframe Seguro</strong> (CSP)</div>
+                <div>• <strong>Single Sign-On (SSO)</strong> JWT</div>
+                <div>• Ingesta Gmail / Google OAuth</div>
+              </div>
+            </div>
+
+            <!-- Flecha 1 -> 2 -->
+            <div class="arch-arrow">
+              <span class="arch-arrow-label">JWT SSO</span>
+              <span>➔</span>
+            </div>
+
+            <!-- Nodo 2: Capa Aplicativa Next.js en Vercel -->
+            <div class="arch-node vercel">
+              <div class="arch-node-title" style="color: #166534;">
+                <span>2. PROCESO &amp; REGLAS</span>
+                <span class="badge badge-green" style="font-size: 7px; padding: 0 4px;">VERCEL</span>
+              </div>
+              <div class="arch-node-subtitle">Next.js 15 Serverless Edge</div>
+              <div class="arch-node-list">
+                <div>• Extracción &amp; Normaliz. Semántica</div>
+                <div>• Reglas ISO 9001 (Margen &amp; Seguros)</div>
+                <div>• <strong>Chatbot Copilot</strong> &amp; #TKT-XXX</div>
+              </div>
+            </div>
+
+            <!-- Flecha 2 -> 3 -->
+            <div class="arch-arrow">
+              <span class="arch-arrow-label">store:false</span>
+              <span>➔</span>
+            </div>
+
+            <!-- Nodo 3: Inteligencia OpenAI ZDR -->
+            <div class="arch-node openai">
+              <div class="arch-node-title" style="color: var(--clave-gold-dark);">
+                <span>3. IA PRIVADA ALMAR</span>
+                <span class="badge badge-gold" style="font-size: 7px; padding: 0 4px;">ZDR § 3.2</span>
+              </div>
+              <div class="arch-node-subtitle">OpenAI Directo ALMAR</div>
+              <div class="arch-node-list">
+                <div>• API Key y tarjeta directa ALMAR</div>
+                <div>• Cero persistencia en disco</div>
+                <div>• <strong>0% reentrenamiento</strong> público</div>
+              </div>
+            </div>
+
+            <!-- Flecha 3 -> 4 -->
+            <div class="arch-arrow">
+              <span class="arch-arrow-label">DB &amp; ERP</span>
+              <span>➔</span>
+            </div>
+
+            <!-- Nodo 4: Persistencia Supabase, Firma & ERPs -->
+            <div class="arch-node persistence">
+              <div class="arch-node-title" style="color: var(--clave-navy);">
+                <span>4. DATOS &amp; SISTEMAS</span>
+                <span class="badge badge-navy" style="font-size: 7px; padding: 0 4px;">ERP &amp; BANCO</span>
+              </div>
+              <div class="arch-node-subtitle">Supabase Postgres sa-east-1</div>
+              <div class="arch-node-list">
+                <div>• <strong>WebAuthn</strong> (Firma SHA-256)</div>
+                <div>• <strong>Kipintoch ERP</strong> (Copia 1-Clic)</div>
+                <div>• <strong>Banco Macro</strong> (Extracto Cta Cte)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOQUE DE DETALLE TÉCNICO EN 3 COLUMNAS -->
+          <div class="grid-3" style="flex: 1;">
+            <!-- Tarjeta 1: Embebido en Intranet Firebase -->
+            <div class="kpi-card" style="border-top: 3px solid #0284c7; justify-content: space-between;">
+              <div>
+                <span class="badge badge-navy" style="width: fit-content; margin-bottom: 3px;">100% FACTIBLE Y COMPATIBLE</span>
+                <div style="font-family: var(--font-heading); font-size: 13px; font-weight: 800; color: #0369a1; margin-bottom: 3px;">
+                  Embebido en Intranet Firebase
+                </div>
+                <p class="kpi-desc" style="font-size: 9.5px; line-height: 1.38;">
+                  • <strong>Iframe con CSP Blindado:</strong> Se embebe como solapa dentro de la intranet actual (<code>https://intranet.almar.com.ar</code>) habilitando la cabecera <code>frame-ancestors</code> segura.<br>
+                  • <strong>Single Sign-On (SSO):</strong> El portal valida el token JWT emitido por Firebase Auth. El personal ingresa con su mismo usuario y rol sin doble login.<br>
+                  • <strong>Firebase Hosting Rewrite:</strong> Mapeo opcional en <code>firebase.json</code> (<code>/facturacion/**</code>) para que corra como subruta nativa.
+                </p>
+              </div>
+              <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 4px; padding: 4px 6px; font-size: 8.5px; font-weight: 700; color: #0369a1; margin-top: 4px;">
+                ✓ Cero contraseñas duplicadas: acceso automático con la cuenta de Intranet.
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Soberanía de Datos OpenAI ZDR -->
+            <div class="kpi-card" style="border-top: 3px solid var(--clave-gold); justify-content: space-between;">
+              <div>
+                <span class="badge badge-gold" style="width: fit-content; margin-bottom: 3px;">CONTRATO DIRECTO ALMAR</span>
+                <div style="font-family: var(--font-heading); font-size: 13px; font-weight: 800; color: var(--clave-gold-dark); margin-bottom: 3px;">
+                  Soberanía OpenAI ZDR (§ 3.2)
+                </div>
+                <p class="kpi-desc" style="font-size: 9.5px; line-height: 1.38;">
+                  • <strong>Propiedad Exclusiva:</strong> ALMAR contrata directamente con OpenAI. Consumo a tarjeta corporativa (centavos por factura) sin intermediarios.<br>
+                  • <strong>Cero Almacenamiento:</strong> Parámetro contractual <code style="font-weight: 700; color: var(--clave-green);">store: false</code>: el documento se procesa en memoria volátil y se destruye inmediatamente al responder.<br>
+                  • <strong>Secreto Comercial:</strong> Ningún dato alimenta modelos públicos de IA.
+                </p>
+              </div>
+              <div style="background: var(--clave-gold-light); border: 1px solid var(--clave-gold-border); border-radius: 4px; padding: 4px 6px; font-size: 8.5px; font-weight: 700; color: var(--clave-gold-dark); margin-top: 4px;">
+                ✓ Blindaje de tarifas y fletes confidenciales contra reentrenamiento de IA.
+              </div>
+            </div>
+
+            <!-- Tarjeta 3: Infraestructura Serverless & Respaldo Legal -->
+            <div class="kpi-card" style="border-top: 3px solid var(--clave-green); justify-content: space-between;">
+              <div>
+                <span class="badge badge-green" style="width: fit-content; margin-bottom: 3px;">ALTA DISPONIBILIDAD</span>
+                <div style="font-family: var(--font-heading); font-size: 13px; font-weight: 800; color: var(--clave-green); margin-bottom: 3px;">
+                  Cloud Serverless &amp; Firma Legal
+                </div>
+                <p class="kpi-desc" style="font-size: 9.5px; line-height: 1.38;">
+                  • <strong>Cero Servidores Físicos:</strong> Vercel Edge + Supabase PostgreSQL en São Paulo (<strong>sa-east-1</strong>, latencia &lt; 35ms) con 99,99% de uptime.<br>
+                  • <strong>Validez Pericial Plena:</strong> Autorizaciones sensibles protegidas con biometría WebAuthn (hash SHA-256 inmutable, Ley 25.506).<br>
+                  • <strong>Conciliación Bancaria:</strong> Validación en extracto de Banco Macro antes del recibo oficial.
+                </p>
+              </div>
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px; padding: 4px 6px; font-size: 8.5px; font-weight: 700; color: #166534; margin-top: 4px;">
+                ✓ 99,99% Uptime, copias de seguridad diarias y validez pericial plena.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SLIDE 18: HOJA DE RUTA DE 4 SEMANAS Y DECISIÓN DIRECTIVA
+           ==================================================================== -->
+      <section class="slide-item" data-slide="18">
+        <div class="slide-header">
+          <div class="slide-pretitle-row">
+            <span class="slide-momento-badge">MOMENTO 4: PLAN DE IMPLEMENTACIÓN</span>
+            <span class="slide-id-tag">HOJA DE RUTA A PRODUCCIÓN &amp; ACUERDO</span>
+          </div>
+          <h2 class="slide-title">HOJA DE RUTA DE PUESTA EN MARCHA (4 SEMANAS) Y DECISIÓN DIRECTIVA</h2>
+          <p class="slide-subtitle">Cronograma de 4 semanas hacia la producción definitiva y llamado a la decisión directiva.</p>
+        </div>
+
+        <div class="slide-body">
+          <!-- 1. CRONOGRAMA DE 4 SEMANAS -->
+          <div class="grid-4" style="margin-bottom: 6px;">
+            <div class="kpi-card" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-green" style="width: fit-content; margin-bottom: 3px;">SEMANA 1</span>
+                <span class="kpi-title">SET-UP &amp; CLOUD</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Alta de cuenta OpenAI propia de ALMAR.<br>• Despliegue en Vercel y Supabase sa-east-1.<br>• Conexión de buzón de correo vía webhook.</p>
+              </div>
+              <div style="background: #f0fdf4; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: #166534; margin-top: 3px;">
+                Fase: Infraestructura y Accesos
+              </div>
+            </div>
+
+            <div class="kpi-card gold-top" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-gold" style="width: fit-content; margin-bottom: 3px;">SEMANA 2</span>
+                <span class="kpi-title">INICIO DE PILOTO</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Capacitación a Stefania y equipo.<br>• Ingesta asistida de 50 facturas reales.<br>• Widget de Triage activo (<strong>#TKT-XXX</strong>).</p>
+              </div>
+              <div style="background: var(--clave-gold-light); border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: var(--clave-gold-dark); margin-top: 3px;">
+                Fase: Operación Dual Asistida
+              </div>
+            </div>
+
+            <div class="kpi-card navy-top" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-navy" style="width: fit-content; margin-bottom: 3px;">SEMANA 3</span>
+                <span class="kpi-title">CALIBRACIÓN FINA</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Calibración de semáforos de vigencias.<br>• Perfiles de margen por cliente.<br>• Pruebas con extractos Banco Macro.</p>
+              </div>
+              <div style="background: #f8fafc; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: var(--clave-navy); margin-top: 3px;">
+                Fase: Ajuste de Reglas y Banco
+              </div>
+            </div>
+
+            <div class="kpi-card" style="padding: 8px 10px; justify-content: space-between;">
+              <div>
+                <span class="badge badge-green" style="width: fit-content; margin-bottom: 3px;">SEMANA 4</span>
+                <span class="kpi-title">PRODUCCIÓN</span>
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">• Pase a producción definitiva.<br>• Corte de carga manual a Kipintoch.<br>• Tablero de métricas en vivo a Directorio.</p>
+              </div>
+              <div style="background: #f0fdf4; border-radius: 4px; padding: 2px 4px; font-size: 7.5px; font-weight: 700; color: #166534; margin-top: 3px;">
+                Fase: Autonomía y Gobernanza
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ENTREGABLES TÉCNICOS & HITOS DE ÉXITO -->
+          <div class="grid-4" style="margin-bottom: 6px;">
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-top: 3px solid var(--clave-green); border-radius: 6px; padding: 6px 8px;">
+              <strong style="color: var(--clave-green); font-size: 8.5px; display: block; text-transform: uppercase;">ENTREGABLE S1:</strong>
+              <span style="font-size: 8px; color: var(--clave-text); line-height: 1.25; display: block; margin-top: 2px;">Tenant OpenAI ZDR propio de ALMAR, credenciales SSO configuradas y webhook de Gmail operativo.</span>
+            </div>
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-top: 3px solid var(--clave-gold); border-radius: 6px; padding: 6px 8px;">
+              <strong style="color: var(--clave-gold-dark); font-size: 8.5px; display: block; text-transform: uppercase;">ENTREGABLE S2:</strong>
+              <span style="font-size: 8px; color: var(--clave-text); line-height: 1.25; display: block; margin-top: 2px;">50 comprobantes procesados con Copilot de IA, cero incidentes de lectura y #TKT funcionando.</span>
+            </div>
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-top: 3px solid var(--clave-navy); border-radius: 6px; padding: 6px 8px;">
+              <strong style="color: var(--clave-navy); font-size: 8.5px; display: block; text-transform: uppercase;">ENTREGABLE S3:</strong>
+              <span style="font-size: 8px; color: var(--clave-text); line-height: 1.25; display: block; margin-top: 2px;">Semáforo 15/30d calibrado, provisión diferida 150d de Sancor y conciliación bancaria en Macro validada.</span>
+            </div>
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-top: 3px solid var(--clave-green); border-radius: 6px; padding: 6px 8px;">
+              <strong style="color: var(--clave-green); font-size: 8.5px; display: block; text-transform: uppercase;">ENTREGABLE S4:</strong>
+              <span style="font-size: 8px; color: var(--clave-text); line-height: 1.25; display: block; margin-top: 2px;">Corte de carga manual a Kipintoch, Copiado 1-Clic para todo el equipo y entrega de informe final.</span>
+            </div>
+          </div>
+
+          <!-- 3. GARANTÍAS DIRECTIVAS DEL DESPLIEGUE -->
+          <div class="grid-3" style="margin-bottom: 6px;">
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-green); border-radius: 6px; padding: 5px 8px;">
+              <strong style="color: var(--clave-green); font-size: 9px; display: block; margin-bottom: 1px;">CERO DISRUPCIÓN OPERATIVA:</strong>
+              <span style="font-size: 8.5px; color: var(--clave-text); line-height: 1.25;">Convivencia dual en paralelo con el circuito manual durante las Semanas 2 y 3.</span>
+            </div>
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-gold); border-radius: 6px; padding: 5px 8px;">
+              <strong style="color: var(--clave-gold-dark); font-size: 9px; display: block; margin-bottom: 1px;">SOPORTE CLAVE DIRECTO:</strong>
+              <span style="font-size: 8.5px; color: var(--clave-text); line-height: 1.25;">Acompañamiento técnico continuo y resolución de #TKT en menos de 24 horas.</span>
+            </div>
+            <div style="background: #ffffff; border: 1px solid var(--clave-border); border-left: 3px solid var(--clave-navy); border-radius: 6px; padding: 5px 8px;">
+              <strong style="color: var(--clave-navy); font-size: 9px; display: block; margin-bottom: 1px;">RETORNO INMEDIATO:</strong>
+              <span style="font-size: 8.5px; color: var(--clave-text); line-height: 1.25;">Ahorro de +180 hs/mes y blindaje contra desvíos y sobrecostos desde el primer día.</span>
+            </div>
+          </div>
+
+          <div class="callout-box callout-success">
+            <div>
+              <strong style="color: var(--clave-green); display: block; margin-bottom: 2px;">DECISIÓN RECOMENDADA PARA EL DIRECTORIO:</strong>
+              Aprobar el inicio de la <strong>Semana 1</strong> de despliegue para comenzar el piloto asistido de facturación inteligente y módulo comercial con acompañamiento técnico continuo de Clave Consultora.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Control Bar -->
+  <footer class="control-bar">
+    <div class="progress-track">
+      <div id="progressBar"></div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn-nav" id="btnOverview" title="Visión General (Tecla O / M)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Índice (O)</span>
+      </button>
+
+      <button class="btn-nav" id="btnFullscreen" title="Pantalla Completa (Tecla F)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+        <span>Pantalla Completa (F)</span>
+      </button>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn-nav" id="btnPrev" title="Diapositiva Anterior (←)">
+        <span>← Anterior</span>
+      </button>
+      
+      <div id="slideCounter">01 / 18</div>
+
+      <button class="btn-nav primary" id="btnNext" title="Siguiente Diapositiva (→ / Espacio)">
+        <span>Siguiente →</span>
+      </button>
+    </div>
+
+    <div class="hotkey-hints">
+      <span>Navegar: <span class="hotkey-tag">←</span> <span class="hotkey-tag">→</span> <span class="hotkey-tag">Espacio</span></span>
+      <span>Índice: <span class="hotkey-tag">O</span></span>
+      <span>Cerrar: <span class="hotkey-tag">Esc</span></span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL PARA AMPLIAR CAPTURAS EN ALTA RESOLUCIÓN -->
+  <div id="imageLightbox" class="lightbox-overlay" aria-hidden="true">
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <span class="lightbox-tag">VISTA EN ALTA RESOLUCIÓN</span>
+          <h4 id="lightboxTitle" class="lightbox-title">Captura del Sistema ALMAR</h4>
+        </div>
+        <button id="btnCloseLightbox" class="lightbox-close-btn" title="Cerrar (Esc)">✕ Cerrar (Esc)</button>
+      </div>
+      <div class="lightbox-body" id="lightboxBody">
+      </div>
+      <div class="lightbox-footer">
+        <span>💡 Podés hacer clic en la imagen para alternar zoom (1.4×). Presioná <strong>Esc</strong> para volver a la presentación.</span>
+        <span style="font-family: var(--font-heading); font-weight: 700; color: var(--clave-green);">CLAVE CONSULTORA · AUDITORÍA DE SISTEMAS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Drawer de Visión General (18 Diapositivas) -->
+  <div class="overview-modal" id="overviewModal">
+    <div class="overview-container">
+      <div class="overview-header">
+        <h3>ÍNDICE DE LA PRESENTACIÓN: SOLUCIÓN TECNOLÓGICA (18 DIAPOSITIVAS)</h3>
+        <button class="btn-nav" id="btnCloseOverview">✕ Cerrar (Esc)</button>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-card active" data-target="1">
+          <div class="overview-card-header">
+            <span class="overview-card-num">01</span>
+            <span class="overview-card-momento">PORTADA</span>
+          </div>
+          <div class="overview-card-title">Solución Tecnológica de Automatización de Facturación</div>
+        </div>
+
+        <div class="overview-card" data-target="2">
+          <div class="overview-card-header">
+            <span class="overview-card-num">02</span>
+            <span class="overview-card-momento">DIAGNÓSTICO</span>
+          </div>
+          <div class="overview-card-title">Diagnóstico Operativo &amp; Comercial: Facturación y Procesos</div>
+        </div>
+
+        <div class="overview-card" data-target="3">
+          <div class="overview-card-header">
+            <span class="overview-card-num">03</span>
+            <span class="overview-card-momento">SOLUCIÓN</span>
+          </div>
+          <div class="overview-card-title">Portal Centralizado con Preview del Dashboard Operativo</div>
+        </div>
+
+        <div class="overview-card" data-target="4">
+          <div class="overview-card-header">
+            <span class="overview-card-num">04</span>
+            <span class="overview-card-momento">PIPELINE</span>
+          </div>
+          <div class="overview-card-title">Arquitectura del Pipeline y Trazabilidad E2E</div>
+        </div>
+
+        <div class="overview-card" data-target="5">
+          <div class="overview-card-header">
+            <span class="overview-card-num">05</span>
+            <span class="overview-card-momento">COMERCIAL</span>
+          </div>
+          <div class="overview-card-title">Tablero Comercial y Control de Vigencia de Tarifas</div>
+        </div>
+
+        <div class="overview-card" data-target="6">
+          <div class="overview-card-header">
+            <span class="overview-card-num">06</span>
+            <span class="overview-card-momento">COMERCIAL</span>
+          </div>
+          <div class="overview-card-title">Calculadora Paramétrica y Perfiles Dinámicos de Margen</div>
+        </div>
+
+        <div class="overview-card" data-target="7">
+          <div class="overview-card-header">
+            <span class="overview-card-num">07</span>
+            <span class="overview-card-momento">COMERCIAL</span>
+          </div>
+          <div class="overview-card-title">Feedback Cualitativo y Smart Follow-Up a 48 hs</div>
+        </div>
+
+        <div class="overview-card" data-target="8">
+          <div class="overview-card-header">
+            <span class="overview-card-num">08</span>
+            <span class="overview-card-momento">INTERFAZ</span>
+          </div>
+          <div class="overview-card-title">Tablero Kanban Operativo y Visor Side-by-Side</div>
+        </div>
+
+        <div class="overview-card" data-target="9">
+          <div class="overview-card-header">
+            <span class="overview-card-num">09</span>
+            <span class="overview-card-momento">CASO C367</span>
+          </div>
+          <div class="overview-card-title">Caso C367: Normalización Semántica BUFF Naviero</div>
+        </div>
+
+        <div class="overview-card" data-target="10">
+          <div class="overview-card-header">
+            <span class="overview-card-num">10</span>
+            <span class="overview-card-momento">CASO C620</span>
+          </div>
+          <div class="overview-card-title">Caso C620: Módulo Multimoneda BNA Oficial (GBP)</div>
+        </div>
+
+        <div class="overview-card" data-target="11">
+          <div class="overview-card-header">
+            <span class="overview-card-num">11</span>
+            <span class="overview-card-momento">SANCOR</span>
+          </div>
+          <div class="overview-card-title">Caso Sancor Seguros: Provisión Diferida 150 Días</div>
+        </div>
+
+        <div class="overview-card" data-target="12">
+          <div class="overview-card-header">
+            <span class="overview-card-num">12</span>
+            <span class="overview-card-momento">CASO C1234</span>
+          </div>
+          <div class="overview-card-title">Caso C1234: Alerta Preventiva y WebAuthn SHA-256</div>
+        </div>
+
+        <div class="overview-card" data-target="13">
+          <div class="overview-card-header">
+            <span class="overview-card-num">13</span>
+            <span class="overview-card-momento">FINANZAS</span>
+          </div>
+          <div class="overview-card-title">Caso Triangulación Net Trade y Banco Macro</div>
+        </div>
+
+        <div class="overview-card" data-target="14">
+          <div class="overview-card-header">
+            <span class="overview-card-num">14</span>
+            <span class="overview-card-momento">LIVE DEMO</span>
+          </div>
+          <div class="overview-card-title">Demostración en Vivo de la Solución en Funcionamiento</div>
+        </div>
+
+        <div class="overview-card" data-target="15">
+          <div class="overview-card-header">
+            <span class="overview-card-num">15</span>
+            <span class="overview-card-momento">PILOTO</span>
+          </div>
+          <div class="overview-card-title">Piloto Asistido: Chatbot Copilot IA &amp; Triage (#TKT-XXX)</div>
+        </div>
+
+        <div class="overview-card" data-target="16">
+          <div class="overview-card-header">
+            <span class="overview-card-num">16</span>
+            <span class="overview-card-momento">DIRECTORIO</span>
+          </div>
+          <div class="overview-card-title">Matriz de Resolución: Pricing, Finanzas y Gobernanza</div>
+        </div>
+
+        <div class="overview-card" data-target="17">
+          <div class="overview-card-header">
+            <span class="overview-card-num">17</span>
+            <span class="overview-card-momento">ARQUITECTURA</span>
+          </div>
+          <div class="overview-card-title">Arquitectura, Diagrama e Integración Intranet Firebase</div>
+        </div>
+
+        <div class="overview-card" data-target="18">
+          <div class="overview-card-header">
+            <span class="overview-card-num">18</span>
+            <span class="overview-card-momento">ROADMAP</span>
+          </div>
+          <div class="overview-card-title">Hoja de Ruta de 4 Semanas y Decisión Directiva</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     LÓGICA INTERACTIVA DE NAVEGACIÓN Y TECLADO
+     ========================================================================== -->
+<script>
+  (function() {
+    let currentSlide = 1;
+    const totalSlides = 18;
+
+    const slides = document.querySelectorAll('.slide-item');
+    const slideCounter = document.getElementById('slideCounter');
+    const progressBar = document.getElementById('progressBar');
+    const overviewModal = document.getElementById('overviewModal');
+    const overviewCards = document.querySelectorAll('.overview-card');
+
+    function updatePresentation() {
+      // Actualizar Diapositiva Activa
+      slides.forEach(slide => {
+        const slideNum = parseInt(slide.getAttribute('data-slide'), 10);
+        if (slideNum === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      // Actualizar Contador y Barra de Progreso
+      const padNum = String(currentSlide).padStart(2, '0');
+      const padTotal = String(totalSlides).padStart(2, '0');
+      if (slideCounter) {
+        slideCounter.textContent = `${padNum} / ${padTotal}`;
+      }
+
+      if (progressBar) {
+        const pct = (currentSlide / totalSlides) * 100;
+        progressBar.style.width = `${pct}%`;
+      }
+
+      // Actualizar Tarjeta Activa en Overview
+      overviewCards.forEach(card => {
+        const target = parseInt(card.getAttribute('data-target'), 10);
+        if (target === currentSlide) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+    }
+
+    function goToSlide(n) {
+      if (n >= 1 && n <= totalSlides) {
+        currentSlide = n;
+        updatePresentation();
+      }
+    }
+
+    window.goToSlide = goToSlide;
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        goToSlide(currentSlide + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        goToSlide(currentSlide - 1);
+      }
+    }
+
+    function toggleOverview() {
+      if (overviewModal) {
+        overviewModal.classList.toggle('open');
+      }
+    }
+
+    function closeOverview() {
+      if (overviewModal) {
+        overviewModal.classList.remove('open');
+      }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+    }
+
+    // ========================================================================
+    // LIGHTBOX MODAL: ZOOM INTERACTIVO DE CAPTURAS EN ALTA RESOLUCIÓN
+    // ========================================================================
+    const imageLightbox = document.getElementById('imageLightbox');
+    const lightboxBody = document.getElementById('lightboxBody');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const btnCloseLightbox = document.getElementById('btnCloseLightbox');
+
+    function openLightbox(imgSrc, title) {
+      if (!imageLightbox || !lightboxBody) return;
+      let lightboxImg = document.getElementById('lightboxImg');
+      if (!lightboxImg) {
+        lightboxImg = document.createElement('img');
+        lightboxImg.id = 'lightboxImg';
+        lightboxImg.className = 'lightbox-img';
+        lightboxImg.alt = 'Captura ampliada en alta resolución';
+        lightboxImg.addEventListener('click', () => lightboxImg.classList.toggle('zoomed'));
+        lightboxBody.appendChild(lightboxImg);
+      }
+      lightboxImg.src = imgSrc;
+      lightboxImg.classList.remove('zoomed');
+      if (lightboxTitle) {
+        lightboxTitle.textContent = title || 'Captura de Sistema en Alta Resolución';
+      }
+      imageLightbox.classList.add('open');
+      imageLightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+      if (!imageLightbox) return;
+      imageLightbox.classList.remove('open');
+      imageLightbox.setAttribute('aria-hidden', 'true');
+      const lightboxImg = document.getElementById('lightboxImg');
+      if (lightboxImg) {
+        lightboxImg.classList.remove('zoomed');
+      }
+    }
+
+    if (btnCloseLightbox) {
+      btnCloseLightbox.addEventListener('click', closeLightbox);
+    }
+
+    if (imageLightbox) {
+      imageLightbox.addEventListener('click', (e) => {
+        if (e.target === imageLightbox || e.target.classList.contains('lightbox-body')) {
+          closeLightbox();
+        }
+      });
+    }
+
+    // Vincular clics a todos los mockups de navegador para abrir zoom
+    document.querySelectorAll('.browser-mockup').forEach(mockup => {
+      const img = mockup.querySelector('.browser-mockup-img');
+      const urlText = mockup.querySelector('.browser-mockup-url')?.textContent || 'Vista del Sistema';
+      if (img) {
+        if (!mockup.querySelector('.browser-mockup-zoom-badge')) {
+          const badge = document.createElement('div');
+          badge.className = 'browser-mockup-zoom-badge';
+          badge.innerHTML = '<span>🔍</span> <span>Clic para ampliar</span>';
+          mockup.appendChild(badge);
+        }
+
+        mockup.addEventListener('click', () => {
+          openLightbox(img.src, urlText);
+        });
+      }
+    });
+
+    // Botones de Navegación
+    const btnNext = document.getElementById('btnNext');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnOverview = document.getElementById('btnOverview');
+    const btnCloseOverview = document.getElementById('btnCloseOverview');
+    const btnFullscreen = document.getElementById('btnFullscreen');
+
+    if (btnNext) btnNext.addEventListener('click', nextSlide);
+    if (btnPrev) btnPrev.addEventListener('click', prevSlide);
+    if (btnOverview) btnOverview.addEventListener('click', toggleOverview);
+    if (btnCloseOverview) btnCloseOverview.addEventListener('click', closeOverview);
+    if (btnFullscreen) btnFullscreen.addEventListener('click', toggleFullscreen);
+
+    // Clic en Tarjetas de Visión General
+    overviewCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const target = parseInt(card.getAttribute('data-target'), 10);
+        goToSlide(target);
+        closeOverview();
+      });
+    });
+
+    // Control por Teclado
+    window.addEventListener('keydown', (e) => {
+      if (imageLightbox && imageLightbox.classList.contains('open')) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+        return;
+      }
+
+      if (e.key === 'Escape') {
+        closeOverview();
+        return;
+      }
+
+      if (e.key === 'o' || e.key === 'O' || e.key === 'm' || e.key === 'M') {
+        toggleOverview();
+        return;
+      }
+
+      if (overviewModal && overviewModal.classList.contains('open')) {
+        return;
+      }
+
+      switch (e.key) {
+        case 'ArrowRight':
+        case ' ':
+        case 'PageDown':
+          e.preventDefault();
+          nextSlide();
+          break;
+        case 'ArrowLeft':
+        case 'PageUp':
+          e.preventDefault();
+          prevSlide();
+          break;
+        case 'Home':
+          e.preventDefault();
+          goToSlide(1);
+          break;
+        case 'End':
+          e.preventDefault();
+          goToSlide(totalSlides);
+          break;
+        case 'f':
+        case 'F':
+          e.preventDefault();
+          toggleFullscreen();
+          break;
+      }
+    });
+
+    // Escalado Dinámico y Centrado para Proyección (16:9 Adaptativo)
+    function fitCanvas() {
+      const stage = document.querySelector('.stage-area');
+      const canvas = document.getElementById('slideCanvas');
+      if (!stage || !canvas) return;
+
+      const stageWidth = stage.clientWidth - 16;
+      const stageHeight = stage.clientHeight - 12;
+      const baseWidth = 1180;
+      const baseHeight = 660;
+
+      const scale = Math.min(stageWidth / baseWidth, stageHeight / baseHeight);
+      canvas.style.transform = `scale(${scale})`;
+    }
+
+    window.addEventListener('resize', fitCanvas);
+    window.addEventListener('fullscreenchange', fitCanvas);
+    window.fitCanvas = fitCanvas;
+
+    // Inicializar
+    updatePresentation();
+    fitCanvas();
+  })();
+</script>
+</body>
+</html>

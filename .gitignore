@@ -1,0 +1,7 @@
+# Dependencias y temporales
+node_modules/
+.DS_Store
+*.log
+.env*
+credentials*.json
+*service-account*.json
