@@ -518,35 +518,39 @@ A continuación se detalla la hoja de ruta minuto a minuto estructurada en los 4
 
 ---
 
-### DIAPOSITIVA 15: PILOTO ASISTIDO: CHATBOT COPILOT DE IA &amp; TRIAGE OPERATIVO (#TKT-XXX)
-- **Título en Pantalla:** *PILOTO ASISTIDO: CHATBOT COPILOT DE IA & TRIAGE OPERATIVO (#TKT-XXX)*
-- **Subtítulo:** *Asistente conversacional de inteligencia artificial para resolución inmediata de dudas operativas y captura ágil de feedback y mejoras.*
+#### DIAPOSITIVA 15: CIRCUITO DE REPORTE DE INCIDENCIAS &amp; TRIAGE OPERATIVO EN VIVO
+- **Título en Pantalla:** *CIRCUITO DE REPORTE DE INCIDENCIAS & TRIAGE OPERATIVO EN VIVO*
+- **Subtítulo:** *Proceso visual en 4 pasos para captura de errores y casos borde en 10 segundos, con auditoría inmutable (#TKT-XXX) y Copilot IA.*
 - **Momento Estratégico:** Momento 4: Etapa Piloto & Mejora Continua.
-- **Badges:** `CHATBOT COPILOT IA ACTIVO` | `AGILIDAD & FEEDBACK EN VIVO` | `#TKT-8421`.
-- **Mockup:** Mockup visual interactivo en HTML del Chatbot Copilot con historial de chat y ticket de triage (#TKT-8421).
+- **Badges:** `TRIAGE EN VIVO (#TKT-XXX)` | `CHATBOT COPILOT IA ACTIVO` | `CAPTURA DE CASOS BORDE`.
+- **Mockup:** Captura real en alta resolución del formulario de reporte in situ sobre `/carpetas/C1234`, con ticket inmutable `#TKT-8421`, selector de severidad *Bloqueante* y tipificación *Caso Borde*.
 - **Tiempo Asignado:** Minuto 21:00 - 22:15 (01:15 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1. A la izquierda, tarjetas explicando el Chatbot Copilot conversacional (auto-resolución 24/7), el widget de triage inmutable y cómo agilizan el feedback. A la derecha, mockup del Chatbot Copilot respondiendo sobre la carpeta C1234 y generando en vivo el ticket `#TKT-8421` para asentar un desvío de Maersk ("Cleaning Fee USD 45").
+- **Lo que ve la Audiencia:** A la izquierda, el circuito visual de 4 pasos para resolución ágil en menos de 24 horas y la garantía de trazabilidad ISO 9001. A la derecha, la captura real del formulario de reporte desplegado sobre la carpeta C1234, mostrando el ticket `#TKT-8421` asentado con éxito en el log de auditoría.
 - **Qué señalar en la pantalla:**
-  * **Pestaña 'Copilot IA Operativo':** Mostrar que el usuario tiene un asistente de inteligencia artificial conversacional integrado en todas las pantallas.
-  * **Diálogo en pantalla:** Apuntar a la pregunta sobre C1234 y cómo el Copilot explica que el margen es de USD 142.50 y recomienda WebAuthn o la calculadora.
-  * **Auto-generación del Ticket #TKT-8421:** Señalar cómo el Copilot genera automáticamente el ticket `#TKT-8421`, deriva el gasto a Desvíos en el Kanban y notifica a soporte técnico.
-  * **Chips de sugerencia rápida inferiores:** Mostrar los atajos para consultas frecuentes (*"¿Por qué se bloqueó C1234?"*, *"Provisión Sancor 150d"*).
-- **Lo que Fran enfatiza:** El personal no está solo: tiene un chatbot que responde en segundos según las normas de ALMAR, y cualquier caso atípico se convierte en una mejora técnica el mismo día sin burocracia ni reuniones eternas.
+  * **El botón flotante (Paso 1):** Señalar la píldora flotante inferior derecha (*"Reportar Ajuste · Triage en Vivo ALMAR"*), accesible las 24 hs desde cualquier pantalla del sistema sin interrumpir la operación.
+  * **Auto-captura de contexto (Paso 2):** Apuntar a la barra de contexto superior del widget: el sistema ya detectó automáticamente que la operadora está en `/carpetas/C1234`, con rol *FINANZAS*, sin obligarla a escribir datos que el software ya conoce.
+  * **Tipificación en 10 segundos (Paso 3):** Mostrar la cuadrícula 2x2 (*Caso Borde*, *Corregir Dato*, *Duda Operativa*, *Sugerencia*) y el semáforo de urgencia donde seleccionó *Bloqueante* ante el gasto imprevisto de Maersk (*Cleaning Fee USD 45*).
+  * **Ticket Inmutable y Calibración (Paso 4):** Resaltar el cartel verde superior con el código `#TKT-8421 AUDIT_LOG OK`, explicando que esto notifica en el acto a ingeniería y deriva la carpeta a la columna *Desvíos* del Kanban para calibrar la regla en < 24 hs.
+  * **Solapa Copilot IA:** Aclarar que si no es un bug ni un desvío sino una simple duda conceptual (*"¿Por qué se bloqueó C1234?"* o *"¿Cómo aplico la provisión de Sancor a 150 días?"*), el personal cambia de pestaña y el Copilot le responde de inmediato en lenguaje natural.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Hay una herramienta clave que desarrollamos específicamente para garantizar que la adopción sea fluida e inmediata:*
+> *"Hay un elemento clave que diseñamos para garantizar que la transición durante el piloto sea impecable y que ningún caso quede en el aire:*
 > 
-> *En todo proyecto tecnológico, en las primeras semanas aparecen dudas operativas, facturas con formatos raros o conceptos portuarios nuevos. Lo típico en las empresas es que el usuario se trabe, mande un mail que nadie responde y el sistema quede en desuso.*
+> *En los primeros días de cualquier sistema nuevo, lo normal es que aparezcan comprobantes atípicos, gastos portuarios no presupuestados o dudas de los operadores. Si el proceso de soporte es burocrático —mandar un email, esperar una reunión o llamar por teléfono—, el usuario se frustra y el sistema pierde tracción.*
 > 
-> *Para evitar eso, integramos en la misma aplicación el* **Chatbot Copilot de Operaciones & Triage de Feedback** [señalando el mockup de la derecha]:
+> *Por eso incorporamos este* **Circuito de Reporte de Incidencias & Triage Operativo in situ** [señalando la captura de la derecha]:
 > 
-> *Primero, funciona como un* **Asistente Conversacional con IA 24/7**. *Cualquier operador o directivo le pregunta en lenguaje natural: '¿Por qué la carpeta C1234 tiene alerta preventiva?', y el Copilot le responde al instante: 'Tiene margen de USD 142.50 (< USD 200). Podés autorizarla con WebAuthn o ajustar la tarifa spot desde la Calculadora'.*
+> *El operador está trabajando en la carpeta C1234 y detecta un gasto no cotizado de Maersk, como este 'Cleaning Fee' de 45 dólares que redujo el margen. No tiene que abrir un correo ni redactar un formulario largo: simplemente toca el botón flotante que está disponible 24/7 en la esquina inferior.*
 > 
-> *Segundo,* **Agiliza el feedback y las mejoras en tiempo real**. *Si el usuario le escribe: 'Maersk sumó un cargo Cleaning Fee por USD 45 no presupuestado', el Copilot genera en el acto el ticket inmutable* **#TKT-8421**, *deriva el sobrecosto a la columna de Desvíos del Kanban y nos envía la traza para que calibremos el algoritmo en pocas horas.*
+> *El sistema* **auto-captura todo el contexto en tiempo real**: *sabe que está en la carpeta C1234, qué usuario está operando y qué rol tiene. El operador solo hace dos clics: elige el tipo —en este caso 'Caso Borde'—, la severidad —'Bloqueante'— y escribe una línea.*
 > 
-> *Cero fricción, cero burocracia y evolución continua a la velocidad del rayo.*
+> *Al presionar Enviar, el sistema estampa de inmediato un ticket inmutable* **#TKT-8421** *en el log de auditoría, deriva el caso a la columna de Desvíos del Kanban para no frenar la facturación general, y nos llega la alerta a nosotros para calibrar la regla de extracción en menos de 24 horas.*
 > 
-> *Veamos ahora cómo sintetizamos las inquietudes de cada uno de ustedes en una matriz directiva."*
+> *Y si el personal no tiene un error sino simplemente una duda operativa, hace clic en la pestaña* **Copilot IA** *y un asistente inteligente le responde al instante según los criterios y directivas de ALMAR.*
+> 
+> *Bajo norma ISO 9001, cada incidente queda medido, registrado y versionado. Cero fricción, cero mails perdidos y mejora continua en tiempo real.*
+> 
+> *Veamos ahora cómo sintetizamos todas las decisiones operativas, financieras y comerciales en la matriz de resolución."*
 
 ---
 

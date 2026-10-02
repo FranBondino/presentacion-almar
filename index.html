@@ -2515,60 +2515,91 @@
       </section>
 
       <!-- ====================================================================
-           SLIDE 15: GESTIÓN DEL PILOTO: WIDGET FLOTANTE DE TRIAGE OPERATIVO
+           SLIDE 15: CIRCUITO DE REPORTE DE INCIDENCIAS & TRIAGE OPERATIVO
            ==================================================================== -->
       <section class="slide-item" data-slide="15">
         <div class="slide-header">
           <div class="slide-pretitle-row">
             <span class="slide-momento-badge">MOMENTO 4: ETAPA PILOTO &amp; MEJORA CONTINUA</span>
             <div class="slide-header-badges">
+              <span class="badge badge-gold">TRIAGE EN VIVO (#TKT-XXX)</span>
               <span class="badge badge-green">CHATBOT COPILOT IA ACTIVO</span>
-              <span class="slide-id-tag">AGILIDAD &amp; FEEDBACK EN VIVO</span>
+              <span class="slide-id-tag">CAPTURA DE CASOS BORDE</span>
             </div>
           </div>
-          <h2 class="slide-title">PILOTO ASISTIDO: CHATBOT COPILOT DE IA &amp; TRIAGE OPERATIVO (#TKT-XXX)</h2>
-          <p class="slide-subtitle">Asistente conversacional de inteligencia artificial para resolución inmediata de dudas operativas y captura ágil de feedback y mejoras.</p>
+          <h2 class="slide-title">CIRCUITO DE REPORTE DE INCIDENCIAS &amp; TRIAGE OPERATIVO EN VIVO</h2>
+          <p class="slide-subtitle">Proceso visual en 4 pasos para captura de errores y casos borde en 10 segundos, con auditoría inmutable (#TKT-XXX) y Copilot IA.</p>
         </div>
 
         <div class="slide-body">
           <div class="grid-2" style="height: 100%;">
-            <!-- Columna Izquierda: Fundamento del Chatbot y Triage -->
-            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
-              <div class="kpi-card" style="border-top: 3px solid var(--clave-green);">
+            <!-- Columna Izquierda: El Proceso Visual en 4 Pasos -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 7px;">
+              <!-- Tarjeta 1: Circuito en 4 Pasos -->
+              <div class="kpi-card" style="border-top: 3px solid var(--clave-green); padding: 8px 10px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                  <span class="kpi-title">CIRCUITO OPERATIVO DE REPORTE (4 PASOS)</span>
+                  <span class="badge badge-green">RESOLUCIÓN &lt; 24 HS</span>
+                </div>
+                
+                <!-- Paso 1 -->
+                <div style="display: flex; align-items: flex-start; gap: 8px; padding: 4px 6px; background: #f8fafc; border: 1px solid var(--clave-border-light); border-radius: 6px;">
+                  <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--clave-green); color: #fff; font-family: var(--font-heading); font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+                  <div style="font-size: 8.5px; line-height: 1.25;">
+                    <strong style="color: var(--clave-navy); font-size: 9.5px; display: block;">Detección In Situ &amp; Clic 24/7</strong>
+                    Desde cualquier pantalla, el operador detecta un cargo imprevisto o error y presiona el botón flotante <code>Reportar Ajuste</code>.
+                  </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div style="display: flex; align-items: flex-start; gap: 8px; padding: 4px 6px; background: #f8fafc; border: 1px solid var(--clave-border-light); border-radius: 6px;">
+                  <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--clave-gold); color: #fff; font-family: var(--font-heading); font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+                  <div style="font-size: 8.5px; line-height: 1.25;">
+                    <strong style="color: var(--clave-navy); font-size: 9.5px; display: block;">Auto-Captura de Contexto (Cero Carga Manual)</strong>
+                    El sistema precarga automáticamente la URL actual (<code>/carpetas/C1234</code>), usuario activo, rol funcional y carpeta operativa.
+                  </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div style="display: flex; align-items: flex-start; gap: 8px; padding: 4px 6px; background: #f8fafc; border: 1px solid var(--clave-border-light); border-radius: 6px;">
+                  <div style="width: 20px; height: 20px; border-radius: 50%; background: #d97706; color: #fff; font-family: var(--font-heading); font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+                  <div style="font-size: 8.5px; line-height: 1.25;">
+                    <strong style="color: var(--clave-navy); font-size: 9.5px; display: block;">Tipificación en 10 Segundos</strong>
+                    Selecciona Tipo (<em>Caso Borde</em>, <em>Corregir Dato</em>) y Severidad (<em>Bloqueante</em>, <em>Alta</em>), redactando la observación.
+                  </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div style="display: flex; align-items: flex-start; gap: 8px; padding: 4px 6px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px;">
+                  <div style="width: 20px; height: 20px; border-radius: 50%; background: #166534; color: #fff; font-family: var(--font-heading); font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+                  <div style="font-size: 8.5px; line-height: 1.25;">
+                    <strong style="color: #166534; font-size: 9.5px; display: block;">Ticket Inmutable (#TKT-8421) &amp; Calibración</strong>
+                    Estampa en <code>audit_log</code>, deriva a Desvíos y alerta a soporte para calibrar la regla de extracción en &lt; 24 hs.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 2: Copilot IA Alternativo -->
+              <div class="kpi-card gold-top" style="padding: 7px 10px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                  <span class="kpi-title">CHATBOT COPILOT CONVERSACIONAL DE PROCESOS</span>
-                  <span class="badge badge-green">DISPONIBLE 24/7 EN CADA PANTALLA</span>
+                  <span class="kpi-title">ASISTENCIA INMEDIATA SIN GENERAR TICKET</span>
+                  <span class="badge badge-gold">COPILOT IA 24/7</span>
                 </div>
-                <div style="font-family: var(--font-heading); font-size: 14.5px; font-weight: 800; color: var(--clave-green); margin: 2px 0;">
-                  Asistencia Inteligente &amp; Feedback Inmediato
-                </div>
-                <p class="kpi-desc">
-                  Agente interactivo con IA embebido en el portal. Responde en lenguaje natural sobre causales de bloqueo, cálculo de márgenes, provisión de Sancor Seguros, tipo de cambio oficial BNA para GBP y desvíos navieros. Permite al personal consultar y registrar sugerencias de mejora sin burocracia.
+                <p class="kpi-desc" style="font-size: 8.5px; line-height: 1.3;">
+                  Si el personal solo tiene una duda operativa (ej. <em>"¿Por qué se bloqueó C1234?"</em> o <em>"¿Cómo se aplica la provisión de Sancor a 150 días?"</em>), cambia a la pestaña <strong>Copilot IA</strong> y recibe respuesta técnica en lenguaje natural al instante.
                 </p>
               </div>
 
-              <div class="kpi-card gold-top">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                  <span class="kpi-title">WIDGET FLOTANTE NO INVASIVO (#TKT-XXX)</span>
-                  <span class="badge badge-gold">REPORTE EN 5 SEGUNDOS</span>
-                </div>
-                <div style="font-family: var(--font-mono); font-size: 15px; font-weight: 800; color: var(--clave-gold-dark); margin: 2px 0;">
-                  Diagnóstico Automático de Casos Borde
-                </div>
-                <p class="kpi-desc">
-                  Captura con 1 solo clic la pantalla actual, usuario activo, carpeta operativa y datos del comprobante, estampando un identificador inmutable <strong>#TKT-XXX</strong> en el <code>audit_log</code> para que soporte calibre reglas en horas.
-                </p>
-              </div>
-
-              <div class="callout-box callout-success">
-                <div>
-                  <strong style="display: block; margin-bottom: 2px; color: var(--clave-green);">CÓMO AGILIZA EL FEEDBACK Y LA EVOLUCIÓN DEL SISTEMA:</strong>
-                  El personal no depende de reuniones semanales ni correos cruzados: dialoga con el Copilot para resolver excepciones en el acto o genera un ticket para calibrar el algoritmo ese mismo día.
+              <!-- Callout de Blindaje -->
+              <div class="callout-box callout-success" style="padding: 6px 10px;">
+                <div style="font-size: 8.5px; line-height: 1.3;">
+                  <strong style="display: block; margin-bottom: 2px; color: var(--clave-green);">GARANTÍA PARA EL DIRECTORIO:</strong>
+                  Durante el piloto, ningún desvío queda sin resolver ni se pierde en cadenas de emails: cada caso queda tipificado, medido y resuelto con versión de software trazable bajo estándar ISO 9001.
                 </div>
               </div>
             </div>
 
-            <!-- Columna Derecha: Mockup Visual del Chatbot Copilot & FeedbackWidget -->
+            <!-- Columna Derecha: Mockup Visual con Captura Real del Widget -->
             <div class="browser-mockup" style="background: #ffffff; height: 100%; display: flex; flex-direction: column;">
               <div class="browser-mockup-header">
                 <div class="browser-mockup-dots">
@@ -2576,77 +2607,11 @@
                   <span class="browser-mockup-dot yellow"></span>
                   <span class="browser-mockup-dot green"></span>
                 </div>
-                <div class="browser-mockup-url">FeedbackWidget · Copilot IA &amp; Triage de Mejoras</div>
-                <span class="browser-mockup-badge" style="background: var(--clave-green);">● EN LÍNEA</span>
+                <div class="browser-mockup-url">/carpetas/C1234 · Formulario de Reporte de Incidencias &amp; Triage</div>
+                <span class="browser-mockup-badge" style="background: var(--success-green);">● #TKT-8421 AUDIT_LOG</span>
               </div>
-              
-              <!-- Tab Selector Visual del Widget -->
-              <div style="display: flex; border-bottom: 1px solid #e2e8f0; background: #f8fafc; font-size: 10.5px; font-weight: 700;">
-                <div style="flex: 1; padding: 6px 10px; text-align: center; background: #ffffff; color: var(--clave-green); border-bottom: 2px solid var(--clave-green); display: flex; align-items: center; justify-content: center; gap: 5px;">
-                  <span>✨</span> Copilot IA Operativo
-                </div>
-                <div style="flex: 1; padding: 6px 10px; text-align: center; color: var(--clave-muted); display: flex; align-items: center; justify-content: center; gap: 5px; border-left: 1px solid #e2e8f0;">
-                  <span>⚠️</span> Reportar Caso / Ajuste (#TKT)
-                </div>
-              </div>
-
-              <!-- Ventana de Chat Interactiva -->
-              <div style="padding: 9px 11px; display: flex; flex-direction: column; gap: 6px; font-size: 10px; flex: 1; justify-content: space-between; background: #fcfcfd;">
-                <!-- Historial de Conversación -->
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                  <!-- Mensaje Copilot 1 -->
-                  <div style="align-self: flex-start; max-width: 92%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px 8px 8px 2px; padding: 5px 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
-                    <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 1px;">
-                      <strong style="color: var(--clave-green); font-size: 9px;">COPILOT IA ALMAR</strong>
-                      <span style="color: var(--clave-muted); font-size: 8px;">14:32</span>
-                    </div>
-                    <span style="color: var(--clave-text); line-height: 1.25;">¡Hola! Asistente activo para consultas de carpetas, márgenes, provisión de seguros diferidos o desvíos navieros.</span>
-                  </div>
-
-                  <!-- Mensaje Usuario 1 -->
-                  <div style="align-self: flex-end; max-width: 88%; background: var(--clave-navy); color: #ffffff; border-radius: 8px 8px 2px 8px; padding: 5px 8px;">
-                    <div style="display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 1px;">
-                      <span style="font-size: 8px; opacity: 0.85;">Operador Facturación · 14:33</span>
-                    </div>
-                    <span style="line-height: 1.25;">¿Por qué la carpeta C1234 tiene alerta preventiva y cómo la autorizamos?</span>
-                  </div>
-
-                  <!-- Mensaje Copilot 2 -->
-                  <div style="align-self: flex-start; max-width: 92%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px 8px 8px 2px; padding: 5px 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
-                    <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 1px;">
-                      <strong style="color: var(--clave-green); font-size: 9px;">COPILOT IA ALMAR</strong>
-                      <span class="badge badge-gold" style="font-size: 7px; padding: 0 3px;">MARGEN &lt; USD 200</span>
-                    </div>
-                    <span style="color: var(--clave-text); line-height: 1.25;">Margen de USD 142.50. Podés autorizarla con <strong>Firma Biométrica WebAuthn</strong> gerencial o ajustar el markup spot en la Calculadora Comercial.</span>
-                  </div>
-
-                  <!-- Mensaje Usuario 2 -->
-                  <div style="align-self: flex-end; max-width: 88%; background: var(--clave-navy); color: #ffffff; border-radius: 8px 8px 2px 8px; padding: 5px 8px;">
-                    <span style="line-height: 1.25;">Maersk facturó "Cleaning Fee" USD 45 no presupuestado. ¿Cómo lo asiento?</span>
-                  </div>
-
-                  <!-- Mensaje Copilot 3 (Ticket generado) -->
-                  <div style="align-self: flex-start; max-width: 95%; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px 8px 8px 2px; padding: 5px 8px;">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1px;">
-                      <strong style="color: #166534; font-size: 9px;">✓ REPORTE ASENTADO EN AUDIT_LOG</strong>
-                      <span class="badge badge-green" style="font-size: 7px; padding: 0 3px;">#TKT-8421</span>
-                    </div>
-                    <span style="color: #14532d; line-height: 1.25;">Sobrecosto derivado a la columna <strong>Desvíos</strong> del Kanban. Soporte técnico calibró la regla de extracción para futuros comprobantes.</span>
-                  </div>
-                </div>
-
-                <!-- Chips Rápidos & Barra de Entrada -->
-                <div style="border-top: 1px solid #e2e8f0; padding-top: 5px;">
-                  <div style="display: flex; gap: 4px; margin-bottom: 4px; overflow-x: hidden;">
-                    <span style="background: #f1f5f9; color: #475569; font-size: 8px; padding: 2px 5px; border-radius: 8px; border: 1px solid #cbd5e1;">¿Por qué se bloqueó C1234?</span>
-                    <span style="background: #f1f5f9; color: #475569; font-size: 8px; padding: 2px 5px; border-radius: 8px; border: 1px solid #cbd5e1;">Provisión Sancor 150d</span>
-                    <span style="background: #f1f5f9; color: #475569; font-size: 8px; padding: 2px 5px; border-radius: 8px; border: 1px solid #cbd5e1;">Derivar Desvío</span>
-                  </div>
-                  <div style="display: flex; gap: 5px; align-items: center;">
-                    <input type="text" value="Consultar al Copilot o reportar ajuste..." readonly style="flex: 1; font-size: 9px; padding: 4px 7px; border: 1px solid #cbd5e1; border-radius: 4px; background: #ffffff; color: #64748b;" />
-                    <button style="background: var(--clave-green); color: #ffffff; font-size: 9px; font-weight: 700; border: none; padding: 4px 9px; border-radius: 4px; cursor: pointer;">ENVIAR</button>
-                  </div>
-                </div>
+              <div class="browser-mockup-body" style="height: 295px; background: #0f172a;">
+                <img src="screenshots/triage_reporte_incidencia_light.png" alt="Formulario de Reporte de Incidencias y Triage en Vivo" class="browser-mockup-img" style="object-fit: contain; object-position: center center;" />
               </div>
             </div>
           </div>
@@ -3240,7 +3205,7 @@
             <span class="overview-card-num">15</span>
             <span class="overview-card-momento">PILOTO</span>
           </div>
-          <div class="overview-card-title">Piloto Asistido: Chatbot Copilot IA &amp; Triage (#TKT-XXX)</div>
+          <div class="overview-card-title">Circuito de Reporte de Incidencias &amp; Triage (#TKT)</div>
         </div>
 
         <div class="overview-card" data-target="16">
