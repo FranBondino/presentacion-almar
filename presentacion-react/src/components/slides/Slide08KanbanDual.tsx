@@ -123,7 +123,7 @@ export const Slide08KanbanDual: React.FC<SlideProps> = ({ onOpenLightbox }) => {
               transition={{ duration: 0.2 }}
               className="h-full flex flex-col justify-between gap-2.5"
             >
-              <div className="flex-1 grid grid-cols-2 gap-3.5 overflow-hidden">
+              <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-2 gap-3.5 overflow-hidden">
                 {/* Left: Kanban Board Mockup with High-Legibility Data */}
                 <div className="h-full flex flex-col">
                   <BrowserMockup

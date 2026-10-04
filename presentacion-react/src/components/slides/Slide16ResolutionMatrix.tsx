@@ -15,7 +15,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
         subtitle="Respuestas sistémicas y estructuradas a los principales desafíos de pricing comercial, control financiero y soberanía tecnológica."
       />
 
-      <div className="flex-1 grid grid-cols-3 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-3 gap-3.5 overflow-hidden">
         {/* Column 1: Alejandro Noacco */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}

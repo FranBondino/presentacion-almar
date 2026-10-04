@@ -16,7 +16,7 @@ export const Slide09CaseBUFF: React.FC<SlideProps> = ({ onOpenLightbox }) => {
         subtitle="Unificación de 15 variantes de Bunker bajo el código canónico BUFF y auditoría contra cotización FCA Guangzhou."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2">
           {/* Visual Comparison Box for 100% Legibility */}

@@ -16,7 +16,7 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
         subtitle="Plataforma integral para recepción, extracción asistida, validación de reglas de negocio y control de gestión."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column: 3 Strategic Pillars (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2.5">
           <motion.div

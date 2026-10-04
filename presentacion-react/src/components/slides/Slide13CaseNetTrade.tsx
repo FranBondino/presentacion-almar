@@ -16,7 +16,7 @@ export const Slide13CaseNetTrade: React.FC<SlideProps> = ({ onOpenLightbox }) =>
         subtitle="Trazabilidad de prefacturas Net Trade LLC y validación en extracto de Banco Macro antes del recibo definitivo."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2">
           {/* Visible Data Card for Immediate Legibility */}

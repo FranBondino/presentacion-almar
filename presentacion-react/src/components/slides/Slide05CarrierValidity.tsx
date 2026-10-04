@@ -16,7 +16,7 @@ export const Slide05CarrierValidity: React.FC<SlideProps> = ({ onOpenLightbox })
         subtitle="Semáforo de vigencias (15/30 días) para impedir cotizaciones desactualizadas que generen quebranto económico."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column: Rules & Protection (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2">
           {/* Visible Data Summary Card */}

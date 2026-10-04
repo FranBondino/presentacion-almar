@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { SlideProps } from '../../types/presentation';
 import { SlideHeader } from '../common/SlideHeader';
 import { BrowserMockup } from '../common/BrowserMockup';
@@ -15,7 +15,7 @@ export const Slide15TriageCopilot: React.FC<SlideProps> = ({ onOpenLightbox }) =
         subtitle="Proceso visual en 4 pasos para captura de errores y casos borde en 10 segundos, con auditoría inmutable (#TKT-XXX) y Copilot IA."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2">
           {/* 4 Steps */}

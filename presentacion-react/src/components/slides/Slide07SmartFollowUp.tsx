@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { SlideProps } from '../../types/presentation';
 import { SlideHeader } from '../common/SlideHeader';
@@ -16,7 +16,7 @@ export const Slide07SmartFollowUp: React.FC<SlideProps> = ({ onOpenLightbox }) =
         subtitle="Estandarización del seguimiento comercial y captura sistemática de pérdidas para renegociar contratos de volumen."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2.5">
           <motion.div

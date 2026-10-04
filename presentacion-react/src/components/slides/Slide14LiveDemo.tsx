@@ -16,7 +16,7 @@ export const Slide14LiveDemo: React.FC<SlideProps> = ({ onOpenLightbox }) => {
         subtitle="Transición al navegador (http://localhost:3000): prueba integral del circuito de facturación, comercial y métricas de productividad."
       />
 
-      <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
+      <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
         {/* Left Column (5 cols) */}
         <div className="col-span-5 flex flex-col justify-between gap-2">
           <div className="grid grid-cols-2 gap-2">
