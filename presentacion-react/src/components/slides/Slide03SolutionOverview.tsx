@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { SlideProps } from '../../types/presentation';
 import { SlideHeader } from '../common/SlideHeader';
@@ -13,7 +13,7 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
         categoryBadge="PORTAL DE FACTURACIÓN INTELIGENTE"
         slideNumber="03"
         title="PORTAL CENTRALIZADO DE FACTURACIÓN ASISTIDO POR IA"
-        subtitle="Plataforma integral para recepción, extracción asistida, validación de reglas de negocio y control contable."
+        subtitle="Plataforma integral para recepción, extracción asistida, validación de reglas de negocio y control de gestión."
       />
 
       <div className="flex-1 grid grid-cols-12 gap-3.5 overflow-hidden">
@@ -42,7 +42,7 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
           >
             <div className="flex items-center space-x-2 text-clave-gold-dark font-heading font-bold text-xs uppercase mb-1">
               <ShieldCheck className="w-4 h-4" />
-              <span>2. Escudo Financiero en Tiempo Real</span>
+              <span>2. Escudo Financiero y Rentabilidad</span>
             </div>
             <p className="text-[11.5px] text-slate-700 leading-snug">
               Auditoría automática contra lo presupuestado en Kipintoch: bloqueo de sobrecostos, semáforo preventivo (&lt; USD 200) y alerta estricta (&lt; USD 3.00).
@@ -57,26 +57,34 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
           >
             <div className="flex items-center space-x-2 text-clave-navy font-heading font-bold text-xs uppercase mb-1">
               <Copy className="w-4 h-4" />
-              <span>3. Copiado Asistido en 1-Clic</span>
+              <span>3. Copiado Asistido y Productividad</span>
             </div>
             <p className="text-[11.5px] text-slate-700 leading-snug">
-              Formateo directo en 5 campos canónicos para pegar en Kipintoch en 15 segundos. Ahorro de <strong>$6.000.000 ARS/año</strong> al evitar conectores cerrados.
+              Carga en Kipintoch en 15 segundos sin tipeo manual. Scorecard de rendimiento por operador y ahorro de <strong>$6.000.000 ARS/año</strong> al evitar conectores cerrados.
             </p>
           </motion.div>
 
-          <div className="p-2.5 rounded bg-clave-gold-light border border-clave-gold/40 text-[11px] text-clave-text">
-            💡 <strong>Soberanía Tecnológica:</strong> Alojado en Vercel Edge con OpenAI ZDR (Zero Data Retention) y base de datos relacional sa-east-1.
+          <div className="p-2.5 rounded bg-clave-gold-light border border-clave-gold/40 text-[11px] text-clave-text flex items-center justify-between">
+            <span>💡 <strong>Soberanía Tecnológica:</strong> Alojado en nube privada con retención cero</span>
+            <span className="font-mono font-bold text-clave-navy">100% SEGURO</span>
           </div>
         </div>
 
-        {/* Right Column: Live Corporate Browser Mockup (7 cols) */}
+        {/* Right Column: Live Corporate Browser Mockup (7 cols) with KeyData and Focal Zoom */}
         <div className="col-span-7 h-full">
           <BrowserMockup
-            url="http://localhost:3000/ · Dashboard Operativo ALMAR [SISTEMA EN VIVO]"
+            url="http://localhost:3000/ · Dashboard Operativo ALMAR"
             badge="● EN VIVO"
             imageSrc="./screenshots/dashboard_corporate_light.png"
             imageAlt="Dashboard Central de Facturación ALMAR"
-            caption="Vista del Tablero General con Métricas de Rentabilidad y KPIs Operativos"
+            caption="Vista del Tablero General con Métricas de Rentabilidad y KPIs de Productividad"
+            keyData={[
+              { label: 'Tiempo Carga', value: '15 seg', color: 'green', highlight: true },
+              { label: 'Ahorro ERP', value: '$6.000.000 ARS', color: 'gold' },
+              { label: 'Sobrecostos', value: 'USD 14.890 frenados', color: 'amber' },
+              { label: 'Control', value: 'Scorecard por Operador', color: 'navy' },
+            ]}
+            focalOrigin="center 20%"
             onOpenLightbox={onOpenLightbox}
           />
         </div>
@@ -84,4 +92,3 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
     </div>
   );
 };
-
