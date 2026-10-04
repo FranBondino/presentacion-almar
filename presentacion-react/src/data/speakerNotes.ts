@@ -279,11 +279,11 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Disparar visualmente la alerta de < USD 200 y mostrar el modal WebAuthn',
     ],
     verbatimSpeech:
-      'Alejandro, esta es la respuesta directa a tu preocupación sobre la flexibilidad comercial. Vos nos dijiste con total razón: "Si me ponen un markup rígido del 15% para todos los clientes por igual, quedamos fuera de mercado en los negocios spot donde el margen es finito pero nos sirve el volumen". Tenías absoluta razón. Por eso eliminamos cualquier porcentaje fijo y creamos la Calculadora Paramétrica con Perfiles Dinámicos de Margen: Fíjense en el mockup: el comercial puede elegir Cuenta Estratégica para grandes cuentas corporativas, Estándar para rentabilidad equilibrada, Spot Alto Riesgo para cargas con riesgo de almacenaje, o Personalizado. ¿Y cómo cuidamos a la empresa? Con dos compuertas inteligentes: Si el margen proyectado baja de 200 dólares, el sistema enciende una alerta amarilla preventiva para que el comercial sepa que los gastos locales en pesos pueden comerle el margen si el dólar se mueve. Y únicamente si la operación arroja un margen menor a 3 dólares —es decir, pérdida neta asegurada—, el botón se bloquea. Podés cotizar en 45 segundos con total libertad, sabiendo que el sistema cuida la espalda de ALMAR. Y veamos cómo resolvemos el seguimiento de esas cotizaciones.',
+      'Alejandro, esta es la respuesta directa a tu preocupación sobre la flexibilidad comercial y al feedback clave que nos transmitió Gisel Cabana Diaz. Gisel nos remarcaba con total criterio: "No siempre el costo naviero es el mismo y cada cliente tiene un criterio de rentabilidad diferente". Tenían absoluta razón: imponer un markup rígido del 15% dejaría a ALMAR fuera de mercado en negocios spot donde el margen es fino pero sirve el volumen. Por eso creamos la Calculadora Paramétrica con Perfiles Dinámicos de Margen: Fíjense en la pantalla: el comercial puede elegir Cuenta Estratégica para grandes cuentas corporativas, Estándar para rentabilidad equilibrada, Spot Alto Riesgo para cargas con riesgo de almacenaje, o Personalizado. ¿Y cómo cuidamos a la empresa? Con dos compuertas inteligentes: Si el margen proyectado baja de 200 dólares, el sistema enciende una alerta amarilla preventiva para advertir que las variaciones del dólar o gastos locales pueden comer la ganancia. Y únicamente si la operación arroja un margen menor a 3 dólares —pérdida neta segura—, el botón se bloquea. Podés cotizar en 45 segundos con total libertad, sabiendo que el sistema cuida la espalda de ALMAR. Y veamos cómo resolvemos el seguimiento de esas cotizaciones.',
     technicalSheet: {
       expediente: 'CALCULADORA_PARAMETRICA_MARGEN',
       operacion: 'Cotizador Ágil en Tiempo Real & Protección de Rentabilidad',
-      normativa: 'Directiva Comercial Alejandro Noacco & Finanzas Vanesa Meggiolaro',
+      normativa: 'Directiva Comercial Alejandro Noacco & Gisel Cabana Diaz (Pricing)',
       metrics: [
         { label: 'Tiempo de Cotización', value: '45 seg', detail: 'Frente a 15 min en planillas', status: 'success' },
         { label: 'Alerta Preventiva', value: '< USD 200', detail: 'Amarillo por riesgo descalce', status: 'warning' },
@@ -291,6 +291,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Perfiles Activos', value: '4 perfiles', detail: 'Estratégico, Estándar, Spot, Custom', status: 'info' },
       ],
       details: [
+        { label: 'Alineación Pricing Gisel', value: 'Costos paramétricos dinámicos y márgenes adaptados a cada cliente' },
         { label: 'Perfil Cuenta Estratégica', value: 'Margen preferencial para clientes corporativos de alto volumen' },
         { label: 'Perfil Estándar', value: 'Equilibrio operativo y financiero habitual' },
         { label: 'Perfil Spot Alto Riesgo', value: 'Protección contra demoras y estadías de contenedor' },
@@ -319,20 +320,21 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     slideId: 7,
     title: 'Registro de Feedback Cualitativo & Smart Follow-Up a 48 hs',
     timeAllocation: '08:15 - 09:45 (01:30 min)',
-    keyStakeholders: ['Alejandro Noacco', 'Lucía Laje'],
+    keyStakeholders: ['Alejandro Noacco', 'Lucía Laje', 'Gisel Cabana Diaz'],
     whatAudienceSees:
       'Modal de Smart Follow-Up con cotizaciones > 48hs sin respuesta, botón para generar correo formal en 1 clic y campo de feedback cualitativo.',
     demoCues: [
       'Mencionar el dato de Lucía Laje (54,1% del volumen de cotizaciones)',
       'Mostrar el botón para copiar plantilla de seguimiento directamente a Gmail',
+      'Citar a Gisel: estandarización formal del proceso de seguimiento comercial',
       'Enfatizar cómo el feedback cualitativo le da poder de negociación a Alejandro con las navieras',
     ],
     verbatimSpeech:
-      'Miremos ahora cómo resolvemos el día a día de Lucía Laje y la inteligencia de mercado de ALMAR: Hoy Lucía emite más de 500 cotizaciones por mes (54,1% del total). Si el cliente no responde en 48 horas, hacer el seguimiento manual insume redactar decenas de correos uno por uno. En la práctica, muchas cotizaciones se enfrían y se pierden por falta de tiempo. Con el Smart Follow-Up: el sistema filtra automáticamente todas las cotizaciones con más de 48 horas de silencio. Lucía entra a esta pantalla, presiona este botón azul, y el portal redacta un correo formal impecable, personalizado con el nombre del cliente, el puerto y la tarifa. Lucía hace 20 seguimientos en 10 minutos desde Gmail sin escribir una sola palabra. Y lo más valioso para vos, Alejandro: el Registro de Feedback Comercial. Si el cliente nos dice "No cierro con ALMAR porque otro forwarder me pasó 150 dólares menos", Lucía lo registra en este campo. A fin de mes abrís el reporte y ves: "En la ruta Shanghai-Buenos Aires perdimos 12 operaciones por 150 dólares frente a tal competidor". Con esa métrica te sentás con el line manager de Maersk o MSC a exigir mejores tarifas de volumen. Pasemos ahora al Escudo Financiero y a los casos reales auditados.',
+      'Miremos ahora cómo resolvemos el día a día de Lucía Laje y la inteligencia de mercado de ALMAR: Hoy Lucía emite más de 500 cotizaciones por mes (54,1% del total). Como bien nos decía Gisel Cabana Diaz: el seguimiento hoy se hace pero es urgente estandarizarlo dentro del proceso. Si el cliente no responde en 48 horas, hacer el seguimiento manual insume redactar decenas de correos uno por uno y muchas operaciones se enfrían con la competencia por simple vorágine diaria. Con el Smart Follow-Up: el sistema filtra automáticamente todas las cotizaciones con más de 48 horas de silencio. Lucía entra a esta pantalla, presiona este botón azul, y el portal redacta un correo formal impecable, personalizado con el nombre del cliente, el puerto y la tarifa pactada. Lucía hace 20 seguimientos en 10 minutos desde Gmail sin escribir una sola palabra. Y acá está el segundo punto clave que pedía Gisel: el Registro de Feedback Comercial. Si el cliente nos dice "No cierro con ALMAR porque otro forwarder me pasó 150 dólares menos", Lucía lo tipifica en este campo. A fin de mes abrís el reporte y ves: "En la ruta Shanghai-Buenos Aires perdimos 12 operaciones por 150 dólares frente a tal competidor". Con esa métrica te sentás con el line manager de Maersk o MSC a exigir mejores tarifas de volumen. Pasemos ahora al Escudo Financiero y a los casos reales auditados.',
     technicalSheet: {
       expediente: 'SMART_FOLLOWUP_COMERCIAL',
       operacion: 'Seguimiento Automatizado de Cotizaciones & Inteligencia de Pérdidas',
-      normativa: 'Gestión Comercial ALMAR Rosario · Retención de Clientes',
+      normativa: 'Gestión Comercial ALMAR Rosario · Estandarización de Procesos',
       metrics: [
         { label: 'Volumen Lucía Laje', value: '54.1%', detail: '584 cotizaciones en auditoría', status: 'warning' },
         { label: 'Tiempo de Seguimiento', value: '10 min', detail: 'Para procesar 20 propuestas', status: 'success' },
@@ -340,6 +342,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Disparador Automático', value: '> 48 hs', detail: 'Sin respuesta del cliente', status: 'info' },
       ],
       details: [
+        { label: 'Estandarización Proceso', value: 'Regla automática de seguimiento a 48 hs pedida por Gisel' },
         { label: 'Generador 1-Clic', value: 'Plantilla formal personalizada redactada para Gmail', badge: 'GMAIL READY', badgeColor: 'green' },
         { label: 'Campos de Feedback', value: 'Motivo de pérdida, competidor, diferencia de flete en USD' },
         { label: 'Inteligencia de Negociación', value: 'Reporte mensual de motivos por ruta para negociar con armadores' },
@@ -370,7 +373,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Mencionar los números de Natali Hermoso (110 facturas, USD 5.400 ahorrados) y el total de USD 14.890 prevenidos',
     ],
     verbatimSpeech:
-      'Acá tienen dos componentes centrales que responden a lo que nos pidieron: el control del flujo diario y la visibilidad de productividad del equipo. En la primera vista ven las dos pantallas operativas: el Tablero Kanban, donde todo comprobante se clasifica solo, y la columna "Con Desvío", que retiene automáticamente cualquier sobrecosto de naviera antes de pagarse; y a la derecha el Visor Dual, donde Stefania comprueba el PDF y en 15 segundos copia los 5 campos limpios a Kipintoch. Pero además, respondiendo a la necesidad explícita del Directorio de medir el rendimiento del personal: si tocan esta pestaña de "Métricas de Productividad", el sistema les muestra el tablero de control de gestión. Fíjense: pasamos de 12 minutos manuales a 15 segundos por factura (-98% de reducción); frenamos 14.890 dólares en sobrecostos de Maersk, MSC, TRP y LGV; y tenemos una tasa de cumplimiento SLA del 98.2%. Y acá abajo tienen el rendimiento individual: Natali Hermoso con 110 comprobantes y 5.400 dólares de sobrecostos frenados, Victoria Moyano con 68 y 3.500 dólares, Ana Laura con 62 y 2.400 dólares, Abril con 54 y 2.150 dólares, y Aldana con 30 comprobantes. Cada minuto y cada dólar quedan medidos con total transparencia.',
+      'Acá tienen dos componentes centrales que responden a lo que nos pidieron: el control del flujo diario y la visibilidad de productividad del equipo. En la primera vista ven las dos pantallas operativas: el Tablero Kanban, donde todo comprobante se clasifica solo, y la columna "Con Desvío", que retiene automáticamente cualquier sobrecosto de naviera antes de pagarse; y a la derecha el Visor Dual, donde Stefania comprueba el PDF y en 15 segundos copia los 5 campos limpios a Kipintoch. Además, el Visor Dual resuelve un dolor neurálgico que vimos en los correos de Stefania y Natali: cuando Maersk, MSC o TRP emiten una sola factura para varios BLs de distintas carpetas y hoy las chicas van subrayando a mano con resaltador en papel qué renglón va a qué carpeta. Con el Smart Split, asignan digitalmente cada ítem a su carpeta (C1234, C1482) con control de balance en cero en pantalla, sin papel ni errores de doble imputación. Pero además, respondiendo a la necesidad explícita del Directorio de medir el rendimiento del personal: si tocan esta pestaña de "Métricas de Productividad", el sistema les muestra el tablero de control de gestión. Fíjense: pasamos de 12 minutos manuales a 15 segundos por factura (-98% de reducción); frenamos 14.890 dólares en sobrecostos de Maersk, MSC, TRP y LGV; y tenemos una tasa de cumplimiento SLA del 98.2%. Y acá abajo tienen el rendimiento individual: Natali Hermoso con 110 comprobantes y 5.400 dólares de sobrecostos frenados, Victoria Moyano con 68 y 3.500 dólares, Ana Laura con 62 y 2.400 dólares, Abril con 54 y 2.150 dólares, y Aldana con 30 comprobantes. Cada minuto y cada dólar quedan medidos con total transparencia.',
     technicalSheet: {
       expediente: 'SCORECARD_OPERATIVO_ALMAR',
       operacion: 'Control Operativo: Tablero Kanban, Visor Dual & Rendimiento del Equipo',
@@ -382,6 +385,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Precisión Fiscal AFIP', value: '0.0% error', detail: 'Algoritmo Módulo 11 en CUITs', status: 'success' },
       ],
       details: [
+        { label: 'Smart Split Multi-Carpeta', value: 'Fin del subrayado con resaltador: desglose de factura única a múltiples carpetas', badge: 'SMART SPLIT', badgeColor: 'green' },
         { label: 'Desvíos Maersk Line', value: 'USD 4.840 prevenidos en 4 comprobantes (BAF de emergencia)' },
         { label: 'Desvíos MSC', value: 'USD 3.900 prevenidos en 2 comprobantes (THC y recargos)' },
         { label: 'Desvíos TRP (Terminal Zárate)', value: 'USD 2.420 prevenidos en 2 comprobantes (estadía)' },
@@ -630,11 +634,12 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     demoCues: [
       'Arrastrar una factura PDF real de Maersk a la bandeja',
       'Mostrar la detección automática del sobrecosto de USD 180',
+      'Explicar el desglose multi-carpeta: fin del subrayado a mano con resaltador para facturas unificadas de navieras',
       'Ejecutar la autorización y el copiado en 1-clic a Kipintoch en 15 segundos',
       'Abrir el Tablero de Rendimiento & Productividad con las métricas del equipo',
     ],
     verbatimSpeech:
-      'Voy a conmutar en este instante al navegador para que vean el sistema operando en tiempo real con datos y comprobantes reales. Miren la pantalla: acá tenemos el portal en vivo. Voy a tomar una factura marítima real en PDF de Maersk y la voy a soltar en la bandeja de entrada de Comprobantes. Fíjense: uno, dos, tres... cuatro segundos. El documento ya fue procesado. Hago clic y abro el Visor Dual: a la izquierda tienen el PDF original tal cual llegó del armador. A la derecha, el motor ya desglosó el CUIT de Maersk, discriminó el flete marítimo internacional, reconoció el recargo BAF y lo mapeó automáticamente a BUFF al 0% de IVA, y calculó los conceptos gravados. Pero observen lo que ocurre con el margen: el sistema cruzó la factura contra la carpeta de Kipintoch y detectó que el armador facturó 180 dólares más de lo cotizado. La tarjeta se fue automáticamente a la columna "Con Desvío de Tarifa" y el botón de facturación está deshabilitado. Si inicio sesión como Stefania en rol Operativo, no puedo destrabarlo. Pero si inicio sesión como Gerencia, se activa este botón: "Autorizar Desvío Gerencial". Hago clic, selecciono el motivo, pongo la huella digital en la laptop y el sistema estampa la firma digital con respaldo probatorio en el log de auditoría. La carpeta queda autorizada. Y ahora miren esto: presiono "Copiar Ficha a Kipintoch". Los 5 campos canónicos están en mi portapapeles. Stefania abre Kipintoch, pega los datos, y en 15 segundos la factura está cargada sin tipear un solo número a mano. Y acá está el cuarto módulo en vivo: el Tablero de Métricas de Rendimiento. Al hacer clic, el Directorio ve exactamente el volumen por operador, tiempos reales de resolución y los USD 14.890 en sobrecostos retenidos a Maersk, MSC, TRP y LGV. Cero opacidad operativa.',
+      'Voy a conmutar en este instante al navegador para que vean el sistema operando en tiempo real con datos y comprobantes reales. Miren la pantalla: acá tenemos el portal en vivo. Voy a tomar una factura marítima real en PDF de Maersk y la voy a soltar en la bandeja de entrada de Comprobantes. Fíjense: uno, dos, tres... cuatro segundos. El documento ya fue procesado. Hago clic y abro el Visor Dual: a la izquierda tienen el PDF original tal cual llegó del armador. A la derecha, el motor ya desglosó el CUIT de Maersk, discriminó el flete marítimo internacional, reconoció el recargo BAF y lo mapeó automáticamente a BUFF al 0% de IVA, y calculó los conceptos gravados. Y si este comprobante ampara contenedores de distintas carpetas —el típico caso donde las chicas hoy van subrayando con resaltador en papel qué renglón va a cada expediente—, el visor permite asignar cada ítem a su carpeta destino (C1234, C1482) con balance en cero automático en pantalla. Pero observen lo que ocurre con el margen: el sistema cruzó la factura contra la carpeta de Kipintoch y detectó que el armador facturó 180 dólares más de lo cotizado. La tarjeta se fue automáticamente a la columna "Con Desvío de Tarifa" y el botón de facturación está deshabilitado. Si inicio sesión como Stefania en rol Operativo, no puedo destrabarlo. Pero si inicio sesión como Gerencia, se activa este botón: "Autorizar Desvío Gerencial". Hago clic, selecciono el motivo, pongo la huella digital en la laptop y el sistema estampa la firma digital con respaldo probatorio en el log de auditoría. La carpeta queda autorizada. Y ahora miren esto: presiono "Copiar Ficha a Kipintoch". Los 5 campos canónicos están en mi portapapeles. Stefania abre Kipintoch, pega los datos, y en 15 segundos la factura está cargada sin tipear un solo número a mano. Y acá está el cuarto módulo en vivo: el Tablero de Métricas de Rendimiento. Al hacer clic, el Directorio ve exactamente el volumen por operador, tiempos reales de resolución y los USD 14.890 en sobrecostos retenidos a Maersk, MSC, TRP y LGV. Cero opacidad operativa.',
     technicalSheet: {
       expediente: 'LIVE_DEMO_VERCEL_LOCALHOST',
       operacion: 'Demostración Interactiva en Vivo: Ingesta, Visor Dual, WebAuthn y Copiado a Kipintoch',
@@ -647,6 +652,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       ],
       details: [
         { label: 'Comprobante de Prueba', value: 'Factura marítima real en PDF de Maersk Line A/S' },
+        { label: 'Desglose Multi-Carpeta', value: 'Smart Split con ticker de saldo restante a cero (sustituye resaltador)', badge: 'SMART SPLIT', badgeColor: 'green' },
         { label: 'Mapeo Semántico en Vivo', value: 'Reconocimiento instantáneo de recargo BAF a código BUFF AFIP', badge: 'BUFF', badgeColor: 'green' },
         { label: 'Role-Based Access (RBAC)', value: 'Stefania (Operativo) bloqueada; Gerencia autoriza con huella biométrica' },
         { label: 'Scorecard Operadores', value: '5 operadores evaluados con métricas de productividad en vivo' },
@@ -673,10 +679,11 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     demoCues: [
       'Apuntar al botón flotante en la esquina inferior del portal',
       'Mostrar la auto-captura de contexto sin tipear datos repetidos',
+      'Explicar la arquitectura de aprendizaje: cero fine-tuning costoso, RAG y reglas de negocio inmediatas',
       'Explicar cómo el caso borde no frena la operación y calibra las reglas en < 24hs',
     ],
     verbatimSpeech:
-      'Hay un elemento clave que diseñamos para garantizar que la transición durante el piloto sea impecable y que ningún caso quede en el aire: En los primeros días de cualquier sistema nuevo, lo normal es que aparezcan comprobantes atípicos, gastos portuarios no presupuestados o dudas de los operadores. Si el proceso de soporte es burocrático, el usuario se frustra y el sistema pierde tracción. Por eso incorporamos este Circuito de Reporte de Incidencias & Triage Operativo in situ: El operador está trabajando en la carpeta C1234 y detecta un gasto no cotizado de Maersk, como este "Cleaning Fee" de 45 dólares que redujo el margen. No tiene que abrir un correo ni redactar un formulario largo: simplemente toca el botón flotante disponible 24/7 en la esquina inferior. El sistema auto-captura todo el contexto en tiempo real: sabe que está en C1234, qué usuario está operando y qué rol tiene. El operador solo hace dos clics: elige el tipo —"Caso Borde"—, la severidad —"Bloqueante"— y escribe una línea. Al presionar Enviar, el sistema estampa de inmediato un ticket formal #TKT-8421 en el libro de auditoría, deriva el caso a la columna de Desvíos del Kanban para no frenar la facturación general, y nos llega la alerta a nosotros para calibrar la regla de extracción en menos de 24 horas. Y si el personal tiene una duda operativa, hace clic en Copilot IA y un asistente inteligente le responde al instante según los criterios de ALMAR. Bajo norma ISO 9001, cada incidente queda medido y versionado. Mejora continua en tiempo real. Veamos ahora cómo sintetizamos todas las decisiones en la matriz de resolución.',
+      'Hay un elemento clave que diseñamos para garantizar que la transición durante el piloto sea impecable y que ningún caso quede en el aire: En los primeros días de cualquier sistema nuevo, lo normal es que aparezcan comprobantes atípicos, gastos portuarios no presupuestados o dudas de los operadores. Si el proceso de soporte es burocrático, el usuario se frustra y el sistema pierde tracción. Por eso incorporamos este Circuito de Reporte de Incidencias & Triage Operativo in situ: El operador está trabajando en la carpeta C1234 y detecta un gasto no cotizado de Maersk, como este "Cleaning Fee" de 45 dólares que redujo el margen. No tiene que abrir un correo ni redactar un formulario largo: simplemente toca el botón flotante disponible 24/7 en la esquina inferior. El sistema auto-captura todo el contexto en tiempo real: sabe que está en C1234, qué usuario está operando y qué rol tiene. El operador solo hace dos clics: elige el tipo —"Caso Borde"—, la severidad —"Bloqueante"— y escribe una línea. Al presionar Enviar, el sistema estampa de inmediato un ticket formal #TKT-8421 en el libro de auditoría, deriva el caso a la columna de Desvíos del Kanban para no frenar la facturación general, y nos llega la alerta a nosotros para calibrar la regla de extracción en menos de 24 horas. Y un punto técnico central que quiero dejarles muy claro: esto desmitifica la IA. No se necesita un reentrenamiento costoso de modelos ni meses de fine-tuning. El reporte alimenta la base de conocimiento y el diccionario de excepciones de ALMAR para que la próxima vez el sistema ya sepa resolverlo automáticamente. Y si el personal tiene una duda operativa, hace clic en Copilot IA y un asistente inteligente le responde al instante según los criterios de ALMAR. Bajo norma ISO 9001, cada incidente queda medido y versionado. Mejora continua en tiempo real. Veamos ahora cómo sintetizamos todas las decisiones en la matriz de resolución.',
     technicalSheet: {
       expediente: 'TRIAGE_INCIDENCIAS_TKT',
       operacion: 'Widget Flotante In Situ & Calibración de Reglas en Piloto (#TKT-8421)',
@@ -690,6 +697,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       details: [
         { label: 'Ticket Formal Emitido', value: '#TKT-8421 estampado en audit_log inmutable', badge: 'TICKET #TKT', badgeColor: 'green' },
         { label: 'Contexto Capturado', value: 'Carpeta, usuario activo, rol, pantalla y datos del comprobante' },
+        { label: 'Aprendizaje sin Fine-Tuning', value: 'Reglas semánticas inmediatas y memoria RAG sin reentrenar redes neuronales' },
         { label: 'Canalización Kanban', value: 'Deriva a columna Desvíos; la facturación general continúa' },
         { label: 'Copilot Asistencial', value: 'Asistente IA para dudas operativas del personal' },
       ],
@@ -754,10 +762,11 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     demoCues: [
       'Destacar el SSO transparente con Firebase: cero contraseñas nuevas para el personal',
       'Explicar el parámetro contractual store: false de OpenAI (cero entrenamiento con datos de ALMAR)',
+      'Mencionar el listener de correo corporativo para ingesta desatendida de comprobantes',
       'Mostrar la baja latencia de Supabase en São Paulo (< 35ms)',
     ],
     verbatimSpeech:
-      'Analicemos la arquitectura técnica y cómo se ensambla con los sistemas que ALMAR ya utiliza hoy: Punto 1: Embebido Directo en la Intranet Firebase de ALMAR. Estudiamos la intranet corporativa que ustedes tienen montada sobre Firebase y les confirmo que la integración es 100% directa y transparente: podemos embeber este portal como una solapa interna dentro de su intranet mediante un contenedor seguro con Content-Security-Policy. Y lo mejor: Single Sign-On (SSO). Reutilizamos la sesión activa de Firebase Authentication mediante tokens JWT. Stefania o Lucía no tienen que aprenderse otro usuario ni otra contraseña: entran a su intranet habitual y el sistema ya sabe quiénes son y qué rol tienen. Punto 2: Procesamiento Serverless en Vercel Edge con 99,99% de uptime. Punto 3: Soberanía Absoluta en OpenAI con Zero Data Retention. ALMAR contrata directamente su cuenta empresarial. Con el parámetro store: false, OpenAI procesa la factura en memoria volátil y la destruye en el acto. Cero persistencia y cero entrenamiento con sus datos. Punto 4: Base de datos en Supabase São Paulo con latencia menor a 35 milisegundos y respaldo pericial pleno. Ahorro de más de $6.000.000 ARS al año en licencias y conectores cerrados. Cero servidores en la oficina. Veamos el cronograma para poner esto en marcha en 4 semanas.',
+      'Analicemos la arquitectura técnica y cómo se ensambla con los sistemas que ALMAR ya utiliza hoy: Punto 1: Embebido Directo en la Intranet Firebase de ALMAR. Estudiamos la intranet corporativa que ustedes tienen montada sobre Firebase y les confirmo que la integración es 100% directa y transparente: podemos embeber este portal como una solapa interna dentro de su intranet mediante un contenedor seguro con Content-Security-Policy. Y lo mejor: Single Sign-On (SSO). Reutilizamos la sesión activa de Firebase Authentication mediante tokens JWT. Stefania o Lucía no tienen que aprenderse otro usuario ni otra contraseña: entran a su intranet habitual y el sistema ya sabe quiénes son y qué rol tienen. Punto 2: Procesamiento Serverless en Vercel Edge con 99,99% de uptime y listener automático para ingesta directa de correos. Punto 3: Soberanía Absoluta en OpenAI con Zero Data Retention. ALMAR contrata directamente su cuenta empresarial. Con el parámetro store: false, OpenAI procesa la factura en memoria volátil y la destruye en el acto. Cero persistencia y cero entrenamiento con sus datos. Punto 4: Base de datos en Supabase São Paulo con latencia menor a 35 milisegundos y respaldo pericial pleno. Ahorro de más de $6.000.000 ARS al año en licencias y conectores cerrados. Cero servidores en la oficina. Veamos el cronograma para poner esto en marcha en 4 semanas.',
     technicalSheet: {
       expediente: 'ARQUITECTURA_CLOUD_ZDR',
       operacion: 'Topología de Producción: Intranet Firebase, Vercel Edge, OpenAI ZDR & Supabase',
@@ -771,7 +780,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       details: [
         { label: 'Capa 1: Front-end Intranet', value: 'Embebido seguro Iframe CSP en Intranet Firebase de ALMAR' },
         { label: 'Autenticación', value: 'Single Sign-On (SSO) con tokens JWT existentes de Firebase', badge: 'SSO JWT', badgeColor: 'green' },
-        { label: 'Capa 2: Cómputo Edge', value: 'Vercel Edge Functions para validación y semáforos' },
+        { label: 'Capa 2: Cómputo Edge & Listener', value: 'Vercel Edge Functions y listener de correo para ingesta directa' },
         { label: 'Capa 3: Extracción IA', value: 'OpenAI API empresarial con cláusula contractual Zero Data Retention', badge: 'ZDR STORE:FALSE', badgeColor: 'green' },
         { label: 'Capa 4: Base de Datos', value: 'Supabase PostgreSQL São Paulo con encriptación en reposo' },
       ],
@@ -795,26 +804,27 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Cronograma de 4 semanas (S1 Set-up, S2 Inicio Piloto 50 facturas, S3 Calibración Fina, S4 Régimen Definitivo) y callout verde bosque de decisión directiva.',
     demoCues: [
       'Apuntar con convicción a la Semana 1 de inicio inmediato',
+      'Enfatizar el despliegue escalonado de accesos para evitar caos el día 1',
       'Enfatizar que la plataforma ya está construida, testeada y operativa',
       'Hacer el cierre formal pidiendo la aprobación para arrancar la Semana 1',
     ],
     verbatimSpeech:
-      'Para cerrar, este es el plan de puesta en marcha propuesto para los próximos 30 días: En la Semana 1, asistimos a Juan en dar de alta la cuenta corporativa de OpenAI de ALMAR y conectamos las claves al entorno productivo de Vercel y Supabase. En la Semana 2, hacemos una sesión de capacitación de 45 minutos con Stefania y habilitamos el piloto de carga real con el Widget de Triage activo sobre 50 facturas reales. En la Semana 3, calibramos las reglas finas de desvíos y los conceptos atípicos que hayan surgido. Y en la Semana 4, hacemos el pase a régimen definitivo, logrando que ALMAR procese el 100% de sus facturas de proveedores con asistencia de IA, -98% de tiempo operativo y control total de rentabilidad con un ahorro garantizado de $6.000.000 ARS anuales. La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Semana 1 para iniciar el despliegue. Quedo a disposición de Alejandro, Vanesa y Juan para responder sus consultas. Muchas gracias.',
+      'Para cerrar, este es el plan de puesta en marcha propuesto para los próximos 30 días: Y un criterio clave de gestión del cambio que les propongo: no le damos acceso a las 10 personas del equipo el Día 1. Abrir el sistema de golpe generaría confusión ante los primeros comprobantes atípicos. Planteamos un despliegue quirúrgico: En la Semana 1, asistimos a Juan en dar de alta la cuenta corporativa de OpenAI de ALMAR, conectamos las claves a Vercel/Supabase y arrancamos exclusivamente con Stefania en un grupo de control de 50 facturas en paralelo con su método habitual. En la Semana 2, sumamos a Lucía Laje y Vanesa para la Calculadora Paramétrica y el Smart Follow-Up a 48 hs. En la Semana 3, integramos Tesorería con Juan Andrés para conciliar Banco Macro y Net Trade Miami. Y en la Semana 4, abrimos la plataforma a todo el equipo con el Scorecard de Productividad y las reglas 100% calibradas. La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Semana 1 para iniciar el despliegue. Quedo a disposición de Alejandro, Vanesa y Juan para responder sus consultas. Muchas gracias.',
     technicalSheet: {
       expediente: 'HOJA_DE_RUTA_PILOTO_30D',
       operacion: 'Plan de Despliegue en 4 Semanas: Setup, Piloto 50 Facturas, Calibración y Producción',
       normativa: 'ISO 9001:2015 · Planificación del Cambio § 6.3',
       metrics: [
         { label: 'Duración del Plan', value: '4 semanas', detail: '30 días corridos de puesta en marcha', status: 'info' },
-        { label: 'Capacitación Personal', value: '45 min', detail: 'Sesión única con Stefania y Lucía', status: 'success' },
-        { label: 'Piloto Controlado', value: '50 facturas', detail: 'Comprobantes reales asistidos', status: 'success' },
+        { label: 'Capacitación Personal', value: '45 min', detail: 'Sesión focalizada por rol y área', status: 'success' },
+        { label: 'Piloto Controlado', value: '50 facturas', detail: 'Lote inicial con Stefania en S1', status: 'success' },
         { label: 'Meta Eficiencia Final', value: '-98% tiempo', detail: '100% facturas en régimen definitivo', status: 'success' },
       ],
       details: [
-        { label: 'Semana 1: Configuración', value: 'Alta cuenta OpenAI corporativa ALMAR y variables de entorno Vercel' },
-        { label: 'Semana 2: Capacitación & Piloto', value: 'Capacitación operativa + procesamiento de 50 facturas reales con Triage', badge: 'PILOTO 50', badgeColor: 'green' },
-        { label: 'Semana 3: Calibración Fina', value: 'Ajuste de reglas de desvío y resolución de tickets de triage' },
-        { label: 'Semana 4: Régimen Definitivo', value: 'Pase a producción al 100% de la facturación de proveedores', badge: 'PRODUCCIÓN', badgeColor: 'green' },
+        { label: 'Semana 1: Configuración & Piloto 0', value: 'Alta OpenAI ALMAR (ZDR) + 50 facturas en paralelo exclusivamente con Stefania', badge: 'PILOTO STEFANIA', badgeColor: 'green' },
+        { label: 'Semana 2: Módulo Comercial', value: 'Acceso Lucía Laje & Vanesa: Calculadora y Smart Follow-Up' },
+        { label: 'Semana 3: Tesorería & Legal', value: 'Acceso Juan Andrés: Conciliación Banco Macro y Net Trade Miami' },
+        { label: 'Semana 4: Régimen Definitivo', value: 'Despliegue a todo el equipo con Scorecard de Productividad', badge: 'PRODUCCIÓN', badgeColor: 'green' },
       ],
       scorecard: OPERATOR_SCORECARD,
       hardQuestions: [
