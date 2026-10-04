@@ -26,6 +26,47 @@ export interface SlideMetadata {
   thumbnailUrl: string;
 }
 
+export interface TechnicalMetricItem {
+  label: string;
+  value: string;
+  detail?: string;
+  status?: 'success' | 'warning' | 'danger' | 'info';
+}
+
+export interface TechnicalDetailRow {
+  label: string;
+  value: string;
+  badge?: string;
+  badgeColor?: 'green' | 'gold' | 'navy' | 'rose' | 'amber';
+}
+
+export interface HardQuestionItem {
+  stakeholder: string;
+  question: string;
+  answer: string;
+  legalBasis?: string;
+}
+
+export interface OperatorScorecardItem {
+  operador: string;
+  area: string;
+  facturas: number;
+  tiempoMin: number;
+  desvios: number;
+  ahorroUsd: number;
+  slaScore: number;
+}
+
+export interface TechnicalSheetData {
+  expediente?: string;
+  operacion?: string;
+  normativa?: string;
+  metrics?: TechnicalMetricItem[];
+  details?: TechnicalDetailRow[];
+  scorecard?: OperatorScorecardItem[];
+  hardQuestions?: HardQuestionItem[];
+}
+
 export interface SpeakerNotesData {
   slideId: number;
   title: string;
@@ -34,6 +75,7 @@ export interface SpeakerNotesData {
   whatAudienceSees: string;
   demoCues: string[];
   verbatimSpeech: string;
+  technicalSheet?: TechnicalSheetData;
   objections?: {
     stakeholder: string;
     objection: string;

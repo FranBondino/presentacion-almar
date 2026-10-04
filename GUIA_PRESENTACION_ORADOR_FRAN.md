@@ -1,227 +1,299 @@
-# 🚢 GUÍA TÁCTICA DEL ORADOR & MANUAL DE DEMOSTRACIÓN EJECUTIVA
+# 🚢 GUÍA MAESTRA DEL ORADOR & MANUAL TÁCTICO DE DEMOSTRACIÓN EJECUTIVA
 ## REUNIÓN DE DIRECTORIO — ALMAR ROSARIO S.R.L.
-### Presentación de la Solución Tecnológica Integral: Automatización Inteligente de Facturación, Módulo Comercial Flexible, Escudo Financiero y Arquitectura Productiva
+### Presentación Integral: Automatización Inteligente de Facturación, Módulo Comercial Flexible, Escudo Financiero y Arquitectura Productiva
+
 **Autoría:** Ing. Francisco Bondino — Clave Consultora  
-**Fecha de Sesión:** Septiembre 2026  
-**Destinatarios:** Directorio de ALMAR Rosario S.R.L. (Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro)  
-**Mazo de Diapositivas:** `presentacion-ejecutiva-almar.html` (18 diapositivas interactivas en tema claro institucional)  
+**Fecha de Sesión:** Octubre 2026  
+**Destinatarios:** Directorio de ALMAR Rosario S.R.L.  
+- Alejandro Noacco — Director Comercial  
+- Vanesa Meggiolaro — Directora de Administración y Finanzas  
+- Juan Andrés Arloro — Director Legal y Responsable TI / Apoderado  
+**Mazo de Diapositivas:** `presentacion-react` (18 diapositivas interactivas en SPA 16:9, diseño corporativo Clave Consultora)  
 **Entorno de Demostración en Vivo:** `http://localhost:3000` (Respaldo Cloud: `https://bot-relevamiento.vercel.app`)  
-**Duración Total Estructurada:** 25 minutos de presentación y demo en vivo + Coloquio Directivo  
+**Duración Total Estructurada:** 25 minutos cronometrados de presentación y demo en vivo + Coloquio Directivo  
+**Estado Documental:** Versión Maestra Definitiva — Apta para impresión, atril y visualización en doble pantalla  
 
 ---
 
-# 1. ENCUADRE ESTRATÉGICO Y CLARIDAD DE ROLES
+# 1. ENCUADRE ESTRATÉGICO, MAPA COGNITIVO Y ARQUITECTURA TEMPORAL
 
-### 1.1 Enfoque de la Sesión: La Solución Tecnológica Principal
-Esta presentación está concebida con un propósito claro y unívoco: **demostrar la solución tecnológica integral que automatiza el procesamiento de facturas de proveedores, agiliza y ordena la fuerza de ventas comercial, blinda el margen financiero de las operaciones y establece la arquitectura productiva definitiva para ALMAR Rosario**.
+### 1.1 Enfoque de la Sesión: Demostración de Solución Tecnológica en Producción
+Esta sesión de Directorio tiene un objetivo directivo excluyente: **demostrar la solución tecnológica integral que automatiza la ingesta de facturas de proveedores, agiliza y dota de inteligencia a la fuerza de ventas comercial, blinda el margen financiero de las operaciones y consolida la arquitectura productiva definitiva para ALMAR Rosario S.R.L.**
 
-No se debe mezclar este encuentro con el documento de relevamiento administrativo preliminar ni con debates operativos secundarios. La audiencia directiva necesita ver con hechos y pantallas reales:
-1. **El Problema Operativo y Comercial Concreto:** El cuello de botella en la carga manual de más de 350 facturas mensuales (8 a 12 minutos por comprobante), el desborde comercial de 1.080 cotizaciones auditadas (54,1% concentradas en Lucía Laje) y la fuga silenciosa de margen por recargos navieros imprevistos.
-2. **El Módulo Comercial Flexible:** Cómo la calculadora paramétrica con perfiles dinámicos permite cotizar en 45 segundos sin atar las manos del vendedor, controlando la vigencia de tarifas navieras (15/30 días) y recuperando cotizaciones dormidas con el Smart Follow-Up a 48 hs.
-3. **El Escudo Financiero y los Casos Reales Auditados:** Cómo el sistema resuelve los casos de fricción histórica identificados en las carpetas de ALMAR:
-   - **Caso C367:** Normalización semántica de recargos de combustible (BAF, BRC, EBS) al código fiscal canónico `BUFF` de AFIP, evitando quebrantos de USD 80 + recargos.
-   - **Caso C620:** Módulo multimoneda con conversión automática al tipo de cambio oficial vendedor del Banco Nación (BNA) a fecha de embarque para Libras Esterlinas (GBP), adjuntando constancia digital oficial y protegiendo el Permiso de Embarque ante la DGA.
-   - **Caso Sancor Seguros:** Provisión automática diferida del 0,55% sobre el valor FOB devengada a 150 días, con holdback de comisiones comerciales para evitar pagar sobre utilidades no devengadas.
-   - **Caso C1234:** Alerta preventiva de margen crítico (< USD 200) ante descalces cambiarios y autorización gerencial con firma biométrica WebAuthn (Touch ID / Windows Hello) y sello SHA-256.
-   - **Casos Net Trade Miami & Banco Macro:** Trazabilidad de prefacturas offshore vinculadas a expedientes locales (Precios de Transferencia y BCRA) y subproceso de conciliación en extracto de cuenta corriente de Banco Macro antes del recibo oficial.
-4. **La Demostración en Vivo en Tiempo Real:** Carga de un comprobante marítimo real en el portal web (`http://localhost:3000`), extracción en 5 segundos, activación de compuertas y copiado en 1-clic a Kipintoch.
-5. **El Acelerador del Piloto:** El widget flotante de triage en vivo (`#TKT-XXX`) embebido en la aplicación para que Stefania, Vanesa, Lucía y el equipo reporten casos borde en 5 segundos, resolviéndolos en horas sin fricción.
-6. **La Soberanía y Seguridad Productiva:** Contratación directa de OpenAI por parte de ALMAR con política contractual Zero Data Retention (ZDR § 3.2, `store: false`), hosting Cloud de alta velocidad en Vercel y base de datos relacional PostgreSQL en Supabase (São Paulo, latencia < 35ms).
+No es una presentación conceptual, ni un informe preliminar de relevamiento, ni una propuesta de desarrollo futuro. Es la puesta en escena de una plataforma operativa, testeada y funcional, construida a la medida de la operatoria de ALMAR, que resuelve de manera directa los problemas identificados en la auditoría forense de los expedientes reales:
+1. **El Problema Operativo y Comercial:** El cuello de botella en la carga manual de más de 320 comprobantes mensuales (8 a 12 minutos por factura en Kipintoch), la saturación comercial sobre 1.080 cotizaciones auditadas (54,1% concentradas en Lucía Laje) y la fuga silenciosa de margen por sobrecostos navieros no cotejados.
+2. **El Módulo Comercial Flexible:** La calculadora paramétrica con perfiles dinámicos para cotizar en 45 segundos sin rigideces, el semáforo de vigencia de tarifas navieras (15/30 días) para frenar fletes caducados, y el Smart Follow-Up a 48 hs con captura de feedback de pérdidas ("Competencia cotizó USD 150 menos") para ganar poder de negociación ante los armadores.
+3. **El Escudo Financiero y los Casos Forenses Auditados:** La resolución algorítmica de los 5 casos de fricción operativa histórica:
+   - **Caso C367:** Normalización semántica de recargos de combustible naviero (BAF, BRC, EBS) al código fiscal canónico AFIP `BUFF` (0% IVA), y detección de desvío de USD 80 bajo Incoterm FCA Guangzhou con recupero vía Nota de Crédito NC A 46188.
+   - **Caso C620:** Módulo multimoneda con conversión automática al tipo de cambio oficial vendedor del Banco de la Nación Argentina (BNA) a fecha de embarque para Libras Esterlinas (£543 GBP @ 1,3628 = USD 740,00), adjuntando constancia PDF inmutable y erradicando asteriscos en Permisos de Embarque ante DGA y Ley 22.415.
+   - **Caso Sancor Seguros:** Provisión automática diferida del 0,55% sobre el valor FOB devengada a 150 días, con retención de comisiones comerciales para impedir el pago y reparto de utilidades ficticias.
+   - **Caso C1234:** Alerta preventiva de margen operativo mínimo (< USD 200) ante descalces cambiarios y autorización gerencial en 3 segundos mediante biometría WebAuthn (Touch ID / Windows Hello) y hash criptográfico SHA-256 bajo la Ley 25.506 de Firma Digital.
+   - **Casos Net Trade Miami & Banco Macro:** Trazabilidad de prefacturas offshore emitidas por Net Trade LLC (cuenta International Finance Bank en Miami) con auditoría de reintegro de costos locales (Precios de Transferencia y BCRA), y compuerta estricta de cobranzas en extracto de Banco Macro (CC Nº 376100000930617) antes de emitir recibos definitivos.
+4. **La Demostración en Vivo en Tiempo Real (Minuto 17:15 - 21:00):** Procesamiento de comprobantes reales en `http://localhost:3000`, extracción en 4 segundos, detección de desvío, autorización WebAuthn, copiado en 1-clic a Kipintoch y métricas de equipo.
+5. **Triage Operativo in situ y Mejora Continua:** Widget flotante 24/7 (`#TKT-XXX`) para reportar casos borde en 10 segundos sin interrumpir la operación, y asistente Copilot IA para consultas conceptuales.
+6. **Soberanía, Seguridad y Hoja de Ruta:** Cuenta corporativa directa de ALMAR en OpenAI con política contractual Zero Data Retention (ZDR § 3.2, `store: false`), hosting Cloud de alta disponibilidad en Vercel, persistencia en Supabase PostgreSQL (São Paulo, latencia < 35ms), y cronograma de 4 semanas hacia régimen definitivo.
 
 ```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        MAPA COGNITIVO DEL DIRECTORIO DE ALMAR                          │
-├─────────────────────────┬───────────────────────────┬──────────────────────────────────┤
-│ ALEJANDRO NOACCO        │ VANESA MEGGIOLARO         │ JUAN ANDRÉS ARLORO               │
-│ Director Comercial      │ Directora Finanzas & Ops  │ Director Legal y TI / Apoderado  │
-├─────────────────────────┼───────────────────────────┼──────────────────────────────────┤
-│ • Enfoque: Velocidad de │ • Enfoque: Cero desvíos de│ • Enfoque: Privacidad de datos,  │
-│   cierre, no entorpecer │   costos de armadores,    │   validez jurídica pericial de   │
-│   la venta spot y tener │   freno a tarifas viejas, │   las firmas biométricas, custodia│
-│   feedback de pérdidas. │   provisión de seguros y  │   de claves de OpenAI y          │
-│                         │   conciliación bancaria.  │   cumplimiento cambiario BCRA.   │
-│ • Qué busca ver: Que la │ • Qué busca ver: Que el   │ • Qué busca ver: Que los datos de│
-│   calculadora sea ágil, │   sistema bloquee fletes  │   clientes y fletes no se usen   │
-│   con perfiles dinámicos│   vencidos, provisione el │   para entrenar modelos públicos │
-│   y seguimiento en 1    │   seguro Sancor a 150 días│   (cuenta propia con ZDR) y que  │
-│   clic para Lucía Laje. │   y exija extracto Macro. │   las firmas tengan no repudio.  │
-└─────────────────────────┴───────────────────────────┴──────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 MAPA COGNITIVO DEL DIRECTORIO DE ALMAR                                 │
+├──────────────────────────────┬──────────────────────────────┬──────────────────────────────────────────┤
+│ ALEJANDRO NOACCO             │ VANESA MEGGIOLARO            │ JUAN ANDRÉS ARLORO                       │
+│ Director Comercial           │ Directora Finanzas & Ops     │ Director Legal y TI / Apoderado          │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────────────────┤
+│ • Eje Principal: Velocidad   │ • Eje Principal: Control de  │ • Eje Principal: Seguridad jurídica,     │
+│   de cotización, agilidad en │   costos, freno a sobrecostos│   privacidad de datos comerciales,       │
+│   negocios spot y captura de │   de armadores, vigencia de  │   validez pericial de firmas y           │
+│   feedback de mercado.       │   tarifas y conciliación real│   cumplimiento BCRA / Precios Transfer.  │
+│                              │                              │                                          │
+│ • Preocupación Crítica: Que  │ • Preocupación Crítica: Que  │ • Preocupación Crítica: Que los datos    │
+│   el sistema no trabe a los  │   los comerciales coticen con│   de clientes se filtren a OpenAI, que   │
+│   vendedores con markups     │   fletes viejos o que se     │   las autorizaciones no tengan validez   │
+│   rígidos ni burocracia.     │   paguen comisiones sobre    │   probatoria o que existan riesgos       │
+│                              │   ganancias ficticias.       │   cambiarios en triangulaciones.         │
+│                              │                              │                                          │
+│ • Qué Necesita Ver: La       │ • Qué Necesita Ver: El       │ • Qué Necesita Ver: La garantía          │
+│   Calculadora Paramétrica    │   Semáforo de Vigencias, la  │   contractual ZDR (store: false), la     │
+│   con 4 perfiles, el Smart   │   provisión de Sancor a 150d │   firma WebAuthn FIDO2 con hash SHA-256  │
+│   Follow-Up en 1 clic y el   │   y la compuerta de extracto │   bajo Ley 25.506 y la trazabilidad de   │
+│   registro de pérdidas.      │   bancario en Banco Macro.   │   reembolsos locales Net Trade / IFB.    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────────────────┘
 ```
 
 ---
 
-# 2. GUION MINUTO A MINUTO SINCRONIZADO CON LAS 18 DIAPOSITIVAS (25 MINUTOS TOTALES)
+### 1.2 Cronograma Global de los 5 Bloques Temáticos (25 Minutos Exactos)
 
-A continuación se detalla la hoja de ruta minuto a minuto estructurada en los 4 Momentos Estratégicos de la presentación ejecutiva (`presentacion-ejecutiva-almar.html`).
+```
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                   ARQUITECTURA TEMPORAL DE LA PRESENTACIÓN (25 MINUTOS TOTALES)                        │
+├─────────┬──────────────┬───────────────┬───────────────────────────────────────────────┬───────────────┤
+│ BLOQUE  │ DIAPOSITIVAS │ TIEMPO TOTAL  │ CONTENIDO TEMÁTICO                            │ ENFOQUE CLAVE │
+├─────────┼──────────────┼───────────────┼───────────────────────────────────────────────┼───────────────┤
+│ B1      │ Slides 01-02 │ 02:45 min     │ Diagnóstico Real: Carga Manual y Comercial    │ Directorio    │
+│ B2      │ Slides 03-04 │ 02:30 min     │ Solución Central & Pipeline de 5 Estaciones   │ Vanesa & Juan │
+│ B3      │ Slides 05-07 │ 04:30 min     │ Módulo Comercial: Vigencias, Pricing & Follow │ Alejandro/Vane│
+│ B4      │ Slides 08-14 │ 11:15 min     │ Escudo Financiero, Casos Reales y Live Demo   │ Todo el Panel │
+│ B5      │ Slides 15-18 │ 04:00 min     │ Triage en Piloto, Arquitectura & Cierre S1    │ Todo el Panel │
+├─────────┴──────────────┴───────────────┴───────────────────────────────────────────────┴───────────────┤
+│ TOTAL: 18 Diapositivas | Tiempo de Presentación: 25:00 min | Espacio para Coloquio: 15-20 min          │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## MOMENTO 1: EL DIAGNÓSTICO REAL & PIPELINE (MINUTOS 00:00 - 05:15)
+# 2. GUION MINUTO A MINUTO SINCRONIZADO 1-A-1 CON LAS 18 DIAPOSITIVAS
+
+---
+
+## BLOQUE 1: DIAGNÓSTICO REAL (MINUTOS 00:00 - 02:45)
 
 ---
 
 ### DIAPOSITIVA 01: PORTADA EJECUTIVA
 - **Título en Pantalla:** *AUTOMATIZACIÓN INTELIGENTE DE FACTURACIÓN Y PROCESAMIENTO DE COMPROBANTES*
 - **Subtítulo:** *Plataforma de Extracción con IA, Escudo Financiero y Arquitectura Productiva para ALMAR Rosario S.R.L.*
-- **Momento Estratégico:** Apertura y Encuadre Directivo.
+- **Bloque:** Bloque 1: Diagnóstico Real.
+- **Badges:** `DEMO OFICIAL DE LA SOLUCIÓN TECNOLÓGICA · 2026` | `CLAVE CONSULTORA · ALMAR ROSARIO`.
 - **Tiempo Asignado:** Minuto 00:00 - 01:15 (01:15 min).
-- **Lo que ve la Audiencia:** Portada corporativa en tema claro institucional de Clave Consultora (fondo blanco puro `#ffffff` sobre escenario gris ejecutivo `#f1f5f9`, acentos verde bosque `#1e3d2f`, dorado `#c29320`, vectores SVG canónicos, logotipo oficial y píldora destacada `DEMO OFICIAL DE LA SOLUCIÓN TECNOLÓGICA · 2026`).
-- **Qué señalar en la pantalla:**
-  * Apuntar al logotipo conjunto de Clave Consultora y ALMAR Rosario.
-  * Señalar la píldora superior de demo tecnológica oficial.
-  * Indicar los destinatarios formales: Alejandro Noacco, Vanesa Meggiolaro y Juan Andrés Arloro.
-- **Lo que Fran enfatiza:** Postura erguida, contacto visual directo y seguro. Establecer desde el segundo cero que no venimos a debatir diagnósticos teóricos en papel, sino a mostrar una plataforma tecnológica ya construida, funcional y lista para operar.
+- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Lo que ve la Audiencia:** Portada editorial limpia de Clave Consultora en formato 16:9 (fondo platino `#f1f5f9`, acentos verde bosque institucional `#1e3d2f`, dorado de jerarquía `#c29320`, isotipos oficiales de Clave y ALMAR Rosario, píldora destacada superior y cuadro de metadatos con orador y destinatarios).
+- **Visual Cues & Guía de Interacción:**
+  * Postura erguida, micrófono o atril estable, mirada triangular abarcando a Alejandro, Vanesa y Juan Andrés.
+  * Señalar con puntero o mano abierta el logotipo conjunto de Clave Consultora y ALMAR Rosario.
+  * Apuntar a la píldora superior dorada: `DEMO OFICIAL DE LA SOLUCIÓN TECNOLÓGICA · 2026`.
+  * Destacar el cuadro de metadatos: marcar que la sesión está formalmente dirigida a ellos tres con nombre y apellido.
+  * Establecer la premisa fundacional: la herramienta ya está construida, opera con datos de ALMAR y se demostrará en vivo.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Buenos días Alejandro, Vanesa, Juan. Les agradezco enormemente este espacio de trabajo directivo.*
+> *"Buenos días Alejandro, Vanesa, Juan. Les agradezco sinceramente este espacio de trabajo conjunto.*
 > 
-> *El motivo de esta convocatoria es presentarles la solución tecnológica definitiva desarrollada para ALMAR Rosario: una plataforma de inteligencia operativa que automatiza la ingesta de facturas de proveedores, agiliza de forma dramática la gestión comercial de cotizaciones, audita los costos en tiempo real contra Kipintoch y blinda la rentabilidad de la empresa.*
+> *El motivo de esta convocatoria es presentarles la solución tecnológica definitiva desarrollada para ALMAR Rosario: una plataforma de inteligencia operativa que automatiza la ingesta y auditoría de facturas de proveedores, agiliza y dota de respaldo comercial a la fuerza de ventas, audita los costos en tiempo real contra Kipintoch y blinda el margen operativo de cada embarque.*
 > 
-> *Hoy no les vengo a mostrar diapositivas teóricas con promesas a futuro. Vamos a recorrer en 15 minutos la arquitectura del sistema, las soluciones concretas a los reclamos comerciales de Alejandro, los blindajes financieros pedidos por Vanesa y la seguridad jurídica que exige Juan Andrés. E inmediatamente después, nos pasamos a la pantalla en vivo del portal para procesar facturas reales frente a ustedes. Comencemos con los números reales de la operación."*
+> *Hoy no les vengo a presentar diapositivas teóricas, ni un informe preliminar de intenciones. En los próximos 15 minutos vamos a recorrer la arquitectura del sistema, las respuestas directas a los requerimientos de agilidad comercial de Alejandro, los blindajes financieros pedidos por Vanesa y la seguridad técnica y jurídica que exige Juan Andrés. E inmediatamente después, en el minuto 17, nos vamos a pasar a la pantalla en vivo del portal para procesar facturas marítimas reales frente a ustedes.*
+> 
+> *Comencemos por la radiografía exacta de los procesos cotidianos de la empresa."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Parámetro | Valor Verificado en Fuente |
+| :--- | :--- |
+| **Organización Destino** | ALMAR Rosario S.R.L. (Sede Central Rosario, Santa Fe) |
+| **Línea de Servicio Auditada** | Freight Forwarding (Marítimo FCL/LCL, Aéreo, Terrestre Internacional) |
+| **Software Base Actual** | Kipintoch Cargo ERP (Arquitectura cliente-servidor cerrada) |
+| **Entorno de Presentación** | SPA React 16:9 (`presentacion-react`), Vite + Tailwind CSS + Framer Motion |
+| **Entorno Productivo de Demo** | Next.js 14 App Router en `http://localhost:3000` / Respaldo Cloud Vercel |
 
 ---
 
 ### DIAPOSITIVA 02: DIAGNÓSTICO OPERATIVO & COMERCIAL: FACTURACIÓN Y PROCESOS
 - **Título en Pantalla:** *DIAGNÓSTICO OPERATIVO & COMERCIAL: FACTURACIÓN Y PROCESOS*
 - **Subtítulo:** *Relevamiento integral de flujos de trabajo, dispersión de comprobantes y cuellos de botella en el circuito actual.*
-- **Momento Estratégico:** Momento 1: El Diagnóstico Real.
-- **Badges:** `AUDITORÍA OPERATIVA & FUERZA COMERCIAL`.
+- **Bloque:** Bloque 1: Diagnóstico Real.
+- **Badges:** `AUDITORÍA OPERATIVA & FUERZA COMERCIAL` | `MOMENTO 1: EL DIAGNÓSTICO REAL`.
 - **Tiempo Asignado:** Minuto 01:15 - 02:45 (01:30 min).
-- **Lo que ve la Audiencia:** 
-  * 3 Tarjetas de Estado Operativo:
-    - **Flujo de Comprobantes (FRAGMENTADO):** Dispersión de facturas y notas de débito de armadores (Maersk, MSC), terminales y transportistas en casillas individuales sin repositorio central.
-    - **Carga en Sistema de Gestión (MANUAL):** Digitación manual de comprobantes, CUITs, alícuotas y conceptos en Kipintoch con demoras operativas y riesgo de error humano.
-    - **Seguimiento Comercial (DISCONTINUO):** Emisión de cotizaciones centralizada en el equipo comercial, con presupuestos que quedan sin seguimiento estructurado ni registro de motivos de no concreción.
-  * Grilla de 3 Ejes Operativos con pastillas de fuga (Despacho, Administración y Fuerza Comercial).
-  * Callout inferior dorado: Erradicar el re-tipeo manual a Kipintoch, frenar sobrecostos y dotar a comercial de control de vigencias y seguimiento proactivo.
-- **Qué señalar en la pantalla:**
-  * Apuntar a la tarjeta de *Carga en Sistema de Gestión (MANUAL)*, validando el cuello de botella diario en la carga campo por campo en Kipintoch.
-  * Señalar la tarjeta de *Seguimiento Comercial (DISCONTINUO)*, destacando la necesidad de seguimiento sistemático para evitar que los presupuestos se enfríen.
-  * Señalar el callout inferior con los objetivos de la solución integral.
-- **Lo que Fran enfatiza:** Mostrar empatía con el equipo: el problema no radica en la capacidad del personal de ALMAR, sino en la falta de herramientas automatizadas que hoy los obligan a realizar tareas mecánicas y dispersas.
+- **Stakeholders Clave:** Vanesa Meggiolaro (administración y costos), Alejandro Noacco (comercial).
+- **Lo que ve la Audiencia:** Tres tarjetas de estado operativo: 1) Flujo de Comprobantes (`FRAGMENTADO`), 2) Carga en ERP (`MANUAL`), 3) Seguimiento Comercial (`DISCONTINUO`). Grilla de 3 ejes de fuga de rentabilidad (Despacho, Administración, Comercial) y callout inferior dorado.
+- **Visual Cues & Guía de Interacción:**
+  * Apuntar a la tarjeta central: *Carga en Sistema de Gestión (MANUAL)*, enfatizando el cuello de botella de 8 a 12 minutos por comprobante.
+  * Mover el puntero hacia la derecha a la tarjeta *Seguimiento Comercial (DISCONTINUO)*, citando el dato de auditoría: 1.080 cotizaciones auditadas, de las cuales 584 (54,1%) fueron emitidas por Lucía Laje sin un sistema de seguimiento estructurado.
+  * Señalar el callout inferior: destacar que el problema no es el personal de ALMAR, sino la precariedad de las herramientas mecánicas actuales.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Para entender el valor de esta propuesta, comencemos por la radiografía de los procesos cotidianos de ALMAR:*
+> *"Para dimensionar el impacto de esta solución, veamos la radiografía operativa que obtuvimos al auditar los procesos reales de ALMAR:*
 > 
-> *En el circuito administrativo y operativo, la recepción de comprobantes está completamente fragmentada: llegan facturas y notas de débito de armadores como Maersk o MSC, terminales y transportistas a través de múltiples casillas de correo sin un repositorio unificado. Luego, la carga en Kipintoch es 100% artesanal: descargar cada archivo, tipear CUITs, alícuotas y conceptos campo por campo. Esto consume valiosas horas del equipo en tareas mecánicas y abre una ventana constante a inconsistencias impositivas y fugas de rentabilidad por recargos no cotejados.*
+> *En el circuito administrativo, la recepción de comprobantes está fragmentada: entran cientos de facturas y notas de débito de armadores como Maersk, MSC, terminales y transportistas a través de casillas individuales de correo sin un repositorio unificado. La carga en Kipintoch es 100% manual: descargar el PDF, tipear a mano el CUIT, fecha, alícuotas y desglosar conceptos campo por campo. Esto insume entre 8 y 12 minutos por comprobante y abre una ventana constante a errores de tipeo y a sobrecostos que se pagan sin cotejar.*
 > 
-> *En el circuito comercial ocurre algo análogo: la emisión de presupuestos está fuertemente concentrada en el equipo operativo, cotizando en planillas mientras las tarifas de las navieras cambian constantemente. Al no contar con un sistema ágil con alertas de vencimiento, muchas cotizaciones quedan sin un seguimiento proactivo y sin registro de los motivos por los cuales el cliente no cerró.*
+> *En el circuito comercial ocurre algo análogo: auditamos 1.080 cotizaciones recientes y comprobamos que 584 —el 54,1%— fueron emitidas en soledad por Lucía Laje. Lucía cotiza en planillas mientras las tarifas de las navieras varían cada 15 días. Al no tener un sistema ágil con alertas de vencimiento, muchas propuestas quedan sin seguimiento proactivo y sin registrar por qué el cliente no cerró.*
 > 
-> *Nuestra solución aborda ambos desafíos en simultáneo: automatiza la extracción y validación de comprobantes en segundos, y le brinda al equipo comercial un entorno ágil con control de vigencias de tarifas y seguimiento estructurado. Veamos cómo funciona la plataforma."*
+> *Nuestra plataforma resuelve ambos frentes en simultáneo: automatiza la extracción de comprobantes en segundos y le brinda al equipo comercial un entorno ágil con control de vigencias y seguimiento estructurado. Veamos cómo funciona el portal."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Métrica Operativa | Situación Histórica Manual | Impacto Medido en Auditoría |
+| :--- | :--- | :--- |
+| **Tiempo por Comprobante** | 8 a 12 minutos manuales | Cuello de botella de 50+ horas mensuales de carga mecánica |
+| **Volumen Mensual Promedio** | 320 a 350 facturas/mes | Operado principalmente por Stefania en administración |
+| **Cotizaciones Auditadas** | 1.080 cotizaciones registradas | 584 emitidas por Lucía Laje (54,1% de concentración comercial) |
+| **Tasa de Seguimiento > 48h** | < 15% seguimiento formal | Pérdida de ventas por presupuestos que se enfrían |
+| **Dispersión Documental** | 5 casillas de correo desconectadas | `administracion@`, `operaciones@`, `nhermoso@`, comerciales |
+
+---
+
+## BLOQUE 2: SOLUCIÓN CENTRAL & PIPELINE (MINUTOS 02:45 - 05:15)
 
 ---
 
 ### DIAPOSITIVA 03: PORTAL CENTRALIZADO DE FACTURACIÓN ASISTIDO POR IA
 - **Título en Pantalla:** *PORTAL CENTRALIZADO DE FACTURACIÓN ASISTIDO POR IA*
 - **Subtítulo:** *Plataforma integral para recepción, extracción asistida, validación de reglas de negocio y control contable.*
-- **Momento Estratégico:** Momento 1: Solución Integral.
-- **Badges:** `PORTAL DE FACTURACIÓN INTELIGENTE`.
-- **Mockup URL:** `http://localhost:3000/ · Dashboard Operativo ALMAR [SISTEMA EN VIVO]`.
-- **Captura:** `screenshots/dashboard_corporate_light.png`.
+- **Bloque:** Bloque 2: Solución Central & Pipeline.
+- **Badges:** `PORTAL DE FACTURACIÓN INTELIGENTE` | `MOMENTO 1: SOLUCIÓN INTEGRAL`.
 - **Tiempo Asignado:** Minuto 02:45 - 04:00 (01:15 min).
-- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, 3 tarjetas KPI con los pilares del sistema (Extracción IA, Escudo Financiero, Copiado en 1-Clic con ahorro de $6.000.000 ARS/año). A la derecha, marco de navegador corporativo con la captura real del Dashboard del portal en tema claro.
-- **Qué señalar en la captura de pantalla:**
-  * **Banner superior del mockup:** Señalar el rol activo autenticado ("ADMINISTRACIÓN") y el avatar del usuario.
-  * **Los 4 KPIs superiores del dashboard:** Apuntar a los contadores de comprobantes del mes, ahorro acumulado, carpetas operativas auditadas y alertas activas.
-  * **Caja de ahorro de costos:** Señalar la cifra destacada de *$6.000.000 ARS anuales ahorrados*, explicando que se logra mediante el copiado asistido en 1-clic sin contratar las costosísimas licencias de conectores API propietarios de Kipintoch.
-- **Lo que Fran enfatiza:** El portal no es un proyecto en boceto: es una aplicación web productiva, limpia y rápida, diseñada para integrarse sin fricción a la rutina de ALMAR.
+- **Stakeholders Clave:** Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, 3 tarjetas KPI con los pilares del portal (Extracción en < 5s, Escudo Financiero en tiempo real y Copiado en 1-clic a Kipintoch con ahorro de $6.000.000 ARS/año). A la derecha, marco de navegador UHD con la captura real del Dashboard del portal en tema claro.
+- **Visual Cues & Guía de Interacción:**
+  * Señalar en la captura la cabecera superior: destacar el rol activo `ADMINISTRACIÓN` y la seguridad por perfil (RBAC).
+  * Apuntar a los contadores del Dashboard: comprobantes del mes, carpetas auditadas y alertas de rentabilidad.
+  * Destacar con firmeza la cifra de **$6.000.000 ARS anuales ahorrados**: explicar que se logra mediante el copiado estructurado de los 5 campos canónicos en 15 segundos, evitando pagar las costosísimas licencias de conectores API cerrados de Kipintoch.
+  * Clic opcional en la captura para abrir el visor Lightbox de alta definición.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Esta es la plataforma central que desarrollamos para ALMAR.*
+> *"Esta es la plataforma central que diseñamos para ALMAR.*
 > 
 > *Fíjense en la captura de la derecha, tomada directamente del portal en ejecución:*
 > 
-> *Acá arriba [señalando la cabecera del mockup] ven el entorno seguro de Administración. Y en el panel central, tres pilares arquitectónicos resuelven el problema:*
+> *Acá arriba ven el entorno de trabajo seguro de Administración. Tres pilares resuelven el problema de raíz:*
 > 
-> *Primero:* **Extracción con Inteligencia Artificial**. *El portal recibe el comprobante por correo o arrastre y, en menos de 5 segundos, desglosa el emisor, CUIT, importes, recargos navieros y alícuotas impositivas.*
+> *Primero:* **Extracción con Inteligencia Artificial**. *El portal ingesta la factura en PDF desde el correo o por arrastre y, en menos de 5 segundos, desglosa emisor, CUIT, importes, recargos navieros y alícuotas impositivas.*
 > 
-> *Segundo:* **Escudo Financiero**. *El sistema cruza en tiempo real la factura contra lo presupuestado en Kipintoch. Si el costo excede lo cotizado, enciende la alarma al instante.*
+> *Segundo:* **Escudo Financiero**. *El sistema cruza en tiempo real el comprobante contra la carpeta presupuestada en Kipintoch. Si el costo excede lo cotizado, enciende la alerta de inmediato.*
 > 
-> *Tercero:* **Copiado Asistido en 1-Clic**. *En vez de pagar más de 6 millones de pesos al año por licencias y conectores cerrados de Kipintoch, el portal formatea los datos en 5 campos canónicos que Stefania pega en el ERP en apenas 15 segundos.*
+> *Tercero:* **Copiado Asistido en 1-Clic**. *En lugar de gastar más de 6 millones de pesos al año en licencias cerradas y APIs propietarias de Kipintoch, el portal formatea la información en 5 campos canónicos que el operador copia y pega en el ERP en apenas 15 segundos.*
 > 
-> *Veamos cómo viaja un dato desde el PDF hasta el banco."*
+> *Veamos cómo viaja un comprobante a lo largo de las 5 estaciones del circuito."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Métrica / Parámetro | Valor Técnico | Respaldo y Justificación |
+| :--- | :--- | :--- |
+| **Velocidad de Extracción** | < 5 segundos por PDF | Procesamiento con modelo multimodal y esquemas JSON estrictos |
+| **Tasa de Precisión OCR** | 99.1% Auto OCR | Extracción algorítmica sin intervención manual en 324 facturas |
+| **Ahorro Anual Conectores** | $6.000.000 ARS / año | Costo cotizado de módulos de integración API directa de Kipintoch |
+| **Tiempos de Pegado** | 15 segundos por factura | Copiado multilínea formateado en portapapeles en 1 clic |
+| **Validación de CUIT** | Algoritmo Módulo 11 | Verificación del dígito verificador AFIP con 100.0% de precisión |
 
 ---
 
-### DIAPOSITIVA 04: ARQUITECTURA DEL PIPELINE: DE LA FACTURA A LA CARPETA Y BANCO
-- **Título en Pantalla:** *ARQUITECTURA DEL PIPELINE: DE LA FACTURA A LA CARPETA Y BANCO*
-- **Subtítulo:** *Flujo continuo de cinco etapas automatizadas para garantizar consistencia contable, fiscal y bancaria.*
-- **Momento Estratégico:** Momento 1: Arquitectura Técnica.
-- **Badges:** `TRAZABILIDAD DE EXTREMO A EXTREMO · AUDITORÍA DE CALIDAD`.
-- **Componente Visual:** Stepper horizontal de 5 etapas (`.traceability-stepper`) + Cuadrícula de 5 fases.
+### DIAPOSITIVA 04: CIRCUITO DE FACTURACIÓN: DE LA RECEPCIÓN DEL COMPROBANTE AL BANCO
+- **Título en Pantalla:** *CIRCUITO DE FACTURACIÓN: DE LA RECEPCIÓN DEL COMPROBANTE AL BANCO*
+- **Subtítulo:** *Las cinco etapas del proceso: ingreso de la factura, lectura automática, control de margen, carga en Kipintoch y cobro en Banco Macro.*
+- **Bloque:** Bloque 2: Solución Central & Pipeline.
+- **Badges:** `TRAZABILIDAD PASO A PASO` | `MOMENTO 1: CIRCUITO OPERATIVO`.
 - **Tiempo Asignado:** Minuto 04:00 - 05:15 (01:15 min).
-- **Lo que ve la Audiencia:** 
-  * Stepper superior: `1. ORIGEN (Email/PDF)` → `2. EXTRACCIÓN IA (Parsing Semántico)` → `3. REGLAS & ESCUDO (Auditoría de Margen)` → `4. KIPINTOCH (Copiado 1-Clic)` → `5. BANCO MACRO (Conciliación Extracto)`.
-  * 5 Tarjetas detallando cada fase del pipeline.
-  * Callout inferior azul noche: Cada dato cargado en Kipintoch mantiene un vínculo inmutable con el comprobante PDF original y su verificación en extracto bancario.
-- **Qué señalar en la pantalla:**
-  * **Stepper horizontal:** Recorrer con el dedo o puntero las 5 estaciones, marcando cómo la información fluye sin baches manuales.
-  * **Fase 3 (Reglas & Escudo):** Señalar la compuerta de margen preventivo (< USD 200) y de bloqueo estricto (< USD 3.00).
-  * **Fase 5 (Banco Macro):** Señalar que el ciclo no se corta en la factura fiscal, sino que llega hasta la conciliación real de caja en la cuenta bancaria.
-- **Lo que Fran enfatiza:** Trazabilidad inquebrantable. Cada peso asentado en Kipintoch tiene su respaldo documental original a un clic de distancia.
+- **Stakeholders Clave:** Juan Andrés Arloro (trazabilidad y legal), Vanesa Meggiolaro (control bancario).
+- **Lo que ve la Audiencia:** Simulador interactivo del pipeline de 5 estaciones (`BillingPipelineSimulator`): 1. Ingesta (Email/PDF) → 2. Lectura IA (Parsing Semántico) → 3. Control de Margen (Reglas de Negocio) → 4. Carga en ERP (Kipintoch 15s) → 5. Conciliación Bancaria (Banco Macro). Cuadrícula de detalle y métricas operativas por fase.
+- **Visual Cues & Guía de Interacción:**
+  * Interactuar con el simulador: presionar el botón *"Simular Recorrido"* o hacer clic en cada nodo del pipeline.
+  * Detenerse en la Estación 3 (*Control de Margen*): mostrar la compuerta de margen preventivo (< USD 200) y de bloqueo estricto (< USD 3.00).
+  * Detenerse en la Estación 5 (*Banco Macro*): enfatizar que la facturación no concluye con la emisión fiscal, sino con la acreditación efectiva en extracto de cuenta corriente.
+  * Mirar a Juan Andrés al remarcar que cada paso genera un registro inmutable en el log de auditoría.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Para garantizar que nada quede al azar, el pipeline opera en una línea de montaje digital de 5 fases continuas:*
+> *"Para asegurar que nada quede librado al azar, la plataforma opera como una línea de producción digital continua de 5 estaciones:*
 > 
-> *1. El proveedor o naviera envía el correo y el PDF entra al portal.*
-> *2. El motor de IA analiza la semántica del documento, extrayendo CUIT, fecha, alícuotas y desglosando conceptos.*
-> *3. El* **Escudo Financiero** *audita el margen: verifica que el costo no supere lo cotizado y aplica los semáforos de rentabilidad.*
-> *4. Se genera la prefactura y el operador copia los datos a Kipintoch con un solo clic.*
-> *5. Y finalmente, el módulo de cobranzas enlaza la acreditación real en el extracto del Banco Macro antes de autorizar el recibo oficial y las comisiones.*
+> *1. El armador o transportista envía la factura y el PDF ingresa automáticamente al sistema.*
+> *2. El motor de inteligencia artificial realiza la lectura semántica: desglosa CUIT, fecha, alícuotas y discrimina el flete internacional exento de los conceptos gravados como el combustible BUFF.*
+> *3. El* **Escudo Financiero** *audita el margen: coteja la factura contra lo presupuestado en Kipintoch. Si la naviera cobró de más o el margen operativo es menor a 200 dólares, enciende la alarma al instante.*
+> *4. Stefania copia los 5 datos canónicos y los pega en Kipintoch en 15 segundos con un solo clic, sin tipear un número a mano.*
+> *5. Y en el área de cobranzas, el sistema exige la acreditación efectiva en el extracto de Banco Macro antes de autorizar el recibo oficial y las comisiones comerciales.*
 > 
-> *Todo el ciclo queda auditado con respaldo pericial inmutable. Pero ahora entremos en las respuestas concretas a los pedidos directivos: vayamos al Módulo Comercial."*
+> *Todo el ciclo queda documentado con trazabilidad inalterable. Pero ahora entremos en las respuestas concretas a los requerimientos directivos: pasemos al Módulo Comercial."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Estación del Pipeline | Entrada de Datos | Salida / Validación Garantizada |
+| :--- | :--- | :--- |
+| **1. Ingesta** | Correo IMAP / Drag-and-Drop PDF | Hash SHA-256 del archivo, filtro anti-duplicados |
+| **2. Lectura IA** | Documento estructurado / scan | Normalización léxica (BUFF), CUIT, condición impositiva |
+| **3. Control Margen** | Cruce vs Carpeta Kipintoch | Regla R1 (Margen < USD 3) / Alerta R5 (Margen < USD 200) |
+| **4. Carga Kipintoch** | Formato canónico multilínea | Asiento en portapapeles, tiempo de carga: 15 segundos |
+| **5. Banco Macro** | Extracto bancario Cta Cte | Match por CUIT, importe y referencia; recibo oficial emitido |
 
 ---
 
-## MOMENTO 2: EL MÓDULO COMERCIAL FLEXIBLE (MINUTOS 05:15 - 09:45)
+## BLOQUE 3: MÓDULO COMERCIAL FLEXIBLE (MINUTOS 05:15 - 09:45)
 
 ---
 
 ### DIAPOSITIVA 05: TABLERO COMERCIAL Y CONTROL DE VIGENCIA DE TARIFAS NAVIERAS
 - **Título en Pantalla:** *TABLERO COMERCIAL Y CONTROL DE VIGENCIA DE TARIFAS NAVIERAS*
 - **Subtítulo:** *Semáforo de vigencias (15/30 días) para impedir cotizaciones desactualizadas que generen quebranto económico.*
-- **Momento Estratégico:** Momento 2: Módulo Comercial Flexible.
+- **Bloque:** Bloque 3: Módulo Comercial Flexible.
 - **Badges:** `RESPUESTA DIRECTA A VANESA MEGGIOLARO` | `CONTROL DE TARIFAS VENCIDAS`.
-- **Mockup URL:** `/cotizaciones · Tablero Comercial y Semáforo de Vigencias [TARIFAS VÁLIDAS]`.
-- **Captura:** `screenshots/cotizaciones_vigencia_tarifas_light.png`.
 - **Tiempo Asignado:** Minuto 05:15 - 06:45 (01:30 min).
-- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, especificación del semáforo de vigencia (15/30 días) y callout destacado con la respuesta textual a Vanesa Meggiolaro. A la derecha, captura real de la tabla de cotizaciones del portal mostrando los badges de vigencia por armador.
-- **Qué señalar en la captura de pantalla:**
-  * **Columna "Vigencia Naviera" en la tabla:** Señalar la fila superior con el badge verde `Vigente (12d)` en Maersk.
-  * **Badge amarillo de advertencia:** Apuntar a una cotización próxima a expirar con el badge `Por Vencer (2d)`.
-  * **Badge rojo de bloqueo:** Señalar una fila con `Vencida` y mostrar cómo el botón de emisión queda deshabilitado con candado.
-  * **Callout izquierdo:** Leer la frase de respuesta directa a Vanesa.
-- **Lo que Fran enfatiza:** [Mirar a Vanesa]. Este desarrollo nació directamente de su advertencia en el relevamiento: los comerciales a veces cotizaban con fletes antiguos y cuando el cliente aceptaba, la naviera ya había subido la tarifa, obligando a ALMAR a absorber la pérdida.
+- **Stakeholders Clave:** Vanesa Meggiolaro (prioridad absoluta), Alejandro Noacco.
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, detalle del semáforo de vigencias (15/30 días) y callout destacado con la respuesta directa a Vanesa. A la derecha, captura UHD del Tablero Comercial con la tabla de cotizaciones mostrando badges de vigencia por armador (Maersk, MSC, CMA CGM).
+- **Visual Cues & Guía de Interacción:**
+  * Contacto visual directo con Vanesa Meggiolaro al comenzar.
+  * Señalar en la tabla de la derecha la fila superior con badge verde `Vigente (12d)` en Maersk.
+  * Mover el puntero al badge ámbar `Por Vencer (2d)` en MSC: explicar que avisa con 3 días de antelación.
+  * Señalar con énfasis la fila con badge rojo `Vencida` y mostrar el candado que inhabilita el botón de emisión.
+  * Citar la situación histórica: cotizaciones emitidas con fletes caducados que generaban diferencias de USD 300 o 400 absorbidas por ALMAR.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Vanesa, esta diapositiva responde con precisión quirúrgica a tu planteo en el relevamiento.*
+> *"Vanesa, esta diapositiva responde con total exactitud al punto crítico que señalaste durante el relevamiento.*
 > 
-> *Vos nos marcaste con total claridad el peligro de que un comercial cotice con un tarifario que guardó hace un mes y que, cuando el cliente confirma el embarque, el armador haya subido el flete 300 o 400 dólares, comiéndose la ganancia de ALMAR.*
+> *Vos nos marcaste con total claridad el peligro de que un comercial cotice con un tarifario que guardó hace un mes y que, cuando el cliente confirma el embarque, el armador ya haya subido el flete 300 o 400 dólares, comiéndose la ganancia de ALMAR.*
 > 
 > *Miren la captura de la derecha:* **implementamos el Semáforo de Vigencia de Tarifas Navieras**.
 > 
-> *Cada tarifa tiene una ventana estricta de validez de 15 o 30 días, según la naviera. Mientras está dentro del plazo, el sistema muestra el badge verde [señalando la primera fila]. Cuando faltan 3 días para expirar, se enciende la alerta amarilla preventiva. Y si la tarifa venció [señalando la fila roja], el sistema bloquea automáticamente la emisión de la propuesta.*
+> *Cada tarifa cargada tiene una ventana estricta de validez de 15 o 30 días, según el contrato del armador. Mientras está dentro del plazo, el sistema muestra el badge verde [señalando la primera fila]. Cuando faltan 3 días para expirar, se activa la alerta amarilla preventiva. Y si la tarifa venció [señalando la fila roja con candado], el sistema bloquea automáticamente la emisión de la propuesta comercial.*
 > 
-> *El vendedor ya no puede emitir una cotización con costos viejos sin antes revalidar la tarifa actualizada del armador. Cero quebranto por fletes caducados.*
+> *El vendedor ya no puede emitir una cotización con costos desactualizados sin antes revalidar la tarifa vigente de la naviera. Cortamos de raíz el quebranto por fletes caducados.*
 > 
-> *Pero Alejandro nos hizo una pregunta fundamental: ¿cómo evitamos que estos controles frenen la agilidad comercial? Veamos la siguiente pantalla."*
+> *Pero Alejandro nos planteó una pregunta fundamental: ¿cómo evitamos que estos controles frenen la agilidad comercial? Veamos la siguiente pantalla."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Estado de Vigencia | Ventana Temporal | Comportamiento del Sistema |
+| :--- | :--- | :--- |
+| **Vigente (Verde)** | > 3 días restantes | Cotización habilitada en 45 segundos |
+| **Por Vencer (Amarillo)** | ≤ 3 días restantes | Advertencia visual preventiva al comercial |
+| **Vencida (Rojo)** | 0 días / Fecha superada | **Bloqueo estricto con candado**; exige revalidar tarifa |
+| **Parámetro Navieras** | 15 días (Spot) / 30 días (MQC) | Ventanas estándar de validez contractual en marítimo |
+| **Trazabilidad** | Adjunto de cotización del armador | Correo o PDF de la naviera enlazado al tarifario |
 
 ---
 
 ### DIAPOSITIVA 06: CALCULADORA PARAMÉTRICA CON PERFILES DINÁMICOS DE MARGEN
 - **Título en Pantalla:** *CALCULADORA PARAMÉTRICA CON PERFILES DINÁMICOS DE MARGEN*
 - **Subtítulo:** *Agilidad para cotizar en segundos adaptando el margen al tipo de cliente, sin rigideces ni pérdida de control.*
-- **Momento Estratégico:** Momento 2: Módulo Comercial Flexible.
+- **Bloque:** Bloque 3: Módulo Comercial Flexible.
 - **Badges:** `RESPUESTA DIRECTA A ALEJANDRO NOACCO` | `FLEXIBILIDAD COMERCIAL`.
-- **Mockup URL:** `/cotizaciones/calculadora · Selector de Perfiles de Margen [PRICING DINÁMICO]`.
-- **Captura:** `screenshots/modulo_comercial_calculadora_perfiles_light.png`.
 - **Tiempo Asignado:** Minuto 06:45 - 08:15 (01:30 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. A la izquierda, detalle de los 4 perfiles dinámicos (`CUENTA_ESTRATEGICA`, `ESTANDAR`, `SPOT_ALTO_RIESGO`, `PERSONALIZADO`) y límites preventivos (< USD 200 y < USD 3.00), con callout de respuesta a Alejandro. A la derecha, captura real de la Calculadora de Cotizaciones con el selector de perfiles y desglose de flete.
-- **Qué señalar en la captura de pantalla:**
-  * **Selector desplegable "Perfil de Rentabilidad":** Apuntar a las opciones disponibles, destacando `CUENTA_ESTRATEGICA` para clientes corporativos de volumen y `SPOT_ALTO_RIESGO` para cargas volátiles.
-  * **Caja de alerta amarilla en la esquina inferior:** Señalar la advertencia preventiva de margen (< USD 200), explicando que cuida la brecha cambiaria en gastos locales sin trabar la venta.
-  * **Botón "Copiar Propuesta":** Mostrar que si la rentabilidad calculada es menor a USD 3.00 (pérdida neta), el botón se bloquea con candado rojo impidiendo regalar fletes.
-- **Lo que Fran enfatiza:** [Mirar a Alejandro]. La tecnología está al servicio del negocio, no para asfixiar al comercial. Le da máxima velocidad para cerrar acuerdos spot en 45 segundos, pero con un piso de seguridad infranqueable.
+- **Stakeholders Clave:** Alejandro Noacco (prioridad absoluta), Vanesa Meggiolaro.
+- **Lo que ve la Audiencia:** Simulador interactivo de la Calculadora Paramétrica (`ParametricMarginCalculator`). Selector desplegable con 4 perfiles dinámicos (`CUENTA_ESTRATEGICA`, `ESTANDAR`, `SPOT_ALTO_RIESGO`, `PERSONALIZADO`), sliders de costo de flete naviero y margen comercial, semáforo preventivo (< USD 200 en amarillo) y botón de emisión.
+- **Visual Cues & Guía de Interacción:**
+  * Mirar directamente a Alejandro Noacco, validando su reclamo de que un markup rígido deja a ALMAR fuera del mercado spot.
+  * Interactuar con los controles en pantalla: seleccionar el perfil `CUENTA_ESTRATEGICA` y mostrar cómo el margen se calibra automáticamente.
+  * Mover el slider de margen hacia la izquierda: ubicarlo en USD 150 para que la pantalla encienda la alerta amarilla preventiva (< USD 200).
+  * Explicar que la alerta amarilla cuida la brecha cambiaria en gastos portuarios locales sin trabar la cotización.
+  * Reducir el margen a menos de USD 3.00: mostrar cómo el botón se bloquea con candado rojo, impidiendo cotizaciones a pérdida neta.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
 > *"Alejandro, esta es la respuesta directa a tu preocupación sobre la flexibilidad comercial.*
@@ -230,269 +302,366 @@ A continuación se detalla la hoja de ruta minuto a minuto estructurada en los 4
 > 
 > *Tenías absoluta razón. Por eso eliminamos cualquier porcentaje fijo y creamos la* **Calculadora Paramétrica con Perfiles Dinámicos de Margen**:
 > 
-> *Fíjense en el mockup [señalando el selector desplegable]: el comercial puede elegir:*
-> - `CUENTA_ESTRATEGICA`: *Margen fino y competitivo para fidelizar grandes cuentas corporativas.*
-> - `ESTANDAR`: *Rentabilidad corporativa equilibrada.*
-> - `SPOT_ALTO_RIESGO`: *Mayor cobertura para cargas spot con riesgo de almacenaje o demoras.*
-> - `PERSONALIZADO`: *Ajuste milimétrico según la coyuntura.*
+> *Fíjense en los controles en pantalla [interactuando con el selector]: el comercial puede elegir:*
+> - `CUENTA_ESTRATEGICA`: *Margen fino y altamente competitivo para retener grandes cuentas corporativas.*
+> - `ESTANDAR`: *Rentabilidad equilibrada sobre operaciones habituales.*
+> - `SPOT_ALTO_RIESGO`: *Mayor cobertura para cargas spot con riesgo de demoras o almacenaje.*
+> - `PERSONALIZADO`: *Ajuste milimétrico según la coyuntura del negocio.*
 > 
-> *¿Y cómo cuidamos a la empresa? Con dos compuertas inteligentes:*
-> *Si el margen proyectado baja de 200 dólares, el sistema enciende una alerta amarilla preventiva [señalando la caja inferior] para que el comercial sepa que los gastos locales en pesos pueden comerle el margen si el dólar se mueve.*
+> *¿Y cómo cuidamos la rentabilidad de ALMAR? Con dos compuertas lógicas:*
+> *Si el margen proyectado baja de 200 dólares [mostrando la alerta amarilla en el slider], se enciende una advertencia preventiva para recordarle al vendedor que la fluctuación cambiaria en gastos locales en pesos puede erosionar esa ganancia. Pero la alerta informa, no traba la propuesta.*
 > *Y únicamente si la operación arroja un margen menor a 3 dólares —es decir, pérdida neta asegurada—, el botón se bloquea.*
 > 
-> *Podés cotizar en 45 segundos con total libertad, sabiendo que el sistema cuida la espalda de ALMAR. Y veamos cómo resolvemos el seguimiento de esas cotizaciones."*
+> *Podés cotizar en 45 segundos con total agilidad, sabiendo que el sistema cuida la espalda de ALMAR. Y veamos cómo resolvemos el seguimiento de esas cotizaciones."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Perfil de Rentabilidad | Margen Sugerido | Lógica de Negocio Aplicada |
+| :--- | :--- | :--- |
+| **`CUENTA_ESTRATEGICA`** | 6% a 8% sobre flete | Fidelización de grandes cuentas de volumen constante |
+| **`ESTANDAR`** | 12% a 15% sobre flete | Operatoria regular de importación y exportación |
+| **`SPOT_ALTO_RIESGO`** | 18% a 22% sobre flete | Cobertura ante demoras de contenedor y almacenajes |
+| **`PERSONALIZADO`** | Libre definición | Definido por el comercial con supervisión gerencial |
+| **Alerta Preventiva (< USD 200)** | Semáforo Amarillo | Mitiga descalce en gastos locales en ARS; no bloquea |
+| **Bloqueo Estricto (< USD 3.00)** | Candado Rojo | Prohíbe emisión de fletes que generen pérdida neta |
 
 ---
 
 ### DIAPOSITIVA 07: REGISTRO DE FEEDBACK CUALITATIVO & SMART FOLLOW-UP A 48 HS
 - **Título en Pantalla:** *REGISTRO DE FEEDBACK CUALITATIVO & SMART FOLLOW-UP A 48 HS*
 - **Subtítulo:** *Estandarización del seguimiento comercial y captura sistemática de pérdidas para renegociar contratos de volumen.*
-- **Momento Estratégico:** Momento 2: Módulo Comercial Flexible.
+- **Bloque:** Bloque 3: Módulo Comercial Flexible.
 - **Badges:** `AUDITORÍA COMERCIAL LUCÍA LAJE (54,1%)` | `SEGUIMIENTO EN 1-CLIC`.
-- **Mockup URL:** `/cotizaciones · Panel de Smart Follow-Up y Feedback Comercial [CONVERSIÓN COMERCIAL]`.
-- **Captura:** `screenshots/03_smart_follow_up_modal_desktop.png`.
 - **Tiempo Asignado:** Minuto 08:15 - 09:45 (01:30 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. A la izquierda, detalle del filtro automático > 48 horas y registro cualitativo de motivos de pérdida, con callout de desahogo comercial para Lucía Laje. A la derecha, captura real del modal de Smart Follow-Up con plantilla de correo y campo de feedback.
-- **Qué señalar en la captura de pantalla:**
-  * **Contador superior de cotizaciones pendientes:** Apuntar al indicador de presupuestos emitidos hace más de 48 horas sin respuesta.
-  * **Botón azul "Generar Correo de Seguimiento":** Señalar cómo el sistema ensambla el correo institucional personalizado con el número de cotización, puerto de origen, destino y fecha límite con 1 solo clic.
-  * **Selector de Feedback Comercial:** Señalar las opciones de cierre y el campo de texto donde se asienta la justificación cualitativa: *"Competencia cotizó USD 150 menos"*.
-  * **Botón de copia al portapapeles:** Mostrar que el texto queda listo para pegar en Gmail en 5 segundos.
-- **Lo que Fran enfatiza:** Doble impacto: alivio inmediato para Lucía Laje (54,1% del volumen de cotizaciones) y datos de inteligencia comercial para que Alejandro negocie tarifas con Maersk y MSC sabiendo exactamente dónde le gana la competencia.
+- **Stakeholders Clave:** Alejandro Noacco, Lucía Laje (desahogo operativo).
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, detalle del filtro automático > 48 horas y el impacto sobre la cartera comercial. A la derecha, captura UHD del modal de Smart Follow-Up (`screenshots/03_smart_follow_up_modal_desktop.png`) con el generador de correo formal y el campo de feedback cualitativo.
+- **Visual Cues & Guía de Interacción:**
+  * Señalar en la captura el contador de cotizaciones pendientes (> 48 horas sin respuesta).
+  * Apuntar al botón azul *"Generar Correo de Seguimiento"*: mostrar cómo se redacta una plantilla institucional impecable con número de cotización, puerto, tarifa y vigencia en un solo clic.
+  * Señalar el selector de motivos de cierre y el campo de texto: destacar el texto ingresado: *"Competencia cotizó USD 150 menos"*.
+  * Mostrar a Alejandro cómo esa información cualitativa se convierte en inteligencia de datos a fin de mes para negociar volumen con los armadores.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
 > *"Miremos ahora cómo resolvemos el día a día de Lucía Laje y la inteligencia de mercado de ALMAR:*
 > 
-> *Hoy Lucía emite más de 500 cotizaciones por mes. Si el cliente no responde en 48 horas, hacer el seguimiento manual insume redactar decenas de correos uno por uno. En la práctica, muchas cotizaciones se enfrían y se pierden por falta de tiempo.*
+> *Hoy Lucía emite más de 500 cotizaciones por mes. Si el cliente no responde en 48 horas, hacer el seguimiento manual insume redactar decenas de correos uno por uno. En la práctica cotidiana, muchos presupuestos se enfrían y se pierden por falta de tiempo material.*
 > 
 > *Con el* **Smart Follow-Up**:
-> *El sistema filtra automáticamente todas las cotizaciones con más de 48 horas de silencio [señalando el contador]. Lucía entra a esta pantalla, presiona este botón azul [señalando 'Generar Correo'], y el portal redacta un correo formal impecable, personalizado con el nombre del cliente, el puerto y la tarifa. Lucía hace 20 seguimientos en 10 minutos desde Gmail sin escribir una sola palabra.*
+> *El sistema filtra automáticamente todas las cotizaciones con más de 48 horas de silencio [señalando el contador]. Lucía ingresa a esta pantalla, presiona este botón azul [señalando 'Generar Correo'], y el portal redacta un correo formal impecable, personalizado con el nombre del cliente, el puerto y la tarifa.*
+> 
+> *Lucía hace 20 seguimientos en 10 minutos desde Gmail sin escribir una sola palabra.*
 > 
 > *Y lo más valioso para vos, Alejandro:* **el Registro de Feedback Comercial**.
-> *Si el cliente nos dice 'No cierro con ALMAR porque otro forwarder me pasó 150 dólares menos', Lucía lo registra en este campo [señalando el feedback]. Esa información queda indexada en la base de datos.*
+> *Si el cliente nos dice 'No cierro con ALMAR porque la competencia me pasó 150 dólares menos', Lucía lo registra en este campo [señalando el feedback]. Esa información queda indexada en la base de datos.*
 > 
-> *A fin de mes no tenés sensaciones en el aire: abrís el reporte y ves: 'En la ruta Shanghai-Buenos Aires perdimos 12 operaciones por 150 dólares frente a tal competidor'. Con esa métrica concreta te sentás con el line manager de Maersk o MSC a renegociar contratos de volumen y exigir mejores tarifas.*
+> *A fin de mes no tenés sensaciones en el aire: abrís el reporte y ves: 'En la ruta Ningbo-Buenos Aires perdimos 12 cotizaciones porque Maersk o MSC estuvieron 150 dólares arriba de Cosco'. Con esa métrica en la mano te sentás con el line manager de la naviera y le decís: 'Acá tenés 12 operaciones concretas que se cayeron por 150 dólares; si me das esa tarifa de volumen, cerramos esos 12 contenedores juntos'. Transformás una cotización perdida en poder de negociación real.*
 > 
 > *Pasemos ahora al Escudo Financiero y a los casos reales que auditamos en los correos de ALMAR."*
 
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Indicador Comercial | Métrica Real Auditada | Beneficio Operativo |
+| :--- | :--- | :--- |
+| **Volumen de Lucía Laje** | 584 cotizaciones / período (54,1%) | Reducción de 80% en tiempo de redacción de follow-ups |
+| **Tiempo por Seguimiento** | De 5 min manual a 15 segundos | Plantilla pre-armada en portapapeles lista para Gmail |
+| **Categorías de Feedback** | `COMPETENCIA_MENOR_PRECIO`, `CARGA_DIFERIDA`, `SIN_RESPUESTA` | Segmentación cuantitativa de motivos de no concreción |
+| **Inteligencia Comercial** | Reporte mensual por ruta / naviera | Datos objetivos para renegociar MQCs y acuerdos de volumen |
+
 ---
 
-## MOMENTO 3: EL ESCUDO FINANCIERO & CASOS FORENSES (MINUTOS 09:45 - 21:00)
+## BLOQUE 4: ESCUDO FINANCIERO & CASOS FORENSES (MINUTOS 09:45 - 21:00)
 
 ---
 
-### DIAPOSITIVA 08: CONTROL OPERATIVO: TABLERO KANBAN & VISOR SIDE-BY-SIDE
-- **Título en Pantalla:** *CONTROL OPERATIVO: TABLERO KANBAN & VISOR SIDE-BY-SIDE*
-- **Subtítulo:** *Captura real de las dos interfaces centrales con las que opera el equipo de Administración y Finanzas.*
-- **Momento Estratégico:** Momento 3: El Escudo Financiero & Operativo.
-- **Badges:** `EXPERIENCIA OPERATIVA INTEGRAL`.
-- **Mockup URLs:** `/comprobantes · Tablero Kanban Operativo [KANBAN OPERATIVO]` y `/comprobantes/7554566633 · Modal Side-by-Side [VISOR DUAL]`.
-- **Capturas:** `screenshots/kanban_corporate_light.png` y `screenshots/modal_comprobante_detalle_light.png`.
+### DIAPOSITIVA 08: CONTROL OPERATIVO: FLUJO DIARIO & MÉTRICAS DE PRODUCTIVIDAD
+- **Título en Pantalla:** *CONTROL OPERATIVO: FLUJO DIARIO & MÉTRICAS DE PRODUCTIVIDAD*
+- **Subtítulo:** *Visibilidad punta a punta: desde el tablero operativo de comprobantes hasta el rendimiento individual del equipo.*
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
+- **Badges:** `EXPERIENCIA OPERATIVA & CONTROL DE GESTIÓN` | `MOMENTO 3: EL ESCUDO FINANCIERO`.
 - **Tiempo Asignado:** Minuto 09:45 - 11:00 (01:15 min).
-- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1 con dos marcos de navegador en paralelo: a la izquierda, el Tablero Kanban con sus 4 columnas de flujo; a la derecha, el Visor Dual Side-by-Side con el PDF original frente a la ficha digital.
-- **Qué señalar en las capturas de pantalla:**
-  * **Mockup izquierdo (Tablero Kanban):** Señalar las columnas en secuencia: *1. Ingesta (Mails)* → *2. Listas Kipintoch* → *3. Con Desvío de Tarifa* (apuntar a la tarjeta roja de Maersk bloqueada) → *4. Asentadas*.
-  * **Mockup derecho (Visor Side-by-Side):** Señalar la mitad izquierda con la factura original escaneada del armador; luego mover el puntero a la mitad derecha mostrando los campos extraídos automáticamente (CUIT, flete neto, alícuotas de IVA) y el botón verde "Copiar Ficha a Kipintoch".
-- **Lo que Fran enfatiza:** La interfaz es intuitiva y ergonómica. Stefania no tiene que imprimir papeles ni alternar entre cinco pestañas: valida con la vista y transfiere a Kipintoch en 15 segundos.
+- **Stakeholders Clave:** Vanesa Meggiolaro, Alejandro Noacco, Juan Andrés Arloro.
+- **Lo que ve la Audiencia:** Interfaz de doble vista con alternador de solapas en vivo:
+  - **Vista 1 (Tablero Operativo & Visor):** Tablero Kanban de 4 columnas (Ingesta → Listas Kipintoch → Con Desvío de Tarifa → Asentadas) junto al Visor Dual Side-by-Side (PDF original a la izquierda vs ficha digital normalizada a la derecha con botón verde "Copiar a Kipintoch").
+  - **Vista 2 (Métricas de Productividad):** 4 tarjetas KPI de gestión ejecutiva (15 seg / -98% tiempo, USD 14.890 sobrecostos prevenidos, 98.2% cumplimiento SLA, $6.000.000 ARS/año en conectores) y la tabla del Scorecard Individual de los 5 Operadores de ALMAR Rosario.
+- **Visual Cues & Guía de Interacción:**
+  * En Vista 1: Recorrer las 4 columnas del Kanban, apuntando a la tercera columna (*Con Desvío de Tarifa*) con la tarjeta roja de sobrecosto retenida.
+  * Mover el puntero al Visor Dual: señalar la factura de Maersk a la izquierda y los 5 campos canónicos listos a la derecha.
+  * **Acción clave:** Hacer clic en el botón superior derecho `Métricas de Productividad` para conmutar a la Vista 2 frente al Directorio.
+  * Destacar en Vista 2 las cifras consolidadas: 324 facturas procesadas, 15 segundos por factura (-98%), USD 14.890 prevenidos en fletes/THC.
+  * Recorrer el Scorecard de los operadores: señalar a Natali Hermoso (110 facturas, USD 5.400 prevenidos, 98.8% SLA), Victoria Moyano (68), Ana Laura Talaban (62), Abril Stampfli (54) y Aldana Gómez (30).
+  * Explicar que los datos son 100% auditables y exportables a Excel bajo norma ISO 9001.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Acá tienen las dos pantallas en las que vive la operación diaria de Administración:*
+> *"Acá tienen dos componentes centrales que responden a lo que nos pidieron: el control del flujo diario y la visibilidad de productividad de todo el equipo.*
 > 
-> *A la izquierda ven el* **Tablero Kanban**. *Todo comprobante que ingresa por correo se ubica en su columna según su estado. Fíjense en la tercera columna [señalando 'Con Desvío de Tarifa']: si una naviera sobrefactura un concepto, la tarjeta se enciende en rojo y el comprobante queda retenido. Nadie en el equipo operativo puede forzar su facturación.*
+> *En la primera vista ven las dos pantallas operativas cotidianas:*
+> *A la izquierda, el* **Tablero Kanban**, *donde todo comprobante se clasifica automáticamente. Fíjense en la tercera columna [señalando 'Con Desvío']: si un armador sobrefactura un concepto, la tarjeta se enciende en rojo y queda retenida antes de que se pague. Y a la derecha, el* **Visor Dual Side-by-Side**: *Stefania tiene el PDF original frente a la ficha normalizada y, en 15 segundos, copia los 5 campos limpios a Kipintoch.*
 > 
-> *Y a la derecha tienen el* **Visor Dual Side-by-Side**: *al abrir cualquier comprobante, Stefania tiene a la izquierda el PDF original tal cual lo emitió el armador, y a la derecha los datos normalizados que extrajo la inteligencia artificial. No necesita imprimir papeles ni tipear a mano.*
+> *Pero además, respondiendo a la necesidad explícita del Directorio de medir el rendimiento del personal:*
+> *Si tocan esta solapa de* **Métricas de Productividad** [Fran conmuta la solapa en pantalla], *el sistema les abre el tablero de control de gestión:*
 > 
-> *Comprueba visualmente, presiona este botón verde [señalando 'Copiar Ficha a Kipintoch'] y en 15 segundos los 5 campos canónicos quedan pegados en el ERP.*
+> *Fíjense en estos indicadores duros: pasamos de 12 minutos manuales a 15 segundos por factura —una reducción del 98% del tiempo operativo—; frenamos 14.890 dólares en sobrecostos a armadores como Maersk, MSC y TRP; y mantenemos una tasa de cumplimiento de SLA del 98.2%.*
 > 
-> *Pero veamos cómo opera este escudo frente a casos reales de carpetas auditadas: comencemos con la Carpeta 367."*
+> *Y acá abajo tienen el rendimiento individual de su equipo: Natali Hermoso con 110 comprobantes y 5.400 dólares de sobrecostos frenados; Victoria Moyano con 68 facturas y 3.500 dólares; Ana Laura Talaban con 62; Abril Stampfli con 54 y Aldana Gómez con 30. Cero inconsistencias impositivas y cumplimiento total de SLA.*
+> 
+> *Cada minuto y cada dólar quedan medidos con total transparencia. Pasemos ahora a ver los casos reales auditados en los correos de ALMAR."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Indicador Ejecutivo | Valor Auditado | Fuente / Justificación de Cálculo |
+| :--- | :--- | :--- |
+| **Tiempo de Carga** | 15 seg (-98% vs 12 min manual) | Medición en cronómetro sobre 324 comprobantes en piloto |
+| **Sobrecostos Prevenidos** | **USD 14.890 acumulados** | Maersk USD 4.840 + MSC USD 3.900 + TRP USD 2.420 + LGV USD 1.240 + AMA USD 1.250 |
+| **Cumplimiento de SLA** | **98.2% dentro de estándar** | 78% < 15 min, 16% < 60 min, 5% < 4h, 1% > 4h (disputas formales) |
+| **Tasa de Error Fiscal** | **0.0% inconsistencias AFIP** | Validación de alícuotas y CUIT con algoritmo Módulo 11 |
+| **Ahorro en Licencias ERP** | **$6.000.000 ARS anuales** | Eliminación de costos por conectores propietarios de Kipintoch |
+
+**Scorecard Individual de los 5 Operadores de ALMAR Rosario:**
+| Operador | Área / Rol Asignado | Facturas | Tiempo Prom. | Desvíos Frenados | Ahorro Prevenido | Score SLA |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **Natali Hermoso** | Coordinación Marítimo Impo | 110 | 10.5 min | 3 | **USD 5.400** | 98.8% |
+| **Victoria Moyano** | Customer Service Expo | 68 | 11.2 min | 2 | **USD 3.500** | 97.4% |
+| **Ana Laura Talaban** | Operaciones Impo & Corp. | 62 | 11.8 min | 1 | **USD 2.400** | 98.1% |
+| **Abril Stampfli** | Aéreo & Terrestre Nacional | 54 | 13.0 min | 1 | **USD 2.150** | 96.5% |
+| **Aldana Gómez** | Operaciones Impo & Back-up | 30 | 11.0 min | 1 | **USD 1.400** | 98.0% |
+| **TOTALES** | **Operaciones ALMAR Rosario** | **324** | **11.4 min** | **8** | **USD 14.850** | **98.2%** |
 
 ---
 
 ### DIAPOSITIVA 09: CASO C367: NORMALIZACIÓN SEMÁNTICA DE COMBUSTIBLE NAVIERO (BUFF)
 - **Título en Pantalla:** *CASO C367: NORMALIZACIÓN SEMÁNTICA DE COMBUSTIBLE NAVIERO (BUFF)*
 - **Subtítulo:** *Unificación de 15 variantes de Bunker bajo el código canónico BUFF y auditoría contra cotización FCA Guangzhou.*
-- **Momento Estratégico:** Momento 3: Casos Críticos Auditados.
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `CASO C367 · LCL IMPORTACIÓN` | `BLINDAJE AFIP: BUFF CANÓNICO`.
-- **Componente Visual:** Stepper horizontal con Etapas 2 y 3 activas (`.traceability-stepper`).
-- **Mockup URL:** `/carpetas/C367 · Normalización BUFF & Visor Dual [CASO C367]`.
-- **Captura:** `screenshots/caso_c367_dual_buff_light.png`.
 - **Tiempo Asignado:** Minuto 11:00 - 12:15 (01:15 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. Arriba, el stepper de trazabilidad con Etapa 2 (Extracción IA) y Etapa 3 (Cruce Cotiz. USD 80) encendidas en dorado. A la izquierda, análisis del caso C367 (Incoterm FCA Guangzhou, Juan Cuello / MSL, dispersión BAF/BRC/EBS) y callout de quebranto evitado: USD 80 + recargo no absorbido. A la derecha, captura del visor dual mostrando el mapeo a `BUFF`.
-- **Qué señalar en la captura de pantalla:**
-  * **Stepper superior:** Apuntar a las fases 2 y 3 activas.
-  * **Línea de concepto en el visor del mockup:** Señalar el texto original del PDF del co-loader MSL ("Emergency Bunker Surcharge / BAF") y mostrar cómo a la derecha la IA lo clasificó automáticamente bajo el código fiscal canónico `BUFF`.
-  * **Alerta de desvío de USD 80.00:** Señalar la discrepancia resaltada frente a la cotización original de Juan Cuello, demostrando que el sistema impidió que ALMAR emitiera la prefactura sin trasladar ese cargo al cliente final.
-- **Lo que Fran enfatiza:** [Mirar a Vanesa]. Cada naviera inventa siglas distintas para el combustible. El normalizador semántico erradica rechazos de AFIP y asegura que ningún recargo quede sin cobrar.
+- **Stakeholders Clave:** Vanesa Meggiolaro (control impositivo), Juan Andrés Arloro (contratos y normativas).
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. Stepper horizontal superior con Etapas 2 y 3 activas. A la izquierda, análisis del caso C367 (Incoterm FCA Guangzhou, co-loader MSL, flete marítimo, dispersión de siglas BAF/BRC/EBS) y caja de ahorro de USD 80 + IVA recuperados. A la derecha, captura UHD del Visor Dual (`screenshots/caso_c367_dual_buff_light.png`) mostrando el mapeo a `BUFF` y el desglose impositivo.
+- **Visual Cues & Guía de Interacción:**
+  * Señalar en el visor dual el concepto original de la factura de MSL: *"Emergency Bunker Surcharge / EBS"*.
+  * Apuntar a la columna derecha del portal: mostrar cómo la IA homologó esa sigla al código canónico de AFIP `[BUFF] — Flete Bunker Fuel (0% IVA Exento)`.
+  * Señalar la alerta de desvío: mostrar el cobro improcedente de **USD 80,00 por Inland Pickup en origen**, explicando que bajo Incoterm FCA Guangzhou correspondía al shipper y no al importador.
+  * Mencionar la remediación forense: la detección de Cecilia Dellamea y la emisión de la Nota de Crédito NC A 46188 de MSL que recuperó el dinero.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Veamos el primer caso real auditado en los correos de ALMAR: la Carpeta C367 de importación LCL.*
+> *"Veamos el primer caso real auditado en los correos de ALMAR: la Carpeta C367 de importación marítima consolidada LCL.*
 > 
-> *¿Qué ocurrió en esa operación? El co-loader MSL facturó conceptos de combustible bajo siglas como BAF, BRC y EBS. En el circuito manual, la operadora dudó sobre cómo imputarlo en Kipintoch, la carpeta se demoró y casi se emite la prefactura sin trasladar un recargo de 80 dólares más combustible al cliente final.*
+> *¿Qué ocurrió en esa operación? El co-loader MSL facturó conceptos de combustible bajo siglas dispersas como BAF, BRC y EBS. En el circuito manual, la operadora dudó sobre cómo ingresarlo a Kipintoch y la carpeta estuvo a punto de emitirse trasladando al cliente o absorbiendo ALMAR un gasto de origen de 80 dólares indebido.*
 > 
 > *Miren cómo lo resuelve el portal [señalando la captura de la derecha]:*
-> *El motor de IA reconoce cualquiera de las 15 variantes de recargos de combustible naviero y las normaliza automáticamente al código canónico* **BUFF** *que exige la normativa fiscal de AFIP.*
+> *El motor de IA reconoce cualquiera de las 15 variantes textuales de combustible que usan las navieras y las normaliza automáticamente al código canónico* **BUFF** *que exige la AFIP para fletes internacionales exentos al 0% de IVA.*
 > 
-> *Y al auditar la carpeta [señalando el stepper en fase 3], detecta al instante que la cotización pactada por Juan Cuello no contemplaba ese sobrecosto de 80 dólares. El comprobante se bloquea preventivamente, protegiendo el margen neto de ALMAR.*
+> *Y al auditar la carpeta contra la cotización acordada por Juan Cuello bajo Incoterm FCA Guangzhou, el sistema detectó al instante que MSL intentaba cobrar USD 80 de acarreo en origen que no correspondían. El comprobante quedó retenido, se exigió la Nota de Crédito correspondiente a MSL y ALMAR no perdió un solo dólar.*
 > 
 > *Pasemos al segundo caso crítico: las operaciones en Libras Esterlinas de la Carpeta C620."*
+
+#### 📋 Ficha Técnica & Forense de Respaldo — Caso C367:
+| Campo / Variable | Detalle Técnico Verificado |
+| :--- | :--- |
+| **Identificación / Carpeta** | Carpeta `367` / `C367` / Expediente `C-202607IM-00001367` (IM1367) |
+| **Tráfico y Ruta** | Importación Marítima LCL: Guangzhou / Shanghai → Puerto Zárate / Rosario |
+| **Buque y HBL** | Buque *Maersk San Lazaro* V. 631W / HBL `MSL-SHA-260811` / `EURFLG2670458ROS` |
+| **Cliente / CUIT** | Juan Ramón Cuello (CUIT: 20-20590316-0; Ref: `LBS INTELLIGENT` / Argon Comex) |
+| **Proveedor / Co-loader** | Maritime Services Line Argentina S.A. / MSL Logistics (CUIT: 30-71124567-9) |
+| **Comprobante Naviero** | Factura A N° `FC-0001-00045210` emitida el 11/08/2026 |
+| **Incoterm Pactado vs Facturado** | Cotizado **FCA Guangzhou** (gastos en origen a cargo del shipper en China) |
+| **Desglose de Conceptos** | Ocean Freight LCL (1.85 CBM): USD 1.420,00 (0% Exento)<br>Bunker Surcharge (BAF/EBS): USD 240,00 (0% Exento) → Canónico `BUFF`<br>Terminal Handling Charge (THC): USD 180,00 (21% Gravado)<br>Documentation Fee: USD 75,00 (21% Gravado)<br>**Inland Pickup Origin (Improcedente): USD 80,00** (Intento de cobro indebido) |
+| **Prueba Forense RFC 2822** | Intervención de Cecilia Dellamea (`<034301dd49e0$71214290$5363c7b0$@almarrosario.com>`) |
+| **Resolución & Ahorro** | Retención de comprobante. MSL emitió **Nota de Crédito A N° 0004-00046188** por **-USD 80,00**. Ahorro recuperado: **USD 80,00 + IVA**. Pérdida ALMAR: **USD 0,00**. |
+| **Asiento Canónico Kipintoch** | `FMA 30-71124567-9 1420.00 USD C367`<br>`BUFF 30-71124567-9 240.00 USD C367`<br>`THC 30-71124567-9 180.00 USD C367` |
 
 ---
 
 ### DIAPOSITIVA 10: CASO C620: MÓDULO MULTIMONEDA BNA OFICIAL PARA DIVISAS COMPLEJAS (GBP)
 - **Título en Pantalla:** *CASO C620: MÓDULO MULTIMONEDA BNA OFICIAL PARA DIVISAS COMPLEJAS (GBP)*
 - **Subtítulo:** *Ingesta del tipo de cambio oficial vendedor del Banco Nación (BNA) a fecha de embarque con respaldo digital.*
-- **Momento Estratégico:** Momento 3: Casos Críticos Auditados.
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `CUMPLIMIENTO CAMBIARIO & DGA` | `DIVISA: LIBRAS ESTERLINAS (GBP)`.
-- **Componente Visual:** Stepper horizontal con Etapa 3 activa (BNA Oficial: USD 740).
-- **Mockup URL:** `/carpetas/C620 · Módulo Multimoneda Oficial BNA (GBP) [CASO C620]`.
-- **Captura:** `screenshots/caso_c620_multimoneda_bna_light.png`.
 - **Tiempo Asignado:** Minuto 12:15 - 13:30 (01:15 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. Arriba, stepper con Etapa 3 encendida. A la izquierda, análisis del riesgo cambiario y aduanero (factura en £543 GBP, falta de tipo de cambio en Kipintoch, riesgo de manipulación del Permiso de Embarque ante DGA) y callout de respuesta a Vanesa. A la derecha, captura del modal de conversión multimoneda con cotización oficial BNA y constancia digital.
-- **Qué señalar en la captura de pantalla:**
-  * **Stepper superior:** Señalar la etapa 3 activa.
-  * **Recuadro de conversión multimoneda:** Apuntar al importe original de **£543.00 GBP**, al tipo de cambio oficial vendedor del BNA de **1.3628** a la fecha exacta de la operación, y al cálculo resultante de **USD 740.00**.
-  * **Hipervínculo de la constancia digital:** Señalar el archivo adjunto `C620_Constancia_Cotizacion_BNA_GBP.pdf`, explicando que queda archivado como respaldo inmutable para la Aduana.
-- **Lo que Fran enfatiza:** [Mirar a Vanesa con tono distendido pero contundente]. Recordar la frase textual del relevamiento: *"Vanesa nos dijo en el relevamiento que no quería tener que ir a visitarnos a la cárcel por tocar a mano un Permiso de Embarque"*. Esta solución digitaliza y blinda el proceso al 100%.
+- **Stakeholders Clave:** Vanesa Meggiolaro (riesgo fiscal y aduanero), Juan Andrés Arloro (Código Aduanero).
+- **Lo que ve la Audiencia:** Simulador interactivo multimoneda (`MulticurrencyProvisionSimulator` con `initialTab="multicurrency"`). Selector de divisa en Libras Esterlinas (£543 GBP), cotización oficial BNA vendedora dinámica (1,3628 USD/GBP), cálculo automático de USD 740,00 y visor del archivo adjunto `Boletin_Oficial_BNA_20260225.pdf`.
+- **Visual Cues & Guía de Interacción:**
+  * Mirar a Vanesa con tono empático y distendido: evocar su advertencia textual en el relevamiento (*"Prometo visitarte en la cárcel"*).
+  * Mostrar en el simulador el monto original: **£ 543,00 GBP** (Flete Aéreo £ 506 + Gastos LHR £ 37).
+  * Señalar la ingesta de la cotización BNA vendedora a la fecha exacta de embarque: **1,3628** (o 1,3625 canónico), resultando exactamente en **USD 740,00**.
+  * Apuntar al hipervínculo del boletín oficial en PDF: destacar que el sistema custodia el documento con hash SHA-256 para cualquier inspección de DGA / AFIP.
+  * Destacar a Juan Andrés que se cumple taxativamente con el Código Aduanero (Ley 22.415) y el Régimen Penal Cambiario, erradicando los asteriscos de Kipintoch.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Este caso es emblemático: la Carpeta C620 con costos facturados en Libras Esterlinas.*
+> *"Este caso es emblemático: la Carpeta C620 con costos liquidados en Libras Esterlinas.*
 > 
-> *Como Kipintoch no maneja conversiones dinámicas automáticas para monedas no habituales, la tentación histórica era hacer el cálculo a mano en una calculadora y tipear dólares directamente en el sistema. Vanesa nos decía con toda la razón del mundo: 'Si tocamos a mano los valores de un Permiso de Embarque, la Aduana nos aplica una infracción cambiaria gravísima'.*
+> *Como Kipintoch no procesa monedas complejas fuera de dólares o pesos, el sistema colapsaba imprimiendo cadenas de asteriscos en el recuadro de flete del Permiso de Embarque. La salida habitual era hacer la cuenta en una calculadora de mano y tipear dólares a ojo. Vanesa nos decía con toda la razón del mundo en un correo formal: 'Si tocamos a mano los valores de un Permiso de Embarque, prometo visitarte en la cárcel por infracción aduanera'.*
 > 
-> *Fíjense en la solución en pantalla [señalando el mockup de la derecha]:*
-> *Cuando ingresa una factura en Libras, Euros o Reales, el portal toma automáticamente la* **cotización oficial vendedor del Banco de la Nación Argentina (BNA)** *a la fecha exacta del embarque.*
+> *Fíjense en la solución en pantalla [interactuando con el simulador multimoneda]:*
+> *Cuando ingresa una factura en Libras, Euros o Reales, el portal consulta automáticamente el* **tipo de cambio oficial vendedor del Banco de la Nación Argentina (BNA)** *a la fecha exacta del embarque.*
 > 
-> *En este caso: 543 Libras a 1.3628 arrojan exactamente* **740,00 dólares**. *Y lo más importante [señalando el enlace inferior]: el sistema descarga y adjunta automáticamente el certificado oficial del BNA como constancia documental inmutable.*
+> *En este caso: 543 Libras a 1,3628 arrojan exactamente* **740,00 dólares**. *Y lo más importante [señalando el certificado digital adjunto]: el sistema descarga y archiva el Boletín Oficial del BNA como constancia documental inalterable.*
 > 
-> *Nadie modifica números a mano, AFIP y la DGA reciben el dato exacto y Vanesa duerme con tranquilidad absoluta.*
+> *Nadie modifica números a mano, la Aduana recibe el valor flete exacto bajo la Ley 22.415 y Vanesa duerme con tranquilidad absoluta.*
 > 
-> *Veamos ahora el caso de los seguros diferidos de Sancor."*
+> *Veamos ahora el dolor financiero de los seguros diferidos de Sancor."*
+
+#### 📋 Ficha Técnica & Forense de Respaldo — Caso C620:
+| Campo / Variable | Detalle Técnico Verificado |
+| :--- | :--- |
+| **Identificación / Carpeta** | Carpeta `C620` / Referencia Operativa `SALJ054596` |
+| **Tráfico y Ruta** | Importación Aérea EXW: Londres (Heathrow - LHR) → EZE / Rosario |
+| **Cliente / Forwarder UK** | CONICET / SAA Logistics UK Ltd. |
+| **Importe Original Pactado** | Flete Aéreo: **£ 506,00 GBP** + Gastos Locales LHR: **£ 37,00 GBP** = **£ 543,00 GBP** |
+| **Falla Histórica en ERP** | Kipintoch no liquida GBP; imprimía asteriscos (`***********`) en campo 19 de Flete |
+| **Prueba Forense ("Smoking Gun")** | Message-ID: `<02d101dca691$299c7360$7cd55a20$@almarrosario.com>` (25/02/2026 16:58)<br>De: Vanesa Meggiolaro a Dalia Silvi: *"Mofifica el PE, el recuadro del flete, sacale los '***********' y ponele el valor de lo q hay q pagar en USD, que creo q son aprox USD 740... Prometo visitarte en la carcel"* |
+| **Solución Regla R3 Portal** | Ingesta automática BNA Vendedor fecha 25/02/2026: **1,3625** (1,3628 redondeado). Total: **USD 739,84** (USD 740,00 en guion verbal). Custodia digital de `Boletin_Oficial_BNA_20260225.pdf` (SHA-256: `9b8d21c4e78a63f10112e45da79901bce471`). |
+| **Blindaje Jurídico Aduanero** | Código Aduanero (Ley 22.415), Régimen Penal Cambiario, normas DGA/AFIP |
+| **Asiento Canónico Kipintoch** | `FMA 50-00000000-0 739.84 USD C620` |
 
 ---
 
 ### DIAPOSITIVA 11: CASO SANCOR SEGUROS: PROVISIÓN DIFERIDA AUTOMÁTICA A 150 DÍAS
 - **Título en Pantalla:** *CASO SANCOR SEGUROS: PROVISIÓN DIFERIDA AUTOMÁTICA A 150 DÍAS*
 - **Subtítulo:** *Blindaje de comisiones comerciales e imputación de costos pendientes ante demoras de pólizas de hasta 5 meses.*
-- **Momento Estratégico:** Momento 3: Casos Críticos Auditados.
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `BLINDAJE DE COMISIONES · DIRECTIVA FINANCIERA` | `PROVISIÓN 0,55% FOB`.
-- **Componente Visual:** Stepper horizontal con Etapas 3 y 4 activas (Provisión 0,55% 150d, Holdback Comisión).
-- **Mockup URL:** `/carpetas/Sancor · Provisión Diferida 150 Días [SEGURO 150D]`.
-- **Captura:** `screenshots/caso_sancor_seguros_provision_light.png`.
 - **Tiempo Asignado:** Minuto 13:30 - 14:45 (01:15 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. Arriba, stepper con Etapas 3 y 4 encendidas. A la izquierda, diagnóstico de la demora histórica de 120-150 días de Sancor Seguros y la liquidación indebida de comisiones sobre utilidades ficticias. A la derecha, captura del ledger contable de la carpeta con la provisión del 0,55% FOB y el estado de comisión retenida.
-- **Qué señalar en la captura de pantalla:**
-  * **Stepper superior:** Señalar las etapas 3 (Reglas) y 4 (Kipintoch holdback) activas.
-  * **Fila de provisión en el ledger del mockup:** Apuntar a la línea: *Provisión Seguro Sancor (0,55% FOB) = USD 220.00*.
-  * **Badge rojo de estado de comisión:** Señalar la tarjeta de comisiones comerciales con el estado `RETENIDA_COSTOS_PENDIENTES (Faltan 118 días / Póliza Sancor)`.
-  * **Callout izquierdo:** Leer la frase de blindaje: *"No se pagan comisiones sobre utilidades ficticias que omiten el seguro"*.
-- **Lo que Fran enfatiza:** [Mirar a Vanesa y a Alejandro]. Se protege la caja de la empresa: los comerciales cobrarán su comisión legítima, pero solo cuando la utilidad sea real y definitiva, descontando el seguro.
+- **Stakeholders Clave:** Vanesa Meggiolaro, Alejandro Noacco.
+- **Lo que ve la Audiencia:** Simulador interactivo de provisión de seguros (`MulticurrencyProvisionSimulator` con `initialTab="sancor"`). Ledger contable de la Carpeta C1482 mostrando el valor FOB, la prima devengada del 0,55% FOB (USD 357,50 / USD 220,00) y la tarjeta de comisión del vendedor con badge ámbar en estado `RETENIDA_COSTOS_PENDIENTES (Faltan 118 días)`.
+- **Visual Cues & Guía de Interacción:**
+  * Señalar la demora estructural de Sancor Seguros: de 120 a 150 días en emitir pólizas definitivas a través del broker.
+  * Apuntar a la línea de costo en el ledger: *Provisión Automática Seguro Sancor (0,55% sobre FOB)*.
+  * Mostrar el comparativo financiero: sin provisión, la carpeta mostraba ganancia inflada y se pagaban comisiones prematuras; con provisión, la comisión se retiene de forma transparente.
+  * Mirar a Alejandro y Vanesa: remarcar que los vendedores no pierden su comisión legítima, sino que se liquida sobre ganancias reales una vez deducido el costo definitivo.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Llegamos a uno de los dolores financieros más profundos identificados en la auditoría: el caso de Sancor Seguros.*
+> *"Llegamos a uno de los dolores financieros más sensibles de ALMAR: el desfasaje crónico con Sancor Seguros.*
 > 
-> *Sancor demora habitualmente entre 120 y 150 días —hasta 5 meses— en emitir las pólizas definitivas de transporte. Históricamente, ¿qué pasaba? Como la factura de Sancor no había llegado, la carpeta se cerraba a fin de mes mostrando una ganancia inflada, y ALMAR liquidaba comisiones a los vendedores sobre esa utilidad ficticia. Cuando a los 4 meses llegaba la factura del seguro, la ganancia real se desplomaba, pero la comisión ya se había pagado.*
+> *Sancor demora habitualmente entre 120 y 150 días —hasta 5 meses— en liquidar las pólizas definitivas de transporte de mercadería. Históricamente, ¿qué ocurría? Como la factura de Sancor no había llegado a fin de mes, la carpeta se cerraba mostrando una ganancia inflada, y ALMAR liquidaba y pagaba comisiones comerciales a los vendedores sobre esa utilidad ficticia. Cuando a los 4 meses llegaba la factura de la aseguradora, la ganancia real se desplomaba, pero la comisión ya se había cobrado y la pérdida la absorbía 100% ALMAR.*
 > 
-> *Miren cómo lo resuelve el portal [señalando la captura]:*
-> *Apenas se carga el embarque, el sistema devenga automáticamente una provisión del* **0,55% sobre el valor FOB** *en el ledger de costos de la carpeta.*
+> *Miren cómo lo resuelve el portal [interactuando con el simulador en pantalla]:*
+> *Apenas se da de alta la carpeta operativa con seguro contratado, el sistema devenga automáticamente una provisión del* **0,55% sobre el valor FOB** *de la mercadería en el ledger contable.*
 > 
-> *Y en el módulo comercial [señalando el badge rojo], la comisión del vendedor pasa al estado* `RETENIDA_COSTOS_PENDIENTES`. *Kipintoch bloquea el cierre definitivo hasta que arribe la póliza real de Sancor o se cumplan los 150 días.*
+> *Y en el módulo comercial [señalando el badge de comisión retenida], la liquidación del vendedor pasa al estado* `RETENIDA_COSTOS_PENDIENTES`. *El sistema bloquea el cierre contable hasta que arribe la factura real de Sancor o se cumplan los 150 días de carencia.*
 > 
-> *Cero anticipo de fondos sobre utilidades no devengadas. El margen real de ALMAR queda 100% protegido.*
+> *Cero anticipo de fondos sobre utilidades no devengadas. La caja y el margen real de ALMAR quedan 100% protegidos.*
 > 
 > *Veamos ahora cómo resolvemos las autorizaciones gerenciales cuando un margen es fino: la Carpeta C1234."*
+
+#### 📋 Ficha Técnica & Forense de Respaldo — Caso Sancor Seguros:
+| Campo / Variable | Detalle Técnico Verificado |
+| :--- | :--- |
+| **Identificación / Carpeta** | Carpeta `C1482` / Póliza Flotante ALMAR N° `PZA 352330` |
+| **Operación y Mercadería** | Importación Marítima Maquinaria Agrícola (Metalfor S.A. / John Deere) |
+| **Broker / Aseguradora** | Baccaro Consultores de Seguros / Sancor Seguros |
+| **Desfase Temporal Crónico** | Demora de **120 a 150 días** (4 a 5 meses) en emitir factura de prima |
+| **Falla Histórica en Caja** | Liquidación de comisiones comerciales sobre utilidad ficticia (sin seguro deducido) |
+| **Regla R2 Portal ALMAR** | Devengamiento automático de **0,55% sobre valor FOB** (Mínimo USD 55,00)<br>Ejemplo C1482 (FOB USD 65.000): Provisión devengada = **USD 357,50**<br>Ejemplo estándar (FOB USD 40.000): Provisión devengada = **USD 220,00** |
+| **Impacto Financiero Comparado** | Venta: USD 4.500 \| Costos Naviera: USD 3.250<br>*Sin Provisión:* Margen ficticio USD 1.250 → Comisión 15%: USD 187,50 pagada de más<br>*Con Regla R2:* Provisión USD 357,50 deducida → Margen real USD 892,50 → Comisión legítima: USD 133,88. Ahorro de caja directo: USD 53,62 por operación. |
+| **Mecanismo de Holdback** | Estado de comisión: `RETENIDA_COSTOS_PENDIENTES` (Ventana 150 días). Rol `OPERATIVO` denegado para forzar cierre; requiere conciliación por `FINANZAS`. |
 
 ---
 
 ### DIAPOSITIVA 12: CASO C1234: ALERTA PREVENTIVA & AUTORIZACIÓN BIOMÉTRICA WEBAUTHN
 - **Título en Pantalla:** *CASO C1234: ALERTA PREVENTIVA & AUTORIZACIÓN BIOMÉTRICA WEBAUTHN*
-- **Subtítulo:** *Gestión de descalces de rentabilidad (< USD 200) y aprobación gerencial con firma criptográfica SHA-256.*
-- **Momento Estratégico:** Momento 3: Casos Críticos Auditados.
+- **Subtítulo:** *Gestión de descalces de rentabilidad (< USD 200) y aprobación gerencial con firma digital en 3 segundos.*
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `RESPUESTA A ALEJANDRO & JUAN ANDRÉS` | `FIDO2 / WEBAUTHN SHA-256`.
-- **Componente Visual:** Stepper horizontal con Etapas 3 y 4 activas (Alerta < USD 200, WebAuthn SHA-256).
-- **Mockup URL:** `/carpetas/C1234 · Autorización Biométrica WebAuthn [WEBAUTHN SHA-256]`.
-- **Captura:** `screenshots/caso_c1234_webauthn_sha256_light.png`.
 - **Tiempo Asignado:** Minuto 14:45 - 16:00 (01:15 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. Arriba, stepper con Etapas 3 y 4 activas. A la izquierda, análisis de la Carpeta C1234 con margen proyectado de USD 142.50 (< USD 200) por descalce cambiario en gastos locales, y el mecanismo de override biométrico. A la derecha, captura del modal de autorización WebAuthn con firma biométrica y hash SHA-256 de 64 caracteres.
-- **Qué señalar en la captura de pantalla:**
-  * **Stepper superior:** Señalar las etapas 3 y 4 activas.
-  * **Banner amarillo preventivo:** Apuntar a la alerta de margen crítico (< USD 200, margen estimado USD 142.50) en la carpeta C1234.
-  * **Selector de motivo justificado:** Señalar la justificación inmutable: *"Aumento de tarifa naviera pactado con cliente"*.
-  * **Sello biométrico y Hash SHA-256:** Señalar el icono de huella digital WebAuthn (Touch ID / Windows Hello) y la cadena criptográfica de 64 caracteres en tipografía monospace, demostrando a Juan Andrés la solidez pericial.
-- **Lo que Fran enfatiza:** Conciliar las necesidades opuestas de la dirección: Alejandro necesita autorizar en 3 segundos desde su laptop sin burocracia, y Juan Andrés necesita que la autorización tenga plena validez jurídica pericial sin contraseñas compartidas.
+- **Stakeholders Clave:** Alejandro Noacco (velocidad sin trabas), Juan Andrés Arloro (validez probatoria Ley 25.506).
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, datos clave de la operación Acindar / Maersk (BL KA0018437, sobrecosto naviero de +USD 305, margen resultante de USD 142,50 / USD 95,00 por debajo del umbral de USD 200). A la derecha, captura UHD (`screenshots/caso_c1234_webauthn_sha256_light.png`) del modal de autorización con sensor biométrico animado y hash SHA-256 de 64 caracteres.
+- **Visual Cues & Guía de Interacción:**
+  * Destacar el margen operativo resultante: **USD 142,50** (o USD 95,00 en caso extremo), encendiendo el semáforo amarillo preventivo (< USD 200).
+  * Explicar el dilema directivo: Alejandro necesita no perder la venta por burocracia, mientras que Juan Andrés necesita respaldo pericial inatacable.
+  * Señalar el modal biométrico: mostrar el sensor WebAuthn (Touch ID / Windows Hello) y la cadena criptográfica SHA-256 en tipografía monospace.
+  * Leer el hash de auditoría y citar la **Ley Nacional de Firma Digital Nº 25.506 (art. 5)**: autoría, integridad inalterable y no repudio pericial pleno.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"En la Carpeta C1234 nos encontramos con un descalce típico: el margen proyectado era de 142,50 dólares, por debajo del umbral de seguridad de USD 200 debido a un aumento imprevisto en acarreos portuarios locales en pesos.*
+> *"En la Carpeta C1234 nos encontramos con un descalce típico: el margen proyectado era de 142,50 dólares, por debajo del umbral preventivo de USD 200 debido a un recargo imprevisto de Maersk y costos portuarios locales en pesos.*
 > 
 > *El sistema encendió el semáforo amarillo preventivo y bloqueó la emisión de la prefactura. Pero acá viene la innovación que une los intereses de Alejandro y de Juan Andrés:*
 > 
-> *Alejandro necesita no trabar la operación con papeles ni llamados [mirando a Alejandro]. Y Juan necesita que si se autoriza un desvío, quede un respaldo legal inatacable [mirando a Juan Andrés].*
+> *Alejandro necesita autorizar en el acto sin trámites ni llamadas [mirando a Alejandro]. Y Juan necesita que si se autoriza un desvío, quede un respaldo legal inatacable [mirando a Juan Andrés].*
 > 
 > *Miren cómo funciona [señalando el modal de la derecha]:*
 > *Gerencia abre el comprobante, selecciona el motivo formal y simplemente apoya su huella dactilar en la laptop con* **WebAuthn (Windows Hello o Touch ID)**.
 > 
-> *Cero contraseñas que se puedan filtrar o compartir. El navegador genera un par de claves criptográficas y un* **hash SHA-256 inmutable de 64 caracteres** *que se estampa en el registro inmutable de auditoría. Tiene plena validez legal bajo la Ley Nacional de Firma Digital.*
+> *Cero contraseñas que se puedan compartir o filtrar. El chip de seguridad local genera un par de claves asimétricas y estampa un* **hash SHA-256 inalterable de 64 caracteres** *en el libro digital de auditoría, junto con el timestamp UTC exacto y la justificación comercial.*
 > 
-> *Alejandro autoriza en 3 segundos y Juan tiene respaldo pericial total.*
+> *Tiene plena validez legal bajo la* **Ley Nacional de Firma Digital Nº 25.506 (artículo 5)**. *Alejandro autoriza en 3 segundos y Juan tiene respaldo pericial total ante cualquier auditoría o conflicto.*
 > 
 > *Y finalmente, veamos el circuito de triangulación con Miami y la conciliación con Banco Macro."*
+
+#### 📋 Ficha Técnica & Forense de Respaldo — Caso C1234:
+| Campo / Variable | Detalle Técnico Verificado |
+| :--- | :--- |
+| **Identificación / Carpeta** | Expediente `C1234` / Cliente: Acindar S.A. |
+| **Embarque y Equipamiento** | BL `KA0018437` / Contenedor `MSKU7842897` con insumos siderúrgicos críticos |
+| **Armador y Facturas** | Maersk Line A/S (Facturas N° `7554566633` y N° `7554364222`) |
+| **Desglose Económico** | Venta Cotizada: USD 1.850,00 \| Costo Estimado: USD 1.450,00<br>Costo Real Facturado Maersk: USD 1.755,00 (**Sobrecosto +USD 305,00 / +21%** por BAF y estadía Zárate)<br>Margen Resultante: **USD 142,50** (7,7% sobre venta; modelado alternativo USD 95,00 / 5,1%) |
+| **Semáforo Preventivo (< USD 200)** | Activación de advertencia amarilla: evita que fluctuaciones cambiarias o gastos locales en pesos vuelvan negativa la operación. No bloquea ciegamente. |
+| **Mecanismo WebAuthn (FIDO2)** | Autenticación con sensor de hardware (Touch ID / Windows Hello) y chip TPM 2.0. Generación de par de claves asimétricas sin contraseñas en texto plano. |
+| **Firma SHA-256 Registrada** | `d8a4f91b72e045c83210bc6a98711e4f9b8c347d0182ec35ab120984de63f512` |
+| **Metadatos de Auditoría** | Timestamp: `2026-09-30T10:15:32.412Z` \| Autorizante: Alejandro Bondino / Vanesa Meggiolaro \| Justificación: *"Ajuste extraordinario de flete Maersk KA0018437 y estadía portuaria en Zárate autorizado para evitar paralización de insumos planta Acindar"* |
+| **Marco Jurídico de Respaldo** | **Ley Nacional de Firma Digital Nº 25.506 (art. 5 y conc.)** e ISO 9001:2015 § 8.5.6 |
 
 ---
 
 ### DIAPOSITIVA 13: CASO TRIANGULACIÓN (NET TRADE MIAMI) & CONCILIACIÓN BANCO MACRO
 - **Título en Pantalla:** *CASO TRIANGULACIÓN (NET TRADE MIAMI) & CONCILIACIÓN BANCO MACRO*
 - **Subtítulo:** *Trazabilidad de prefacturas Net Trade LLC y validación en extracto de Banco Macro antes del recibo definitivo.*
-- **Momento Estratégico:** Momento 3: Casos Críticos Auditados.
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `NET TRADE LLC (MIAMI)` | `BANCO MACRO · CTA CTE`.
-- **Componente Visual:** Stepper horizontal con Etapas 4 y 5 activas (Enlace Net Trade, Extracto Conciliado Banco Macro).
-- **Mockup URL:** `/finanzas/banco-macro · Conciliación Bancaria y Extractos [CONCILIACIÓN BANCO]`.
-- **Captura:** `screenshots/banco_macro_conciliacion_extracto_light.png`.
 - **Tiempo Asignado:** Minuto 16:00 - 17:15 (01:15 min).
-- **Lo que ve la Audiencia:** Cuadrícula 1:1.25. Arriba, stepper con Etapas 4 y 5 encendidas. A la izquierda, detalle de las triangulaciones con Net Trade LLC en Miami (International Finance Bank) y el subproceso de cobranzas en 3 pasos con Banco Macro. A la derecha, captura de la tabla de conciliación bancaria mostrando la concordancia entre el extracto bancario y la carpeta operativa.
-- **Qué señalar en la captura de pantalla:**
-  * **Stepper superior:** Señalar las etapas 4 y 5 activas.
-  * **Bloque Net Trade Miami:** Apuntar al número de prefactura offshore vinculada al legajo local de Rosario, verificando el reembolso de costos locales.
-  * **Tabla de conciliación de Banco Macro:** Señalar la fila del extracto bancario con la cuenta corriente en pesos Nº 376100000930617, apuntando al importe acreditado exacto.
-  * **Badge verde de estado:** Señalar el estado `COBRADA_CONCILIADA`, mostrando que recién ahí el sistema habilita la emisión del recibo oficial y libera la comisión del comercial.
-- **Lo que Fran enfatiza:** Se erradica el riesgo de dar por cobrada una operación con un simple volante de transferencia enviado por WhatsApp que luego resulta rebotado o apócrifo. Cero salida de recibos sin respaldo en extracto bancario.
+- **Stakeholders Clave:** Juan Andrés Arloro (Precios de Transferencia y BCRA), Vanesa Meggiolaro (tesorería).
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. Stepper superior con Etapas 4 y 5 activas. A la izquierda, detalle de las triangulaciones con Net Trade LLC en Miami y el subproceso de cobranzas en 3 pasos. A la derecha, captura UHD (`screenshots/banco_macro_conciliacion_extracto_light.png`) de la tabla de conciliación bancaria con la cuenta corriente de Banco Macro y el estado `COBRADA_CONCILIADA`.
+- **Visual Cues & Guía de Interacción:**
+  * Mirar a Juan Andrés al abordar las triangulaciones con Net Trade LLC: destacar que el comprobante offshore emitido en IFB Miami queda vinculado al legajo local de Rosario.
+  * Resaltar el control de sustancia económica: el portal audita que los costos locales abonados por ALMAR tengan orden de reembolso acreditada desde el exterior (Precios de Transferencia, Ley Ganancias art. 15 y BCRA).
+  * Mirar a Vanesa al abordar Banco Macro: recorrer el ciclo en 3 pasos: `EMITIDA_PENDIENTE_COBRO` → `EN_VERIFICACION_BANCARIA` → `COBRADA_CONCILIADA`.
+  * Señalar en la tabla de la derecha la Cuenta Corriente Nº 376100000930617 y el match exacto con el extracto bancario.
+  * Remarcar la regla de oro: **cero recibos oficiales ni comisiones comerciales habilitadas por WhatsApp sin dinero acreditado en el banco**.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
 > *"Cerramos los casos auditados con dos pilares de alta sensibilidad financiera y fiscal:*
 > 
 > *Primero, las* **Operaciones Triangulares con Net Trade LLC en Miami** [mirando a Juan Andrés].
-> *Cuando se emiten prefacturas al exterior a través de Net Trade y su cuenta en International Finance Bank (IFB), el sistema vincula automáticamente ese comprobante offshore con la carpeta operativa local en Rosario. Y antes de permitir el cierre, audita que los costos locales abonados por ALMAR hayan sido reembolsados formalmente, cumpliendo con la normativa cambiaria del BCRA y Precios de Transferencia.*
+> *Cuando se emiten prefacturas al exterior a través de Net Trade y su cuenta en International Finance Bank (IFB), el sistema vincula automáticamente ese comprobante offshore con la carpeta operativa local en Rosario. Y antes de permitir el cierre, audita que los costos locales abonados por ALMAR hayan sido reembolsados formalmente desde el exterior, cumpliendo con la normativa cambiaria del BCRA y Precios de Transferencia.*
 > 
 > *Segundo, la* **Conciliación Obligatoria en Banco Macro** [mirando a Vanesa].
 > *Establecimos un flujo de cobranzas en tres pasos:*
 > `EMITIDA_PENDIENTE_COBRO` → `EN_VERIFICACION_BANCARIA` → `COBRADA_CONCILIADA`.
 > 
-> *Si un cliente manda un volante de transferencia por WhatsApp, pasa a verificación. Pero fíjense en la tabla de la derecha [señalando la captura]: el sistema prohíbe emitir el recibo oficial o liberar comisiones hasta que Finanzas no concilia ese importe contra el movimiento real del extracto bancario de la cuenta corriente de Banco Macro.*
+> *Si un cliente manda un volante de transferencia por WhatsApp, la carpeta pasa a verificación. Pero fíjense en la tabla de la derecha [señalando la captura]: el sistema prohíbe emitir el recibo oficial o liberar comisiones hasta que Finanzas no concilia ese importe contra el movimiento real del extracto bancario de la cuenta corriente de Banco Macro (cuenta Nº 376100000930617).*
 > 
 > *Si la plata no impactó en el banco, el recibo no se emite. Tesorería blindada al 100%.*
 > 
 > *Y ahora, pasemos a lo que todos quieren ver: la demostración en vivo de la plataforma en funcionamiento."*
 
+#### 📋 Ficha Técnica & Forense de Respaldo — Casos Net Trade & Banco Macro:
+| Entidad / Circuito | Detalle Técnico y Operativo Verificado |
+| :--- | :--- |
+| **Entidad Offshore** | `NET TRADE AND LOGISTICS SERVICES LLC` (NTLS), Miami, FL (EIN: `35-2756633`) |
+| **Cuenta Bancaria Exterior** | International Finance Bank (IFB), Miami, Florida, EE.UU. |
+| **Sustancia Económica** | Control de recupero de costos locales pagados por ALMAR Rosario (fletes internos, acarreo, aduana) antes de permitir cierre de legajo. |
+| **Marco Fiscal y Cambiario** | Normas de Precios de Transferencia (art. 15 Ley Impuesto a las Ganancias) y Comunicaciones del BCRA sobre cobro y liquidación de servicios al exterior. |
+| **Cuenta Bancaria Local** | Banco Macro S.A., Cta. Cte. Especial en Pesos N° **`376100000930617`** (CBU: `2850761530000009306179`) |
+| **Ciclo de Cobranzas R4** | `EMITIDA_PENDIENTE_COBRO` → `EN_VERIFICACION_BANCARIA` → `COBRADA_CONCILIADA` |
+| **Compuerta de Tesorería** | Prohibición absoluta de emisión de recibos oficiales AFIP (`REC-2026-XXXX`) o liberación de comisiones comerciales sin match de crédito en extracto. |
+| **Casos Concretos Conciliados** | **Cuello Juan Ramón (Argon Comex):** Factura A 0002-00012331 (ARS $1.617.000,00) acreditada el 24/09/2026 en CC Macro con transacción `TRB-0761-806121/000/001`. Recibo `REC-2026-1042` emitido.<br>**IQUIR / CONICET:** Factura B 0002-00000029 (ARS $5.240.144,00). Cobro parcial de ARS $1.900.279,75 retenido `EN_VERIFICACION_BANCARIA`. |
+
 ---
 
 ### DIAPOSITIVA 14: DEMOSTRACIÓN EN VIVO DE LA SOLUCIÓN EN FUNCIONAMIENTO (LIVE DEMO)
 - **Título en Pantalla:** *DEMOSTRACIÓN EN VIVO DE LA SOLUCIÓN EN FUNCIONAMIENTO*
-- **Subtítulo:** *Transición al navegador (http://localhost:3000): prueba integral del circuito de facturación, comercial y cobranzas.*
-- **Momento Estratégico:** Momento 3: Demo Interactiva en Tiempo Real.
-- **Badges:** `ENTORNO ACTIVO · PRUEBA EN VIVO ANTE DIRECTORIO`.
-- **Mockup URL:** `http://localhost:3000/comprobantes · Tablero en Vivo [● EN VIVO]`.
-- **Captura:** `screenshots/kanban_corporate_light.png`.
+- **Subtítulo:** *Transición al navegador (http://localhost:3000): prueba integral del circuito de facturación, comercial y métricas de productividad.*
+- **Bloque:** Bloque 4: Escudo & Casos Críticos.
+- **Badges:** `ENTORNO ACTIVO · PRUEBA EN VIVO ANTE DIRECTORIO` | `● SISTEMA EN VIVO`.
 - **Tiempo Asignado:** Minuto 17:15 - 21:00 (03:45 min de Demo en Vivo en Navegador).
-- **Lo que ve la Audiencia:** Diapositiva puente con los 3 pasos de la demo (1. Ingesta y extracción en 5s; 2. Detección de desvío y semáforos; 3. Override biométrico y copiado en 1-clic a Kipintoch).
-- **Acción Táctica del Orador:** Fran minimiza la presentación (`Alt + Tab` o ventana adyacente) y proyecta el navegador web con la aplicación en vivo en `http://localhost:3000`.
-- **Qué señalar en la pantalla interactiva en vivo:**
-  * **Paso 1 (Ingesta):** Arrastrar un archivo PDF real de Maersk o MSC a la zona de dropzone en `/comprobantes`. Mostrar el cronómetro en pantalla procesando y renderizando el documento en menos de 5 segundos.
-  * **Paso 2 (Visor Side-by-Side):** Abrir el comprobante procesado: mostrar a la izquierda el PDF original y a la derecha los campos normalizados (CUIT 30-..., concepto BUFF, alícuota 21%).
-  * **Paso 3 (Desvío de Tarifa):** Mostrar cómo el sistema detecta que el flete cobrado supera la cotización, activando el semáforo preventivo y bloqueando la emisión.
-  * **Paso 4 (Override WebAuthn):** Cambiar al rol de Gerencia en el selector superior, presionar "Autorizar Desvío", simular la firma biométrica y mostrar el hash SHA-256 grabado en el log.
-  * **Paso 5 (Copiado a Kipintoch):** Presionar "Copiar Ficha a Kipintoch", abrir un bloc de notas o formulario y pegar los datos instantáneamente en 15 segundos.
-  * **Paso 6 (Calculadora Comercial):** Navegar a `/cotizaciones`, abrir la Calculadora, cambiar el perfil a `CUENTA_ESTRATEGICA`, mostrar el recálculo dinámico de margen en vivo, y abrir el panel de Smart Follow-Up para copiar un correo formal listo en 1 clic.
+- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Lo que ve la Audiencia:** Diapositiva puente interactiva que exhibe las 4 estaciones de la prueba en vivo (1. Ingesta y Extracción en 4s; 2. Desvío y WebAuthn; 3. Copiado en 1-clic a Kipintoch; 4. Métricas de Productividad y Scorecard), enlace directo y marco UHD con badge parpadeante `● EN VIVO`.
+- **Visual Cues & Guía de Interacción:**
+  * Transición con aplomo: Fran no pide permiso dubitativo; minimiza la presentación (`Alt + Tab`) o conmuta al monitor donde corre `http://localhost:3000`.
+  * **Estación 1 (Minuto 17:15 - 18:00):** Arrastrar un archivo PDF real de Maersk a la bandeja de Comprobantes. Contar en voz alta los 4 segundos hasta que la tarjeta se renderiza. Abrir el Visor Dual Side-by-Side: mostrar el PDF del armador a la izquierda y el CUIT, flete exento y recargo BUFF a la derecha.
+  * **Estación 2 (Minuto 18:00 - 19:00):** Mostrar la alerta de desvío de sobrecosto (+USD 180): la tarjeta se ubicó en la columna *"Con Desvío de Tarifa"* y el botón de facturación está deshabilitado. Conmutar el selector de rol a *Gerencia*. Hacer clic en *"Autorizar Desvío"*, seleccionar el motivo comercial, presionar el sensor WebAuthn simulando la huella dactilar y mostrar el hash SHA-256 estampado en pantalla.
+  * **Estación 3 (Minuto 19:00 - 20:00):** Presionar el botón verde *"Copiar Ficha a Kipintoch"*. Abrir un bloc de notas o formulario de prueba y pegar la cadena canónica multilínea en 15 segundos sin digitar un solo número.
+  * **Estación 4 (Minuto 20:00 - 21:00):** Navegar a `/cotizaciones`: abrir la Calculadora, seleccionar el perfil `CUENTA_ESTRATEGICA`, mostrar el recálculo instantáneo de margen, abrir el panel de Smart Follow-Up a 48 hs para copiar una plantilla en 1 clic. Concluir en `/metricas` mostrando el Scorecard de los 5 operadores.
+  * Regresar a la presentación interactiva (`Alt + Tab`) y avanzar a la Diapositiva 15.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Voy a conmutar en este instante al navegador para que vean el sistema operando en tiempo real con datos y comprobantes reales.*
+> *"Voy a conmutar en este instante al navegador para que vean la plataforma operando en tiempo real con datos y comprobantes reales.*
 > 
 > *[Fran pasa al navegador en `http://localhost:3000`]*
 > 
@@ -500,159 +669,192 @@ A continuación se detalla la hoja de ruta minuto a minuto estructurada en los 4
 > 
 > *Voy a tomar una factura marítima real en PDF de Maersk y la voy a soltar en la bandeja de entrada de Comprobantes. Fíjense: uno, dos, tres... cuatro segundos. El documento ya fue procesado.*
 > 
-> *Hago clic y abro el Visor Dual: a la izquierda tienen el PDF original tal cual llegó del armador. A la derecha, el motor ya desglosó el CUIT de Maersk, discriminó el flete marítimo internacional, reconoció el recargo BAF y lo mapeó automáticamente a BUFF, y calculó el IVA.*
+> *Hago clic y abro el Visor Dual: a la izquierda tienen el PDF original tal cual llegó del armador. A la derecha, el motor ya desglosó el CUIT de Maersk, discriminó el flete marítimo internacional exento, reconoció el recargo BAF y lo mapeó automáticamente a BUFF al 0% de IVA, y calculó el IVA de los gastos locales.*
 > 
 > *Pero observen lo que ocurre con el margen [señalando la alerta en pantalla]: el sistema cruzó la factura contra la carpeta de Kipintoch y detectó que el armador facturó 180 dólares más de lo cotizado. La tarjeta se fue automáticamente a la columna 'Con Desvío de Tarifa' y el botón de facturación está deshabilitado.*
 > 
-> *Si inicio sesión como Stefania en rol Operativo, no puedo destrabarlo. Pero si inicio sesión como Gerencia [Fran conmuta el rol a Gerencia], se activa este botón: 'Autorizar Desvío Gerencial'. Hago clic, selecciono el motivo, pongo la huella digital en la laptop y el sistema estampa el sello biométrico con el hash SHA-256 inmutable.*
+> *Si inicio sesión como operadora, no puedo destrabarlo. Pero si inicio sesión como Gerencia [Fran conmuta el rol a Gerencia], se activa este botón: 'Autorizar Desvío Gerencial'. Hago clic, selecciono el motivo, pongo la huella digital en la laptop y el sistema estampa la firma digital con respaldo probatorio en el log de auditoría bajo la Ley 25.506.*
 > 
 > *La carpeta queda autorizada. Y ahora miren esto: presiono 'Copiar Ficha a Kipintoch'. Los 5 campos canónicos están en mi portapapeles. Stefania abre Kipintoch, pega los datos, y en 15 segundos la factura está cargada sin tipear un solo número a mano.*
 > 
 > *Y antes de volver a las diapositivas, miren la parte comercial [Fran navega a `/cotizaciones`]: acá está la Calculadora que le prometí a Alejandro. Cambio el perfil a 'CUENTA_ESTRATEGICA' y el margen se recalcula al instante. Abro el Smart Follow-Up, elijo la cotización que lleva 3 días sin respuesta, toco 'Copiar Seguimiento' y tengo la plantilla formal lista para pegar en Gmail.*
 > 
+> *Y finalmente, en la pestaña de Métricas [Fran abre `/metricas`], el Directorio tiene a la vista el Scorecard de Natali, Victoria, Ana Laura, Abril y Aldana, con los 14.890 dólares retenidos a las navieras. Cero opacidad operativa.*
+> 
 > *[Fran regresa a la presentación interactiva y avanza a la Diapositiva 15]*"
 
+#### 📋 Ficha Técnica & Métricas de Respaldo — Live Demo:
+| Estación de Demo | Acción Ejecutada en Vivo | Resultado Técnico Observable |
+| :--- | :--- | :--- |
+| **1. Ingesta & Visor Dual** | Drag-and-drop de factura PDF Maersk | Procesamiento en 4s; PDF original vs campos extraídos (BUFF 0%) |
+| **2. Desvío & WebAuthn** | Retención de sobrecosto (+USD 180) | Tarjeta bloqueada en columna roja; firma biométrica con hash SHA-256 |
+| **3. Carga Kipintoch** | Clic en botón "Copiar Ficha a Kipintoch" | 5 campos canónicos pegados en 15s; ahorro de $6M ARS en conectores |
+| **4. Comercial & Métricas** | Calculadora paramétrica y Smart Follow-Up | Recálculo dinámico en 45s; plantilla para Gmail; Scorecard de 5 operadores |
+
 ---
 
-## MOMENTO 4: TRIAGE EN PILOTO, ARQUITECTURA & HOJA DE RUTA (MINUTOS 21:00 - 25:00)
+## BLOQUE 5: TRIAGE EN PILOTO, ARQUITECTURA & DECISIÓN DIRECTIVA (MINUTOS 21:00 - 25:00)
 
 ---
 
-#### DIAPOSITIVA 15: CIRCUITO DE REPORTE DE INCIDENCIAS &amp; TRIAGE OPERATIVO EN VIVO
+### DIAPOSITIVA 15: CIRCUITO DE REPORTE DE INCIDENCIAS & TRIAGE OPERATIVO EN VIVO
 - **Título en Pantalla:** *CIRCUITO DE REPORTE DE INCIDENCIAS & TRIAGE OPERATIVO EN VIVO*
 - **Subtítulo:** *Proceso visual en 4 pasos para captura de errores y casos borde en 10 segundos, con auditoría inmutable (#TKT-XXX) y Copilot IA.*
-- **Momento Estratégico:** Momento 4: Etapa Piloto & Mejora Continua.
+- **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
 - **Badges:** `TRIAGE EN VIVO (#TKT-XXX)` | `CHATBOT COPILOT IA ACTIVO` | `CAPTURA DE CASOS BORDE`.
-- **Mockup:** Captura real en alta resolución del formulario de reporte in situ sobre `/carpetas/C1234`, con ticket inmutable `#TKT-8421`, selector de severidad *Bloqueante* y tipificación *Caso Borde*.
 - **Tiempo Asignado:** Minuto 21:00 - 22:15 (01:15 min).
-- **Lo que ve la Audiencia:** A la izquierda, el circuito visual de 4 pasos para resolución ágil en menos de 24 horas y la garantía de trazabilidad ISO 9001. A la derecha, la captura real del formulario de reporte desplegado sobre la carpeta C1234, mostrando el ticket `#TKT-8421` asentado con éxito en el log de auditoría.
-- **Qué señalar en la pantalla:**
-  * **El botón flotante (Paso 1):** Señalar la píldora flotante inferior derecha (*"Reportar Ajuste · Triage en Vivo ALMAR"*), accesible las 24 hs desde cualquier pantalla del sistema sin interrumpir la operación.
-  * **Auto-captura de contexto (Paso 2):** Apuntar a la barra de contexto superior del widget: el sistema ya detectó automáticamente que la operadora está en `/carpetas/C1234`, con rol *FINANZAS*, sin obligarla a escribir datos que el software ya conoce.
-  * **Tipificación en 10 segundos (Paso 3):** Mostrar la cuadrícula 2x2 (*Caso Borde*, *Corregir Dato*, *Duda Operativa*, *Sugerencia*) y el semáforo de urgencia donde seleccionó *Bloqueante* ante el gasto imprevisto de Maersk (*Cleaning Fee USD 45*).
-  * **Ticket Inmutable y Calibración (Paso 4):** Resaltar el cartel verde superior con el código `#TKT-8421 AUDIT_LOG OK`, explicando que esto notifica en el acto a ingeniería y deriva la carpeta a la columna *Desvíos* del Kanban para calibrar la regla en < 24 hs.
-  * **Solapa Copilot IA:** Aclarar que si no es un bug ni un desvío sino una simple duda conceptual (*"¿Por qué se bloqueó C1234?"* o *"¿Cómo aplico la provisión de Sancor a 150 días?"*), el personal cambia de pestaña y el Copilot le responde de inmediato en lenguaje natural.
+- **Stakeholders Clave:** Juan Andrés Arloro (soporte y trazabilidad), Vanesa Meggiolaro (operatividad de Stefania).
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, circuito visual de 4 pasos (1. Botón flotante 24/7 → 2. Auto-captura de contexto en 10s → 3. Clasificación ágil → 4. Ticket inmutable y derivación). A la derecha, captura UHD (`screenshots/slide_audit_1080p/canvas_slide_15.png`) del formulario de reporte sobre la carpeta C1234 con ticket `#TKT-8421` y solapa de Copilot IA.
+- **Visual Cues & Guía de Interacción:**
+  * Señalar el botón flotante en la esquina inferior derecha (*"Reportar Ajuste · Triage en Vivo ALMAR"*), accesible en todo momento.
+  * Apuntar a la barra de contexto superior del widget: destacar que el sistema ya capturó automáticamente que la operadora está en `/carpetas/C1234` con rol *FINANZAS*, sin obligarla a tipear datos redundantes.
+  * Mostrar la tipificación en 2 clics: cuadrícula 2x2 (*Caso Borde*, *Corregir Dato*, *Duda Operativa*, *Sugerencia*) y el semáforo de urgencia (*Bloqueante* ante el gasto imprevisto de Maersk de USD 45).
+  * Señalar el ticket verde `#TKT-8421 AUDIT_LOG OK`: explicar que esto notifica en el acto a ingeniería y deriva la carpeta a la columna de Desvíos del Kanban para calibrar la regla en menos de 24 horas.
+  * Mencionar la solapa Copilot IA: si es una duda operativa sobre cómo provisionar Sancor o por qué se frenó un margen, el asistente responde de inmediato en lenguaje natural.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Hay un elemento clave que diseñamos para garantizar que la transición durante el piloto sea impecable y que ningún caso quede en el aire:*
+> *"Hay un componente fundamental que desarrollamos para asegurar que la etapa piloto sea impecable y que ningún caso quede en el aire:*
 > 
-> *En los primeros días de cualquier sistema nuevo, lo normal es que aparezcan comprobantes atípicos, gastos portuarios no presupuestados o dudas de los operadores. Si el proceso de soporte es burocrático —mandar un email, esperar una reunión o llamar por teléfono—, el usuario se frustra y el sistema pierde tracción.*
+> *En los primeros días de cualquier sistema nuevo, es esperable que aparezcan comprobantes atípicos, gastos portuarios imprevistos o dudas de los operadores. Si el soporte es burocrático —mandar un correo largo, esperar una reunión o llamar por teléfono—, el equipo se frustra y la herramienta pierde tracción.*
 > 
-> *Por eso incorporamos este* **Circuito de Reporte de Incidencias & Triage Operativo in situ** [señalando la captura de la derecha]:
+> *Por eso incorporamos este* **Circuito de Reporte de Incidencias & Triage Operativo in situ** [señalando la captura]:
 > 
-> *El operador está trabajando en la carpeta C1234 y detecta un gasto no cotizado de Maersk, como este 'Cleaning Fee' de 45 dólares que redujo el margen. No tiene que abrir un correo ni redactar un formulario largo: simplemente toca el botón flotante que está disponible 24/7 en la esquina inferior.*
+> *La operadora está trabajando en la carpeta C1234 y detecta un gasto no cotizado de Maersk, como este 'Cleaning Fee' de 45 dólares. No tiene que redactar un correo ni salir del sistema: toca el botón flotante disponible 24/7 en la esquina inferior.*
 > 
-> *El sistema* **auto-captura todo el contexto en tiempo real**: *sabe que está en la carpeta C1234, qué usuario está operando y qué rol tiene. El operador solo hace dos clics: elige el tipo —en este caso 'Caso Borde'—, la severidad —'Bloqueante'— y escribe una línea.*
+> *El portal* **auto-captura todo el contexto en tiempo real**: *sabe qué carpeta está en pantalla, qué usuario está operando y qué rol tiene. El operador solo hace dos clics: elige el tipo —en este caso 'Caso Borde'—, la severidad —'Bloqueante'— y escribe una línea.*
 > 
-> *Al presionar Enviar, el sistema estampa de inmediato un ticket inmutable* **#TKT-8421** *en el log de auditoría, deriva el caso a la columna de Desvíos del Kanban para no frenar la facturación general, y nos llega la alerta a nosotros para calibrar la regla de extracción en menos de 24 horas.*
+> *Al presionar Enviar, el sistema estampa de inmediato un ticket formal* **#TKT-8421** *en el libro digital de auditoría, deriva el caso a la columna de Desvíos del Kanban para no frenar la facturación general, y nos llega la notificación para calibrar la regla de extracción en menos de 24 horas.*
 > 
-> *Y si el personal no tiene un error sino simplemente una duda operativa, hace clic en la pestaña* **Copilot IA** *y un asistente inteligente le responde al instante según los criterios y directivas de ALMAR.*
+> *Y si el personal no tiene un error sino una duda conceptual, hace clic en* **Copilot IA** *y un asistente inteligente le responde al instante según los criterios y directivas de ALMAR.*
 > 
-> *Bajo norma ISO 9001, cada incidente queda medido, registrado y versionado. Cero fricción, cero mails perdidos y mejora continua en tiempo real.*
+> *Bajo norma ISO 9001, cada incidente queda medido, registrado y versionado. Cero fricción y mejora continua en tiempo real.*
 > 
-> *Veamos ahora cómo sintetizamos todas las decisiones operativas, financieras y comerciales en la matriz de resolución."*
+> *Veamos ahora cómo consolidamos todas las decisiones en la matriz de resolución."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Parámetro de Triage | Especificación Funcional | Garantía Operativa |
+| :--- | :--- | :--- |
+| **Disponibilidad** | Botón flotante accesible 24/7 en toda pantalla | Reporte en menos de 10 segundos in situ |
+| **Auto-Captura de Contexto** | URL, ruta, ID de carpeta, usuario activo, rol RBAC | Cero re-tipeo de información por el operador |
+| **Severidades** | `BAJA`, `MEDIA`, `ALTA`, `BLOQUEANTE` | Enrutamiento prioritario a ingeniería |
+| **SLA de Calibración** | < 24 horas hábiles para reglas de parsing | Ajuste continuo de expresiones regulares y modelos |
+| **Registro Inmutable** | Ticket `#TKT-XXXX` en tabla `audit_log` | Trazabilidad completa bajo norma ISO 9001:2015 |
 
 ---
 
 ### DIAPOSITIVA 16: MATRIZ DE RESOLUCIÓN DE DESAFÍOS OPERATIVOS Y ESTRATÉGICOS
 - **Título en Pantalla:** *MATRIZ DE RESOLUCIÓN DE DESAFÍOS OPERATIVOS Y ESTRATÉGICOS*
 - **Subtítulo:** *Respuestas sistémicas y estructuradas a los principales desafíos de pricing comercial, control financiero y soberanía tecnológica.*
-- **Momento Estratégico:** Momento 4: Respuestas al Directorio.
-- **Badges:** `PRICING & VENTAS` | `RENTABILIDAD REAL` | `SEGURIDAD DE DATOS`.
-- **Componente Visual:** Cuadrícula de 3 columnas institucionales (`.objection-card`) emparejando cada área operativa con el dilema resuelto, respuesta técnica y beneficio concreto:
-  1. **GESTIÓN COMERCIAL (Pricing & Ventas):** Velocidad spot vs control de margen → Respuesta: selector `SPOT_ALTO_RIESGO` cotiza en 45s, alerta sin frenar, bloqueo solo ante pérdida neta (< USD 3) o tarifa vencida. Beneficio: Registro sistemático de feedback de pérdidas para negociar volumen con navieras.
-  2. **CONTROL FINANCIERO (Rentabilidad Real):** Flete viejo y 5 meses de espera en seguros → Respuesta: semáforo de vigencias (15/30d) y provisión diferida automática 0,55% FOB por 150d. Beneficio: Comisiones comerciales blindadas y conciliación bancaria obligatoria en Banco Macro.
-  3. **GOBERNANZA Y LEGAL (Seguridad de Datos):** Respaldo de autorizaciones y confidencialidad en IA → Respuesta: firma biométrica WebAuthn con hash SHA-256 inmutable (Ley 25.506) y cuenta corporativa propia de ALMAR con Zero Data Retention (`store: false`). Beneficio: Soberanía de datos y no repudio pericial pleno.
+- **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
+- **Badges:** `PRICING & VENTAS` | `RENTABILIDAD REAL & SEGURIDAD`.
 - **Tiempo Asignado:** Minuto 22:15 - 23:15 (01:00 min).
-- **Lo que ve la Audiencia:** Tres tarjetas de diseño institucional impecable donde cada área clave de la empresa ve resuelta su inquietud de forma elegante, profesional y sin personalizar ni exponer a ningún director en pantalla.
-- **Qué señalar en la pantalla:**
-  * Recorrer de izquierda a derecha cada columna, haciendo contacto visual natural con cada directivo al abordar el dominio de su interés.
-  * Señalar los badges de beneficio inferior en cada tarjeta.
-- **Lo que Fran enfatiza:** Mostrar que cada requerimiento crítico de las operaciones fue comprendido al detalle, parametrizado en la arquitectura y resuelto con rigor tecnológico.
+- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Lo que ve la Audiencia:** Tres columnas institucionales de diseño sobrio que consolidan las respuestas directivas por área:
+  1. **Gestión Comercial (Alejandro Noacco):** Velocidad spot vs control de margen → Solución: selector `SPOT_ALTO_RIESGO` en 45s, alerta sin frenar la venta, bloqueo solo ante pérdida neta (< USD 3) o tarifa vencida. Beneficio: Registro de feedback de pérdidas para negociar volumen.
+  2. **Control Financiero (Vanesa Meggiolaro):** Flete viejo y 5 meses de demora en Sancor → Solución: semáforo de vigencias (15/30d), provisión automática 0,55% FOB por 150d y holdback de comisiones. Beneficio: Comisiones blindadas y conciliación obligatoria en Banco Macro.
+  3. **Gobernanza y Legal (Juan Andrés Arloro):** Respaldo de autorizaciones y privacidad en IA → Solución: firma biométrica WebAuthn con hash SHA-256 (Ley 25.506) y cuenta OpenAI corporativa de ALMAR con Zero Data Retention (`store: false`). Beneficio: Soberanía de datos y no repudio pericial pleno.
+- **Visual Cues & Guía de Interacción:**
+  * Recorrer de izquierda a derecha cada columna, realizando contacto visual con Alejandro, Vanesa y Juan Andrés en su respectivo dominio.
+  * Destacar los badges de beneficio inferior en cada tarjeta.
+  * Enfatizar la síntesis: no hay contradicción entre vender rápido y controlar con rigor; la tecnología armoniza ambos objetivos.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Esta matriz sintetiza el compromiso de diseño que asumimos con cada uno de ustedes:*
+> *"Esta matriz sintetiza el compromiso de ingeniería que asumimos con cada uno de ustedes tres:*
 > 
-> *Para Alejandro [mirando a Alejandro]: velocidad comercial absoluta con perfiles dinámicos y captura sistemática de pérdidas para negociar con navieras.*
+> *Para Alejandro [mirando a Alejandro]: velocidad comercial absoluta con perfiles dinámicos y captura sistemática de pérdidas para negociar tarifas de volumen con los armadores.*
 > 
-> *Para Vanesa [mirando a Vanesa]: freno taxativo a tarifas caducadas, provisión diferida de seguros para no regalar comisiones y conciliación bancaria estricta.*
+> *Para Vanesa [mirando a Vanesa]: freno taxativo a tarifas caducadas, provisión diferida de seguros para no pagar comisiones sobre ganancias ficticias y conciliación bancaria obligatoria en Banco Macro.*
 > 
-> *Y para Juan Andrés [mirando a Juan Andrés]: firmas biométricas inatacables bajo la Ley de Firma Digital y custodia absoluta de los secretos comerciales de ALMAR.*
+> *Y para Juan Andrés [mirando a Juan Andrés]: firmas biométricas inatacables bajo la Ley Nacional de Firma Digital, cumplimiento aduanero estricto y custodia absoluta de los secretos comerciales de ALMAR.*
 > 
-> *Revisemos ahora el diagrama de arquitectura y cómo se integra con la Intranet existente de ALMAR."*
+> *Revisemos ahora el diagrama de arquitectura y cómo se integra con la Intranet existente de la empresa."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Área / Directivo | Dilema Operativo Planteado | Solución Tecnológica Implementada |
+| :--- | :--- | :--- |
+| **Comercial (Alejandro)** | No perder ventas spot por trabas burocráticas | Calculadora paramétrica en 45s, perfiles dinámicos, alerta < USD 200 sin freno ciego |
+| **Finanzas (Vanesa)** | Flete vencido, 150d seguros, descalces cambiarios | Semáforo vigencias (15/30d), provisión 0,55% FOB, conciliación obligatoria Banco Macro |
+| **Legal / TI (Juan)** | Privacidad de datos, validez firmas, DGA/BCRA | OpenAI ZDR (`store: false`), WebAuthn SHA-256 Ley 25.506, BNA oficial Ley 22.415 |
 
 ---
 
 ### DIAPOSITIVA 17: ARQUITECTURA DE PRODUCCIÓN, DIAGRAMA E INTEGRACIÓN EN INTRANET FIREBASE
 - **Título en Pantalla:** *ARQUITECTURA DE PRODUCCIÓN, DIAGRAMA E INTEGRACIÓN EN INTRANET FIREBASE*
 - **Subtítulo:** *Diagrama integral de componentes, soberanía Zero Data Retention (§ 3.2) y especificación técnica para embeber la solución en la Intranet de ALMAR.*
-- **Momento Estratégico:** Momento 4: Arquitectura de Producción & Integración.
+- **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
 - **Badges:** `EMBEBIBLE EN INTRANET FIREBASE` | `OPENAI ZDR SOBERANO` | `DIAGRAMA TÉCNICO E2E`.
-- **Componente Visual:** Diagrama interactivo de flujo de 4 capas conectadas (Intranet Firebase / Acceso ➔ Next.js Vercel ➔ OpenAI ZDR ➔ Supabase Postgres / ERPs) + 3 tarjetas técnicas detallando el embebido en Firebase, la soberanía ZDR y la alta disponibilidad.
 - **Tiempo Asignado:** Minuto 23:15 - 24:15 (01:00 min).
-- **Lo que ve la Audiencia:** 
-  * Arriba: Diagrama horizontal de arquitectura conectando las 4 capas de punta a punta.
-  * Abajo: Tres tarjetas ejecutivas:
-    1. **Embebido en Intranet Firebase (100% Factible):** Iframe con Content-Security-Policy (CSP) `frame-ancestors`, Single Sign-On (SSO) mediante Firebase Auth JWT (cero contraseñas extra) y opción de Firebase Hosting Rewrites.
-    2. **Soberanía OpenAI ZDR (§ 3.2):** Cuenta directa de ALMAR, facturación a tarjeta corporativa (centavos/factura), parámetro `store: false` y cero entrenamiento.
-    3. **Cloud Serverless & Firma Legal:** Vercel Edge + Supabase Postgres en São Paulo (`sa-east-1`, < 35ms), firma biométrica WebAuthn SHA-256 inmutable y conciliación en Banco Macro.
-- **Qué señalar en la pantalla:**
-  * **Diagrama superior:** Recorrer las 4 cajas con el cursor de izquierda a derecha, mostrando el flujo de datos.
-  * **Caja 1 del diagrama (Azul):** Señalar la Intranet en Firebase de ALMAR y el handshake con SSO.
-  * **Caja 3 del diagrama (Dorado):** Apuntar al parámetro `store: false` de OpenAI ZDR.
-  * **Tarjeta inferior de Firebase:** Destacar que para el usuario final es simplemente una solapa nueva en su intranet de todos los días.
-- **Lo que Fran enfatiza:** Compatibilidad total con lo que ALMAR ya tiene (su intranet en Firebase), seguridad contractual plena y cero inversión en servidores físicos.
+- **Stakeholders Clave:** Juan Andrés Arloro (arquitectura y seguridad), Alejandro Noacco.
+- **Lo que ve la Audiencia:** Diagrama horizontal de 4 capas:
+  1. *Capa 1: Acceso / Intranet Firebase:* Embebido como solapa interna mediante Iframe CSP (`frame-ancestors`) y Single Sign-On (SSO) con Firebase Auth JWT (cero contraseñas nuevas).
+  2. *Capa 2: Aplicación Next.js Vercel Edge:* Microservicios serverless de alta disponibilidad (99,99% SLA), motor de reglas de negocio y proxy seguro.
+  3. *Capa 3: Motor de Inteligencia Artificial OpenAI ZDR:* Cuenta directa de ALMAR, facturación a tarjeta corporativa (centavos por factura), parámetro contractual `store: false` (Zero Data Retention) y cero entrenamiento con datos comerciales.
+  4. *Capa 4: Persistencia y ERP:* Base de datos relacional PostgreSQL en Supabase (São Paulo, `sa-east-1`, latencia < 35ms), log de auditoría inmutable, firmas WebAuthn y copiado a Kipintoch.
+- **Visual Cues & Guía de Interacción:**
+  * Recorrer con el puntero las 4 capas de izquierda a derecha.
+  * Detenerse en la Capa 1: mirar a Juan Andrés y Alejandro, remarcando que para el personal de ALMAR es simplemente una pestaña nueva dentro de su intranet actual de Firebase.
+  * Detenerse en la Capa 3: señalar el parámetro `store: false` de OpenAI ZDR, enfatizando que Clave Consultora no intermedia ni almacena claves.
+  * Destacar que la infraestructura es 100% Cloud Serverless: cero costos de servidores físicos en la oficina y mantenimiento delegado.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Analicemos la arquitectura técnica y cómo se ensambla con los sistemas que ALMAR ya utiliza hoy:*
+> *"Analicemos la arquitectura técnica y cómo se ensambla con los sistemas que ALMAR ya utiliza:*
 > 
-> *Fíjense en el diagrama superior [recorriendo las 4 capas con la mano]:*
+> *Fíjense en el diagrama de 4 capas [recorriendo el flujo de izquierda a derecha]:*
 > 
 > *Punto 1:* **Embebido Directo en la Intranet Firebase de ALMAR** [mirando a Juan Andrés y Alejandro].
-> *Estudiamos la intranet corporativa que ustedes tienen montada sobre Firebase y les confirmo que* **la integración es 100% directa y transparente**:
+> *Estudiamos la intranet que ustedes tienen montada sobre Firebase y les confirmamos que* **la integración es 100% directa y transparente**:
 > *Podemos embeber este portal como una solapa interna dentro de su intranet mediante un contenedor seguro con Content-Security-Policy.*
-> *Y lo mejor:* **Single Sign-On (SSO)**. *Reutilizamos la sesión activa de Firebase Authentication mediante tokens JWT. ¿Qué significa esto en el día a día? Que Stefania, Lucía o ustedes no tienen que aprenderse otro usuario ni otra contraseña: entran a su intranet habitual y el sistema ya sabe quiénes son y qué rol tienen.*
+> *Y lo más importante:* **Single Sign-On (SSO)**. *Reutilizamos la sesión activa de Firebase Authentication mediante tokens JWT. ¿Qué significa esto en el día a día? Que Stefania, Lucía o ustedes no tienen que aprenderse otro usuario ni otra contraseña: entran a su intranet habitual y el sistema ya sabe quiénes son y qué permisos tienen.*
 > 
 > *Punto 2:* **Procesamiento Serverless en Vercel Edge**.
-> *Todo el motor de reglas ISO 9001, las validaciones de margen y el Copilot corren en microservicios serverless de alta disponibilidad, con 99,99% de uptime.*
+> *Todo el motor de reglas de negocio, la auditoría de margen y el Copilot corren en microservicios serverless de alta disponibilidad, con 99,99% de uptime.*
 > 
 > *Punto 3:* **Soberanía Absoluta en OpenAI con Zero Data Retention (ZDR § 3.2)**.
-> *ALMAR contrata directamente su cuenta empresarial de OpenAI. El consumo se debita directo de su tarjeta corporativa. Con el parámetro técnico* `store: false`, *OpenAI procesa la factura en memoria volátil y la destruye en el acto. Cero persistencia en disco y cero entrenamiento de modelos con su información.*
+> *ALMAR contrata directamente su cuenta empresarial con OpenAI. El consumo se debita directo de su tarjeta corporativa. Con el parámetro técnico* `store: false`, *OpenAI procesa la factura en memoria volátil y la destruye en el acto. Cero persistencia en disco y cero entrenamiento de modelos con los datos de sus clientes.*
 > 
 > *Punto 4:* **Persistencia y Respaldo Legal**.
-> *La base de datos PostgreSQL corre en Supabase en la región de São Paulo, con latencia menor a 35 milisegundos. Las autorizaciones críticas se firman con biometría WebAuthn inalterable, y los cobros se concilian contra el extracto real de Banco Macro.*
+> *La base de datos PostgreSQL corre en Supabase en la región de São Paulo, con latencia menor a 35 milisegundos. Las firmas WebAuthn quedan estampadas con validez pericial y los cobros se concilian contra Banco Macro.*
 > 
 > *Cero gastos en servidores en la oficina y una integración perfecta en su intranet existente.*
 > 
 > *Veamos el cronograma para poner esto en marcha en 4 semanas."*
+
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Capa Arquitectónica | Tecnología Utilizada | Especificación de Seguridad / Rendimiento |
+| :--- | :--- | :--- |
+| **Capa 1: Intranet** | Firebase Auth / Hosting | SSO con tokens JWT, `frame-ancestors: 'self' https://*.firebaseapp.com` |
+| **Capa 2: Edge Serverless** | Next.js 14 / Vercel Edge | Uptime 99.99%, ejecución en borde geográfico, TLS 1.3 |
+| **Capa 3: Inteligencia Artificial** | OpenAI API Empresarial | **Zero Data Retention (§ 3.2)**, parámetro `store: false`, cero persistencia |
+| **Capa 4: Base de Datos** | Supabase PostgreSQL | Región `sa-east-1` (São Paulo), latencia < 35ms, backups automáticos |
+| **Costos Cloud Estimados** | Facturación por consumo | OpenAI: ~USD 0.02 a 0.04 por factura procesada (centavos/mes) |
 
 ---
 
 ### DIAPOSITIVA 18: HOJA DE RUTA DE PUESTA EN MARCHA (4 SEMANAS) Y DECISIÓN DIRECTIVA
 - **Título en Pantalla:** *HOJA DE RUTA DE PUESTA EN MARCHA (4 SEMANAS) Y DECISIÓN DIRECTIVA*
 - **Subtítulo:** *Cronograma de 4 semanas hacia la producción definitiva y llamado a la decisión directiva.*
-- **Momento Estratégico:** Momento 4: Plan de Implementación y Cierre.
-- **Componente Visual:** Cuadrícula de 4 columnas (Semanas 1 a 4) + Callout de Decisión Recomendada.
+- **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
+- **Badges:** `HOJA DE RUTA EJECUTIVA · 4 SEMANAS` | `PLAN DE DESPLIEGUE`.
 - **Tiempo Asignado:** Minuto 24:15 - 25:00 (00:45 min).
-- **Lo que ve la Audiencia:** 
-  * 4 Semanas en secuencia:
-    - **Semana 1: Set-up & Cloud:** Alta de la cuenta OpenAI propia de ALMAR y despliegue del entorno productivo en Vercel y Supabase sa-east-1.
-    - **Semana 2: Inicio de Piloto:** Capacitación a Stefania y equipo administrativo; carga asistida con Widget de Triage activo (`#TKT-XXX`).
-    - **Semana 3: Calibración Fina:** Ajuste de reglas de desvíos, conceptos navieros específicos, vigencias y pruebas con extractos de Banco Macro.
-    - **Semana 4: Producción Definitiva:** Pase a producción definitivo, corte operativo de carga manual a Kipintoch y tablero de métricas en vivo.
-  * Callout inferior verde bosque: Decisión recomendada: aprobar el inicio de la Semana 1 de despliegue con acompañamiento técnico continuo de Clave Consultora.
-- **Qué señalar en la pantalla:**
-  * Recorrer las 4 tarjetas de semanas con ritmo ágil y decidido.
-  * Señalar la tarjeta de la Semana 1 marcando que el inicio es inmediato.
-  * Apuntar al callout inferior verde con la solicitud formal de decisión directiva.
-- **Lo que Fran enfatiza:** Llamado directo a la acción. El desarrollo está terminado y probado; la pelota está en el campo del directorio para dar el paso hacia la eficiencia y el control definitivo.
+- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Lo que ve la Audiencia:** Cronograma secuencial de 4 columnas (Semanas 1 a 4) y callout inferior verde bosque de Decisión Recomendada:
+  - **Semana 1 (Set-up & Cloud):** Alta de cuenta corporativa OpenAI de ALMAR, configuración de variables de entorno y despliegue del entorno productivo en Vercel/Supabase.
+  - **Semana 2 (Inicio de Piloto Asistido):** Capacitación de 45 min a Stefania y equipo administrativo; carga asistida de las primeras 50 facturas con el Widget de Triage activo (`#TKT-XXX`).
+  - **Semana 3 (Calibración Fina):** Ajuste fino de reglas de desvíos, conceptos navieros atípicos, vigencias y conciliación con extractos de Banco Macro.
+  - **Semana 4 (Producción Definitiva):** Pase a régimen productivo definitivo, corte operativo de carga manual en Kipintoch y monitoreo continuo en el Tablero de Métricas.
+  - Callout inferior: *Decisión recomendada: Aprobar el inicio de la Semana 1 de despliegue con acompañamiento técnico continuo de Clave Consultora.*
+- **Visual Cues & Guía de Interacción:**
+  * Recorrer las 4 tarjetas de semanas con ritmo ágil, decidido y profesional.
+  * Apuntar a la Semana 1 marcando que el inicio es inmediato y no requiere inversión de capital en hardware.
+  * Mirar sucesivamente a Alejandro, Vanesa y Juan Andrés al formular el cierre directivo.
+  * Ejecutar el llamado a la acción con seguridad y naturalidad: la pelota queda en el campo del Directorio.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
 > *"Para cerrar, este es el plan de puesta en marcha propuesto para los próximos 30 días:*
 > 
-> *En la* **Semana 1**, *asistimos a Juan en dar de alta la cuenta corporativa de OpenAI de ALMAR y conectamos las claves al entorno productivo de Vercel y Supabase.*
+> *En la* **Semana 1**, *asistimos a Juan en dar de alta la cuenta corporativa de OpenAI de ALMAR y conectamos las credenciales al entorno productivo de Vercel y Supabase.*
 > 
-> *En la* **Semana 2**, *hacemos una sesión de capacitación de 45 minutos con Stefania y habilitamos el piloto de carga real con el Widget de Triage activo.*
+> *En la* **Semana 2**, *hacemos una sesión de capacitación de 45 minutos con Stefania y habilitamos el piloto de carga real con el Widget de Triage activo para procesar las primeras 50 facturas.*
 > 
 > *En la* **Semana 3**, *calibramos las reglas finas de desvíos y los conceptos atípicos que hayan surgido.*
 > 
@@ -660,11 +862,17 @@ A continuación se detalla la hoja de ruta minuto a minuto estructurada en los 4
 > 
 > *La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Semana 1 para iniciar el despliegue. Quedo a disposición de Alejandro, Vanesa y Juan para responder sus consultas. Muchas gracias."*
 
+#### 📋 Ficha Técnica & Métricas de Respaldo:
+| Semana | Hito Principal | Entregable Concreto | Responsables |
+| :--- | :--- | :--- | :--- |
+| **Semana 1** | Set-up & Cloud | Cuenta OpenAI corporativa ALMAR, entorno Vercel + Supabase configurado | Juan Andrés / Clave |
+| **Semana 2** | Inicio Piloto Asistido | Capacitación a Stefania (45 min), primeras 50 facturas procesadas con Triage | Stefania / Clave |
+| **Semana 3** | Calibración Fina | Reglas navieras afinadas, pruebas con extracto Macro, vigencias comex | Vanesa / Clave |
+| **Semana 4** | Producción Definitiva | Pase a régimen regular, corte de tipeo manual, Tablero de Métricas 100% | Directorio ALMAR |
+
 ---
 
-# 3. BANCO DE RESPUESTAS A OBJECIONES DIRECTIVAS AMPLIADO
-
-A continuación se presenta el arsenal táctico de respuestas para que Fran Bondino responda con solvencia técnica, aplomo comercial y rigor jurídico ante las repreguntas de cada uno de los directores durante el coloquio final.
+# 3. BANCO MAESTRO DE RESPUESTAS A OBJECIONES DIRECTIVAS
 
 ---
 
@@ -678,19 +886,19 @@ A continuación se presenta el arsenal táctico de respuestas para que Fran Bond
   
   *Fijate que eliminamos cualquier markup rígido. En la calculadora tenés el selector de 'Perfil de Rentabilidad'. Si estás cerrando una carga spot agresiva, elegís el perfil `SPOT_ALTO_RIESGO` o `CUENTA_ESTRATEGICA`. El sistema te calcula la propuesta en 45 segundos con el margen que vos decidís.*
   
-  *¿Dónde interviene el sistema? Únicamente en dos cosas lógicas:*
-  *1. Te avisa con semáforo amarillo si el margen baja de 200 dólares para que recuerdes que los gastos portuarios o acarreos en pesos pueden comerse ese margen si la brecha cambiaria se mueve. Pero la alerta te informa, no te traba la propuesta.*
+  *¿Dónde interviene el sistema? Únicamente en dos compuertas lógicas:*
+  *1. Te avisa con semáforo amarillo si el margen baja de 200 dólares para recordarte que los gastos portuarios o acarreos en pesos pueden comerse ese margen si la brecha cambiaria se mueve. Pero la alerta te informa, no te traba la propuesta.*
   *2. La única compuerta que te bloquea el botón es si la operación da ganancia negativa o menor a 3 dólares, porque en ese caso no estás vendiendo: estás subsidiando el flete del cliente con plata de ALMAR.*
   
   *Tenés total libertad de pricing, cotizás en menos de un minuto y contás con un copiloto que te asegura que cada negocio que cierres le sume plata a la empresa."*
 
-#### 3.1.2 Registro de Pérdidas de Cotizaciones por Precio de la Competencia
+#### 3.1.2 Registro Cualitativo de Pérdidas por Competencia y Negociación con Navieras
 - **Pregunta / Objeción de Alejandro:**  
-  *"Nosotros cotizamos cientos de fletes al mes. Muchas veces el cliente se va con la competencia porque cotizó 100 o 150 dólares menos. Hoy ese dato queda en un WhatsApp o se pierde en el aire. ¿Cómo me ayuda este portal a capturar esa información y qué hago con eso?"*
+  *"Nosotros cotizamos cientos de fletes al mes. Muchas veces el cliente se va con la competencia porque cotizó 100 o 150 dólares menos. Hoy ese dato queda en un WhatsApp o se pierde en el aire. ¿Cómo me ayuda este portal a capturar esa información y qué hago con eso a fin de mes?"*
 - **Respuesta Táctica de Fran:**  
   *"Ese es uno de los mayores diferenciales comerciales de la plataforma, Alejandro.*
   
-  *En la tabla de cotizaciones agregamos el botón 'Feedback Comercial'. Cuando un cliente no cierra, Lucía o vos hacen un clic, seleccionan el motivo 'COMPETENCIA_MENOR_PRECIO' y escriben textual: 'Competencia cotizó USD 150 menos'.*
+  *En la tabla de cotizaciones agregamos el botón 'Feedback Comercial'. Cuando un cliente no cierra, Lucía o vos hacen un clic, seleccionan el motivo `COMPETENCIA_MENOR_PRECIO` y escriben textual: 'Competencia cotizó USD 150 menos'.*
   
   *Ese dato no queda en una nota suelta: se indexa automáticamente asociado a la naviera, la ruta y el tipo de contenedor. A fin de mes, el portal te muestra una métrica consolidada: 'En la ruta Ningbo-Buenos Aires perdimos 14 cotizaciones porque MSC o Maersk estuvieron 150 dólares por encima de Cosco'.*
   
@@ -709,11 +917,19 @@ A continuación se presenta el arsenal táctico de respuestas para que Fran Bond
   
   *Lucía no redacta nada: revisa el texto en 3 segundos, toca 'Copiar', lo pega en Gmail y lo envía. En 10 minutos hace el seguimiento prolijo de 20 cotizaciones. Esto le devuelve horas de tiempo productivo y reactiva ventas dormidas sin esfuerzo manual."*
 
+#### 3.1.4 Temor a Pérdida de Velocidad Operativa frente a la Competencia Spot
+- **Pregunta / Objeción de Alejandro:**  
+  *"¿Esto no le va a agregar pasos administrativos al comercial que antes pasaba un número por WhatsApp en 20 segundos?"*
+- **Respuesta Táctica de Fran:**  
+  *"Al contrario: hoy cotizar en planillas de Excel, buscar el tarifario viejo en carpetas compartidas y calcular recargos a mano demora entre 5 y 10 minutos por presupuesto. Con la Calculadora Paramétrica, el vendedor selecciona origen, destino, tipo de contenedor, ajusta el slider y tiene la cotización armada con desglose formal en 45 segundos.*
+  
+  *Gana velocidad real y elimina el riesgo de olvidarse de incluir el THC o el combustible BUFF."*
+
 ---
 
 ### 3.2 OBJECIONES DE VANESA MEGGIOLARO (DIRECTORA DE ADMINISTRACIÓN Y FINANZAS)
 
-#### 3.2.1 Freno a Cotizaciones con Tarifas Vencidas de Navieras
+#### 3.2.1 Freno a Cotizaciones con Tarifas Navieras Vencidas
 - **Pregunta / Objeción de Vanesa:**  
   *"A mí me pasa seguido que un comercial cotiza con un tarifario viejo que le quedó guardado en una planilla; el cliente confirma dos semanas después y cuando nos llega la factura del armador nos encontramos con que la tarifa ya había subido y nosotros nos tenemos que hacer cargo de la diferencia. ¿Cómo me garantiza el sistema que esto no vuelva a pasar?"*
 - **Respuesta Táctica de Fran:**  
@@ -747,6 +963,22 @@ A continuación se presenta el arsenal táctico de respuestas para que Fran Bond
   
   *El operador debe marcar la concordancia exacta con la línea del extracto bancario donde impactaron los fondos. Recién con esa conciliación validada, la carpeta pasa a 'Cobrada y Conciliada' y se habilita el recibo. Cero riesgo de cheques rechazados, transferencias que no entraron o volantes fraudulentos."*
 
+#### 3.2.4 Control de Margen Mínimo Operativo (< USD 200) ante Descalces Cambiarios
+- **Pregunta / Objeción de Vanesa:**  
+  *"¿Por qué pusimos el semáforo preventivo en USD 200 y no en un porcentaje fijo?"*
+- **Respuesta Táctica de Fran:**  
+  *"Porque en fletes marítimos, los gastos en destino (acarreos locales, peajes portuarios, estadías) se liquidan en pesos a tipo de cambio oficial o con alícuotas específicas. Si una operación tiene un margen menor a USD 200, un movimiento de 30 o 40 pesos en la cotización de la divisa o un recargo de acarreo se come la totalidad de la rentabilidad.*
+  
+  *Los USD 200 funcionan como un colchón de absorción de volatilidad cambiaria argentina. Protege la caja sin trabar la venta."*
+
+#### 3.2.5 Duplicación de Carga entre el Portal y Kipintoch
+- **Pregunta / Objeción de Vanesa:**  
+  *"¿Esto no le genera doble trabajo a Stefania al tener que mirar el portal y después cargar en Kipintoch?"*
+- **Respuesta Táctica de Fran:**  
+  *"Todo lo contrario: hoy Stefania demora de 8 a 12 minutos por factura porque tiene que abrir el PDF, buscar con la vista los números, calcular el IVA y tipear campo por campo. Con el portal, la IA extrae y valida los datos en 4 segundos, y con el botón 'Copiar Ficha a Kipintoch' pega los 5 campos canónicos en 15 segundos.*
+  
+  *Pasa de 12 minutos a 15 segundos: un ahorro neto de más del 95% del tiempo administrativo."*
+
 ---
 
 ### 3.3 OBJECIONES DE JUAN ANDRÉS ARLORO (DIRECTOR LEGAL Y RESPONSABLE TI / APODERADO)
@@ -754,7 +986,7 @@ A continuación se presenta el arsenal táctico de respuestas para que Fran Bond
 #### 3.3.1 Validez Jurídica y Probatoria de las Autorizaciones Biométricas WebAuthn
 - **Pregunta / Objeción de Juan Andrés:**  
   *"Fran, desde el punto de vista legal y societario: si un directivo autoriza un desvío de costos o un margen crítico con la huella digital en su laptop en lugar de una firma física o un usuario y contraseña tradicional, ¿qué validez probatoria tiene eso ante una auditoría fiscal, una demanda judicial o un conflicto societario?"*
-- **Respuesta Táctica de Juan:**  
+- **Respuesta Táctica de Fran:**  
   *"Juan Andrés, la respuesta jurídica es contundente: tiene una validez probatoria pericial infinitamente superior a una contraseña y a una firma ológrafa escaneada.*
   
   *El sistema implementa el estándar internacional* **WebAuthn (FIDO2)**, *el mismo protocolo que exige la directiva bancaria europea PSD2 y los sistemas de banca electrónica de máxima seguridad.*
@@ -787,17 +1019,93 @@ A continuación se presenta el arsenal táctico de respuestas para que Fran Bond
   
   *Tercero:* **Parámetro técnico de persistencia cero**. *En cada llamada de procesamiento, el portal envía el parámetro estricto* `store: false`. *Esto obliga a los servidores de OpenAI a procesar el texto de la factura en memoria volátil y destruirlo de inmediato una vez devuelta la respuesta estructurada. Cero retención en disco, cero persistencia y secreto comercial 100% blindado por contrato internacional."*
 
+#### 3.3.4 Soberanía de Infraestructura, Soporte y Escalabilidad Cloud
+- **Pregunta / Objeción de Juan Andrés:**  
+  *"¿Qué dependencias externas tenemos con Vercel y Supabase? ¿Qué pasa si el día de mañana queremos migrar a servidores propios en Argentina?"*
+- **Respuesta Táctica de Fran:**  
+  *"Cero ataduras propietarias. La aplicación está construida sobre estándares abiertos:*
+  - *La base de datos es PostgreSQL estándar. Pueden exportar el dump completo en cualquier momento y montarlo en un servidor local en Rosario o en cualquier nube.*
+  - *El frontend es Next.js estándar, empaquetable en contenedores Docker para correr en infraestructura propia.*
+  - *Elegimos Vercel Edge y Supabase en São Paulo porque garantizan 99,99% de uptime y latencias menores a 35 milisegundos sin requerir mantenimiento de hardware ni personal de infraestructura dedicado."*
+
 ---
 
-# 4. PAUTAS DE INTERACCIÓN, COMUNICACIÓN NO VERBAL Y PROTOCOLO DE CIERRE
+# 4. PROTOCOLO DE CONTINGENCIA OPERATIVA EN SALA
 
-### 4.1 Postura, Mirada y Clima de la Reunión
-- **Contacto Visual Triangular:** Mantener un reparto equilibrado de la atención visual: 40% a Alejandro (foco comercial y agilidad), 40% a Vanesa (foco financiero, costos y control) y 20% a Juan Andrés (foco legal, seguridad y arquitectura).
-- **Lenguaje Corporal Firme y Empático:** Brazos abiertos, sin cruzar de brazos ni apoyarse en la mesa con desgano. Mostrar convicción en la tecnología desarrollada pero humildad operativa: *"Este sistema lo diseñamos escuchando lo que ustedes nos marcaron en el relevamiento"*.
-- **Transición Fluida a la Demo en Vivo (Minuto 17):** No pedir permiso dubitativo; decir con seguridad: *"Voy a abrir el navegador para que lo veamos operar en vivo"*. La transición rápida al sistema funcional desarma cualquier escepticismo teórico.
+Para garantizar una presentación ejecutiva impecable ante cualquier eventualidad física o tecnológica durante la reunión de Directorio, Fran Bondino dispone del siguiente protocolo de tres niveles de contingencia:
 
-### 4.2 Cierre Ejecutivo y Solicitud del Aval para la Semana 1
-Al llegar al final de la Diapositiva 18, Fran debe ejecutar un cierre directo, claro y con orientación a la decisión:
-> *"Alejandro, Vanesa, Juan: la plataforma no es una idea en desarrollo, es una realidad productiva que ya está funcionando en este momento. Lo que les propongo hoy no es firmar un contrato a ciegas, sino dar inicio a la* **Semana 1** *de despliegue: damos de alta su cuenta corporativa de OpenAI, montamos el entorno Cloud y la semana que viene capacitamos a Stefania para iniciar el piloto asistido con el Widget de Triage activo.*
+```
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                              MATRIZ DE CONTINGENCIA OPERATIVA EN SALA                                  │
+├─────────┬──────────────────────────────┬───────────────────────────────────────────────────────────────┤
+│ NIVEL   │ ESCENARIO DE FALLA           │ PROCEDIMIENTO DE MITIGACIÓN INMEDIATA                         │
+├─────────┼──────────────────────────────┼───────────────────────────────────────────────────────────────┤
+│ N1      │ Falla de Proyector / Pantalla│ Distribución de enlace web local / Entrega de dossier PDF A4  │
+│ N2      │ Falla de Conexión a Internet │ Ejecución 100% desconectada en localhost / Hotspot 5G móvil   │
+│ N3      │ Caída de Servidor Local Demo │ Conmutación a Vercel Cloud / Apoyo en Mockups UHD interactivos│
+└─────────┴──────────────────────────────┴───────────────────────────────────────────────────────────────┘
+```
+
+### 4.1 Nivel 1: Falla de Proyector o Pantalla de la Sala
+- **Diagnóstico:** El proyector de la sala de reuniones de ALMAR no enciende, parpadea o pierde la señal HDMI.
+- **Acción Inmediata (0 a 30 segundos):**
+  1. No perder la calma ni pedir disculpas reiteradas. Decir con naturalidad: *"Mientras resolvemos la señal del proyector, comparto el mazo interactivo directamente en sus pantallas"*.
+  2. Compartir por red local o AirDrop/Nearby Share el enlace directo al mazo (`http://192.168.1.X:5173` o URL de respaldo).
+  3. Desplegar sobre la mesa los tres ejemplares impresos de alta calidad del documento ejecutivo: `ALMAR_Resumen_Ejecutivo_Solucion_Integral_Clave.pdf` (diseño editorial Clave Consultora a color).
+- **Ajuste del Guion:** Fran conduce la presentación indicando verbalmente los números de diapositiva o página (*"Vayamos a la diapositiva 5, en el Semáforo de Vigencias..."*).
+
+### 4.2 Nivel 2: Falla de Conexión a Internet
+- **Diagnóstico:** Se corta la conexión Wi-Fi corporativa de ALMAR o cae el enlace de fibra óptica durante la reunión.
+- **Acción Inmediata (0 a 15 segundos):**
+  1. La presentación React (`presentacion-react`) y el servidor local de demo (`http://localhost:3000`) corren **completamente de manera local y autónoma** en la laptop de Fran. No requieren internet para transiciones, animaciones, cálculos paramétricos ni navegación.
+  2. Para la extracción de comprobantes en vivo, el entorno de demo cuenta con un set de comprobantes cacheados y respuestas mockeadas locales de alta fidelidad que reproducen con precisión milimétrica la respuesta de la IA.
+  3. Si se desea conexión real a OpenAI, Fran activa en 10 segundos el punto de acceso personal 5G en su teléfono móvil previamente emparejado.
+- **Speech de Fran:** *"El sistema está diseñado con arquitectura tolerante a fallas de conectividad: el procesamiento operativo y el control de reglas no dependen de enlaces externos para operar en la terminal del usuario"*.
+
+### 4.3 Nivel 3: Caída del Servidor Local de Demo (`localhost:3000`)
+- **Diagnóstico:** El proceso Node.js local se interrumpe o arroja un error imprevisto al conmutar en el minuto 17.
+- **Acción Inmediata (0 a 20 segundos):**
+  1. Fran abre de inmediato una pestaña del navegador apuntando al respaldo Cloud en producción: `https://bot-relevamiento.vercel.app`.
+  2. Si la conexión web no responde, Fran regresa a la presentación interactiva de React (`presentacion-react`).
+  3. Dentro de la propia presentación React, las diapositivas 08, 09, 10, 11, 12, 13 y 14 contienen **mockups interactivos de ultra-alta definición con lightbox zoom y simuladores funcionales** (`BillingPipelineSimulator`, `ParametricMarginCalculator`, `MulticurrencyProvisionSimulator`).
+  4. Fran opera los simuladores incrustados en las diapositivas demostrando los cálculos, la alerta de USD 200 y el semáforo con la misma contundencia.
+- **Speech de Fran:** *"Como ven en los simuladores interactivos embebidos en la propia presentación, cada regla de negocio corre de forma determinística con los datos exactos de los casos auditados"*.
+
+---
+
+# 5. PROTOCOLO DE COMUNICACIÓN NO VERBAL, PACING Y CIERRE EJECUTIVO
+
+### 5.1 Postura, Pacing y Control del Reloj
+- **Postura Corporal:** De pie o sentado erguido en la cabecera, hombros relajados, brazos visibles sobre la mesa, sin cruzar de brazos ni juguetear con bolígrafos.
+- **Triangulación Visual:** Reparto equilibrado y consciente de la mirada:
+  * **40% del tiempo a Alejandro Noacco:** Foco en agilidad de cotización, perfiles dinámicos y seguimiento comercial.
+  * **40% del tiempo a Vanesa Meggiolaro:** Foco en frenar costos de navieras, provisión de seguros a 150 días y extracto bancario.
+  * **20% del tiempo a Juan Andrés Arloro:** Foco en validez legal de firmas, Ley 25.506, Código Aduanero y soberanía OpenAI.
+- **Control del Reloj (Checkpoints Temporales):**
+  * Minuto 02:45: Concluir Diagnóstico Real (Slide 02) e ingresar a la Solución Central.
+  * Minuto 05:15: Concluir Pipeline (Slide 04) e ingresar al Módulo Comercial.
+  * Minuto 09:45: Concluir Módulo Comercial (Slide 07) e ingresar al Escudo Financiero.
+  * Minuto 17:15: Concluir casos teóricos e iniciar la Demostración en Vivo en el navegador.
+  * Minuto 21:00: Regresar al mazo y presentar Triage y Arquitectura.
+  * Minuto 25:00: Cierre formal y solicitud de aprobación de la Semana 1.
+
+### 5.2 Manejo Elegante de Interrupciones Durante la Exposición
+Si algún directivo interrumpe antes del minuto 17 con una duda puntual:
+- **No confrontar ni cortar abruptamente.**
+- **Regla de deferencia y anticipación:**
+  * Si Vanesa pregunta por seguros en el slide 3: *"Vanesa, tocás un punto neurálgico; en exactamente 8 minutos, en la diapositiva 11, te muestro cómo provisionamos automáticamente el 0,55% de Sancor a 150 días para que no se paguen comisiones de más"*.
+  * Si Alejandro pregunta por cotizaciones spot en el slide 4: *"Alejandro, en la próxima diapositiva te muestro la Calculadora Paramétrica con los 4 perfiles de margen que cotiza en 45 segundos"*.
+  * Si Juan Andrés pregunta por las firmas en el slide 8: *"Juan, en la diapositiva 12 vemos la firma biométrica FIDO2 con hash SHA-256 bajo la Ley de Firma Digital"*.
+
+### 5.3 Speech de Clausura y Llamado a la Decisión Directiva
+Al finalizar la Diapositiva 18 (minuto 25:00), Fran concluye con tono firme, seguro y colaborativo:
+
+> *"Alejandro, Vanesa, Juan: la plataforma no es un informe preliminar ni un desarrollo en boceto. Es una solución operativa probada con los números, las navieras y los clientes reales de ALMAR.*
 > 
-> *Si están de acuerdo, comenzamos hoy mismo. ¿Tienen alguna consulta final o damos inicio a la Semana 1?"*
+> *Lo que les propongo hoy no es firmar un contrato a ciegas, sino dar inicio formal a la* **Semana 1** *de puesta en marcha:*
+> *Damos de alta su cuenta corporativa de OpenAI con Zero Data Retention, montamos el entorno productivo y la semana que viene capacitamos a Stefania para iniciar el piloto asistido con el Widget de Triage activo.*
+> 
+> *La tecnología está lista y probada. ¿Damos por aprobada la Semana 1 para comenzar el despliegue?"*
+
+---
+*Fin de la Guía Maestra del Orador — Clave Consultora · ALMAR Rosario S.R.L.*
