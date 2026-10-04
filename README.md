@@ -8,7 +8,10 @@ Presentación ejecutiva e interactiva desarrollada con la identidad corporativa 
 
 ## 🌐 Acceso en Vivo (GitHub Pages)
 
-👉 **[Ver Presentación Ejecutiva Online](https://franbondino.github.io/presentacion-almar/)**
+- 📄 **[Ver Presentación Clásica (HTML)](https://franbondino.github.io/presentacion-almar/)**
+- ✨ **[Ver Versión React Animada (Framer Motion)](https://franbondino.github.io/presentacion-almar/react/)**
+
+Ambas versiones cuentan con un botón en la barra superior para alternar instantáneamente entre la experiencia clásica y la animada interactiva.
 
 ---
 
