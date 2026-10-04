@@ -1,4 +1,4 @@
-﻿import { SlideMetadata } from '../types/presentation';
+import { SlideMetadata } from '../types/presentation';
 
 export const SLIDES_METADATA: SlideMetadata[] = [
   {
@@ -37,12 +37,12 @@ export const SLIDES_METADATA: SlideMetadata[] = [
   {
     id: 4,
     number: '04',
-    title: 'ARQUITECTURA DEL PIPELINE: DE LA FACTURA A LA CARPETA Y BANCO',
-    subtitle: 'Flujo continuo de cinco etapas automatizadas para garantizar consistencia contable, fiscal y bancaria.',
+    title: 'CIRCUITO DE FACTURACIÓN: DE LA RECEPCIÓN DEL COMPROBANTE AL BANCO',
+    subtitle: 'Las cinco etapas del proceso: ingreso de la factura, lectura automática, control de margen, carga en Kipintoch y cobro en Banco Macro.',
     block: 2,
-    blockTitle: 'Solución Central & Pipeline',
-    badgePrimary: 'TRAZABILIDAD DE EXTREMO A EXTREMO',
-    badgeSecondary: 'AUDITORÍA DE CALIDAD',
+    blockTitle: 'Solución Central & Proceso',
+    badgePrimary: 'TRAZABILIDAD PASO A PASO',
+    badgeSecondary: 'MOMENTO 1: CIRCUITO OPERATIVO',
     thumbnailUrl: './screenshots/slide_audit_1080p/canvas_slide_04.png',
   },
   {

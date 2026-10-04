@@ -48,14 +48,14 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     title: 'Arquitectura del Pipeline: De la Factura a la Carpeta y Banco',
     timeAllocation: '04:00 - 05:15 (01:15 min)',
     keyStakeholders: ['Juan Andrés Arloro', 'Vanesa Meggiolaro'],
-    whatAudienceSees: 'Stepper interactivo de 5 etapas (Origen -> Extracción IA -> Reglas & Escudo -> Kipintoch -> Banco Macro), tarjetas de payload y callout azul de trazabilidad inmutable.',
+    whatAudienceSees: 'Grilla panorámica de las 5 etapas del circuito de facturación (Recepción -> Lectura IA -> Control de Margen -> Kipintoch -> Banco Macro), ficha interactiva de detalle y métricas operativas.',
     demoCues: [
-      'Interactuar con el Stepper avanzando por las 5 etapas',
-      'Explicar la compuerta de reglas de negocio en la etapa 3',
-      'Destacar el requerimiento de extracto real en Banco Macro en la etapa 5',
+      'Mostrar las 5 etapas visibles en paralelo en la pantalla',
+      'Hacer clic en las etapas o tocar "Simular Recorrido" para ver qué entra y qué resuelve cada paso',
+      'Destacar la verificación en extracto real de Banco Macro antes de cerrar cobranzas',
     ],
     verbatimSpeech:
-      'Para garantizar que nada quede al azar, el pipeline opera en una línea de montaje digital de 5 fases continuas: 1. El proveedor o naviera envía el correo y el PDF entra al portal. 2. El motor de IA analiza la semántica del documento, extrayendo CUIT, fecha, alícuotas y desglosando conceptos. 3. El Escudo Financiero audita el margen: verifica que el costo no supere lo cotizado y aplica los semáforos de rentabilidad. 4. Se genera la prefactura y el operador copia los datos a Kipintoch con un solo clic. 5. Y finalmente, el módulo de cobranzas enlaza la acreditación real en el extracto del Banco Macro antes de autorizar el recibo oficial y las comisiones. Todo el ciclo queda auditado con respaldo pericial inmutable. Pero ahora entremos en las respuestas concretas a los pedidos directivos: vayamos al Módulo Comercial.',
+      'El circuito funciona como una línea de trabajo en 5 pasos bien definidos: 1. La naviera o transportista envía la factura y entra al sistema. 2. La IA lee el CUIT, los montos y separa el flete exento del recargo de combustible BUFF para AFIP. 3. El sistema compara el gasto contra lo presupuestado en la carpeta: si la naviera cobró de más o el margen cae de USD 200, avisa de inmediato. 4. Stefania copia los 5 datos clave a Kipintoch en 15 segundos con un clic, sin tipear nada a mano. 5. Y en cobranzas, se verifica el ingreso real en el extracto de Banco Macro antes del recibo oficial y las comisiones. Todo el proceso queda registrado y vinculado a la carpeta. Pasemos ahora a ver las respuestas a los pedidos comerciales de Vanesa y Alejandro.',
   },
   5: {
     slideId: 5,

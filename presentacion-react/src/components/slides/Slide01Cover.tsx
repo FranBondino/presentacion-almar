@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { SlideProps } from '../../types/presentation';
 
@@ -78,7 +78,7 @@ export const Slide01Cover: React.FC<SlideProps> = () => {
           transition={{ duration: 0.5, delay: 0.35 }}
           className="font-body text-[12.5px] text-clave-muted leading-[1.45] max-w-[740px] mb-5 font-normal"
         >
-          Plataforma de Extracción con IA, Escudo Financiero y Arquitectura Productiva para ALMAR Rosario S.R.L.
+          Extracción automática de comprobantes, control de desvíos de costos y conciliación contable para ALMAR Rosario S.R.L.
         </motion.p>
 
         {/* Executive Metadata Grid Box */}
