@@ -38,7 +38,7 @@ export const Slide12CaseMarginAlert: React.FC<SlideProps> = ({ onOpenLightbox })
             </div>
             <div className="flex items-center justify-between p-2 rounded bg-white border border-slate-200 text-xs font-mono">
               <span className="text-slate-600 font-sans">Aprobador Formal:</span>
-              <span className="font-bold text-clave-navy">Alejandro Bondino (Director)</span>
+              <span className="font-bold text-clave-navy">Alejandro Noacco (Director)</span>
             </div>
           </div>
 

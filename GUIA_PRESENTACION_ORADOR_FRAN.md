@@ -594,7 +594,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 | **Semáforo Preventivo (< USD 200)** | Activación de advertencia amarilla: evita que fluctuaciones cambiarias o gastos locales en pesos vuelvan negativa la operación. No bloquea ciegamente. |
 | **Mecanismo WebAuthn (FIDO2)** | Autenticación con sensor de hardware (Touch ID / Windows Hello) y chip TPM 2.0. Generación de par de claves asimétricas sin contraseñas en texto plano. |
 | **Firma SHA-256 Registrada** | `d8a4f91b72e045c83210bc6a98711e4f9b8c347d0182ec35ab120984de63f512` |
-| **Metadatos de Auditoría** | Timestamp: `2026-09-30T10:15:32.412Z` \| Autorizante: Alejandro Bondino / Vanesa Meggiolaro \| Justificación: *"Ajuste extraordinario de flete Maersk KA0018437 y estadía portuaria en Zárate autorizado para evitar paralización de insumos planta Acindar"* |
+| **Metadatos de Auditoría** | Timestamp: `2026-09-30T10:15:32.412Z` \| Autorizante: Alejandro Noacco / Vanesa Meggiolaro \| Justificación: *"Ajuste extraordinario de flete Maersk KA0018437 y estadía portuaria en Zárate autorizado para evitar paralización de insumos planta Acindar"* |
 | **Marco Jurídico de Respaldo** | **Ley Nacional de Firma Digital Nº 25.506 (art. 5 y conc.)** e ISO 9001:2015 § 8.5.6 |
 
 ---
