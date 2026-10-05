@@ -16,7 +16,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
       />
 
       <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-3 gap-3.5 overflow-hidden">
-        {/* Column 1: Alejandro Noacco */}
+        {/* Column 1: Dirección General & Comercial */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
               </span>
               <UserCheck className="w-4 h-4 text-clave-green" />
             </div>
-            <div className="text-[10px] font-mono text-clave-muted mb-2">ALEJANDRO NOACCO</div>
+            <div className="text-[10px] font-mono text-clave-muted mb-2">DIRECCIÓN GENERAL & COMERCIAL</div>
 
             <div className="space-y-2 text-xs">
               <div className="p-2 rounded bg-white border border-slate-200">
@@ -61,7 +61,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
           </div>
         </motion.div>
 
-        {/* Column 2: Vanesa Meggiolaro */}
+        {/* Column 2: Administración & Finanzas */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
               </span>
               <ShieldCheck className="w-4 h-4 text-clave-gold" />
             </div>
-            <div className="text-[10px] font-mono text-clave-muted mb-2">VANESA MEGGIOLARO</div>
+            <div className="text-[10px] font-mono text-clave-muted mb-2">ADMINISTRACIÓN & FINANZAS</div>
 
             <div className="space-y-2 text-xs">
               <div className="p-2 rounded bg-white border border-slate-200">
@@ -106,7 +106,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
           </div>
         </motion.div>
 
-        {/* Column 3: Juan Andrés Arloro */}
+        {/* Column 3: Gobierno Corporativo & TI */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export const Slide16ResolutionMatrix: React.FC<SlideProps> = () => {
               </span>
               <Scale className="w-4 h-4 text-clave-navy" />
             </div>
-            <div className="text-[10px] font-mono text-clave-muted mb-2">JUAN ANDRÉS ARLORO</div>
+            <div className="text-[10px] font-mono text-clave-muted mb-2">GOBIERNO CORPORATIVO & TI</div>
 
             <div className="space-y-2 text-xs">
               <div className="p-2 rounded bg-white border border-slate-200">

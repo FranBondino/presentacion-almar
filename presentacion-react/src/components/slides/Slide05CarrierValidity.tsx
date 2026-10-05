@@ -10,7 +10,7 @@ export const Slide05CarrierValidity: React.FC<SlideProps> = ({ onOpenLightbox })
     <div className="w-full h-full p-4 flex flex-col justify-between bg-white">
       <SlideHeader
         momentoBadge="MOMENTO 2: EL MÓDULO COMERCIAL FLEXIBLE"
-        categoryBadge="RESPUESTA DIRECTA A VANESA MEGGIOLARO"
+        categoryBadge="PROTECCIÓN FINANCIERA & CONTROL DE TARIFAS"
         slideNumber="05"
         title="TABLERO COMERCIAL Y CONTROL DE VIGENCIA DE TARIFAS NAVIERAS"
         subtitle="Semáforo de vigencias (15/30 días) para impedir cotizaciones desactualizadas que generen quebranto económico."
@@ -74,7 +74,7 @@ export const Slide05CarrierValidity: React.FC<SlideProps> = ({ onOpenLightbox })
           </motion.div>
 
           <div className="p-2 rounded bg-clave-gold-light border-l-4 border-clave-gold text-[11px] text-clave-text flex items-center justify-between">
-            <span>🛡️ <strong>Respuesta a Vanesa:</strong> Cero absorción de aumentos desfasados</span>
+            <span>🛡️ <strong>Control Financiero:</strong> Cero absorción de aumentos desfasados</span>
             <span className="font-mono font-bold text-clave-navy">100% PROTEGIDO</span>
           </div>
         </div>

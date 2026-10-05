@@ -86,7 +86,7 @@ export const Slide17ArchitectureZDR: React.FC<SlideProps> = () => {
               Soberanía Contractual
             </h5>
             <p className="text-[11px] text-slate-600 leading-snug">
-              Facturación a tarjeta corporativa de ALMAR. Las claves API permanecen bajo custodia exclusiva de Juan Andrés.
+              Facturación a tarjeta corporativa de ALMAR. Las claves API permanecen bajo custodia exclusiva de Administración y Sistemas.
             </p>
           </div>
 

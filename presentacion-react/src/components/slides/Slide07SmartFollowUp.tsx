@@ -60,7 +60,7 @@ export const Slide07SmartFollowUp: React.FC<SlideProps> = ({ onOpenLightbox }) =
               <span>Inteligencia de Pérdidas de Mercado</span>
             </div>
             <p className="text-[11.5px] text-slate-700 leading-snug">
-              Registro del motivo: <em>"Competencia cotizó USD 150 menos"</em>. Alejandro obtiene la métrica exacta para exigir tarifas de volumen a los armadores.
+              Registro del motivo: <em>"Competencia cotizó USD 150 menos"</em>. La Dirección Comercial obtiene la métrica exacta para exigir tarifas de volumen a los armadores.
             </p>
           </motion.div>
 

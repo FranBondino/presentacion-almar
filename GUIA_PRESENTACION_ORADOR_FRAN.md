@@ -95,7 +95,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 1: Diagnóstico Real.
 - **Badges:** `DEMO OFICIAL DE LA SOLUCIÓN TECNOLÓGICA · 2026` | `CLAVE CONSULTORA · ALMAR ROSARIO`.
 - **Tiempo Asignado:** Minuto 00:00 - 01:15 (01:15 min).
-- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Stakeholders Clave:** Directorio Ejecutivo.
 - **Lo que ve la Audiencia:** Portada editorial limpia de Clave Consultora en formato 16:9 (fondo platino `#f1f5f9`, acentos verde bosque institucional `#1e3d2f`, dorado de jerarquía `#c29320`, isotipos oficiales de Clave y ALMAR Rosario, píldora destacada superior y cuadro de metadatos con orador y destinatarios).
 - **Visual Cues & Guía de Interacción:**
   * Postura erguida, micrófono o atril estable, mirada triangular abarcando a Alejandro, Vanesa y Juan Andrés.
@@ -167,7 +167,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 2: Solución Central & Pipeline.
 - **Badges:** `PORTAL DE FACTURACIÓN INTELIGENTE` | `MOMENTO 1: SOLUCIÓN INTEGRAL`.
 - **Tiempo Asignado:** Minuto 02:45 - 04:00 (01:15 min).
-- **Stakeholders Clave:** Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Stakeholders Clave:** Dirección Financiera, Gobernanza & TI.
 - **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, 3 tarjetas KPI con los pilares del portal (Extracción en < 5s, Escudo Financiero en tiempo real y Copiado en 1-clic a Kipintoch con ahorro de $6.000.000 ARS/año). A la derecha, marco de navegador UHD con la captura real del Dashboard del portal en tema claro.
 - **Visual Cues & Guía de Interacción:**
   * Señalar en la captura la cabecera superior: destacar el rol activo `ADMINISTRACIÓN` y la seguridad por perfil (RBAC).
@@ -245,12 +245,12 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Título en Pantalla:** *TABLERO COMERCIAL Y CONTROL DE VIGENCIA DE TARIFAS NAVIERAS*
 - **Subtítulo:** *Semáforo de vigencias (15/30 días) para impedir cotizaciones desactualizadas que generen quebranto económico.*
 - **Bloque:** Bloque 3: Módulo Comercial Flexible.
-- **Badges:** `RESPUESTA DIRECTA A VANESA MEGGIOLARO` | `CONTROL DE TARIFAS VENCIDAS`.
+- **Badges:** `PROTECCIÓN FINANCIERA & CONTROL DE TARIFAS` | `CONTROL DE TARIFAS VENCIDAS`.
 - **Tiempo Asignado:** Minuto 05:15 - 06:45 (01:30 min).
 - **Stakeholders Clave:** Vanesa Meggiolaro (prioridad absoluta), Alejandro Noacco.
 - **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, detalle del semáforo de vigencias (15/30 días) y callout destacado con la respuesta directa a Vanesa. A la derecha, captura UHD del Tablero Comercial con la tabla de cotizaciones mostrando badges de vigencia por armador (Maersk, MSC, CMA CGM).
 - **Visual Cues & Guía de Interacción:**
-  * Contacto visual directo con Vanesa Meggiolaro al comenzar.
+  * Enfocar el control de costos y la protección del margen bruto.
   * Señalar en la tabla de la derecha la fila superior con badge verde `Vigente (12d)` en Maersk.
   * Mover el puntero al badge ámbar `Por Vencer (2d)` en MSC: explicar que avisa con 3 días de antelación.
   * Señalar con énfasis la fila con badge rojo `Vencida` y mostrar el candado que inhabilita el botón de emisión.
@@ -284,12 +284,12 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Título en Pantalla:** *CALCULADORA PARAMÉTRICA CON PERFILES DINÁMICOS DE MARGEN*
 - **Subtítulo:** *Agilidad para cotizar en segundos adaptando el margen al tipo de cliente, sin rigideces ni pérdida de control.*
 - **Bloque:** Bloque 3: Módulo Comercial Flexible.
-- **Badges:** `RESPUESTA DIRECTA A ALEJANDRO NOACCO` | `FLEXIBILIDAD COMERCIAL`.
+- **Badges:** `POLÍTICA DE RENTABILIDAD & COTIZACIÓN SPOT` | `FLEXIBILIDAD COMERCIAL`.
 - **Tiempo Asignado:** Minuto 06:45 - 08:15 (01:30 min).
 - **Stakeholders Clave:** Alejandro Noacco (prioridad absoluta), Vanesa Meggiolaro.
 - **Lo que ve la Audiencia:** Simulador interactivo de la Calculadora Paramétrica (`ParametricMarginCalculator`). Selector desplegable con 4 perfiles dinámicos (`CUENTA_ESTRATEGICA`, `ESTANDAR`, `SPOT_ALTO_RIESGO`, `PERSONALIZADO`), sliders de costo de flete naviero y margen comercial, semáforo preventivo (< USD 200 en amarillo) y botón de emisión.
 - **Visual Cues & Guía de Interacción:**
-  * Mirar directamente a Alejandro Noacco, validando su reclamo de que un markup rígido deja a ALMAR fuera del mercado spot.
+  * Enfocar la necesidad de agilidad spot y flexibilidad comercial sin rigideces.
   * Interactuar con los controles en pantalla: seleccionar el perfil `CUENTA_ESTRATEGICA` y mostrar cómo el margen se calibra automáticamente.
   * Mover el slider de margen hacia la izquierda: ubicarlo en USD 150 para que la pantalla encienda la alerta amarilla preventiva (< USD 200).
   * Explicar que la alerta amarilla cuida la brecha cambiaria en gastos portuarios locales sin trabar la cotización.
@@ -377,7 +377,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `EXPERIENCIA OPERATIVA & CONTROL DE GESTIÓN` | `MOMENTO 3: EL ESCUDO FINANCIERO`.
 - **Tiempo Asignado:** Minuto 09:45 - 11:00 (01:15 min).
-- **Stakeholders Clave:** Vanesa Meggiolaro, Alejandro Noacco, Juan Andrés Arloro.
+- **Stakeholders Clave:** Directorio Ejecutivo.
 - **Lo que ve la Audiencia:** Interfaz de doble vista con alternador de solapas en vivo:
   - **Vista 1 (Tablero Operativo & Visor):** Tablero Kanban de 4 columnas (Ingesta → Listas Kipintoch → Con Desvío de Tarifa → Asentadas) junto al Visor Dual Side-by-Side (PDF original a la izquierda vs ficha digital normalizada a la derecha con botón verde "Copiar a Kipintoch").
   - **Vista 2 (Métricas de Productividad):** 4 tarjetas KPI de gestión ejecutiva (15 seg / -98% tiempo, USD 14.890 sobrecostos prevenidos, 98.2% cumplimiento SLA, $6.000.000 ARS/año en conectores) y la tabla del Scorecard Individual de los 5 Operadores de ALMAR Rosario.
@@ -518,7 +518,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `BLINDAJE DE COMISIONES · DIRECTIVA FINANCIERA` | `PROVISIÓN 0,55% FOB`.
 - **Tiempo Asignado:** Minuto 13:30 - 14:45 (01:15 min).
-- **Stakeholders Clave:** Vanesa Meggiolaro, Alejandro Noacco.
+- **Stakeholders Clave:** Dirección Financiera, Dirección Comercial.
 - **Lo que ve la Audiencia:** Simulador interactivo de provisión de seguros (`MulticurrencyProvisionSimulator` con `initialTab="sancor"`). Ledger contable de la Carpeta C1482 mostrando el valor FOB, la prima devengada del 0,55% FOB (USD 357,50 / USD 220,00) y la tarjeta de comisión del vendedor con badge ámbar en estado `RETENIDA_COSTOS_PENDIENTES (Faltan 118 días)`.
 - **Visual Cues & Guía de Interacción:**
   * Señalar la demora estructural de Sancor Seguros: de 120 a 150 días en emitir pólizas definitivas a través del broker.
@@ -558,7 +558,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Título en Pantalla:** *CASO C1234: ALERTA PREVENTIVA & AUTORIZACIÓN BIOMÉTRICA WEBAUTHN*
 - **Subtítulo:** *Gestión de descalces de rentabilidad (< USD 200) y aprobación gerencial con firma digital en 3 segundos.*
 - **Bloque:** Bloque 4: Escudo & Casos Críticos.
-- **Badges:** `RESPUESTA A ALEJANDRO & JUAN ANDRÉS` | `FIDO2 / WEBAUTHN SHA-256`.
+- **Badges:** `AUTORIZACIÓN DIRECTIVA & GOBERNANZA` | `FIDO2 / WEBAUTHN SHA-256`.
 - **Tiempo Asignado:** Minuto 14:45 - 16:00 (01:15 min).
 - **Stakeholders Clave:** Alejandro Noacco (velocidad sin trabas), Juan Andrés Arloro (validez probatoria Ley 25.506).
 - **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, datos clave de la operación Acindar / Maersk (BL KA0018437, sobrecosto naviero de +USD 305, margen resultante de USD 142,50 / USD 95,00 por debajo del umbral de USD 200). A la derecha, captura UHD (`screenshots/caso_c1234_webauthn_sha256_light.png`) del modal de autorización con sensor biométrico animado y hash SHA-256 de 64 caracteres.
@@ -650,7 +650,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 4: Escudo & Casos Críticos.
 - **Badges:** `ENTORNO ACTIVO · PRUEBA EN VIVO ANTE DIRECTORIO` | `● SISTEMA EN VIVO`.
 - **Tiempo Asignado:** Minuto 17:15 - 21:00 (03:45 min de Demo en Vivo en Navegador).
-- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Stakeholders Clave:** Directorio Ejecutivo.
 - **Lo que ve la Audiencia:** Diapositiva puente interactiva que exhibe las 4 estaciones de la prueba en vivo (1. Ingesta y Extracción en 4s; 2. Desvío y WebAuthn; 3. Copiado en 1-clic a Kipintoch; 4. Métricas de Productividad y Scorecard), enlace directo y marco UHD con badge parpadeante `● EN VIVO`.
 - **Visual Cues & Guía de Interacción:**
   * Transición con aplomo: Fran no pide permiso dubitativo; minimiza la presentación (`Alt + Tab`) o conmuta al monitor donde corre `http://localhost:3000`.
@@ -748,11 +748,11 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
 - **Badges:** `PRICING & VENTAS` | `RENTABILIDAD REAL & SEGURIDAD`.
 - **Tiempo Asignado:** Minuto 22:15 - 23:15 (01:00 min).
-- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Stakeholders Clave:** Directorio Ejecutivo.
 - **Lo que ve la Audiencia:** Tres columnas institucionales de diseño sobrio que consolidan las respuestas directivas por área:
-  1. **Gestión Comercial (Alejandro Noacco):** Velocidad spot vs control de margen → Solución: selector `SPOT_ALTO_RIESGO` en 45s, alerta sin frenar la venta, bloqueo solo ante pérdida neta (< USD 3) o tarifa vencida. Beneficio: Registro de feedback de pérdidas para negociar volumen.
-  2. **Control Financiero (Vanesa Meggiolaro):** Flete viejo y 5 meses de demora en Sancor → Solución: semáforo de vigencias (15/30d), provisión automática 0,55% FOB por 150d y holdback de comisiones. Beneficio: Comisiones blindadas y conciliación obligatoria en Banco Macro.
-  3. **Gobernanza y Legal (Juan Andrés Arloro):** Respaldo de autorizaciones y privacidad en IA → Solución: firma biométrica WebAuthn con hash SHA-256 (Ley 25.506) y cuenta OpenAI corporativa de ALMAR con Zero Data Retention (`store: false`). Beneficio: Soberanía de datos y no repudio pericial pleno.
+  1. **Gestión Comercial:** Velocidad spot vs control de margen → Solución: selector `SPOT_ALTO_RIESGO` en 45s, alerta sin frenar la venta, bloqueo solo ante pérdida neta (< USD 3) o tarifa vencida. Beneficio: Registro de feedback de pérdidas para negociar volumen.
+  2. **Control Financiero:** Flete viejo y 5 meses de demora en Sancor → Solución: semáforo de vigencias (15/30d), provisión automática 0,55% FOB por 150d y holdback de comisiones. Beneficio: Comisiones blindadas y conciliación obligatoria en Banco Macro.
+  3. **Gobernanza y Legal:** Respaldo de autorizaciones y privacidad en IA → Solución: firma biométrica WebAuthn con hash SHA-256 (Ley 25.506) y cuenta OpenAI corporativa de ALMAR con Zero Data Retention (`store: false`). Beneficio: Soberanía de datos y no repudio pericial pleno.
 - **Visual Cues & Guía de Interacción:**
   * Recorrer de izquierda a derecha cada columna, realizando contacto visual con Alejandro, Vanesa y Juan Andrés en su respectivo dominio.
   * Destacar los badges de beneficio inferior en cada tarjeta.
@@ -836,7 +836,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
 - **Badges:** `HOJA DE RUTA EJECUTIVA · 4 ETAPAS` | `PLAN DE DESPLIEGUE`.
 - **Tiempo Asignado:** Minuto 24:15 - 25:00 (00:45 min).
-- **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
+- **Stakeholders Clave:** Directorio Ejecutivo.
 - **Lo que ve la Audiencia:** Cronograma secuencial de 4 columnas (Etapas 1 a 4) y callout inferior verde bosque de Decisión Recomendada:
   - **Etapa 1 (Set-up & Cloud):** Alta de cuenta corporativa OpenAI de ALMAR, configuración de variables de entorno y despliegue del entorno productivo en Vercel/Supabase.
   - **Etapa 2 (Inicio de Piloto Asistido):** Inducción de 45 min al equipo operativo; carga asistida de las primeras 50 facturas con el Widget de Triage activo (`#TKT-XXX`).
@@ -876,7 +876,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 
 ---
 
-### 3.1 OBJECIONES DE ALEJANDRO NOACCO (DIRECTOR COMERCIAL)
+### 3.1 OBJECIONES DEL FRENTE COMERCIAL (DIRECCIÓN COMERCIAL)
 
 #### 3.1.1 Flexibilidad de Pricing Spot vs Markup Rígido
 - **Pregunta / Objeción de Alejandro:**  
@@ -981,7 +981,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 
 ---
 
-### 3.3 OBJECIONES DE JUAN ANDRÉS ARLORO (DIRECTOR LEGAL Y RESPONSABLE TI / APODERADO)
+### 3.3 OBJECIONES DE GOBERNANZA, LEGAL Y TI
 
 #### 3.3.1 Validez Jurídica y Probatoria de las Autorizaciones Biométricas WebAuthn
 - **Pregunta / Objeción de Juan Andrés:**  
@@ -1078,9 +1078,9 @@ Para garantizar una presentación ejecutiva impecable ante cualquier eventualida
 ### 5.1 Postura, Pacing y Control del Reloj
 - **Postura Corporal:** De pie o sentado erguido en la cabecera, hombros relajados, brazos visibles sobre la mesa, sin cruzar de brazos ni juguetear con bolígrafos.
 - **Triangulación Visual:** Reparto equilibrado y consciente de la mirada:
-  * **40% del tiempo a Alejandro Noacco:** Foco en agilidad de cotización, perfiles dinámicos y seguimiento comercial.
-  * **40% del tiempo a Vanesa Meggiolaro:** Foco en frenar costos de navieras, provisión de seguros a 150 días y extracto bancario.
-  * **20% del tiempo a Juan Andrés Arloro:** Foco en validez legal de firmas, Ley 25.506, Código Aduanero y soberanía OpenAI.
+  * **40% del tiempo al Frente Comercial:** Foco en agilidad de cotización, perfiles dinámicos y seguimiento comercial.
+  * **40% del tiempo al Control Financiero:** Foco en frenar costos de navieras, provisión de seguros a 150 días y extracto bancario.
+  * **20% del tiempo a Gobernanza, Legal y TI:** Foco en validez legal de firmas, Ley 25.506, Código Aduanero y soberanía OpenAI.
 - **Control del Reloj (Checkpoints Temporales):**
   * Minuto 02:45: Concluir Diagnóstico Real (Slide 02) e ingresar a la Solución Central.
   * Minuto 05:15: Concluir Pipeline (Slide 04) e ingresar al Módulo Comercial.

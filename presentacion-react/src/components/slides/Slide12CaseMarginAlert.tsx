@@ -10,7 +10,7 @@ export const Slide12CaseMarginAlert: React.FC<SlideProps> = ({ onOpenLightbox })
     <div className="w-full h-full p-4 flex flex-col justify-between bg-white">
       <SlideHeader
         momentoBadge="MOMENTO 3: CASOS OPERATIVOS REALES"
-        categoryBadge="RESPUESTA A ALEJANDRO & JUAN ANDRÉS"
+        categoryBadge="AUTORIZACIÓN DIRECTIVA & GOBERNANZA"
         slideNumber="12"
         title="CASO C1234: ALERTA PREVENTIVA & AUTORIZACIÓN BIOMÉTRICA WEBAUTHN"
         subtitle="Gestión de descalces de rentabilidad (< USD 200) y aprobación gerencial con firma digital en 3 segundos."
@@ -38,7 +38,7 @@ export const Slide12CaseMarginAlert: React.FC<SlideProps> = ({ onOpenLightbox })
             </div>
             <div className="flex items-center justify-between p-2 rounded bg-white border border-slate-200 text-xs font-mono">
               <span className="text-slate-600 font-sans">Aprobador Formal:</span>
-              <span className="font-bold text-clave-navy">Alejandro Noacco (Director)</span>
+              <span className="font-bold text-clave-navy">Dirección General (Override Autorizado)</span>
             </div>
           </div>
 

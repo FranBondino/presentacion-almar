@@ -8,7 +8,7 @@ export const Slide06MarginCalculator: React.FC<SlideProps> = () => {
     <div className="w-full h-full p-4 flex flex-col justify-between bg-white">
       <SlideHeader
         momentoBadge="MOMENTO 2: EL MÓDULO COMERCIAL FLEXIBLE"
-        categoryBadge="RESPUESTA DIRECTA A ALEJANDRO NOACCO"
+        categoryBadge="POLÍTICA DE RENTABILIDAD & COTIZACIÓN SPOT"
         slideNumber="06"
         title="CALCULADORA PARAMÉTRICA CON PERFILES DINÁMICOS DE MARGEN"
         subtitle="Agilidad para cotizar en segundos adaptando el margen al tipo de cliente, sin rigideces ni pérdida de control."

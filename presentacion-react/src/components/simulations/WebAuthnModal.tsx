@@ -88,7 +88,7 @@ export const WebAuthnModal: React.FC<WebAuthnModalProps> = ({
                   <span>Margen USD {margenUSD.toFixed(2)} (&lt; $200)</span>
                 </div>
                 <p className="text-amber-800 text-[11px] leading-tight">
-                  Requiere validación pericial de Gerencia (Alejandro Noacco / Juan Andrés Arloro).
+                  Requiere validación pericial de Gerencia y Dirección General.
                 </p>
               </div>
 
