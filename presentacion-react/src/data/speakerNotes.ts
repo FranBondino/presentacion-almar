@@ -747,7 +747,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         {
           stakeholder: 'Directorio Ejecutivo',
           question: '¿Cuál es el siguiente paso para implementar esta solución en ALMAR?',
-          answer: 'Aprobar el inicio de la Semana 1 de la Hoja de Ruta para conectar las credenciales corporativas de OpenAI y habilitar el piloto asistido de 50 facturas con Stefania.',
+          answer: 'Aprobar el inicio de la Etapa 1 de la Hoja de Ruta para conectar las credenciales corporativas de OpenAI y habilitar el piloto asistido de 50 facturas con el equipo operativo.',
           legalBasis: 'Decisión de Directorio y Aprobación de Proyecto',
         },
       ],
@@ -768,7 +768,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Mostrar la baja latencia de Supabase en São Paulo (< 35ms)',
     ],
     verbatimSpeech:
-      'Analicemos la arquitectura técnica y cómo se ensambla con los sistemas que ALMAR ya utiliza hoy: Punto 1: Embebido Directo en la Intranet Firebase de ALMAR. Estudiamos la intranet corporativa que ustedes tienen montada sobre Firebase y les confirmo que la integración es 100% directa y transparente: podemos embeber este portal como una solapa interna dentro de su intranet mediante un contenedor seguro con Content-Security-Policy. Y lo mejor: Single Sign-On (SSO). Reutilizamos la sesión activa de Firebase Authentication mediante tokens JWT. Stefania o Lucía no tienen que aprenderse otro usuario ni otra contraseña: entran a su intranet habitual y el sistema ya sabe quiénes son y qué rol tienen. Punto 2: Procesamiento Serverless en Vercel Edge con 99,99% de uptime y listener automático para ingesta directa de correos. Punto 3: Soberanía Absoluta en OpenAI con Zero Data Retention. ALMAR contrata directamente su cuenta empresarial. Con el parámetro store: false, OpenAI procesa la factura en memoria volátil y la destruye en el acto. Cero persistencia y cero entrenamiento con sus datos. Punto 4: Base de datos en Supabase São Paulo con latencia menor a 35 milisegundos y respaldo pericial pleno. Ahorro de más de $6.000.000 ARS al año en licencias y conectores cerrados. Cero servidores en la oficina. Veamos el cronograma para poner esto en marcha en 4 semanas.',
+      'Analicemos la arquitectura técnica y cómo se ensambla con los sistemas que ALMAR ya utiliza hoy: Punto 1: Embebido Directo en la Intranet Firebase de ALMAR. Estudiamos la intranet corporativa que ustedes tienen montada sobre Firebase y les confirmo que la integración es 100% directa y transparente: podemos embeber este portal como una solapa interna dentro de su intranet mediante un contenedor seguro con Content-Security-Policy. Y lo mejor: Single Sign-On (SSO). Reutilizamos la sesión activa de Firebase Authentication mediante tokens JWT. El personal operativo no tiene que aprenderse otro usuario ni otra contraseña: entra a su intranet habitual y el sistema ya sabe quién es y qué rol tiene. Punto 2: Procesamiento Serverless en Vercel Edge con 99,99% de uptime y listener automático para ingesta directa de correos. Punto 3: Soberanía Absoluta en OpenAI con Zero Data Retention. ALMAR contrata directamente su cuenta empresarial. Con el parámetro store: false, OpenAI procesa la factura en memoria volátil y la destruye en el acto. Cero persistencia y cero entrenamiento con sus datos. Punto 4: Base de datos en Supabase São Paulo con latencia menor a 35 milisegundos y respaldo pericial pleno. Ahorro de más de $6.000.000 ARS al año en licencias y conectores cerrados. Cero servidores en la oficina. Veamos el cronograma para poner esto en marcha en 4 etapas.',
     technicalSheet: {
       expediente: 'ARQUITECTURA_CLOUD_ZDR',
       operacion: 'Topología de Producción: Intranet Firebase, Vercel Edge, OpenAI ZDR & Supabase',
@@ -799,40 +799,40 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
 
   18: {
     slideId: 18,
-    title: 'Hoja de Ruta de Puesta en Marcha (4 Semanas) y Decisión Directiva',
+    title: 'Hoja de Ruta de Puesta en Marcha (4 Etapas) y Decisión Directiva',
     timeAllocation: '24:15 - 25:00 (00:45 min)',
     keyStakeholders: ['Alejandro Noacco', 'Vanesa Meggiolaro', 'Juan Andrés Arloro'],
     whatAudienceSees:
-      'Cronograma de 4 semanas (S1 Set-up, S2 Inicio Piloto 50 facturas, S3 Calibración Fina, S4 Régimen Definitivo) y callout verde bosque de decisión directiva.',
+      'Cronograma de 4 etapas (E1 Set-up, E2 Inicio Piloto 50 facturas, E3 Calibración Fina, E4 Régimen Definitivo) y callout verde bosque de decisión directiva.',
     demoCues: [
-      'Apuntar con convicción a la Semana 1 de inicio inmediato',
-      'Enfatizar el despliegue escalonado de accesos para evitar caos el día 1',
+      'Apuntar con convicción a la Etapa 1 de inicio inmediato',
+      'Enfatizar el despliegue escalonado de accesos para evitar desorden el día 1',
       'Enfatizar que la plataforma ya está construida, testeada y operativa',
-      'Hacer el cierre formal pidiendo la aprobación para arrancar la Semana 1',
+      'Hacer el cierre formal pidiendo la aprobación para arrancar la Etapa 1',
     ],
     verbatimSpeech:
-      'Para cerrar, este es el plan de puesta en marcha propuesto para los próximos 30 días: Y un criterio clave de gestión del cambio que les propongo: no le damos acceso a las 10 personas del equipo el Día 1. Abrir el sistema de golpe generaría confusión ante los primeros comprobantes atípicos. Planteamos un despliegue quirúrgico: En la Semana 1, asistimos a Juan en dar de alta la cuenta corporativa de OpenAI de ALMAR, conectamos las claves a Vercel/Supabase y arrancamos exclusivamente con Stefania en un grupo de control de 50 facturas en paralelo con su método habitual. En la Semana 2, sumamos a Lucía Laje y Vanesa para la Calculadora Paramétrica y el Smart Follow-Up a 48 hs. En la Semana 3, integramos Tesorería con Juan Andrés para conciliar Banco Macro y Net Trade Miami. Y en la Semana 4, abrimos la plataforma a todo el equipo con el Scorecard de Productividad y las reglas 100% calibradas. La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Semana 1 para iniciar el despliegue. Quedo a disposición de Alejandro, Vanesa y Juan para responder sus consultas. Muchas gracias.',
+      'Para cerrar, este es el plan de puesta en marcha propuesto por etapas: Y un criterio clave de gestión del cambio que les propongo: no le damos acceso a todo el personal el Día 1. Abrir el sistema de golpe generaría confusión ante los primeros comprobantes atípicos. Planteamos un despliegue quirúrgico: En la Etapa 1, se da de alta la cuenta corporativa de OpenAI de ALMAR, conectamos las claves a Vercel/Supabase y arrancamos con el equipo de operaciones en un grupo de control de 50 facturas en paralelo con su método habitual. En la Etapa 2, sumamos al área comercial para la Calculadora Paramétrica y el Smart Follow-Up a 48 hs. En la Etapa 3, integramos Tesorería y Administración para conciliar Banco Macro y Net Trade Miami. Y en la Etapa 4, abrimos la plataforma a toda la organización con el Scorecard de Productividad y las reglas 100% calibradas. La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Etapa 1 para iniciar el despliegue. Quedo a disposición del Directorio para responder sus consultas. Muchas gracias.',
     technicalSheet: {
       expediente: 'HOJA_DE_RUTA_PILOTO_30D',
-      operacion: 'Plan de Despliegue en 4 Semanas: Setup, Piloto 50 Facturas, Calibración y Producción',
+      operacion: 'Plan de Despliegue en 4 Etapas: Setup, Piloto 50 Facturas, Calibración y Producción',
       normativa: 'ISO 9001:2015 · Planificación del Cambio § 6.3',
       metrics: [
-        { label: 'Duración del Plan', value: '4 semanas', detail: '30 días corridos de puesta en marcha', status: 'info' },
+        { label: 'Duración del Plan', value: '4 etapas', detail: 'Despliegue gradual por fases operativas', status: 'info' },
         { label: 'Capacitación Personal', value: '45 min', detail: 'Sesión focalizada por rol y área', status: 'success' },
-        { label: 'Piloto Controlado', value: '50 facturas', detail: 'Lote inicial con Stefania en S1', status: 'success' },
+        { label: 'Piloto Controlado', value: '50 facturas', detail: 'Lote inicial en paralelo en Etapa 1', status: 'success' },
         { label: 'Meta Eficiencia Final', value: '-98% tiempo', detail: '100% facturas en régimen definitivo', status: 'success' },
       ],
       details: [
-        { label: 'Semana 1: Configuración & Piloto 0', value: 'Alta OpenAI ALMAR (ZDR) + 50 facturas en paralelo exclusivamente con Stefania', badge: 'PILOTO STEFANIA', badgeColor: 'green' },
-        { label: 'Semana 2: Módulo Comercial', value: 'Acceso Lucía Laje & Vanesa: Calculadora y Smart Follow-Up' },
-        { label: 'Semana 3: Tesorería & Legal', value: 'Acceso Juan Andrés: Conciliación Banco Macro y Net Trade Miami' },
-        { label: 'Semana 4: Régimen Definitivo', value: 'Despliegue a todo el equipo con Scorecard de Productividad', badge: 'PRODUCCIÓN', badgeColor: 'green' },
+        { label: 'Etapa 1: Configuración & Piloto 0', value: 'Alta OpenAI ALMAR (ZDR) + 50 facturas en paralelo con equipo operativo', badge: 'PILOTO INICIAL', badgeColor: 'green' },
+        { label: 'Etapa 2: Módulo Comercial', value: 'Acceso Área Comercial: Calculadora y Smart Follow-Up' },
+        { label: 'Etapa 3: Tesorería & Legal', value: 'Acceso Administración y Tesorería: Conciliación Banco Macro y Net Trade' },
+        { label: 'Etapa 4: Régimen Definitivo', value: 'Despliegue a toda la organización con Scorecard de Productividad', badge: 'PRODUCCIÓN', badgeColor: 'green' },
       ],
       scorecard: OPERATOR_SCORECARD,
       hardQuestions: [
         {
           stakeholder: 'Directorio ALMAR',
-          question: '¿Qué inversión adicional en licencias o infraestructura debe desembolsar ALMAR para arrancar la Semana 1?',
+          question: '¿Qué inversión adicional en licencias o infraestructura debe desembolsar ALMAR para arrancar la Etapa 1?',
           answer: 'Cero inversión en infraestructura: el software ya está completamente desarrollado y testeado. Solo se requiere dar de alta la cuenta corporativa de OpenAI de ALMAR (costo estimado menor a USD 15 mensuales según volumen) e iniciar de inmediato.',
           legalBasis: 'Eficiencia de Capital y Retorno Inmediato de Inversión',
         },
@@ -840,3 +840,4 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     },
   },
 };
+

@@ -31,7 +31,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
    - **Casos Net Trade Miami & Banco Macro:** Trazabilidad de prefacturas offshore emitidas por Net Trade LLC (cuenta International Finance Bank en Miami) con auditoría de reintegro de costos locales (Precios de Transferencia y BCRA), y compuerta estricta de cobranzas en extracto de Banco Macro (CC Nº 376100000930617) antes de emitir recibos definitivos.
 4. **La Demostración en Vivo en Tiempo Real (Minuto 17:15 - 21:00):** Procesamiento de comprobantes reales en `http://localhost:3000`, extracción en 4 segundos, detección de desvío, autorización WebAuthn, copiado en 1-clic a Kipintoch y métricas de equipo.
 5. **Triage Operativo in situ y Mejora Continua:** Widget flotante 24/7 (`#TKT-XXX`) para reportar casos borde en 10 segundos sin interrumpir la operación, y asistente Copilot IA para consultas conceptuales.
-6. **Soberanía, Seguridad y Hoja de Ruta:** Cuenta corporativa directa de ALMAR en OpenAI con política contractual Zero Data Retention (ZDR § 3.2, `store: false`), hosting Cloud de alta disponibilidad en Vercel, persistencia en Supabase PostgreSQL (São Paulo, latencia < 35ms), y cronograma de 4 semanas hacia régimen definitivo.
+6. **Soberanía, Seguridad y Hoja de Ruta:** Cuenta corporativa directa de ALMAR en OpenAI con política contractual Zero Data Retention (ZDR § 3.2, `store: false`), hosting Cloud de alta disponibilidad en Vercel, persistencia en Supabase PostgreSQL (São Paulo, latencia < 35ms), y cronograma de 4 etapas hacia régimen definitivo.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -817,7 +817,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 > 
 > *Cero gastos en servidores en la oficina y una integración perfecta en su intranet existente.*
 > 
-> *Veamos el cronograma para poner esto en marcha en 4 semanas."*
+> *Veamos el cronograma para poner esto en marcha en 4 etapas."*
 
 #### 📋 Ficha Técnica & Métricas de Respaldo:
 | Capa Arquitectónica | Tecnología Utilizada | Especificación de Seguridad / Rendimiento |
@@ -830,45 +830,45 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 
 ---
 
-### DIAPOSITIVA 18: HOJA DE RUTA DE PUESTA EN MARCHA (4 SEMANAS) Y DECISIÓN DIRECTIVA
-- **Título en Pantalla:** *HOJA DE RUTA DE PUESTA EN MARCHA (4 SEMANAS) Y DECISIÓN DIRECTIVA*
-- **Subtítulo:** *Cronograma de 4 semanas hacia la producción definitiva y llamado a la decisión directiva.*
+### DIAPOSITIVA 18: HOJA DE RUTA DE PUESTA EN MARCHA (4 ETAPAS) Y DECISIÓN DIRECTIVA
+- **Título en Pantalla:** *HOJA DE RUTA DE PUESTA EN MARCHA (4 ETAPAS) Y DECISIÓN DIRECTIVA*
+- **Subtítulo:** *Cronograma de 4 etapas hacia la producción definitiva y llamado a la decisión directiva.*
 - **Bloque:** Bloque 5: Triage, Arquitectura & Decisión.
-- **Badges:** `HOJA DE RUTA EJECUTIVA · 4 SEMANAS` | `PLAN DE DESPLIEGUE`.
+- **Badges:** `HOJA DE RUTA EJECUTIVA · 4 ETAPAS` | `PLAN DE DESPLIEGUE`.
 - **Tiempo Asignado:** Minuto 24:15 - 25:00 (00:45 min).
 - **Stakeholders Clave:** Alejandro Noacco, Vanesa Meggiolaro, Juan Andrés Arloro.
-- **Lo que ve la Audiencia:** Cronograma secuencial de 4 columnas (Semanas 1 a 4) y callout inferior verde bosque de Decisión Recomendada:
-  - **Semana 1 (Set-up & Cloud):** Alta de cuenta corporativa OpenAI de ALMAR, configuración de variables de entorno y despliegue del entorno productivo en Vercel/Supabase.
-  - **Semana 2 (Inicio de Piloto Asistido):** Capacitación de 45 min a Stefania y equipo administrativo; carga asistida de las primeras 50 facturas con el Widget de Triage activo (`#TKT-XXX`).
-  - **Semana 3 (Calibración Fina):** Ajuste fino de reglas de desvíos, conceptos navieros atípicos, vigencias y conciliación con extractos de Banco Macro.
-  - **Semana 4 (Producción Definitiva):** Pase a régimen productivo definitivo, corte operativo de carga manual en Kipintoch y monitoreo continuo en el Tablero de Métricas.
-  - Callout inferior: *Decisión recomendada: Aprobar el inicio de la Semana 1 de despliegue con acompañamiento técnico continuo de Clave Consultora.*
+- **Lo que ve la Audiencia:** Cronograma secuencial de 4 columnas (Etapas 1 a 4) y callout inferior verde bosque de Decisión Recomendada:
+  - **Etapa 1 (Set-up & Cloud):** Alta de cuenta corporativa OpenAI de ALMAR, configuración de variables de entorno y despliegue del entorno productivo en Vercel/Supabase.
+  - **Etapa 2 (Inicio de Piloto Asistido):** Inducción de 45 min al equipo operativo; carga asistida de las primeras 50 facturas con el Widget de Triage activo (`#TKT-XXX`).
+  - **Etapa 3 (Calibración Fina):** Ajuste fino de reglas de desvíos, conceptos navieros atípicos, vigencias y conciliación con extractos de Banco Macro.
+  - **Etapa 4 (Producción Definitiva):** Pase a régimen productivo definitivo, corte operativo de carga manual en Kipintoch y monitoreo continuo en el Tablero de Métricas.
+  - Callout inferior: *Decisión recomendada: Aprobar el inicio de la Etapa 1 de despliegue con acompañamiento técnico continuo de Clave Consultora.*
 - **Visual Cues & Guía de Interacción:**
-  * Recorrer las 4 tarjetas de semanas con ritmo ágil, decidido y profesional.
-  * Apuntar a la Semana 1 marcando que el inicio es inmediato y no requiere inversión de capital en hardware.
+  * Recorrer las 4 tarjetas de etapas con ritmo ágil, decidido y profesional.
+  * Apuntar a la Etapa 1 marcando que el inicio es inmediato y no requiere inversión de capital en hardware.
   * Mirar sucesivamente a Alejandro, Vanesa y Juan Andrés al formular el cierre directivo.
   * Ejecutar el llamado a la acción con seguridad y naturalidad: la pelota queda en el campo del Directorio.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"Para cerrar, este es el plan de puesta en marcha propuesto para los próximos 30 días:*
+> *"Para cerrar, este es el plan de puesta en marcha propuesto por etapas:*
 > 
-> *En la* **Semana 1**, *asistimos a Juan en dar de alta la cuenta corporativa de OpenAI de ALMAR y conectamos las credenciales al entorno productivo de Vercel y Supabase.*
+> *En la* **Etapa 1**, *se da de alta la cuenta corporativa de OpenAI de ALMAR y conectamos las credenciales al entorno productivo de Vercel y Supabase.*
 > 
-> *En la* **Semana 2**, *hacemos una sesión de capacitación de 45 minutos con Stefania y habilitamos el piloto de carga real con el Widget de Triage activo para procesar las primeras 50 facturas.*
+> *En la* **Etapa 2**, *hacemos una sesión de inducción operativa de 45 minutos y habilitamos el piloto de carga real con el Widget de Triage activo para procesar las primeras 50 facturas.*
 > 
-> *En la* **Semana 3**, *calibramos las reglas finas de desvíos y los conceptos atípicos que hayan surgido.*
+> *En la* **Etapa 3**, *calibramos las reglas finas de desvíos y los conceptos atípicos que hayan surgido junto a Tesorería y Administración.*
 > 
-> *Y en la* **Semana 4**, *hacemos el pase a régimen definitivo, logrando que ALMAR procese el 100% de sus facturas de proveedores con asistencia de IA y control total de rentabilidad.*
+> *Y en la* **Etapa 4**, *hacemos el pase a régimen definitivo, logrando que ALMAR procese el 100% de sus facturas de proveedores con asistencia de IA y control total de rentabilidad.*
 > 
-> *La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Semana 1 para iniciar el despliegue. Quedo a disposición de Alejandro, Vanesa y Juan para responder sus consultas. Muchas gracias."*
+> *La plataforma está lista, testeada y funcionando. Les propongo que demos por aprobada la Etapa 1 para iniciar el despliegue. Quedo a disposición de Alejandro, Vanesa y Juan para responder sus consultas. Muchas gracias."*
 
 #### 📋 Ficha Técnica & Métricas de Respaldo:
-| Semana | Hito Principal | Entregable Concreto | Responsables |
+| Etapa | Hito Principal | Entregable Concreto | Responsables |
 | :--- | :--- | :--- | :--- |
-| **Semana 1** | Set-up & Cloud | Cuenta OpenAI corporativa ALMAR, entorno Vercel + Supabase configurado | Juan Andrés / Clave |
-| **Semana 2** | Inicio Piloto Asistido | Capacitación a Stefania (45 min), primeras 50 facturas procesadas con Triage | Stefania / Clave |
-| **Semana 3** | Calibración Fina | Reglas navieras afinadas, pruebas con extracto Macro, vigencias comex | Vanesa / Clave |
-| **Semana 4** | Producción Definitiva | Pase a régimen regular, corte de tipeo manual, Tablero de Métricas 100% | Directorio ALMAR |
+| **Etapa 1** | Set-up & Cloud | Cuenta OpenAI corporativa ALMAR, entorno Vercel + Supabase configurado | Administración / Clave |
+| **Etapa 2** | Inicio Piloto Asistido | Inducción operativa (45 min), primeras 50 facturas procesadas con Triage | Equipo Operativo / Clave |
+| **Etapa 3** | Calibración Fina | Reglas navieras afinadas, pruebas con extracto Macro, vigencias comex | Tesorería & Finanzas / Clave |
+| **Etapa 4** | Producción Definitiva | Pase a régimen regular, corte de tipeo manual, Tablero de Métricas 100% | Directorio ALMAR |
 
 ---
 
@@ -1087,7 +1087,7 @@ Para garantizar una presentación ejecutiva impecable ante cualquier eventualida
   * Minuto 09:45: Concluir Módulo Comercial (Slide 07) e ingresar al Escudo Financiero.
   * Minuto 17:15: Concluir casos teóricos e iniciar la Demostración en Vivo en el navegador.
   * Minuto 21:00: Regresar al mazo y presentar Triage y Arquitectura.
-  * Minuto 25:00: Cierre formal y solicitud de aprobación de la Semana 1.
+  * Minuto 25:00: Cierre formal y solicitud de aprobación de la Etapa 1.
 
 ### 5.2 Manejo Elegante de Interrupciones Durante la Exposición
 Si algún directivo interrumpe antes del minuto 17 con una duda puntual:
@@ -1102,10 +1102,10 @@ Al finalizar la Diapositiva 18 (minuto 25:00), Fran concluye con tono firme, seg
 
 > *"Alejandro, Vanesa, Juan: la plataforma no es un informe preliminar ni un desarrollo en boceto. Es una solución operativa probada con los números, las navieras y los clientes reales de ALMAR.*
 > 
-> *Lo que les propongo hoy no es firmar un contrato a ciegas, sino dar inicio formal a la* **Semana 1** *de puesta en marcha:*
-> *Damos de alta su cuenta corporativa de OpenAI con Zero Data Retention, montamos el entorno productivo y la semana que viene capacitamos a Stefania para iniciar el piloto asistido con el Widget de Triage activo.*
+> *Lo que les propongo hoy no es firmar un contrato a ciegas, sino dar inicio formal a la* **Etapa 1** *de puesta en marcha:*
+> *Damos de alta su cuenta corporativa de OpenAI con Zero Data Retention, montamos el entorno productivo y habilitamos la inducción al equipo operativo para iniciar el piloto asistido con el Widget de Triage activo.*
 > 
-> *La tecnología está lista y probada. ¿Damos por aprobada la Semana 1 para comenzar el despliegue?"*
+> *La tecnología está lista y probada. ¿Damos por aprobada la Etapa 1 para comenzar el despliegue?"*
 
 ---
 
@@ -1267,49 +1267,49 @@ Si Juan Andrés Arloro o los directivos preguntan: *"¿Cómo funciona exactament
 
 ---
 
-### 6.6 Plan Escalonado de Implementación y Matriz de Accesos (Semanas 1 a 4)
+### 6.6 Plan Escalonado de Implementación y Matriz de Accesos (Etapas 1 a 4)
 
 Fran debe anticipar una regla de oro de la gestión del cambio tecnológico: **NO dar acceso masivo a todo el equipo el Día 1**. Darle acceso simultáneo a 10 personas sin calibración previa genera confusión, consultas desordenadas y fricción innecesaria ante los primeros casos atípicos.
 
-El despliegue propuesto sigue un plan gradual de 4 semanas con aislamiento de roles:
+El despliegue propuesto sigue un plan gradual de 4 etapas con aislamiento de roles:
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│              PLAN DE DESPLIEGUE GRADUAL EN 4 SEMANAS (ALMAR)              │
+│              PLAN DE DESPLIEGUE GRADUAL EN 4 ETAPAS (ALMAR)               │
 ├────────────┬─────────────────────────────┬────────────────────────────────┤
-│ SEMANA     │ GRUPO DE ACCESO & USUARIOS  │ OBJETIVO OPERATIVO             │
+│ ETAPA      │ GRUPO DE ACCESO & USUARIOS  │ OBJETIVO OPERATIVO             │
 ├────────────┼─────────────────────────────┼────────────────────────────────┤
-│ Semana 1   │ Setup Técnico + Stefania    │ Alta cuenta OpenAI ALMAR (ZDR),│
+│ Etapa 1    │ Setup Técnico + Piloto Op.  │ Alta cuenta OpenAI ALMAR (ZDR),│
 │            │ (Rol Operativo Piloto)      │ despliegue en intranet y lote  │
 │            │                             │ de 50 facturas en paralelo     │
 ├────────────┼─────────────────────────────┼────────────────────────────────┤
-│ Semana 2   │ Lucía Laje + Vanesa M.      │ Activación Calculadora         │
+│ Etapa 2    │ Área Comercial y Finanzas   │ Activación Calculadora         │
 │            │ (Comercial y Finanzas)      │ Paramétrica y Smart Follow-Up; │
 │            │                             │ registro de feedback comercial │
 ├────────────┼─────────────────────────────┼────────────────────────────────┤
-│ Semana 3   │ Juan Andrés + Tesorería     │ Conciliación Banco Macro,      │
+│ Etapa 3    │ Tesorería y Administración  │ Conciliación Banco Macro,      │
 │            │ (Administración y Legal)    │ Net Trade Miami y WebAuthn     │
 ├────────────┼─────────────────────────────┼────────────────────────────────┤
-│ Semana 4   │ Despliegue Pleno al Equipo  │ Apertura a todo el personal,   │
-│            │ (Natali, Victoria, etc.)    │ Scorecard de Productividad y   │
+│ Etapa 4    │ Despliegue a Organización   │ Apertura a todo el personal,   │
+│            │ (Equipo Operativo Pleno)    │ Scorecard de Productividad y   │
 │            │                             │ operación en régimen definitivo│
 └────────────┴─────────────────────────────┴────────────────────────────────┘
 ```
 
 #### Detalle de Roles y Permisos (RBAC - Role Based Access Control):
-- **Rol Operativo (Stefania, Natali, Victoria, Ana Laura, Abril, Aldana):**
+- **Rol Operativo:**
   * *Acceso permitido:* Bandeja de ingesta, Visor Dual, copiado a Kipintoch, emisión de tickets de triage `#TKT`.
   * *Restricción estricta:* No pueden autorizar desvíos de sobrecostos ni alterar alícuotas fiscales de forma unilateral.
-- **Rol Comercial (Lucía Laje, Alejandro Noacco):**
+- **Rol Comercial:**
   * *Acceso permitido:* Calculadora Paramétrica, perfiles de margen, bandeja de Smart Follow-Up a 48 hs, registro de motivos de pérdida.
-- **Rol Finanzas / Gerencia (Vanesa Meggiolaro, Alejandro Noacco):**
+- **Rol Finanzas / Gerencia:**
   * *Acceso permitido:* Autorización biométrica de desvíos WebAuthn (margen < USD 200), supervisión de provisiones a 150 días (Sancor), conciliación bancaria y métricas de rentabilidad.
-- **Rol Administrador / Auditoría (Juan Andrés Arloro, Fran Bondino):**
+- **Rol Administrador / Auditoría:**
   * *Acceso permitido:* Libro digital inmutable de auditoría (`audit_log`), configuración de claves API soberanas, gestión de usuarios en Firebase y políticas de seguridad CSP.
 
 #### Discurso Clave de Fran sobre la Gestión del Cambio:
 > *"Alejandro, Vanesa: la clave del éxito de este proyecto no es técnica, es humana y operativa. Si le abrimos el acceso a las 10 personas del equipo el primer día, ante el primer comprobante atípico de una naviera se generan dudas y fricción. Por eso planteamos un despliegue quirúrgico:*
-> *En la Semana 1 trabajamos mano a mano con Stefania en un grupo de control de 50 facturas en paralelo con su método habitual. El sistema va a asimilar todas las particularidades de sus carpetas. En la Semana 2 sumamos a Lucía en el área comercial. En la Semana 3 integramos tesorería con Juan Andrés. Y en la Semana 4 abrimos la plataforma a todo el equipo, cuando las reglas ya están 100% calibradas y la herramienta vuela. Así garantizamos una transición ordenada, sin estrés y con cero riesgo operativo."*
+> *En la Etapa 1 trabajamos con el equipo de operaciones en un grupo de control de 50 facturas en paralelo con su método habitual. El sistema va a asimilar todas las particularidades de sus carpetas. En la Etapa 2 sumamos al área comercial. En la Etapa 3 integramos Tesorería y Administración. Y en la Etapa 4 abrimos la plataforma a toda la organización, cuando las reglas ya estén 100% calibradas y la herramienta vuela. Así garantizamos una transición ordenada, sin estrés y con cero riesgo operativo."*
 
 ---
 *Fin de la Guía Maestra del Orador — Clave Consultora · ALMAR Rosario S.R.L.*

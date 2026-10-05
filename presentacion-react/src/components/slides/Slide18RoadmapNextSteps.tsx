@@ -9,18 +9,18 @@ export const Slide18RoadmapNextSteps: React.FC<SlideProps> = () => {
     <div className="w-full h-full p-4 flex flex-col justify-between bg-white">
       <SlideHeader
         momentoBadge="MOMENTO 4: TRIAGE, ARQUITECTURA & DECISIÓN"
-        categoryBadge="HOJA DE RUTA EJECUTIVA · 4 SEMANAS"
+        categoryBadge="HOJA DE RUTA EJECUTIVA · 4 ETAPAS"
         slideNumber="18"
-        title="HOJA DE RUTA DE PUESTA EN MARCHA (4 SEMANAS) Y DECISIÓN DIRECTIVA"
-        subtitle="Cronograma de 4 semanas hacia la producción definitiva y llamado a la decisión directiva."
+        title="HOJA DE RUTA DE PUESTA EN MARCHA (4 ETAPAS) Y DECISIÓN DIRECTIVA"
+        subtitle="Cronograma por etapas hacia la producción definitiva y llamado a la decisión directiva."
       />
 
       <div className="flex-1 flex flex-col justify-between gap-3 overflow-hidden">
-        {/* 4 Weeks Grid */}
+        {/* 4 Stages Grid */}
         <div className="grid grid-cols-4 gap-3">
           {[
             {
-              sem: 'Semana 1',
+              sem: 'Etapa 1',
               title: 'Set-up & Cloud',
               badge: 'INICIO INMEDIATO',
               badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300',
@@ -31,29 +31,29 @@ export const Slide18RoadmapNextSteps: React.FC<SlideProps> = () => {
               ],
             },
             {
-              sem: 'Semana 2',
+              sem: 'Etapa 2',
               title: 'Inicio Piloto Real',
               badge: 'CAPACITACIÓN',
               badgeColor: 'bg-blue-100 text-blue-800 border-blue-300',
               tasks: [
-                'Sesión de 45 min con Stefania',
+                'Sesión de inducción operativa (45 min)',
                 'Carga asistida de 50 facturas',
                 'Widget #TKT activo para desvíos',
               ],
             },
             {
-              sem: 'Semana 3',
+              sem: 'Etapa 3',
               title: 'Calibración Fina',
               badge: 'OPTIMIZACIÓN',
               badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
               tasks: [
                 'Ajuste fino de reglas de desvíos',
-                'Pruebas con extractos Banco Macro',
+                'Pruebas con extractos bancarios',
                 'Validación semáforo comercial',
               ],
             },
             {
-              sem: 'Semana 4',
+              sem: 'Etapa 4',
               title: 'Régimen Definitivo',
               badge: 'PRODUCCIÓN',
               badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
@@ -131,12 +131,12 @@ export const Slide18RoadmapNextSteps: React.FC<SlideProps> = () => {
                 Propuesta de Decisión Directiva:
               </h4>
               <p className="text-xs text-white/95 leading-tight">
-                Aprobación del Directorio para iniciar la <strong>Semana 1 (Set-up &amp; Cloud)</strong> y puesta en marcha del piloto asistido.
+                Aprobación del Directorio para iniciar la <strong>Etapa 1 (Set-up &amp; Cloud)</strong> y puesta en marcha del piloto asistido.
               </p>
             </div>
           </div>
           <div className="px-3 py-1.5 rounded bg-clave-gold text-clave-navy font-heading font-bold text-xs uppercase tracking-wider shadow-sm flex items-center space-x-1">
-            <span>Aprobar Semana 1</span>
+            <span>Aprobar Etapa 1</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </div>
         </div>
