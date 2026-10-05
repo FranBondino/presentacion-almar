@@ -8,6 +8,7 @@
  */
 
 export * from './mockData';
+export * from './carpetasCotizacionesMap';
 
 export {
   INITIAL_CARPETAS as REAL_AUDIT_CARPETAS,
@@ -18,3 +19,8 @@ export {
   INITIAL_AUDIT_LOGS as REAL_AUDIT_LOGS,
   MOCK_USERS as REAL_CORPORATE_USERS,
 } from './mockData';
+
+export {
+  CARPETAS_COTIZACIONES_MAP as REAL_CARPETAS_COTIZACIONES_MAP,
+  getCotizacionByCarpeta,
+} from './carpetasCotizacionesMap';

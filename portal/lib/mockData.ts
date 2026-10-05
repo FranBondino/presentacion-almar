@@ -22,6 +22,8 @@ import type {
   RolUsuario,
 } from './supabase/database.types';
 
+export * from './carpetasCotizacionesMap';
+
 export type CarpetaRecord = Database['public']['Tables']['carpetas']['Row'];
 export type EventoRecord = Database['public']['Tables']['eventos']['Row'];
 export type ComprobanteRecord = Database['public']['Tables']['comprobantes']['Row'] & {
