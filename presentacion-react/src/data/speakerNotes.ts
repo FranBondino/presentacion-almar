@@ -402,6 +402,7 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Desvíos TRP (Terminal Zárate)', value: 'USD 2.420 prevenidos en 2 comprobantes (estadía)' },
         { label: 'Desvíos LGV Transportes', value: 'USD 1.240 prevenidos en 1 comprobante (custodia extra)' },
         { label: 'Ahorro Conectores Kipin', value: '$6.000.000 ARS anuales garantizados', badge: 'AHORRO', badgeColor: 'green' },
+        { label: 'Auditoría de Carpetas', value: '12 expedientes conciliados: Venta = Cotización y Costo = Facturas asociadas (Diferencia 0,00)', badge: '100% CUADRADO', badgeColor: 'green' },
       ],
       scorecard: OPERATOR_SCORECARD,
       hardQuestions: [
@@ -669,6 +670,8 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Mapeo Semántico en Vivo', value: 'Reconocimiento instantáneo de recargo BAF a código BUFF AFIP', badge: 'BUFF', badgeColor: 'green' },
         { label: 'Role-Based Access (RBAC)', value: 'Stefania (Operativo) bloqueada; Gerencia autoriza con huella biométrica' },
         { label: 'Scorecard Operadores', value: '5 operadores evaluados con métricas de productividad en vivo' },
+        { label: 'Conciliación de Carpetas', value: '12 de 12 carpetas activas auditadas: Diferencia Costo vs Facturas = 0,00', badge: 'DIF 0,00', badgeColor: 'green' },
+        { label: 'Trazabilidad Comercial', value: 'Cotizaciones vinculadas a sus comerciales reales (Juan Arloro, Lucía Laje, Martín Fusco, Abril Stampfli)' },
       ],
       scorecard: OPERATOR_SCORECARD,
       hardQuestions: [

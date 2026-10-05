@@ -66,6 +66,16 @@ const OPERADORES_ALMAR: OperatorPerformance[] = [
     ahorroPrevenido: 'USD 2.150',
     scoreSla: '96.5%',
   },
+  {
+    nombre: 'Aldana Gómez',
+    puesto: 'Operaciones Impo & Back-up',
+    avatar: 'AG',
+    facturas: 30,
+    tiempoProm: '11.0m',
+    desviosAuditados: 1,
+    ahorroPrevenido: 'USD 1.400',
+    scoreSla: '98.0%',
+  },
 ];
 
 export const Slide08KanbanDual: React.FC<SlideProps> = ({ onOpenLightbox }) => {

@@ -715,6 +715,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 | **2. Desvío & WebAuthn** | Retención de sobrecosto (+USD 180) | Tarjeta bloqueada en columna roja; firma biométrica con hash SHA-256 |
 | **3. Carga Kipintoch** | Clic en botón "Copiar Ficha a Kipintoch" | 5 campos canónicos pegados en 15s; ahorro de $6M ARS en conectores |
 | **4. Comercial & Métricas** | Calculadora paramétrica y Smart Follow-Up | Recálculo dinámico en 45s; plantilla para Gmail; Scorecard de 5 operadores |
+| **5. Conciliación 12 Carpetas** | Navegación a `/carpetas` y `/carpetas/[id]` | 12 de 12 carpetas con facturas asignadas, coincidencia de monedas y Diferencia = 0,00 |
 
 ---
 
