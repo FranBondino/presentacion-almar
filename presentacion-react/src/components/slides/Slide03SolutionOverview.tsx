@@ -70,7 +70,7 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
           </div>
         </div>
 
-        {/* Right Column: Live Corporate Browser Mockup (7 cols) with KeyData and Focal Zoom */}
+        {/* Right Column: Live Corporate Browser Mockup (7 cols) with Focal Zoom */}
         <div className="col-span-7 h-full">
           <BrowserMockup
             url="http://localhost:3000/ · Dashboard Operativo ALMAR"
@@ -78,12 +78,6 @@ export const Slide03SolutionOverview: React.FC<SlideProps> = ({ onOpenLightbox }
             imageSrc="./screenshots/dashboard_corporate_light.png"
             imageAlt="Dashboard Central de Facturación ALMAR"
             caption="Vista del Tablero General con Métricas de Rentabilidad y KPIs de Productividad"
-            keyData={[
-              { label: 'Tiempo Carga', value: '15 seg', color: 'green', highlight: true },
-              { label: 'Ahorro ERP', value: '$6.000.000 ARS', color: 'gold' },
-              { label: 'Sobrecostos', value: 'USD 14.890 frenados', color: 'amber' },
-              { label: 'Control', value: 'Scorecard por Operador', color: 'navy' },
-            ]}
             focalOrigin="center 20%"
             onOpenLightbox={onOpenLightbox}
           />
