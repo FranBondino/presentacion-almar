@@ -290,11 +290,12 @@ async function runReactPresentationTestSuite() {
 
     // Probar botón de pantalla "Anterior"
     await page.evaluate(() => {
-      const buttons = Array.from(document.querySelectorAll('button'));
-      const prevBtn = buttons.find((b) => b.getAttribute('title')?.includes('anterior') || b.innerText.includes('Anterior'));
+      const footer = document.querySelector('footer');
+      const buttons = footer ? Array.from(footer.querySelectorAll('button')) : Array.from(document.querySelectorAll('button'));
+      const prevBtn = buttons.find((b) => b.getAttribute('title')?.toLowerCase().includes('anterior') || b.innerText.includes('Anterior'));
       if (prevBtn) prevBtn.click();
     });
-    await new Promise((r) => setTimeout(r, 320));
+    await new Promise((r) => setTimeout(r, 600));
     const indicatorAfterPrevBtn = await page.evaluate(() => {
       const match = document.body.innerText.match(/(\d{2})\s*\/\s*18/);
       return match ? match[1] : null;

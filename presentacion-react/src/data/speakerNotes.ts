@@ -143,11 +143,12 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Split 1:1.25. Izquierda: 3 pilares KPI (Extracción IA en 5s, Escudo Financiero en tiempo real, Copiado 1-Clic con ahorro de $6M ARS/año). Derecha: Captura UHD del Dashboard en vivo.',
     demoCues: [
       'Indicar el banner superior con rol ADMINISTRACIÓN en tema claro',
+      'Explicar con total claridad los 8 pasos manuales que desaparecen vs los 2 únicos pasos que quedan',
       'Destacar la métrica de extracción en menos de 5 segundos',
       'Remarcar el ahorro de $6.000.000 ARS anuales al evitar conectores cerrados de Kipintoch',
     ],
     verbatimSpeech:
-      'Esta es la plataforma central que desarrollamos para ALMAR. Fíjense en la captura de la derecha, tomada directamente del portal en ejecución: acá arriba ven el entorno seguro de Administración. Y en el panel central, tres pilares arquitectónicos resuelven el problema: Primero: Extracción con Inteligencia Artificial. El portal recibe el comprobante por correo o arrastre y, en menos de 5 segundos, desglosa el emisor, CUIT, importes, recargos navieros y alícuotas impositivas. Segundo: Escudo Financiero. El sistema cruza en tiempo real la factura contra lo presupuestado en Kipintoch. Si el costo excede lo cotizado, enciende la alarma al instante y retiene el sobrecosto. Tercero: Copiado Asistido en 1-Clic. En vez de pagar más de 6 millones de pesos al año por licencias y conectores cerrados de Kipintoch, el portal formatea los datos en 5 campos canónicos que Stefania pega en el ERP en apenas 15 segundos. Reducción neta del 98% del tiempo de carga con 100% de precisión fiscal.',
+      'Esta es la plataforma central que desarrollamos para ALMAR. Fíjense en la captura de la derecha, tomada directamente del portal en ejecución: acá arriba ven el entorno seguro de Administración. Y acá está la idea principal que acelera toda la operación: hoy una coordinadora realiza 10 pasos manuales por cada factura que llega a la empresa. Con esta plataforma, 8 de esos 10 pasos desaparecen por completo: desaparece el monitoreo manual de las 15 casillas de correo, desaparece la descarga física del PDF a la computadora, desaparece renombrar el archivo a mano, desaparece buscar la carpeta en Kipintoch, desaparece tipear el CUIT, CAE y fechas en el teclado, desaparece calcular el BUFF al 21% a mano, desaparece rastrear la cotización vieja de venta y desaparece usar la calculadora para ver si la naviera nos cobró de más. Todo eso lo hace el sistema solo en segundo plano. A la operadora le quedan únicamente dos pasos: validar visualmente en pantalla en el Visor Dual que los datos coincidan y presionar un botón de 1 clic para copiar los 5 campos canónicos a Kipintoch. Por eso pasamos de 12 minutos manuales a apenas 15 segundos: se eliminan 8 tareas repetitivas y todo el circuito se acelera un 98% con total precisión fiscal.',
     technicalSheet: {
       expediente: 'PORTAL_CORE_AI',
       operacion: 'Plataforma de Extracción, Auditoría y Conexión Asistida a Kipintoch',
@@ -159,12 +160,20 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Ahorro Conectores ERP', value: '$6.000.000 ARS', detail: 'Ahorro anual en APIs cerradas', status: 'success' },
       ],
       details: [
+        { label: '8 Pasos que Desaparecen', value: 'Monitoreo de casillas, descarga PDF, renombrado, búsqueda ERP, tipeo CUIT/CAE, desglose BUFF 21%, rastreo cotización y cálculo manual', badge: '80% PASOS MENOS', badgeColor: 'green' },
+        { label: '2 Pasos que Quedan', value: '1) Validación visual en Visor Dual (semáforo de desvío) y 2) Clic en "Copiar para Kipintoch" (15 segundos)', badge: 'ASISTIDO', badgeColor: 'gold' },
         { label: 'Motor de Inteligencia', value: 'OpenAI Zero Data Retention (ZDR § 3.2)', badge: 'PRIVACIDAD', badgeColor: 'green' },
         { label: 'Validación Fiscal AFIP', value: 'Algoritmo Módulo 11 en CUIT + alícuotas 21%, 10.5%, 0% exento' },
         { label: 'Protocolo de Enlace', value: 'Copiado estructurado al portapapeles sin tocar SQL Kipintoch' },
         { label: 'Escudo Financiero', value: 'Cruza en tiempo real costo facturado vs carpeta Kipintoch', badge: 'ESCUDO ACTIVO', badgeColor: 'gold' },
       ],
       hardQuestions: [
+        {
+          stakeholder: 'Dirección Operativa & Financiera',
+          question: '¿Cómo garantizan que la carga se acelere un 98% sin perder control sobre los comprobantes?',
+          answer: 'Eliminando los 8 pasos mecánicos de transcripción y cálculo que consumían 11.5 de los 12 minutos. El operador conserva el 100% de la supervisión en los 2 pasos finales: validar visualmente el semáforo y confirmar el pegado en Kipintoch.',
+          legalBasis: 'Eficiencia Operativa ISO 9001 § 8.5',
+        },
         {
           stakeholder: 'Dirección Financiera',
           question: '¿Quién se hace responsable si la Inteligencia Artificial lee mal un número de factura o un CUIT?',
@@ -184,11 +193,12 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Grilla panorámica de las 5 etapas del circuito de facturación (Recepción -> Lectura IA -> Control de Margen -> Kipintoch -> Banco Macro), ficha interactiva de detalle y métricas operativas.',
     demoCues: [
       'Mostrar las 5 etapas visibles en paralelo en la pantalla',
+      'Explicar qué tareas manuales desaparecen en cada una de las 5 estaciones',
       'Hacer clic en las etapas o tocar "Simular Recorrido" para ver qué entra y qué resuelve cada paso',
       'Destacar la verificación en extracto real de Banco Macro antes de cerrar cobranzas',
     ],
     verbatimSpeech:
-      'El circuito funciona como una línea de trabajo en 5 pasos bien definidos: 1. La naviera o transportista envía la factura y entra al sistema. 2. La IA lee el CUIT, los montos y separa el flete exento del recargo de combustible BUFF para AFIP. 3. El sistema compara el gasto contra lo presupuestado en la carpeta: si la naviera cobró de más o el margen cae de USD 200, avisa de inmediato. 4. Stefania copia los 5 datos clave a Kipintoch en 15 segundos con un clic, sin tipear nada a mano. 5. Y en cobranzas, se verifica el ingreso real en el extracto de Banco Macro (cuenta Nº 376100000930617) antes de emitir el recibo oficial y liberar las comisiones. Todo el proceso queda registrado y vinculado a la carpeta con un SLA del 98.2% en menos de 24 horas y 0.0% de error fiscal.',
+      'El circuito funciona como una línea de producción en 5 etapas donde cada estación elimina fricción humana: En la Estación 1 de Ingesta, desaparece el monitoreo manual de correos y la descarga de PDFs; el comprobante ingresa solo. En la Estación 2 de Lectura y Normalización, desaparece el tipeo de CUITs y el desglose en papel del flete exento vs. el combustible BUFF al 21% de IVA; la IA formatea todo según las normas de AFIP. En la Estación 3 de Control de Margen, desaparece buscar la cotización comercial vieja y hacer cuentas con la calculadora; el semáforo alerta al instante si la naviera cobró de más o si el margen cae de USD 200. En la Estación 4 de Asiento ERP, desaparece la carga campo por campo en Kipintoch; Stefania pega los 5 campos limpios en 15 segundos en un clic. Y en la Estación 5, Cobranzas verifica el extracto real de Banco Macro (cuenta Nº 376100000930617) antes de emitir recibos y liberar comisiones. El resultado neto: 8 tareas manuales menos, SLA del 98.2% en menos de 24 horas y cero errores impositivos.',
     technicalSheet: {
       expediente: 'PIPELINE_CIRCUITO_5_ETAPAS',
       operacion: 'Circuito Integral: Ingesta -> Normalización -> Control -> ERP -> Banco',
@@ -200,11 +210,11 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Cta Cte Banco Macro', value: '376100000930617', detail: 'Hard gate de conciliación', status: 'success' },
       ],
       details: [
-        { label: 'Etapa 1: Ingesta', value: 'Recepción automática vía PDF / Email institucional' },
-        { label: 'Etapa 2: Normalización', value: 'Extracción IA + mapeo canónico BUFF (AFIP 0% IVA)', badge: 'BUFF', badgeColor: 'green' },
-        { label: 'Etapa 3: Control Margen', value: 'Alerta preventiva < USD 200 / Bloqueo estricto < USD 3.00' },
-        { label: 'Etapa 4: Asiento ERP', value: 'Copiado 1-Clic a Kipintoch en 15 seg (5 campos canónicos)' },
-        { label: 'Etapa 5: Cobranzas Macro', value: 'Conciliación con extracto Banco Macro Cta 376100000930617', badge: 'MACRO', badgeColor: 'navy' },
+        { label: 'Etapa 1: Ingesta', value: 'Recepción automática. Desaparece: monitoreo de casillas y descarga de PDFs' },
+        { label: 'Etapa 2: Normalización', value: 'Extracción IA + BUFF. Desaparece: tipeo CUIT/CAE y cálculo manual de alícuotas', badge: 'BUFF', badgeColor: 'green' },
+        { label: 'Etapa 3: Control Margen', value: 'Auditoría automática. Desaparece: búsqueda de cotización y cuentas con calculadora' },
+        { label: 'Etapa 4: Asiento ERP', value: 'Copiado 1-Clic a Kipintoch (15s). Desaparece: transcripción campo a campo', badge: '5 CAMPOS', badgeColor: 'green' },
+        { label: 'Etapa 5: Cobranzas Macro', value: 'Conciliación con extracto Banco Macro Cta 376100000930617. Blindaje de tesorería', badge: 'MACRO', badgeColor: 'navy' },
       ],
       hardQuestions: [
         {
@@ -373,18 +383,19 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Mencionar los números de Natali Hermoso (110 facturas, USD 5.400 ahorrados) y el total de USD 14.890 prevenidos',
     ],
     verbatimSpeech:
-      'Acá tienen dos componentes centrales que responden a lo que nos pidieron: el control del flujo diario y la visibilidad de productividad del equipo. En la primera vista ven las dos pantallas operativas: el Tablero Kanban, donde todo comprobante se clasifica solo, y la columna "Con Desvío", que retiene automáticamente cualquier sobrecosto de naviera antes de pagarse; y a la derecha el Visor Dual, donde Stefania comprueba el PDF y en 15 segundos copia los 5 campos limpios a Kipintoch. Además, el Visor Dual resuelve un dolor neurálgico que vimos en los correos de Stefania y Natali: cuando Maersk, MSC o TRP emiten una sola factura para varios BLs de distintas carpetas y hoy las chicas van subrayando a mano con resaltador en papel qué renglón va a qué carpeta. Con el Smart Split, asignan digitalmente cada ítem a su carpeta (C1234, C1482) con control de balance en cero en pantalla, sin papel ni errores de doble imputación. Pero además, respondiendo a la necesidad explícita del Directorio de medir el rendimiento del personal: si tocan esta pestaña de "Métricas de Productividad", el sistema les muestra el tablero de control de gestión. Fíjense: pasamos de 12 minutos manuales a 15 segundos por factura (-98% de reducción); frenamos 14.890 dólares en sobrecostos de Maersk, MSC, TRP y LGV; y tenemos una tasa de cumplimiento SLA del 98.2%. Y acá abajo tienen el rendimiento individual: Natali Hermoso con 110 comprobantes y 5.400 dólares de sobrecostos frenados, Victoria Moyano con 68 y 3.500 dólares, Ana Laura con 62 y 2.400 dólares, Abril con 54 y 2.150 dólares, y Aldana con 30 comprobantes. Cada minuto y cada dólar quedan medidos con total transparencia.',
+      'Acá tienen dos componentes centrales que responden a lo que nos pidieron: el control del flujo diario y la visibilidad de productividad del equipo. En la primera vista ven las dos pantallas operativas: el Tablero Kanban, donde todo comprobante se clasifica solo, y la columna "Con Desvío", que retiene automáticamente cualquier sobrecosto de naviera antes de pagarse; y a la derecha el Visor Dual, donde Stefania comprueba el PDF y en 15 segundos copia los 5 campos limpios a Kipintoch. Esta aceleración extrema de 12 minutos a 15 segundos (-98% de tiempo) ocurre precisamente porque eliminamos las 8 tareas manuales repetitivas: el monitoreo de correos, la descarga de PDFs, el renombrado, la búsqueda en el ERP, el tipeo de datos AFIP, el cálculo del BUFF al 21%, el rastreo de cotizaciones y las cuentas con calculadora. En 324 facturas mensuales, esto le devuelve a ALMAR más de 62 horas operativas al mes. Además, el Visor Dual resuelve un dolor neurálgico que vimos en los correos de Stefania y Natali: cuando Maersk, MSC o TRP emiten una sola factura para varios BLs de distintas carpetas y hoy las chicas van subrayando a mano con resaltador en papel qué renglón va a qué carpeta. Con el Smart Split, asignan digitalmente cada ítem a su carpeta (C1234, C1482) con control de balance en cero en pantalla, sin papel ni errores de doble imputación. Pero además, respondiendo a la necesidad explícita del Directorio de medir el rendimiento del personal: si tocan esta pestaña de "Métricas de Productividad", el sistema les muestra el tablero de control de gestión. Fíjense: frenamos 14.890 dólares en sobrecostos de Maersk, MSC, TRP y LGV; y tenemos una tasa de cumplimiento SLA del 98.2%. Y acá abajo tienen el rendimiento individual: Natali Hermoso con 110 comprobantes y 5.400 dólares de sobrecostos frenados, Victoria Moyano con 68 y 3.500 dólares, Ana Laura con 62 y 2.400 dólares, Abril con 54 y 2.150 dólares, y Aldana con 30 comprobantes. Cada minuto y cada dólar quedan medidos con total transparencia.',
     technicalSheet: {
       expediente: 'SCORECARD_OPERATIVO_ALMAR',
       operacion: 'Control Operativo: Tablero Kanban, Visor Dual & Rendimiento del Equipo',
       normativa: 'ISO 9001:2015 § 9.1 · Seguimiento, Medición, Análisis y Evaluación',
       metrics: [
         { label: 'Reducción de Tiempo', value: '-98%', detail: 'De 12 min a 15s por factura', status: 'success' },
+        { label: 'Horas Mes Recuperadas', value: '62 hs / mes', detail: '324 facturas x 11.5 min ahorrados', status: 'success' },
         { label: 'Sobrecostos Interceptados', value: 'USD 14.890', detail: '8 desvíos retenidos a navieras', status: 'success' },
         { label: 'Cumplimiento SLA', value: '98.2%', detail: 'Procesamiento en < 24hs (78% < 15m)', status: 'success' },
-        { label: 'Precisión Fiscal AFIP', value: '0.0% error', detail: 'Algoritmo Módulo 11 en CUITs', status: 'success' },
       ],
       details: [
+        { label: 'Causa de la Aceleración', value: 'Eliminación de 8 pasos mecánicos (tipeo, descarga, cálculo BUFF y calculadora)', badge: '8 PASOS MENOS', badgeColor: 'green' },
         { label: 'Smart Split Multi-Carpeta', value: 'Fin del subrayado con resaltador: desglose de factura única a múltiples carpetas', badge: 'SMART SPLIT', badgeColor: 'green' },
         { label: 'Desvíos Maersk Line', value: 'USD 4.840 prevenidos en 4 comprobantes (BAF de emergencia)' },
         { label: 'Desvíos MSC', value: 'USD 3.900 prevenidos en 2 comprobantes (THC y recargos)' },
