@@ -524,7 +524,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00060_Acindar_Shanghai.pdf',
           size: '84.2 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00060_Acindar_Shanghai.pdf',
           tipo: 'Cotización Comercial PDF',
         },
       ],
@@ -571,7 +571,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'MSC_Invoice_0098_00041234.pdf',
           size: '112.5 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/MSC_Invoice_0098_00041234.pdf',
           tipo: 'Factura FMA Naviera',
         },
       ],
@@ -613,7 +613,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00061_Siderar_Ningbo.pdf',
           size: '76.8 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00061_Siderar_Ningbo.pdf',
           tipo: 'Cotización Comercial PDF',
         },
       ],
@@ -650,7 +650,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '7554566633.PDF',
           size: '14.8 KB',
-          url: '/comprobantes/7554566633.PDF',
+          url: '/facturas/7554566633.PDF',
           tipo: 'Factura Local Charges',
         },
       ],
@@ -692,7 +692,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00357_Paladini_Terrestre.pdf',
           size: '68.4 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00357_Paladini_Terrestre.pdf',
           tipo: 'Cotización Terrestre PDF',
         },
       ],
@@ -729,7 +729,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '0004-00000303.PDF',
           size: '18.2 KB',
-          url: '/comprobantes/0004-00000303.PDF',
+          url: '/facturas/0004-00000303.PDF',
           tipo: 'Factura A Terrestre',
         },
       ],
@@ -771,7 +771,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00610_Vicentin_Aereo.pdf',
           size: '91.2 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00610_Vicentin_Aereo.pdf',
           tipo: 'Cotización Aérea PDF',
         },
       ],
@@ -825,7 +825,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00226_Molinos_Santos.pdf',
           size: '81.5 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00226_Molinos_Santos.pdf',
           tipo: 'Cotización FCL PDF',
         },
       ],
@@ -925,7 +925,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00105_Albertoni_FCL.pdf',
           size: '88.1 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00105_Albertoni_FCL.pdf',
           tipo: 'Cotización Comercial PDF',
         },
       ],
@@ -962,7 +962,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '7555554402.PDF',
           size: '13.4 KB',
-          url: '/comprobantes/7555554402.PDF',
+          url: '/facturas/7555554402.PDF',
           tipo: 'Factura Maersk',
         },
       ],
@@ -1004,7 +1004,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00428_Bertot_Aereo.pdf',
           size: '79.2 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00428_Bertot_Aereo.pdf',
           tipo: 'Cotización Aérea PDF',
         },
       ],
@@ -1056,7 +1056,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00067_Secco_Hamburg.pdf',
           size: '95.6 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00067_Secco_Hamburg.pdf',
           tipo: 'Cotización Marítima EUR PDF',
         },
       ],
@@ -1081,7 +1081,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '261005130R.pdf',
           size: '22.4 KB',
-          url: '/comprobantes/261005130R.pdf',
+          url: '/facturas/261005130R.pdf',
           tipo: 'Invoice Internacional EUR',
         },
       ],
@@ -1123,7 +1123,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00457_Saprograf_Cartagena.pdf',
           size: '83.0 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00457_Saprograf_Cartagena.pdf',
           tipo: 'Cotización Exportación PDF',
         },
       ],
@@ -1177,7 +1177,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00113_Juan_Cuello_LCL.pdf',
           size: '74.5 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00113_Juan_Cuello_LCL.pdf',
           tipo: 'Cotización LCL PDF',
         },
       ],
@@ -1231,7 +1231,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: 'COT_2026_00018_CONICET_GBP.pdf',
           size: '86.4 KB',
-          url: '/comprobantes/factura_ejemplo.pdf',
+          url: '/facturas/COT_2026_00018_CONICET_GBP.pdf',
           tipo: 'Cotización Multimoneda GBP PDF',
         },
       ],
