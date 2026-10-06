@@ -236,11 +236,12 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Tabla de cotizaciones con semáforo de vigencia (Vigente 12d verde, Por Vencer 2d amarillo, Vencida rojo con candado), callout de control financiero.',
     demoCues: [
       'Enfocar el control de costos y la protección del margen bruto',
+      'Citar la observación de Vanesa Meggiolaro en audios sobre el vencimiento de tarifas',
       'Señalar la fila roja de tarifa vencida y el botón con candado',
-      'Resaltar que el vendedor no puede emitir una cotización con costos desactualizados',
+      'Explicar el diferencial con Kipintoch: alerta activa en el momento vs registro estadístico posterior',
     ],
     verbatimSpeech:
-      'Un punto crítico detectado en el relevamiento fue el peligro de que el equipo comercial cotice con tarifarios desactualizados y que, al momento de confirmar el embarque, el armador haya subido el flete 300 o 400 dólares, comiéndose el margen de ALMAR. Miren la captura de la derecha: implementamos el Semáforo de Vigencia de Tarifas Navieras. Cada tarifa tiene una ventana estricta de validez de 15 o 30 días, según la naviera. Mientras está dentro del plazo, el sistema muestra el badge verde. Cuando faltan 3 días para expirar, se enciende la alerta amarilla preventiva. Y si la tarifa venció, el sistema bloquea automáticamente la emisión de la propuesta. El comercial ya no puede emitir una cotización con costos viejos sin antes revalidar la tarifa actualizada del armador. Cero quebranto por fletes caducados. Ahora bien, surge una pregunta fundamental: ¿cómo evitamos que estos controles frenen la agilidad comercial? Veamos la siguiente pantalla.',
+      'Un punto crítico que nos remarcó Vanesa Meggiolaro en sus audios para que esta herramienta le sirva realmente a Lucía fue la fecha de vigencia de las tarifas navieras: en fletes marítimos los costos cambian cada 15 o 30 días por recargos de combustible BAF o aumentos generales. Si un comercial cotiza con una tarifa vieja y el cliente confirma semanas después, nos encontramos con un flete más caro que se come la ganancia. Miren la captura de la derecha: implementamos el Semáforo de Vigencia de Tarifas Navieras. Cada tarifa tiene una ventana estricta de validez de 15 o 30 días. Mientras está dentro del plazo, el sistema muestra el badge verde. Cuando faltan 3 días para expirar, se enciende la alerta amarilla preventiva. Y si la tarifa venció, el sistema bloquea automáticamente la emisión de la propuesta. El comercial no puede emitir una cotización con costos viejos sin antes revalidar la tarifa actualizada del armador. Y respecto a lo que planteaba Vanesa sobre Kipintoch: Kipintoch registra la diferencia como estadística histórica cuando el barco ya navegó y la factura ya se pagó. Nuestra plataforma actúa en el momento exacto en que entra el PDF de la naviera, prendiendo la alerta y frenando el comprobante antes de emitir la orden de pago. Cero quebranto por fletes caducados.',
     technicalSheet: {
       expediente: 'CONTROL_VIGENCIA_TARIFAS',
       operacion: 'Módulo Comercial: Semáforo de Fletes y Validez Temporal Naviera',
@@ -255,23 +256,23 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Semáforo Verde', value: 'Tarifa vigente con margen validado en origen', badge: 'VIGENTE', badgeColor: 'green' },
         { label: 'Semáforo Amarillo', value: 'Vence en menos de 72 horas: requiere revisión', badge: 'POR VENCER', badgeColor: 'amber' },
         { label: 'Semáforo Rojo', value: 'Vencida: emisión bloqueada sin revalidación naviera', badge: 'BLOQUEADA', badgeColor: 'rose' },
-        { label: 'Auditoría de Origen', value: 'Requiere adjuntar confirmación formal por correo de la naviera' },
+        { label: 'Observación Vanesa', value: 'Tarifas marítimas quincenales/mensuales con fecha límite estricta' },
       ],
       hardQuestions: [
         {
-          stakeholder: 'Dirección Financiera',
-          question: '¿Qué pasa si una naviera extiende verbalmente la vigencia por teléfono a un vendedor?',
-          answer: 'El vendedor no puede levantar el bloqueo por su cuenta. Debe adjuntar el correo formal del armador que certifique la extensión tarifaria en el portal. Esto garantiza trazabilidad documental ante cualquier reclamo posterior de costos.',
-          legalBasis: 'Control de Riesgo de Descalce Tarifario',
+          stakeholder: 'Dirección Financiera (Vanesa)',
+          question: '¿Kipintoch ya no guarda la diferencia entre lo presupuestado y lo facturado?',
+          answer: 'Kipintoch la guarda como registro estadístico posterior, cuando la operación cerró y la plata ya salió. Nuestra solución actúa en el momento de la ingesta del comprobante: compara el PDF contra lo cotizado y, ante un sobrecosto, bloquea el pago antes de que se liquide.',
+          legalBasis: 'Prevención Activa de Sobrecostos',
         },
       ],
     },
     objections: [
       {
-        stakeholder: 'Dirección Financiera',
-        objection: '¿Qué pasa si una naviera extiende verbalmente la vigencia por teléfono?',
+        stakeholder: 'Dirección Financiera (Vanesa)',
+        objection: 'Kipintoch registra la diferencia entre lo presupuestado y lo facturado, ¿pero este sistema tira alerta en el momento o es solo estadística posterior?',
         response:
-          'El comercial puede solicitar la revalidación adjuntando el correo formal de la naviera en el sistema, lo cual audita la extensión sin depender de memoria verbal.',
+          'Kipintoch muestra el desvío como estadística posterior cuando el flete ya se pagó. Nuestra plataforma opera en tiempo real en la bandeja de entrada: lee el PDF de la naviera y, si hay sobrefacturación, bloquea el comprobante antes de emitir la orden de pago.',
       },
     ],
   },
@@ -280,16 +281,17 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     slideId: 6,
     title: 'Calculadora Paramétrica con Perfiles Dinámicos de Margen',
     timeAllocation: '06:45 - 08:15 (01:30 min)',
-    keyStakeholders: ['Dirección Comercial'],
+    keyStakeholders: ['Dirección Comercial', 'Dirección Financiera'],
     whatAudienceSees:
       'Selector de 4 perfiles de margen, sliders de costo naviero y margen comercial, semáforo preventivo (< USD 200 amarillo, < USD 3.00 candado rojo).',
     demoCues: [
-      'Enfocar la necesidad de agilidad spot y flexibilidad comercial',
+      'Citar a Alejandro Noacco: costos que varían y distintos criterios de rentabilidad por cliente',
+      'Citar a Vanesa Meggiolaro: márgenes en dólares que dan pérdida en pesos y umbral preventivo en USD 200',
       'Mover los sliders de la calculadora paramétrica interactiva',
-      'Disparar visualmente la alerta de < USD 200 y mostrar el modal WebAuthn',
+      'Disparar visualmente la alerta preventiva de USD 200 y mostrar el override WebAuthn',
     ],
     verbatimSpeech:
-      'Para dar respuesta a la necesidad de máxima flexibilidad comercial y al criterio operativo de Pricing donde cada cliente tiene un perfil de rentabilidad diferente, descartamos imponer un markup rígido del 15% que dejaría a ALMAR fuera de mercado en negocios spot donde el margen es fino pero sirve el volumen. Por eso creamos la Calculadora Paramétrica con Perfiles Dinámicos de Margen: Fíjense en la pantalla: el comercial puede elegir Cuenta Estratégica para grandes cuentas corporativas, Estándar para rentabilidad equilibrada, Spot Alto Riesgo para cargas con riesgo de almacenaje, o Personalizado. ¿Y cómo cuidamos a la empresa? Con dos compuertas inteligentes: Si el margen proyectado baja de 200 dólares, el sistema enciende una alerta amarilla preventiva para advertir que las variaciones del dólar o gastos locales pueden comer la ganancia. Y únicamente si la operación arroja un margen menor a 3 dólares —pérdida neta segura—, el botón se bloquea. Se puede cotizar en 45 segundos con total agilidad, sabiendo que el sistema cuida la rentabilidad de ALMAR. Y veamos cómo resolvemos el seguimiento de esas cotizaciones.',
+      'Tomando exactamente lo que nos comentó Alejandro Noacco: si bien hay consultas de cotización que se repiten, los costos no siempre son iguales y cada cliente tiene un criterio de rentabilidad diferente. Por eso descartamos imponer un markup rígido del 15% que te dejaría fuera de mercado en negocios spot. Creamos la Calculadora Paramétrica con 4 Perfiles Dinámicos de Rentabilidad: Cuenta Estratégica para grandes cuentas corporativas, Estándar para rentabilidad equilibrada, Spot Alto Riesgo para cargas con riesgo de almacenaje, o Personalizado. El comercial mueve los sliders libremente en 45 segundos. ¿Y cómo cuidamos a ALMAR? Tomando la propuesta textual de Vanesa tras analizar con Finanzas que márgenes de 50 o 100 dólares terminan dando pérdida al pasarse a pesos por gastos locales y tipo de cambio: parametrizamos la alerta preventiva exactamente en USD 200. Si el margen proyectado baja de USD 200, el sistema enciende una alerta amarilla preventiva para advertir el riesgo cambiario antes de enviar la oferta. Y únicamente si la operación arroja un margen menor a 3 dólares —pérdida neta segura—, el botón se bloquea. Se cotiza con agilidad spot y con la tranquilidad de que el sistema cuida la rentabilidad.',
     technicalSheet: {
       expediente: 'CALCULADORA_PARAMETRICA_MARGEN',
       operacion: 'Cotizador Ágil en Tiempo Real & Protección de Rentabilidad',
@@ -301,27 +303,27 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Perfiles Activos', value: '4 perfiles', detail: 'Estratégico, Estándar, Spot, Custom', status: 'info' },
       ],
       details: [
-        { label: 'Alineación Pricing Gisel', value: 'Costos paramétricos dinámicos y márgenes adaptados a cada cliente' },
+        { label: 'Criterio Alejandro', value: 'Costos variables y criterios de rentabilidad diferenciados por cliente' },
+        { label: 'Criterio Vanesa', value: 'Alerta en USD 200 para evitar que márgenes chicos en USD den pérdida en ARS' },
         { label: 'Perfil Cuenta Estratégica', value: 'Margen preferencial para clientes corporativos de alto volumen' },
-        { label: 'Perfil Estándar', value: 'Equilibrio operativo y financiero habitual' },
         { label: 'Perfil Spot Alto Riesgo', value: 'Protección contra demoras y estadías de contenedor' },
         { label: 'Override Gerencial', value: 'Autorización FIDO2 WebAuthn en 3 segundos', badge: 'WEBAUTHN', badgeColor: 'green' },
       ],
       hardQuestions: [
         {
-          stakeholder: 'Dirección Comercial',
-          question: 'Si tengo 10 contenedores y peleo flete spot con margen de USD 50 por contenedor, ¿me frena?',
-          answer: 'No te frena. La alerta de USD 200 es amarilla preventiva para avisarte del riesgo. Solo se bloquea si el margen total es menor a USD 3.00 (pérdida segura). Además, contás con el override biométrico gerencial en 3 segundos.',
-          legalBasis: 'Flexibilidad Comercial Controlada',
+          stakeholder: 'Dirección Comercial (Alejandro)',
+          question: 'Si tengo 10 contenedores y peleo flete spot con margen de USD 50 por contenedor, ¿este sistema me frena?',
+          answer: 'No te frena. La alerta de USD 200 es amarilla preventiva para avisarte del riesgo cambiario al pasar a pesos. El vendedor ajusta el margen libremente con los 4 perfiles. Solo se bloquea si el margen total es menor a USD 3.00 (pérdida segura). Además, contás con el override biométrico gerencial en 3 segundos.',
+          legalBasis: 'Flexibilidad Comercial y Control de Riesgo Cambiario',
         },
       ],
     },
     objections: [
       {
-        stakeholder: 'Dirección Comercial',
-        objection: 'Si tengo 10 contenedores y peleo flete spot con margen de USD 50 por contenedor, ¿me frena?',
+        stakeholder: 'Dirección Comercial (Alejandro)',
+        objection: 'No siempre el costo es igual y cada cliente tiene un criterio de rentabilidad diferente. ¿El sistema se adapta?',
         response:
-          'No te frena. La alerta de USD 200 es amarilla preventiva. Solo se bloquea si el margen total es menor a USD 3.00.',
+          'Sí, 100%. No hay un markup fijo. El comercial elige el perfil de rentabilidad del cliente y ajusta el slider libremente. La alerta de USD 200 propuesta por Vanesa es preventiva (amarilla), avisando si hay riesgo de descalce al pasar a pesos.',
       },
     ],
   },
@@ -335,12 +337,12 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       'Modal de Smart Follow-Up con cotizaciones > 48hs sin respuesta, botón para generar correo formal en 1 clic y campo de feedback cualitativo.',
     demoCues: [
       'Mencionar el dato de Lucía Laje (54,1% del volumen de cotizaciones)',
-      'Mostrar el botón para copiar plantilla de seguimiento directamente a Gmail',
-      'Citar a Gisel: estandarización formal del proceso de seguimiento comercial',
-      'Enfatizar cómo el feedback cualitativo le da poder de negociación a la Dirección Comercial con las navieras',
+      'Citar a Alejandro Noacco: estandarizar el seguimiento en el proceso y valor del recordatorio',
+      'Mostrar el botón para copiar plantilla de seguimiento directamente a Gmail en 1 clic',
+      'Explicar el Feedback Comercial informativo que planteó Alejandro para no perder datos en WhatsApp',
     ],
     verbatimSpeech:
-      'Miremos ahora cómo resolvemos el día a día de Lucía Laje y la inteligencia de mercado de ALMAR: Hoy Lucía emite más de 500 cotizaciones por mes (54,1% del total). Como bien nos decía Gisel Cabana Diaz: el seguimiento hoy se hace pero es urgente estandarizarlo dentro del proceso. Si el cliente no responde en 48 horas, hacer el seguimiento manual insume redactar decenas de correos uno por uno y muchas operaciones se enfrían con la competencia por simple vorágine diaria. Con el Smart Follow-Up: el sistema filtra automáticamente todas las cotizaciones con más de 48 horas de silencio. Lucía entra a esta pantalla, presiona este botón azul, y el portal redacta un correo formal impecable, personalizado con el nombre del cliente, el puerto y la tarifa pactada. Lucía hace 20 seguimientos en 10 minutos desde Gmail sin escribir una sola palabra. Y acá está el segundo punto clave que pedía Gisel: el Registro de Feedback Comercial. Si el cliente nos dice "No cierro con ALMAR porque otro forwarder me pasó 150 dólares menos", Lucía lo tipifica en este campo. A fin de mes abrís el reporte y ves: "En la ruta Shanghai-Buenos Aires perdimos 12 operaciones por 150 dólares frente a tal competidor". Con esa métrica te sentás con el line manager de Maersk o MSC a exigir mejores tarifas de volumen. Pasemos ahora al Escudo Financiero y a los casos reales auditados.',
+      'Miremos ahora cómo resolvemos el día a día de Lucía Laje y la inteligencia comercial de ALMAR: Hoy Lucía emite más de 500 cotizaciones por mes (54,1% del total). Como bien nos marcó Alejandro Noacco: el seguimiento hoy se está realizando, pero coincidimos plenamente en que debemos estandarizarlo formalmente dentro del proceso, y el recordatorio automático es clave. Si el cliente no responde en 48 horas, hacer el seguimiento manual insume redactar decenas de correos uno por uno y muchas operaciones se enfrían con la competencia por simple vorágine diaria. Con el Smart Follow-Up: el sistema filtra automáticamente todas las cotizaciones con más de 48 horas de silencio. Lucía entra a esta pantalla, presiona este botón azul, y el portal redacta un correo formal impecable, personalizado con el nombre del cliente, el puerto y la tarifa pactada. Lucía hace 20 seguimientos en 10 minutos desde Gmail sin escribir una sola palabra. Y acá entra el segundo punto que destacó Alejandro: el Feedback Comercial a modo informativo. Cuando el cliente responde que se fue con otra naviera, que el flete fue alto o cualquier devolución, Lucía lo anota en un clic en la venta. Ese dato queda registrado en el historial de la operación y en un reporte consolidado, permitiendo a la Dirección Comercial sentarse a negociar tarifas con Maersk o MSC sabiendo exactamente qué rutas y qué diferencias de precio nos dejaron afuera.',
     technicalSheet: {
       expediente: 'SMART_FOLLOWUP_COMERCIAL',
       operacion: 'Seguimiento Automatizado de Cotizaciones & Inteligencia de Pérdidas',
@@ -352,21 +354,29 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
         { label: 'Disparador Automático', value: '> 48 hs', detail: 'Sin respuesta del cliente', status: 'info' },
       ],
       details: [
-        { label: 'Estandarización Proceso', value: 'Regla automática de seguimiento a 48 hs pedida por Gisel' },
+        { label: 'Estandarización Proceso', value: 'Regla automática de seguimiento a 48 hs pedida por Alejandro' },
         { label: 'Generador 1-Clic', value: 'Plantilla formal personalizada redactada para Gmail', badge: 'GMAIL READY', badgeColor: 'green' },
-        { label: 'Campos de Feedback', value: 'Motivo de pérdida, competidor, diferencia de flete en USD' },
-        { label: 'Inteligencia de Negociación', value: 'Reporte mensual de motivos por ruta para negociar con armadores' },
+        { label: 'Feedback Informativo', value: 'Registro cualitativo pedido por Alejandro para no perder datos en chats' },
+        { label: 'Inteligencia de Negociación', value: 'Reporte consolidado por ruta y armador para negociar tarifas' },
         { label: 'Trazabilidad', value: 'Historial de contactos consolidado en la carpeta operativa' },
       ],
       hardQuestions: [
         {
-          stakeholder: 'Dirección Comercial',
-          question: '¿Cómo me sirve a mí como Director Comercial registrar por qué perdimos una cotización?',
-          answer: 'Te da datos objetivos frente a las navieras: a fin de mes abrís el panel y ves exactamente: "En la ruta Shanghai-Rosario perdimos 15 operaciones porque tal armador cobró USD 150 más que la competencia". Te sentás con el line manager de Maersk o MSC con números duros para exigir tarifas de volumen competitivas.',
-          legalBasis: 'Inteligencia Comercial y Poder de Negociación',
+          stakeholder: 'Dirección Comercial (Alejandro)',
+          question: '¿Cómo ayuda estandarizar el seguimiento a 48 hs y registrar el feedback del cliente a modo informativo?',
+          answer: 'Estandariza una regla operativa clara sin sobrecargar a Lucía: con 1 solo clic genera la plantilla para Gmail. Y el feedback del cliente queda documentado en la venta a modo informativo para que Dirección Comercial identifique qué rutas o armadores están desfasados en precio.',
+          legalBasis: 'Estandarización Comercial ISO 9001 § 8.2',
         },
       ],
     },
+    objections: [
+      {
+        stakeholder: 'Dirección Comercial (Alejandro)',
+        objection: '¿Cómo se asegura que el seguimiento se estandarice en el proceso sin sobrecargar al equipo?',
+        response:
+          'El panel de Smart Follow-Up detecta automáticamente las cotizaciones paradas a 48 hs. Lucía no redacta nada: revisa y copia en 1 clic a Gmail, logrando estandarización total con mínimo tiempo operativo.',
+      },
+    ],
   },
 
   8: {
@@ -548,16 +558,17 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
     slideId: 12,
     title: 'Caso C1234: Alerta Preventiva & Autorización Biométrica WebAuthn',
     timeAllocation: '14:45 - 16:00 (01:15 min)',
-    keyStakeholders: ['Dirección Comercial', 'Gobernanza & IT'],
+    keyStakeholders: ['Dirección Comercial', 'Dirección Financiera', 'Gobernanza & IT'],
     whatAudienceSees:
       'Carpeta C1234 con margen proyectado de USD 142.50 (< USD 200), diálogo WebAuthn con huella digital y hash SHA-256 de 64 caracteres.',
     demoCues: [
-      'Conectar la agilidad comercial con el respaldo legal que exige la dirección',
+      'Citar el planteo de Vanesa: el operativo no controla márgenes chicos y en pesos dan pérdida',
+      'Mostrar cómo el sistema dispara la alerta en USD 200 automáticamente',
       'Mostrar el sensor animado de huella digital Touch ID / Windows Hello',
-      'Señalar la cadena hash SHA-256 inmutable generada conforme a la Ley de Firma Digital 25.506',
+      'Señalar la cadena hash SHA-256 generada conforme a la Ley de Firma Digital 25.506',
     ],
     verbatimSpeech:
-      'En la Carpeta C1234 de Acindar S.A. (BL KA0018437, contenedor MSKU7842897) nos encontramos con un descalce típico: Maersk Line facturó un sobrecosto imprevisto de +USD 305 en BAF y estadía en Terminal Zárate. Esto redujo el margen proyectado a USD 142.50, por debajo del umbral preventivo de USD 200 fijado por finanzas. El sistema encendió el semáforo amarillo preventivo y retuvo la emisión de la prefactura. Pero acá viene la innovación que une las dos prioridades directivas: comercialmente se necesita no trabar la operación con burocracia ni demoras; y a nivel institucional se necesita que si se autoriza un desvío, quede un respaldo legal inatacable. Miren cómo funciona: la Dirección o Finanzas abren el comprobante, seleccionan el motivo formal y simplemente apoyan su huella dactilar en la laptop con WebAuthn FIDO2 (Touch ID o Windows Hello) en 3 segundos. Cero contraseñas que se puedan filtrar o compartir. El chip criptográfico de hardware genera una firma con hash SHA-256 inmutable de 64 caracteres que se estampa en el registro digital. Tiene plena validez legal bajo la Ley Nacional de Firma Digital Nº 25.506 (art. 5). La Dirección autoriza en 3 segundos y la empresa cuenta con respaldo probatorio total.',
+      'En la Carpeta C1234 de Acindar S.A. (BL KA0018437, contenedor MSKU7842897) vemos en vivo exactamente lo que advirtió Vanesa Meggiolaro en sus audios: primero, que el operativo desbordado en el día a día no suele mirar si la operación deja apenas 5 dólares de ganancia o si la naviera cobró de más; y segundo, la necesidad de fijar la alerta en USD 200 por el riesgo de descalce pesos/dólares, donde 50 o 100 dólares de margen en la planilla terminan dando pérdida neta al pasarse a pesos por gastos portuarios e impuestos. Acá Maersk Line facturó un sobrecosto imprevisto de +USD 305 en BAF y estadía en Terminal Zárate, reduciendo el margen proyectado a USD 142.50. El sistema encendió inmediatamente el semáforo preventivo de USD 200 fijado por Finanzas y retuvo la emisión de la prefactura. Pero acá viene cómo resolvemos la agilidad comercial: la Dirección o Finanzas abren el comprobante, seleccionan el motivo y simplemente apoyan su huella dactilar en la laptop con WebAuthn FIDO2 (Touch ID o Windows Hello) en 3 segundos. Cero contraseñas que se filtren. Se genera una firma con hash SHA-256 de 64 caracteres con plena validez legal bajo la Ley Nacional de Firma Digital Nº 25.506 (art. 5). La Dirección autoriza en 3 segundos y ALMAR queda con respaldo probatorio absoluto.',
     technicalSheet: {
       expediente: 'C1234 (BL KA0018437 / Contenedor MSKU7842897)',
       operacion: 'Importación Siderúrgica Acindar S.A. · Maersk Line',
@@ -571,25 +582,26 @@ export const SPEAKER_NOTES: Record<number, SpeakerNotesData> = {
       details: [
         { label: 'Cliente', value: 'Acindar S.A. (Insumos críticos de planta industrial)' },
         { label: 'Armador / Facturas', value: 'Maersk Line A/S (FC N° 7554566633 y N° 7554364222)' },
+        { label: 'Planteo Vanesa Audios', value: 'Alerta preventiva en USD 200 por descalce con pesos y falta de control manual' },
         { label: 'Semáforo Activado', value: 'Alerta amarilla preventiva < USD 200 (bloqueo rojo solo < USD 3.00)', badge: 'ALERTA', badgeColor: 'amber' },
         { label: 'Hash Probatorio', value: 'd8a4f91b72e045c83210bc6a98711e4f9b8c347d0182ec35ab120984de63f512', badge: 'SHA-256', badgeColor: 'green' },
         { label: 'Autorizante', value: 'Dirección General / Finanzas (TPM 2.0 Hardware)' },
       ],
       hardQuestions: [
         {
-          stakeholder: 'Gobernanza / Legal',
-          question: '¿Qué valor probatorio tiene WebAuthn frente a una auditoría contable o fiscal?',
-          answer: 'Plena validez jurídica: bajo la Ley 25.506 (art. 5), la firma electrónica generada mediante claves asimétricas en chip criptográfico de hardware (TPM 2.0 / Secure Enclave) con hash SHA-256 estampado en un registro inmutable con marca temporal UTC invierte la carga probatoria y asegura no repudio absoluto.',
-          legalBasis: 'Ley 25.506 de Firma Digital y No Repudio Criptográfico',
+          stakeholder: 'Dirección Financiera (Vanesa)',
+          question: '¿Por qué la alerta salta en USD 200 y no bloquea directamente?',
+          answer: 'Porque una alerta amarilla preventiva informa el descalce cambiario al pasar a pesos sin trabar la venta. Si Dirección decide asumirlo o negociarlo, se autoriza en 3 segundos con huella dactilar. Solo se bloquea de forma estricta si da pérdida neta segura (< USD 3.00).',
+          legalBasis: 'Gestión Preventiva de Riesgo Financiero',
         },
       ],
     },
     objections: [
       {
-        stakeholder: 'Gobernanza / Legal',
-        objection: '¿Qué valor probatorio tiene WebAuthn frente a una auditoría contable o fiscal?',
+        stakeholder: 'Dirección Financiera (Vanesa)',
+        objection: '¿Cómo evita el sistema que una ganancia de USD 100 termine dando pérdida al pasarse a pesos?',
         response:
-          'Cumple como firma electrónica avanzada bajo Ley 25.506 (art. 5). La vinculación criptográfica con chip de hardware y el hash SHA-256 en audit_log garantizan no repudio absoluto.',
+          'Con la alerta preventiva de USD 200 que propuso Vanesa: si el margen cae por debajo de USD 200, el sistema avisa para revisar el impacto cambiario antes de facturar al cliente.',
       },
     ],
   },

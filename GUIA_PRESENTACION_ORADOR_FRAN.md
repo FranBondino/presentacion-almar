@@ -902,108 +902,93 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 
 ---
 
-### 3.1 OBJECIONES DEL FRENTE COMERCIAL (DIRECCIÓN COMERCIAL)
+### 3.1 OBSERVACIONES REALES Y DEVOLUCIONES DEL FRENTE COMERCIAL (ALEJANDRO NOACCO)
 
-#### 3.1.1 Flexibilidad de Pricing Spot vs Markup Rígido
-- **Pregunta / Objeción de Alejandro:**  
-  *"Fran, me parece bárbaro que quieran cuidar los números, pero el mercado de freight forwarding vive de los negocios spot. Si a mí me entra una carga de 10 contenedores donde el cliente me pide precio en el acto y yo tengo que pelear el flete con un margen finito de 50 dólares por contenedor, ¿este sistema no me va a atar de pies y manos o hacerme perder la operación por esperar autorizaciones?"*
-- **Respuesta Táctica de Fran:**  
-  *"Alejandro, esa fue exactamente la premisa que guio el diseño del Módulo Comercial: la tecnología tiene que darte velocidad de fuego, no burocracia.*
-  
-  *Fijate que eliminamos cualquier markup rígido. En la calculadora tenés el selector de 'Perfil de Rentabilidad'. Si estás cerrando una carga spot agresiva, elegís el perfil `SPOT_ALTO_RIESGO` o `CUENTA_ESTRATEGICA`. El sistema te calcula la propuesta en 45 segundos con el margen que vos decidís.*
-  
-  *¿Dónde interviene el sistema? Únicamente en dos compuertas lógicas:*
-  *1. Te avisa con semáforo amarillo si el margen baja de 200 dólares para recordarte que los gastos portuarios o acarreos en pesos pueden comerse ese margen si la brecha cambiaria se mueve. Pero la alerta te informa, no te traba la propuesta.*
-  *2. La única compuerta que te bloquea el botón es si la operación da ganancia negativa o menor a 3 dólares, porque en ese caso no estás vendiendo: estás subsidiando el flete del cliente con plata de ALMAR.*
-  
-  *Tenés total libertad de pricing, cotizás en menos de un minuto y contás con un copiloto que te asegura que cada negocio que cierres le sume plata a la empresa."*
+> **Contexto de la devolución:**  
+> Ante la propuesta enviada por Fran a Gisel sobre tres mejoras comerciales concretas para el área de Lucía Laje (1. Ahorro de tiempo operativo en cálculos; 2. Recupero de presupuestos con seguimiento a 48 hs; 3. Control de sobrefacturación naviera), **Alejandro Noacco** respondió textualmente por WhatsApp con los siguientes tres puntos:
 
-#### 3.1.2 Registro Cualitativo de Pérdidas por Competencia y Negociación con Navieras
-- **Pregunta / Objeción de Alejandro:**  
-  *"Nosotros cotizamos cientos de fletes al mes. Muchas veces el cliente se va con la competencia porque cotizó 100 o 150 dólares menos. Hoy ese dato queda en un WhatsApp o se pierde en el aire. ¿Cómo me ayuda este portal a capturar esa información y qué hago con eso a fin de mes?"*
-- **Respuesta Táctica de Fran:**  
-  *"Ese es uno de los mayores diferenciales comerciales de la plataforma, Alejandro.*
-  
-  *En la tabla de cotizaciones agregamos el botón 'Feedback Comercial'. Cuando un cliente no cierra, Lucía o vos hacen un clic, seleccionan el motivo `COMPETENCIA_MENOR_PRECIO` y escriben textual: 'Competencia cotizó USD 150 menos'.*
-  
-  *Ese dato no queda en una nota suelta: se indexa automáticamente asociado a la naviera, la ruta y el tipo de contenedor. A fin de mes, el portal te muestra una métrica consolidada: 'En la ruta Ningbo-Buenos Aires perdimos 14 cotizaciones porque MSC o Maersk estuvieron 150 dólares por encima de Cosco'.*
-  
-  *Con ese reporte en mano, vos ya no vas a negociar con los armadores pidiendo rebajas generales por simpatía: te sentás con el line manager de Maersk y le decís con números en la mesa: 'Acá tenés 14 operaciones concretas que se cayeron por 150 dólares; si me das esa tarifa de volumen, cerramos 14 contenedores juntos este mes'. Transformás una cotización perdida en poder de negociación real."*
+#### 3.1.1 Devolución de Alejandro sobre el Punto 1: Costos Variables, Criterios de Rentabilidad por Cliente y Feedback Comercial
+- **Mensaje Textual de Alejandro:**  
+  > *"1) Debemos chequear con Comercial y Pricing, ya que si bien hay solicitudes de cotización que se repiten, no siempre el costo es el mismo, hay casos que los costos son iguales y tienen muy pocas variaciones. Otro tema es cuando se recibe el feedback de cliente, que puede llevar a modo informativo la venta, y también considerando que cada cliente tiene un criterios de rentabilidad diferente"*
+- **Cómo lo trata y resuelve el sistema:**  
+  1. **Costos Dinámicos vs. Costos Fijos:** El sistema no asume costos fijos inmutables. La Calculadora Paramétrica integra las vigencias y recargos temporales (BAF, GRI) que se actualizan quincenalmente según el armador, permitiendo ajustar variaciones mínimas o cotizar fletes spot en 45 segundos.
+  2. **Criterios de Rentabilidad Diferenciados por Cliente:** Para responder exactamente a lo que plantea Alejandro, descartamos imponer un markup rígido (ej. un 15% fijo que dejaría a ALMAR fuera de juego). Desarrollamos los **4 Perfiles Dinámicos de Rentabilidad** (`CUENTA_ESTRATEGICA`, `ESTANDAR`, `SPOT_ALTO_RIESGO` y `PERSONALIZADO`) con sliders libres para regular el margen según el volumen y la relación comercial con cada cliente.
+  3. **Registro de Feedback de Cliente a Modo Informativo:** Se incorporó el botón **"Feedback Comercial"** en la tabla de cotizaciones. Cuando un cliente da una respuesta o no cierra, Lucía o el comercial registran el motivo (`COMPETENCIA_MENOR_PRECIO`, `DEMORA_CARGA`, etc.) y el comentario del cliente, quedando asociado a la venta a modo informativo para que ese aprendizaje comercial no se pierda en chats de WhatsApp.
+- **Cómo mencionarlo en la reunión:**  
+  *"Alejandro, tomando exactamente lo que me comentaste por WhatsApp sobre consultar con Pricing y los distintos criterios de rentabilidad por cliente: fíjate que eliminamos cualquier markup rígido. La calculadora te permite elegir el perfil del cliente (si es cuenta estratégica o spot) y mover el margen libremente. Y además sumamos el botón de 'Feedback Comercial' para que cuando el cliente te conteste algo sobre la tarifa, ese dato quede registrado formalmente en la venta a modo informativo."*
 
-#### 3.1.3 Automatización del Seguimiento Comercial para Lucía Laje
-- **Pregunta / Objeción de Alejandro:**  
-  *"Lucía Laje emite más de la mitad de las cotizaciones de la empresa y la realidad es que está tapada de laburo administrativo. Se le pasan los seguimientos y me preocupa que se nos enfríen clientes potenciales por no insistir a tiempo. ¿Cómo le saca trabajo de encima este portal?"*
-- **Respuesta Táctica de Fran:**  
-  *"Los números que auditamos son contundentes: Lucía emitió 584 de las 1.080 cotizaciones recientes, el 54,1%. Es humanamente imposible que una sola persona cotice, atienda el teléfono, coordine cargas y además redacte correos personalizados de seguimiento para 500 operaciones.*
-  
-  *Por eso creamos el panel de* **Smart Follow-Up a 48 Horas**:
-  *El sistema filtra en tiempo real todas las cotizaciones que llevan más de 48 horas sin respuesta del cliente. Lucía abre el panel a la mañana y ve la lista priorizada por monto económico.*
-  
-  *Al hacer clic en 'Generar Correo de Seguimiento', el sistema redacta automáticamente la plantilla institucional formal: saluda al cliente por su nombre, menciona el número de cotización, el puerto de embarque, la tarifa ofrecida y le recuerda cordialmente la fecha de vigencia.*
-  
-  *Lucía no redacta nada: revisa el texto en 3 segundos, toca 'Copiar', lo pega en Gmail y lo envía. En 10 minutos hace el seguimiento prolijo de 20 cotizaciones. Esto le devuelve horas de tiempo productivo y reactiva ventas dormidas sin esfuerzo manual."*
+#### 3.1.2 Devolución de Alejandro sobre el Punto 2: Estandarización del Seguimiento y Recordatorio
+- **Mensaje Textual de Alejandro:**  
+  > *"2) se está realizando del seguimiento de las cotizaciones, pero lo debemos estandarizar dentro del proceso y me parece muy bueno el tema del recordatorio"*
+- **Cómo lo trata y resuelve el sistema:**  
+  - Estandarización formal del proceso a través del módulo **Smart Follow-Up a 48 hs**.
+  - El sistema detecta automáticamente qué cotizaciones llevan más de 48 horas sin respuesta del cliente y las prioriza en una bandeja comercial clara.
+  - Con **1 solo clic**, el sistema genera la plantilla formal de recordatorio lista para enviar por Gmail, con el nombre del cliente, puerto y tarifa pactada, liberando a Lucía del trabajo manual y asegurando que ninguna cotización quede sin seguimiento.
+- **Cómo mencionarlo en la reunión:**  
+  *"Sobre lo que marcaste del seguimiento: coincidimos 100% en que hoy se hace a pulmón pero falta estandarizarlo en el proceso. Con el Smart Follow-Up a 48 horas definimos esa regla estándar: a las 48 horas el sistema le agrupa a Lucía los presupuestos dormidos y le arma el recordatorio en un clic para mandarlo por correo en segundos."*
 
-#### 3.1.4 Temor a Pérdida de Velocidad Operativa frente a la Competencia Spot
-- **Pregunta / Objeción de Alejandro:**  
-  *"¿Esto no le va a agregar pasos administrativos al comercial que antes pasaba un número por WhatsApp en 20 segundos?"*
-- **Respuesta Táctica de Fran:**  
-  *"Al contrario: hoy cotizar en planillas de Excel, buscar el tarifario viejo en carpetas compartidas y calcular recargos a mano demora entre 5 y 10 minutos por presupuesto. Con la Calculadora Paramétrica, el vendedor selecciona origen, destino, tipo de contenedor, ajusta el slider y tiene la cotización armada con desglose formal en 45 segundos.*
-  
-  *Gana velocidad real y elimina el riesgo de olvidarse de incluir el THC o el combustible BUFF."*
+#### 3.1.3 Devolución de Alejandro sobre el Punto 3: Alerta de Sobrefacturación Naviera
+- **Mensaje Textual de Alejandro:**  
+  > *"3) sería excelente tener este alerta, más los que estuvimos hablando"*
+- **Cómo lo trata y resuelve el sistema:**  
+  - Se implementó el **Escudo de Sobrecostos Navieros**: cuando la naviera envía su factura (PDF o correo), el motor OCR compara el costo facturado contra la cotización acordada en la carpeta.
+  - Si la naviera cobró recargos indebidos o un flete mayor al pactado, el sistema enciende una alerta roja de desvío y retiene el comprobante antes de emitir la orden de pago.
+- **Cómo mencionarlo en la reunión:**  
+  *"Respecto a la alerta de sobrefacturación naviera que te pareció excelente: ya está activa en el circuito. Si Maersk, MSC o cualquier armador factura un dólar por encima de lo cotizado, la alerta frena la factura en la bandeja de entrada antes de que pase a administración."*
 
 ---
 
-### 3.2 OBJECIONES DE VANESA MEGGIOLARO (DIRECTORA DE ADMINISTRACIÓN Y FINANZAS)
+### 3.2 OBSERVACIONES REALES Y DEVOLUCIONES DE ADMINISTRACIÓN Y FINANZAS (VANESA MEGGIOLARO)
 
-#### 3.2.1 Freno a Cotizaciones con Tarifas Navieras Vencidas
-- **Pregunta / Objeción de Vanesa:**  
-  *"A mí me pasa seguido que un comercial cotiza con un tarifario viejo que le quedó guardado en una planilla; el cliente confirma dos semanas después y cuando nos llega la factura del armador nos encontramos con que la tarifa ya había subido y nosotros nos tenemos que hacer cargo de la diferencia. ¿Cómo me garantiza el sistema que esto no vuelva a pasar?"*
-- **Respuesta Táctica de Fran:**  
-  *"Vanesa, ese dolor que describís fue el que motivó el desarrollo del Semáforo de Vigencia de Tarifas Navieras.*
-  
-  *En el sistema, cada tarifa cargada en la calculadora o en la tabla tiene asignada una fecha de expiración estricta de 15 o 30 días, que es la ventana estándar de las navieras. El semáforo monitorea esa fecha en tiempo real:*
-  *Si la tarifa está dentro del plazo, se muestra verde 'Vigente'. Cuando faltan 3 días para vencer, pasa a amarillo 'Por Vencer'. Pero si la tarifa expiró, pasa automáticamente a rojo 'Vencida' y el sistema* **bloquea la emisión de la propuesta comercial**.*
-  
-  *El comercial físicamente no puede generar la cotización para el cliente con esa tarifa caducada. El sistema lo obliga a consultar al armador y actualizar el costo en el sistema. Cortamos de cuajo la posibilidad de que ALMAR emita propuestas con fletes viejos que luego se conviertan en quebranto para la empresa."*
+> **Contexto de la devolución:**  
+> Tras escuchar la propuesta comercial, **Vanesa Meggiolaro** envió 4 audios de WhatsApp analizando la solución desde la óptica operativa y financiera de ALMAR:
 
-#### 3.2.2 Provisión Diferida Automática a 150 Días de Sancor Seguros y Retención de Comisiones
-- **Pregunta / Objeción de Vanesa:**  
-  *"Con Sancor Seguros tenemos un problema crónico: tardan entre 4 y 5 meses en enviarnos las pólizas. Si cerramos las carpetas a fin de mes para liquidar comisiones a los vendedores, estamos pagando sobre una utilidad que no descontó el seguro. Cuando la factura de Sancor finalmente llega, la ganancia real baja y la comisión ya se pagó de más. ¿Cómo lo soluciona el portal?"*
-- **Respuesta Táctica de Fran:**  
-  *"Esa fue una de las fallas más delicadas que descubrimos en la auditoría y la resolvimos con una regla contable automática inquebrantable:*
-  
-  *Apenas una carpeta operativa se da de alta con seguro contratado, el sistema* **devenga automáticamente una provisión estimada del 0,55% sobre el valor FOB** *de la mercadería en el ledger de costos de esa carpeta.*
-  
-  *En simultáneo, el cálculo de la comisión del comercial para esa operación pasa al estado* `RETENIDA_COSTOS_PENDIENTES` *por una ventana de 150 días. Kipintoch y el portal impiden cerrar contablemente la carpeta o liberar la comisión hasta que ocurra una de dos cosas: o Finanzas carga la factura definitiva de Sancor y se ajusta la diferencia real, o expira el plazo de 150 días provisionado.*
-  
-  *De esta manera, los vendedores cobran sus comisiones sobre números reales y depurados. Ni un solo peso de ALMAR sale de la caja para pagar comisiones sobre ganancias ficticias."*
+#### 3.2.1 Audios 1 y 2: Aprobación de Cálculos y Seguimiento + Vencimiento de Tarifas + Limitación de Kipintoch
+- **Puntos Clave y Citas de Vanesa:**  
+  - Da visto bueno inicial a la calculadora y al seguimiento para Lucía.
+  - Advierte que para que a Lucía le sirva al 100%, la herramienta debe contemplar los **vencimientos de tarifas de las navieras** (que en marítimo cambian quincenal o mensualmente por BAF o recargos).
+  - Plantea una duda fundamental sobre Kipintoch frente a la solución:  
+    > *"El sistema actual (Kipintoch) registra la diferencia entre lo presupuestado y lo facturado, **pero lo que no sé es si ese dato te lo tira a nivel alerta en el momento, o si es solo informativo a nivel estadística posterior.**"*
+- **Cómo lo trata y resuelve el sistema:**  
+  1. **Vencimiento de Tarifas:** El módulo de cotizaciones incorpora el **Semáforo de Vigencia**: monitorea la fecha límite de la tarifa naviera (15 a 30 días). Si está vigente se muestra verde; si faltan 3 días alerta en amarillo; y si venció, se bloquea la emisión de la propuesta para evitar que se venda con costos viejos.
+  2. **Alerta en el Momento vs. Estadística Posterior (Diferencial con Kipintoch):** Distinguimos tajantemente entre un registro histórico posterior y una **alerta preventiva activa**. Kipintoch solo muestra la diferencia cuando el barco ya navegó y la factura ya se pagó. Nuestra plataforma actúa **al ingreso de la factura**: la IA compara en tiempo real y, ante una diferencia, frena el comprobante en la bandeja OCR antes de que Finanzas pague.
+- **Cómo mencionarlo en la reunión:**  
+  *"Vanesa dio en el blanco con dos temas clave: primero, que a Lucía le sirve la calculadora siempre y cuando contemple los vencimientos de navieras, que ya los parametrizamos con un semáforo de 15 y 30 días. Y segundo, la diferencia con Kipintoch: Kipintoch te muestra el desvío como una estadística histórica cuando la plata ya salió; nosotros ponemos la alerta en el momento exacto en que entra el PDF para no pagar de más."*
 
-#### 3.2.3 Validación Obligatoria de Acreditación en Extracto de Banco Macro
-- **Pregunta / Objeción de Vanesa:**  
-  *"A veces los clientes mandan por WhatsApp un volante de transferencia o un comprobante bancario apócrifo, o una transferencia que después rebota, y Operaciones ya quiere dar la carpeta por cobrada y emitir el recibo. Yo necesito que hasta que la plata no esté acreditada en la cuenta del Banco Macro, no se mueva nada."*
-- **Respuesta Táctica de Fran:**  
-  *"Comparto al 100% tu criterio financiero, Vanesa. Por eso extendimos el ciclo de vida del sistema más allá de la factura fiscal, creando el Subproceso de Cobranzas en tres pasos obligatorios:*
-  `EMITIDA_PENDIENTE_COBRO` → `EN_VERIFICACION_BANCARIA` → `COBRADA_CONCILIADA`.
-  
-  *Cuando el cliente manda el volante de pago, la carpeta pasa a 'En Verificación Bancaria'. Pero el sistema prohíbe taxativamente la emisión del recibo oficial de cobro y prohíbe liberar las comisiones comerciales hasta que Finanzas no realiza el cruce contra el extracto bancario de la cuenta corriente de Banco Macro (cuenta Nº 376100000930617).*
-  
-  *El operador debe marcar la concordancia exacta con la línea del extracto bancario donde impactaron los fondos. Recién con esa conciliación validada, la carpeta pasa a 'Cobrada y Conciliada' y se habilita el recibo. Cero riesgo de cheques rechazados, transferencias que no entraron o volantes fraudulentos."*
+#### 3.2.2 Audio 3: El Dolor Operativo Humano y la Detección Temprana de Márgenes Absurdos
+- **Puntos Clave y Citas de Vanesa:**  
+  - Validación del uso de IA:  
+    > *"Totalmente de acuerdo, todo lo que la inteligencia artificial pueda ayudar a acelerar procesos y controles, bienvenida sea."*
+  - El problema humano de fondo en ALMAR:  
+    > *"El control de que la naviera cobra de más se podría hacer cuando se carga la factura... **el problema es que eso lo tiene que hacer el operativo, y el operativo NO LO HACE.** No miran si una operación deja apenas USD 5 de ganancia mientras la carga está en tránsito."*
+- **Cómo lo trata y resuelve el sistema:**  
+  - No depende de la memoria, el tiempo ni la buena voluntad del operador. La IA analiza automáticamente el 100% de los comprobantes entrantes.
+  - Si una operación arroja un margen absurdo o inviable (< USD 3 o sobrecosto imprevisto), el sistema lo marca en rojo inmediatamente y notifica a Finanzas y Gerencia.
+- **Cómo mencionarlo en la reunión:**  
+  *"Como bien dijo Vanesa en sus audios: hoy el control de la naviera se podría hacer en la carga, pero el problema es que el operativo está desbordado y no lo hace, ni revisa si una carpeta está dejando 5 dólares de margen. Por eso la IA hace ese control de forma automática y sistemática: lee el comprobante y alerta sin depender de que alguien se acuerde de mirarlo."*
 
-#### 3.2.4 Control de Margen Mínimo Operativo (< USD 200) ante Descalces Cambiarios
-- **Pregunta / Objeción de Vanesa:**  
-  *"¿Por qué pusimos el semáforo preventivo en USD 200 y no en un porcentaje fijo?"*
-- **Respuesta Táctica de Fran:**  
-  *"Porque en fletes marítimos, los gastos en destino (acarreos locales, peajes portuarios, estadías) se liquidan en pesos a tipo de cambio oficial o con alícuotas específicas. Si una operación tiene un margen menor a USD 200, un movimiento de 30 o 40 pesos en la cotización de la divisa o un recargo de acarreo se come la totalidad de la rentabilidad.*
-  
-  *Los USD 200 funcionan como un colchón de absorción de volatilidad cambiaria argentina. Protege la caja sin trabar la venta."*
+#### 3.2.3 Audio 4: Descalce Dólares vs. Pesos y Parametrización de la Alerta en USD 200
+- **Puntos Clave y Citas de Vanesa:**  
+  - La trampa del margen en dólares (análisis conjunto con Laura de Finanzas):  
+    > *"Tenés operaciones que en la planilla te dejan 100 o 50 dólares de ganancia en dólares, **pero cuando las pasás a pesos no hay ganancia, hay PÉRDIDA** (por tipo de cambio, gastos bancarios y retenciones)."*
+  - Propuesta textual de Vanesa:  
+    > *"Propone configurar una **alerta de margen mínimo**: por ejemplo, si una operación marítima deja **menos de USD 200 de margen**, que el sistema salte con una **alerta preventiva** para revisar la carpeta antes de que sea tarde."*
+- **Cómo lo trata y resuelve el sistema:**  
+  - Se configuró la **Alerta Preventiva de Margen exactamente en USD 200**, tal como lo solicitó Vanesa.
+  - Cuando una operación proyecta un margen menor a USD 200, se enciende el semáforo amarillo preventivo en la calculadora y en la carpeta para advertir el riesgo de descalce cambiario y gastos locales en pesos.
+  - Si la operación requiere avanzar por motivos comerciales estratégicos, cuenta con el override de autorización directiva en 3 segundos mediante WebAuthn FIDO2.
+- **Cómo mencionarlo en la reunión:**  
+  *"Vanesa y Laura detectaron un punto financiero crítico: que márgenes de 50 o 100 dólares terminan dando pérdida en pesos por el descalce cambiario y los gastos bancarios. Por eso tomamos textual la propuesta de Vanesa y parametrizamos la alerta preventiva exactamente en USD 200: si el margen baja de ese valor, el sistema prende una alarma amarilla para revisar la carpeta antes de facturarle al cliente."*
 
-#### 3.2.5 Duplicación de Carga entre el Portal y Kipintoch
-- **Pregunta / Objeción de Vanesa:**  
-  *"¿Esto no le genera doble trabajo a Stefania al tener que mirar el portal y después cargar en Kipintoch?"*
-- **Respuesta Táctica de Fran:**  
-  *"Todo lo contrario: hoy Stefania demora de 8 a 12 minutos por factura porque tiene que abrir el PDF, buscar con la vista los números, calcular el IVA y tipear campo por campo. Con el portal, la IA extrae y valida los datos en 4 segundos, y con el botón 'Copiar Ficha a Kipintoch' pega los 5 campos canónicos en 15 segundos.*
-  
-  *Pasa de 12 minutos a 15 segundos: un ahorro neto de más del 95% del tiempo administrativo."*
+#### 3.2.4 Control de Sancor Seguros (Provisión Diferida a 150 Días) y Cobranzas Banco Macro
+- **Puntos Clave de Finanzas:**  
+  - Sancor Seguros demora entre 120 y 150 días en remitir pólizas finales, lo que provocaba cierres con utilidades infladas y comisiones comerciales liquidadas sobre ganancias ficticias.
+  - Riesgo de dar por cobrada una operación con volantes de pago o transferencias no acreditadas en cuenta corriente.
+- **Cómo lo trata y resuelve el sistema:**  
+  - **Sancor Seguros:** Provisión automática del 0,55% sobre valor FOB al abrir la carpeta y retención formal de la comisión comercial (`RETENIDA_COSTOS_PENDIENTES`) hasta la carga de la póliza real o el cumplimiento de los 150 días.
+  - **Banco Macro:** Conciliación estricta y obligatoria contra el extracto bancario de la Cta Cte N° 376100000930617 antes de habilitar el recibo oficial o dar la carpeta por conciliada.
+- **Cómo mencionarlo en la reunión:**  
+  *"Completamos el circuito financiero con dos candados que protegen la caja: la provisión diferida del 0,55% de Sancor Seguros para no pagar comisiones sobre ganancias que después se comen las pólizas a 150 días, y la conciliación obligatoria contra el extracto de Banco Macro antes de emitir cualquier recibo de cobro."*
 
 ---
 
