@@ -11,7 +11,16 @@
 ---
 
 ## ÍNDICE DEL DOCUMENTO EVOLUTIVO
-- [MÓDULO 1: El Frente Comercial (Lucía Laje, Cotizaciones y Pricing Ágil)](#módulo-1-el-frente-comercial-lucía-laje-cotizaciones-y-pricing-ágil) *(Completado y Detallado)*
+- [MÓDULO 1: El Frente Comercial (Lucía Laje, Cotizaciones y Pricing Ágil)](#módulo-1-el-frente-comercial-lucía-laje-cotizaciones-y-pricing-ágil)
+  - 1.1 El Flujo Cronológico Real de una Venta (Día 1 a Día 3)
+  - 1.2 Alineación: Propuesta Inicial de Fran vs. Realidad del Sistema
+  - 1.3 Devoluciones Reales de Alejandro Noacco (WhatsApp) y Tratamiento de Sistema
+  - 1.4 Devoluciones Reales de Vanesa Meggiolaro (4 Audios de WhatsApp) y Tratamiento de Sistema
+  - 1.5 Calculadora Paramétrica vs. Multicotizador: Por qué NO se Solapan
+  - 1.6 Guion de Oratoria para Fran (Apertura Comercial ante el Directorio)
+  - 1.7 ¿Cómo Funciona en la Práctica la Solución Comercial? (De Dónde Salen los Datos y Rutina en 4 Pasos de Lucía)
+  - 1.8 Arquitectura y Funcionamiento Detallado del Sistema de Alertas de Rentabilidad (USD 200 vs. USD 3.00 y WebAuthn)
+  - 1.9 Dinámica y Protocolo Operativo de las Fechas de Vencimiento de Tarifas (15 y 30 Días y Modal de Advertencia)
 - [MÓDULO 2: El Ciclo de Vida en Kipintoch y el Listener de Correos IA (Momento 1 vs. Momento 2)](#módulo-2-el-ciclo-de-vida-en-kipintoch-y-el-listener-de-correos-ia) *(Completado y Detallado)*
 - [MÓDULO 3: El Caso Multicarpeta y el "Subrayado Operativo" (Facturas Compartidas)](#módulo-3-el-caso-multicarpeta-y-el-subrayado-operativo) *(Completado y Detallado)*
 - [MÓDULO 4: La Arquitectura Técnica en Producción (Vercel, OpenAI ZDR, Modelo y Saldo)](#módulo-4-la-arquitectura-técnica-en-producción) *(Completado y Detallado)*
@@ -236,6 +245,140 @@ En su jornada laboral, Lucía utiliza la plataforma en cuatro momentos concretos
   Si un cliente le avisa que eligió a otro forwarder porque cotizó USD 150 menos, Lucía hace clic en `+ Feedback`, selecciona `COMPETENCIA_MENOR_PRECIO`, ingresa `-150` y guarda. Esa información queda registrada para que la Dirección la utilice en negociaciones de contratos con armadores.
 * **Paso 4 (16:30 hs · 15 segundos): Pase Comercial a Kipintoch**  
   Cuando el cliente confirma la operación, Lucía presiona *"Copiar para Kipintoch"*, abre el ERP y pega los datos (`Ctrl+V`). Se genera el número de carpeta (ej. `C1434`), Lucía gestiona el booking con la naviera y pasa la posta a Operaciones.
+
+---
+
+### 1.8 Arquitectura y Funcionamiento Detallado del Sistema de Alertas de Rentabilidad
+
+Uno de los aportes más valiosos de **Vanesa Meggiolaro** (Dirección de Finanzas) durante las devoluciones fue advertir sobre la **trampa del margen en dólares** en el forwarding argentino:
+> *"Tenés operaciones que en la planilla te dejan 50 o 100 dólares de ganancia en dólares, pero cuando las pasás a pesos no hay ganancia, hay PÉRDIDA..."*
+
+Para resolver este desafío financiero estructural sin asfixiar la velocidad comercial de Lucía, la plataforma implementa una **arquitectura de alertas de doble compuerta**:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│             MATRIZ DE RENTABILIDAD Y DOBLE COMPUERTA DE SEGURIDAD                      │
+├───────────────────────┬───────────────────────────────┬────────────────────────────────┤
+│ RANGO DE MARGEN BRUTO │ ESTADO Y SEMÁFORO DE SISTEMA  │ COMPORTAMIENTO Y PROTOCOLO     │
+├───────────────────────┼───────────────────────────────┼────────────────────────────────┤
+│ Margen ≥ USD 200      │ 🟢 SEMÁFORO VERDE             │ • Venta financieramente sana.  │
+│                       │    (Margen Óptimo)            │ • Flujo libre a Kipintoch.     │
+├───────────────────────┼───────────────────────────────┼────────────────────────────────┤
+│ USD 3.00 ≤ Margen     │ 🟡 SEMÁFORO AMARILLO          │ • Alerta preventiva activa.    │
+│       < USD 200       │    (Alerta Preventiva Vanesa) │ • NO bloquea la venta.         │
+│                       │                               │ • Advierte riesgo en pesos.    │
+├───────────────────────┼───────────────────────────────┼────────────────────────────────┤
+│ Margen < USD 3.00     │ 🔴 SEMÁFORO ROJO              │ • BLOQUEO ESTRICTO DE CARPETA. │
+│ (o Pérdida Neta)      │    (Pérdida Inminente)        │ • Exige Override WebAuthn FIDO2│
+│                       │                               │   de Alejandro o Vanesa.       │
+└───────────────────────┴───────────────────────────────┴────────────────────────────────┘
+```
+
+#### 1. ¿Por qué USD 200 y no un porcentaje rígido? (El Fundamento Financiero de Vanesa)
+En una empresa de forwarding que opera en Argentina, la rentabilidad no puede medirse únicamente como un porcentaje del flete internacional por las siguientes razones:
+1. **Gastos Fijos Locales en Moneda Local (ARS):** En importación y exportación intervienen cargos que se facturan o liquidan en pesos al arribo o zarpe:
+   - *Terminal Handling Charges (THC)* y almacenaje en terminales (Terminal 4, Exolgan, TRP, Zárate).
+   - *Peajes fluviales e hidrovía*, tasas de verificación aduanera y escáner.
+   - *Acarreos y fletes terrestres locales* (puerto a planta).
+2. **Volatilidad Cambiaria y Descalce Temporal (35 a 45 días):** Entre el día en que Lucía cotiza y el día en que el buque atraca y se pagan los gastos locales, la cotización de la divisa oficial o el costo de los servicios portuarios puede variar. Una devaluación o un ajuste tarifario de terminal portuaria puede absorber instantáneamente USD 80 o USD 120 de costo.
+3. **Retenciones Impositivas y Comisiones Bancarias:** Retenciones de Ingresos Brutos (SIRCREB), percepciones de IVA/Ganancias y comisiones bancarias por transferencias locales y del exterior que muerden margen real.
+
+**Conclusión:** Un margen de USD 80 sobre un flete de USD 4.000 parece un 2% "positivo", pero en la realidad bancaria de ALMAR termina arrojando saldo negativo en pesos. Los **USD 200 funcionan como un colchón de absorción de volatilidad argentina**, protegiendo la caja sin trabar la venta.
+
+#### 2. Funcionamiento de la Alerta Preventiva (< USD 200)
+- **Naturaleza:** Es una advertencia visual y operativa, **NO bloqueante**.
+- **Qué ve Lucía:** En la Calculadora Paramétrica y en la tabla de cotizaciones se enciende un badge amarillo parpadeante: `⚠️ Margen Ajustado: USD 142.50 (< USD 200)`.
+- **Por qué no bloquea ciegamente:** Porque ALMAR tiene cuentas corporativas de gran escala (ej. Acindar, Gerdau, Secco) donde por estrategia comercial o volumen de 20 contenedores mensuales se decide voluntariamente trabajar con márgenes más finos. Lucía puede continuar y presionar "Copiar para Kipintoch" con total fluidez.
+
+#### 3. Funcionamiento del Bloqueo Estricto (< USD 3.00) y Override WebAuthn
+- **Naturaleza:** Bloqueo absoluto del sistema.
+- **Cuándo se activa:** Si por un error de tipeo (ej. tipear costo USD 3.800 y venta USD 3.500) o por una combinación de recargos la operación arroja un margen irrisorio o negativo (< USD 3.00).
+- **Efecto de bloqueo:** El botón "Copiar para Kipintoch" y la confirmación de la cotización quedan inhabilitados con un candado rojo (`BLOQUEADA_RENTABILIDAD_NEGATIVA`).
+- **El Mecanismo de Desbloqueo Biométrico (WebAuthn FIDO2):**
+  Para destrabar una carpeta bloqueada por rentabilidad negativa, se requiere la autorización indelegable de la Dirección General (Alejandro Noacco o Vanesa Meggiolaro):
+  1. El director abre el comprobante o la cotización en su pantalla.
+  2. Selecciona el motivo formal en el desplegable (ej. *Acuerdo Comercial de Volumen* o *Compensación por Servicio Previo*).
+  3. Apoya su dedo en el lector biométrico de su laptop o teléfono (Touch ID / Windows Hello).
+  4. El chip criptográfico de hardware (TPM 2.0 / Secure Enclave) firma la transacción en 3 segundos mediante WebAuthn FIDO2, sin contraseñas compartidas.
+  5. Se genera un **hash SHA-256 inmutable de 64 caracteres** que se graba en el `audit_log` con marca temporal UTC.
+  6. **Respaldo Jurídico:** Cumple con la Ley Nacional de Firma Digital Nº 25.506 (art. 5), invirtiendo la carga probatoria y asegurando no repudio jurídico frente a auditorías contables.
+
+---
+
+### 1.9 Dinámica y Protocolo Operativo de las Fechas de Vencimiento de Tarifas (15 y 30 Días)
+
+En sus audios 1 y 2, Vanesa planteó una advertencia medular sobre la realidad marítima:
+> *"A Lucía le sirve la calculadora siempre y cuando contemple los vencimientos de tarifas de las navieras, porque en marítimo cambian quincenal o mensualmente..."*
+
+#### 1. La Realidad Naviera: ¿Por qué Vencen las Tarifas de Flete?
+Los armadores marítimos (Maersk Line, MSC, ONE, CMA CGM, Hapag-Lloyd, Cosco) y las aerolíneas cargueras no sostienen tarifas fijas a largo plazo en contratos spot. Aplican esquemas de vigencia estricta:
+- **Tarifas Quincenales (15 días):** Rigen del 1 al 15 y del 16 al último día de cada mes calendario.
+- **Tarifas Mensuales (30 días):** Rigen durante el mes calendario en curso.
+- **Factores de Ajuste Periódico:** Cada quincena los armadores modifican recargos dinámicos:
+  * **BAF (Bunker Adjustment Factor):** Variación del precio internacional del combustible fuel oil marítimo.
+  * **GRI (General Rate Increase):** Subas unilaterales por saturación de espacio en bodega durante temporada alta.
+  * **PSS (Peak Season Surcharge):** Recargos adicionales por cuello de botella en puertos de transbordo (Santos, Montevideo).
+
+Si un cliente acepta una propuesta 25 días después de emitida y el comercial la pasa a Kipintoch sin chequear la tarifa del armador, la naviera cobrará el flete actualizado (+USD 300 o +USD 600 más caro). **Ese sobrecosto se come la totalidad del margen de ALMAR.**
+
+#### 2. Cómo Calcula la Plataforma los Días de Vigencia
+En la base de datos del portal, cada cotización almacena:
+- `fechaEmision`: Marca temporal exacta de confección de la propuesta (ej. `2026-09-01T09:00:00Z`).
+- `vigenciaTarifaDias`: Plazo asignado por la naviera (15 o 30 días corridos).
+- `fechaVencimientoTarifa`: Fecha calendario límite estricta calculada por el sistema (`fechaEmision + vigenciaTarifaDias`).
+- `diasRestantes`: Cálculo continuo contra la fecha actual en tiempo real:
+  $$\text{díasRestantes} = \left\lceil \frac{\text{fechaVencimientoTarifa} - \text{fechaActual}}{86.400.000 \text{ ms}} \right\rceil$$
+
+#### 3. Los Tres Estados del Semáforo de Vigencia
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                        EL SEMÁFORO DE VIGENCIA DE TARIFAS NAVIERAS                     │
+├─────────────────────┬──────────────────────────┬───────────────────────────────────────┤
+│ DÍAS RESTANTES      │ ESTADO Y SEMÁFORO        │ INDICADOR EN TABLERO COMERCIAL        │
+├─────────────────────┼──────────────────────────┼───────────────────────────────────────┤
+│ > 5 días            │ 🟢 VIGENTE               │ `Vence: 02/10/2026 (18d restantes)`   │
+│                     │    (Operación Confiable) │ Texto verde esmeralda, seguro operar. │
+├─────────────────────┼──────────────────────────┼───────────────────────────────────────┤
+│ 1 a 5 días          │ 🟡 POR VENCER            │ `Vence: 26/09/2026 (2d restantes)`    │
+│                     │    (Alerta Cierre Spot)  │ Texto ámbar; priorizar seguimiento.   │
+├─────────────────────┼──────────────────────────┼───────────────────────────────────────┤
+│ ≤ 0 días            │ 🔴 VENCIDA               │ `🔒 Caducó: 17/09/2026`               │
+│                     │    (Tarifa Caducada)     │ Badge rojo con candado de protección. │
+└─────────────────────┴──────────────────────────┴───────────────────────────────────────┘
+```
+
+1. **Estado `VIGENTE` (Verde):** La cotización está amparada por la tarifa oficial del armador. Lucía puede confirmarla y crear la carátula con certeza absoluta.
+2. **Estado `POR_VENCER` (Amarillo):** El sistema alimenta automáticamente el panel de **Smart Follow-Up**. Lucía visualiza en su banner: *"Quedan 48 hs de tarifa vigente Maersk para Siderar: enviar recordatorio urgente"*. Esto permite cerrar ventas antes del salto de flete.
+3. **Estado `VENCIDA` (Rojo con Candado):** La tarifa expiró. La cotización muestra el indicador rojo `🔒 Caducó: 17/09/2026`.
+
+#### 4. Protocolo de Protección Financiera ante Tarifa Vencida (El Modal de Advertencia)
+¿Qué ocurre si un cliente llama después de 20 días y dice *"Lucía, cerremos el flete que me pasaste el mes pasado"*?
+Si Lucía hace clic en **"Copiar para Kipintoch"** sobre una cotización con tarifa vencida, el sistema **no ejecuta la acción a ciegas**. Se abre un **Modal de Advertencia de Tarifa Caducada**:
+
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  ⚠️ ADVERTENCIA: TARIFA NAVIERA CADUCADA HACE 8 DÍAS                         │
+├──────────────────────────────────────────────────────────────────────────────┤
+│  La tarifa de referencia de Maersk Line venció el 17/09/2026.               │
+│  Los armadores marítimos actualizan recargos BAF/GRI quincenalmente.         │
+│  Si traslada estos costos a Kipintoch sin revalidar con la naviera,          │
+│  ALMAR absorberá cualquier diferencia tarifaria de su propio margen.         │
+│                                                                              │
+│  Seleccione la acción a tomar:                                               │
+│                                                                              │
+│  [ 🔄 Recotizar en Calculadora (Recomendado) ]                               │
+│  -> Abre la Calculadora con los mismos datos precargados para actualizar      │
+│     el flete de la naviera en 20 segundos.                                   │
+│                                                                              │
+│  [ ⚠️ Confirmar bajo Apercibimiento Comercial ]                              │
+│  -> Habilita la copia a Kipintoch registrando en el Audit Log que la         │
+│     operación fue confirmada con tarifa caducada bajo responsabilidad        │
+│     del ejecutivo comercial.                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Resultado Directivo:** Se erradica definitivamente el problema histórico donde los clientes cerraban fletes viejos y ALMAR terminaba perdiendo entre USD 300 y USD 800 por contenedor al recibir la factura de Maersk o MSC.
 
 ---
 
