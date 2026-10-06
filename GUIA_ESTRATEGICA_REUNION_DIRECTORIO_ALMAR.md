@@ -21,6 +21,7 @@
   - 1.7 ¿Cómo Funciona en la Práctica la Solución Comercial? (De Dónde Salen los Datos y Rutina en 4 Pasos de Lucía)
   - 1.8 Arquitectura y Funcionamiento Detallado del Sistema de Alertas de Rentabilidad (USD 200 vs. USD 3.00 y WebAuthn)
   - 1.9 Dinámica y Protocolo Operativo de las Fechas de Vencimiento de Tarifas (15 y 30 Días y Modal de Advertencia)
+  - 1.10 Guía Maestra de Demostración en Vivo: Cómo Mostrar Todo el Circuito de Lucía en la Reunión (Paso a Paso en Pantalla, Dónde Hacer Clic y Qué Decir)
 - [MÓDULO 2: El Ciclo de Vida en Kipintoch y el Listener de Correos IA (Momento 1 vs. Momento 2)](#módulo-2-el-ciclo-de-vida-en-kipintoch-y-el-listener-de-correos-ia) *(Completado y Detallado)*
 - [MÓDULO 3: El Caso Multicarpeta y el "Subrayado Operativo" (Facturas Compartidas)](#módulo-3-el-caso-multicarpeta-y-el-subrayado-operativo) *(Completado y Detallado)*
 - [MÓDULO 4: La Arquitectura Técnica en Producción (Vercel, OpenAI ZDR, Modelo y Saldo)](#módulo-4-la-arquitectura-técnica-en-producción) *(Completado y Detallado)*
@@ -379,6 +380,172 @@ Si Lucía hace clic en **"Copiar para Kipintoch"** sobre una cotización con tar
 ```
 
 **Resultado Directivo:** Se erradica definitivamente el problema histórico donde los clientes cerraban fletes viejos y ALMAR terminaba perdiendo entre USD 300 y USD 800 por contenedor al recibir la factura de Maersk o MSC.
+
+---
+
+### 1.10 Guía Maestra de Demostración en Vivo: Cómo Mostrar Todo el Circuito de Lucía en la Reunión (Paso a Paso en Pantalla, Dónde Hacer Clic y Qué Decir)
+
+Esta sección es el **manual táctico de oratoria y navegación en pantalla** para que Fran conduzca la reunión con solvencia ejecutiva. El bloque comercial está diseñado para durar entre **6 y 8 minutos**, respondiendo una por una las preguntas que Alejandro Noacco y Vanesa Meggiolaro plantearon en sus mensajes y audios.
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   MAPA DE NAVEGACIÓN DE LA DEMO COMERCIAL EN VIVO                      │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                        │
+│  [ PASO 1: EL CENTRO DE COMANDO ] ──► Tablero `/cotizaciones` (Volumen y Filtros)      │
+│         │                                                                              │
+│         ▼                                                                              │
+│  [ PASO 2: COTIZACIÓN EN CALIENTE ] ──► Calculadora (Sliders, Alerta USD 200 y Copia) │
+│         │                                                                              │
+│         ▼                                                                              │
+│  [ PASO 3: SMART FOLLOW-UP 48 HS ] ──► Rescate de Ventas y Correo con Copia a Dirección│
+│         │                                                                              │
+│         ▼                                                                              │
+│  [ PASO 4: FEEDBACK DE COMPETENCIA ] ──► Inteligencia Comercial para Negociar Navieras │
+│         │                                                                              │
+│         ▼                                                                              │
+│  [ PASO 5: PASE A KIPINTOCH (15 SEG) ] ──► Copia de Carátula, Booking y Pase a Tráfico │
+│                                                                                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+#### PASO 1: Apertura en Pantalla — El Tablero Comercial de Cotizaciones (2 minutos)
+
+* **🖥️ Qué proyectar en pantalla:**
+  Abrir el Portal de ALMAR en `https://bot-relevamiento.vercel.app/cotizaciones` habiendo iniciado sesión con el usuario de Lucía Laje (`comercial@almar.com.ar`), o proyectar la **Diapositiva 05** de la Presentación.
+* **🖱️ Qué clics y señalamientos hacer con el mouse:**
+  1. Señalar el contador superior: *"Total: 1.995 cotizaciones históricas de ALMAR relevadas"*.
+  2. Hacer clic en los filtros superiores por Asesor Comercial:
+     - Mostrar `Todos (24)`.
+     - Hacer clic en `Lucía Laje (1.080)`: la tabla se filtra al instante mostrando solo la cartera de Lucía.
+     - Mostrar los otros comerciales: `Nerea Guida (399)`, `Martín Fusco (233)`, `Juan Andrés Arloro (138)`.
+  3. Señalar en una fila las **nuevas columnas operativas**:
+     - *Fecha de Emisión legible:* `02/09/2026` y antigüedad en horas (`71h`).
+     - *Naviera / Aerolínea cotizada:* Destacar `Maersk Line`, `MSC`, `LATAM Cargo`, `ONE`.
+     - *Incoterm y Días Libres:* Destacar `FOB` y `14d libres` de demora en destino.
+  4. Señalar con el cursor el **Semáforo de Vigencia de Tarifas**:
+     - Fila verde: `Vence: 02/10/2026 (18d restantes)`.
+     - Fila amarilla: `Vence: 26/09/2026 (2d restantes)`.
+     - Fila roja con candado: `🔒 Caducó: 17/09/2026`.
+* **🗣️ Qué decir textualmente al Directorio (Guion Verbatim de Fran):**
+  > *"Alejandro, Vanesa, Juan Andrés: arrancamos por el motor comercial de la empresa, donde hoy opera Lucía Laje.*  
+  > *Miren lo que tenemos en pantalla: auditamos las casillas reales de ALMAR y encontramos 1.995 cotizaciones emitidas en el año. Lucía sola genera 1.080 cotizaciones, más del 54% del volumen de ventas de toda la empresa.*  
+  >  
+  > *La tabla que ven acá no es una planilla estática: es el centro de control donde Lucía ve en un solo golpe de vista la naviera cotizada, los días libres de demora acordados y, fundamentalmente, lo que Vanesa me pidió en su audio: la fecha exacta en que vence la tarifa de Maersk o MSC con un semáforo visual. Verde si está vigente, amarillo si faltan pocos días, y rojo con candado si ya caducó para no vender con costos viejos."*
+
+---
+
+#### PASO 2: La Cotización en Caliente — Calculadora Paramétrica (2 minutos)
+
+* **🖥️ Qué proyectar en pantalla:**
+  Hacer clic en el botón superior derecho **`+ Nueva Cotización`** o pasar a la **Diapositiva 06** (Calculadora Paramétrica Multimodal).
+* **🖱️ Qué clics y simulaciones hacer en vivo:**
+  1. Cargar origen y destino: Seleccionar *Ningbo, China* ➔ *Puerto Buenos Aires*.
+  2. Seleccionar equipo: *1x40' High Cube*.
+  3. Mostrar el selector de **Perfil de Cliente** (respondiendo directamente a Alejandro Noacco):
+     - Seleccionar `Cuenta Estratégica` (mínimo markup para grandes clientes como Acindar).
+     - Mostrar `Estándar` y `Spot Alto Riesgo`.
+  4. **Mover el Slider de Margen en Vivo:** Moverlo libremente entre USD 100 y USD 800.
+  5. **Simulación de la Alerta Preventiva de Vanesa (< USD 200):**
+     - Bajar el slider a **USD 150**.
+     - Mostrar cómo en pantalla salta el badge amarillo:  
+       `⚠️ Alerta Preventiva: Margen menor a USD 200 (Riesgo de descalce cambiario en gastos locales)`.
+     - Explicar por qué NO bloquea la venta.
+  6. **Simulación del Bloqueo Estricto (< USD 3.00):**
+     - Bajar el margen a USD 0: la calculadora deshabilita la propuesta y muestra el candado rojo (`BLOQUEADA_RENTABILIDAD_NEGATIVA`).
+  7. Regresar el slider a USD 350 y hacer clic en **"Copiar Propuesta para el Cliente"**.
+* **🗣️ Qué decir textualmente al Directorio (Guion Verbatim de Fran):**
+  > *"Alejandro, vos me hiciste una observación clave por WhatsApp: me dijiste que no podíamos poner un porcentaje fijo de ganancia porque cada cliente tiene un criterio de rentabilidad diferente y en forwarders hay negocios spot donde hay que pelear el flete.*  
+  > *Mirá la pantalla: Lucía tiene libertad total. Elige si el cliente es Cuenta Estratégica, Estándar o Spot, y mueve este slider dólar por dólar según cómo viene la negociación.*  
+  >  
+  > *Pero acá entra lo que me marcó Vanesa con muchísima lucidez en su audio: que un margen de 50 o 100 dólares en la planilla termina dando pérdida en pesos cuando sumamos terminales portuarias, acarreos y retenciones.*  
+  > *Miren lo que pasa si bajo el margen a USD 150: el sistema enciende automáticamente esta alerta preventiva amarilla en USD 200. No le traba la venta a Lucía, pero le avisa a ella y a Finanzas que el colchón para gastos locales es ajustado.*  
+  >  
+  > *Y cuando Lucía termina, en vez de tardar 15 minutos calculando metros cúbicos y tipeando correos, toca este botón: 'Copiar Propuesta'. En 2 segundos tiene el texto formal armado para pegarlo en WhatsApp o en Gmail y enviárselo a Siderar."*
+
+---
+
+#### PASO 3: Smart Follow-Up a 48 Horas — Rescate de Ventas Paradas (1.5 minutos)
+
+* **🖥️ Qué proyectar en pantalla:**
+  En el módulo de cotizaciones, señalar el banner superior de **Smart Follow-Up** o pasar a la **Diapositiva 07**.
+* **🖱️ Qué clics y señalamientos hacer con el mouse:**
+  1. Mostrar cómo el sistema identifica automáticamente las cotizaciones que tienen más de 48 horas sin respuesta del cliente (ej. cotización `C1590` de Gerdau Argentina).
+  2. Hacer clic en el botón azul **`Enviar Seguimiento`**.
+  3. Mostrar la ventana modal con la plantilla formal autogenerada:
+     - Asunto: `[ALMAR] Seguimiento de Propuesta FCL - Ningbo a Buenos Aires - Ref. C1590`.
+     - Saludo personalizado: *"Estimado Diego Álvarez (Gerdau)..."*.
+     - Resumen de la oferta con naviera y días libres.
+     - **Copia Oculta Automática:** `cc: anoacco@almarrosario.com` (Alejandro Noacco).
+* **🗣️ Qué decir textualmente al Directorio (Guion Verbatim de Fran):**
+  > *"Alejandro, el segundo punto que me marcaste por mensaje fue textual: 'Se está realizando el seguimiento, pero lo debemos estandarizar dentro del proceso y me parece muy bueno el recordatorio'.*  
+  >  
+  > *Acá está la estandarización exacta que pediste:*  
+  > *Todas las mañanas a las 8:30, el sistema le filtra a Lucía las cotizaciones que cumplieron 48 horas sin respuesta. Lucía no tiene que acordarse de memoria ni buscar en libretas: hace un solo clic en 'Enviar Seguimiento' y se genera este mail formal con toda la información técnica, recordándole al cliente que la tarifa de la naviera tiene fecha de vencimiento.*  
+  >  
+  > *Y fíjense este detalle fundamental de gobernanza: el correo sale con copia automática a la casilla de Alejandro (`anoacco@almarrosario.com`). Dirección Comercial tiene visibilidad total del pipeline comercial en tiempo real sin tener que pedirle planillas de reporte a Lucía los viernes a la tarde. En 10 minutos, Lucía reactiva 15 cotizaciones dormidas."*
+
+---
+
+#### PASO 4: Registro de Feedback Comercial — Inteligencia para Negociar con Armadores (1 minuto)
+
+* **🖥️ Qué proyectar en pantalla:**
+  En la tabla de cotizaciones, posicionarse sobre una fila que no cerró (ej. `C1597` de Pulpeiro Hyo o `C1583` de Disden).
+* **🖱️ Qué clics y señalamientos hacer con el mouse:**
+  1. Hacer clic en el botón **`+ Feedback`**.
+  2. Desplegar el menú de motivos: mostrar las opciones preconfiguradas (`COMPETENCIA_MENOR_PRECIO`, `CARGA_DIFERIDA`, `EVALUACION_GERENCIA`, `CAMBIO_CONDICIONES`).
+  3. Seleccionar `COMPETENCIA_MENOR_PRECIO`.
+  4. Ingresar en el campo de diferencia: `- USD 150` y naviera competidora (ej. *Cosco Shipping vía otro agente*).
+  5. Hacer clic en Guardar y mostrar cómo la etiqueta de feedback queda registrada en la cotización.
+* **🗣️ Qué decir textualmente al Directorio (Guion Verbatim de Fran):**
+  > *"Alejandro, vos me planteaste también que el feedback del cliente debía registrarse a modo informativo en la venta.*  
+  >  
+  > *Miren la utilidad estratégica que tiene esto: si un cliente le dice a Lucía 'Mirá, no cierro con ustedes porque otra agencia me pasó 150 dólares menos por Cosco', Lucía hace dos clics en '+ Feedback' y lo deja asentado en la venta.*  
+  >  
+  > *¿Por qué esto vale oro para ALMAR? Porque a fin de mes, cuando Alejandro se sienta a negociar contratos de volumen o acuerdos de tarifas con el representante comercial de Maersk o de MSC en Rosario o Buenos Aires, no va a negociar a ciegas. Abre el sistema y le dice al armador: 'Mirá la data: en septiembre perdí 12 contenedores de Ningbo porque tu flete estuvo USD 150 arriba de la competencia'. Tenés datos duros y medibles para pelear mejores tarifas para ALMAR."*
+
+---
+
+#### PASO 5: Cierre de Venta y Pase a Kipintoch en 15 Segundos (1.5 minutos)
+
+* **🖥️ Qué proyectar en pantalla:**
+  En la tabla comercial, seleccionar una cotización aceptada por el cliente (ej. cotización `C1580` de Industrias Juan F. Secco S.A. o `C1434` de Siderar).
+* **🖱️ Qué clics y demostraciones hacer en vivo:**
+  1. **Demostración de Protección ante Tarifa Vencida (Prueba de Candado):**
+     - Intentar presionar *"Copiar para Kipintoch"* sobre una cotización caducada (ej. `C1527` con badge rojo `Caducó: 12/09/2026`).
+     - Mostrar cómo salta el **Modal de Advertencia de Tarifa Caducada**:
+       > *"¡Miren la seguridad que tiene esto! Si el cliente tardó 30 días en confirmar y la tarifa naviera ya venció, el sistema frena a Lucía y le dice: 'Ojo, la tarifa de Maersk venció hace 15 días; si la pasás a Kipintoch con costo viejo, ALMAR asume el sobrecosto de su bolsillo. Presioná acá para recotizar con la tarifa de hoy'."*
+  2. **Demostración del Pase Normal a Kipintoch (Operación Vigente):**
+     - Seleccionar la cotización vigente `C1580`.
+     - Presionar el botón verde **`Copiar para Kipintoch`** (1 solo clic).
+     - Mostrar la notificación flotante: *"Ficha de carátula copiada al portapapeles con éxito"*.
+     - Explicar cómo Lucía abre Kipintoch ERP, va a Carátula Nueva y presiona `Ctrl+V`. Todos los campos (Cliente, CUIT, Puerto Origen, Puerto Destino, Tipo de Carga, Naviera sugerida y Tarifa de Venta) quedan pegados en 15 segundos.
+     - Kipintoch le entrega el número oficial de carpeta: **`C1580`**.
+     - Lucía saca el Booking con Maersk Line (reserva BKG-MSK-982341, contenedor MSKU7842897, BL KA0018437) y manda el correo interno de confirmación a Natali Hermoso con el asunto canónico:  
+       `[C1580] Secco - Booking confirmado Maersk - BL KA0018437`.
+* **🗣️ El Remate Final del Bloque Comercial ante el Directorio (Palabras de Cierre):**
+  > *"Y acá viene la respuesta a la gran duda que teníamos todos: ¿Qué hace Lucía con las facturas de proveedores cuando abre la carpeta?*  
+  > *¡La respuesta es NINGUNA! Lucía no carga ninguna factura porque en este momento la mercadería recién se está cargando en el buque en China.*  
+  >  
+  > *Lucía tardó 45 segundos en cotizar, cerró la venta, pasó los datos a Kipintoch en 15 segundos con un solo clic, le dio el número a Natali y queda 100% libre para seguir vendiendo.*  
+  >  
+  > *La factura del flete de Maersk va a llegar recién dentro de 35 días, cuando el buque llegue al Puerto de Buenos Aires. Y cuando llegue ese PDF por correo, no lo va a cargar Lucía ni va a tener Stefania que tipear durante 12 minutos: lo va a agarrar nuestro Listener de Inteligencia Artificial en el servidor, lo va a vincular a esta misma carpeta por el número de BL, va a controlar que Maersk no cobre un dólar de más, y le va a dar la orden de pago limpia a Vanesa.*  
+  >  
+  > *Lucía pasa de perder horas en cálculos y planillas a vender más, con tarifas protegidas y con el seguimiento al día."*
+
+---
+
+#### Hoja de Ruta Rápida para Fran Durante la Reunión (Cheat-Sheet en 1 Minuto)
+
+| Minuto | Pantalla a Proyectar | Clic o Acción en Vivo | Concepto Clave a Decir a Alejandro | Concepto Clave a Decir a Vanesa |
+| :---: | :--- | :--- | :--- | :--- |
+| **00:00 - 02:00** | Tablero `/cotizaciones` (o Slide 05) | Filtrar por `Lucía Laje (1.080)`. Señalar columnas naviera, días libres y semáforo de vencimiento. | *"Lucía genera el 54% de las ventas. Acá tiene la radiografía completa de su cartera en un solo lugar."* | *"Las tarifas tienen semáforo verde, amarillo y rojo según los 15 o 30 días de vigencia de naviera."* |
+| **02:00 - 04:00** | Calculadora (o Slide 06) | Mover slider de margen. Simular baja a USD 150 (salta alerta amarilla) y a USD 0 (bloqueo rojo). | *"Libertad total de margen y perfiles por cliente (Estratégico, Estándar, Spot), sin markups rígidos."* | *"Alerta preventiva en USD 200 por el riesgo de descalce pesos/dólares en terminales y gastos bancarios."* |
+| **04:00 - 05:30** | Smart Follow-Up (o Slide 07) | Clic en *"Enviar Seguimiento"* en cotización > 48h. Mostrar plantilla autogenerada y copia oculta. | *"Estandarización del proceso: reactiva 15 cotizaciones dormidas en 10 min con copia automática a tu correo."* | *"Acelera el ciclo de cobro y evita que se pierdan presupuestos en la vorágine diaria de la oficina."* |
+| **05:30 - 06:30** | Registro de Feedback Comercial | Clic en `+ Feedback` en venta perdida. Seleccionar `COMPETENCIA_MENOR_PRECIO` (-USD 150). | *"Datos duros de por qué perdemos cargas para sentarte a negociar tarifas de volumen con Maersk o MSC."* | *"Estadística real de mercado sin depender de percepciones subjetivas."* |
+| **06:30 - 08:00** | Pase a Kipintoch y Cierre Comercial | Clic en *"Copiar para Kipintoch"*. Mostrar alerta si caducó vs. copia en 15 seg si está vigente. | *"Lucía tarda 15 segundos en pasar la carátula a Kipintoch y queda 100% libre para seguir vendiendo."* | *"Lucía no toca facturas de compra. La factura llega en 35 días y la audita la IA en el ingreso."* |
 
 ---
 
