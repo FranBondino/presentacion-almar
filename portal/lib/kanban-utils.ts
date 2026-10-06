@@ -180,7 +180,6 @@ export function classifyKanbanColumn(
   const cRecord = comp as Partial<ComprobanteRecord>;
   const cDomain = comp as Partial<Comprobante>;
   const cRaw = comp as Record<string, unknown>;
-  const cKanban = comp as Partial<KanbanComprobante>;
 
   const folderId =
     cRecord.carpeta_id ||
@@ -215,25 +214,17 @@ export function classifyKanbanColumn(
     (carpRaw?.costo_estimado_total as number | undefined) ??
     0;
 
-  const rawMonto =
-    cRecord.subtotal_neto ??
-    cRecord.monto_total ??
-    cDomain.subtotalNeto ??
-    cDomain.importeTotal ??
-    (cRaw.subtotal_neto as number | undefined) ??
-    (cRaw.monto_total as number | undefined) ??
-    0;
-
-  const desvioPct =
-    (typeof cKanban.desvio_porcentaje === 'number' ? cKanban.desvio_porcentaje : undefined) ??
-    (typeof cRaw.desvio_porcentaje === 'number' ? (cRaw.desvio_porcentaje as number) : undefined) ??
-    (typeof (cRaw.metadata_raw as Record<string, unknown> | undefined)?.desvio_porcentaje === 'number'
-      ? ((cRaw.metadata_raw as Record<string, unknown>).desvio_porcentaje as number)
-      : undefined) ??
-    (typeof (cRaw.metadata_extraida as Record<string, unknown> | undefined)?.desvio_porcentaje === 'number'
-      ? ((cRaw.metadata_extraida as Record<string, unknown>).desvio_porcentaje as number)
-      : undefined) ??
-    cDomain.desviacionPorcentaje;
+  const operationalCost =
+    (typeof cRecord.subtotal_neto === 'number' && cRecord.subtotal_neto > 0)
+      ? cRecord.subtotal_neto
+      : (typeof cDomain.subtotalNeto === 'number' && cDomain.subtotalNeto > 0)
+      ? cDomain.subtotalNeto
+      : (typeof (cRaw.subtotal_neto as number) === 'number' && (cRaw.subtotal_neto as number) > 0)
+      ? (cRaw.subtotal_neto as number)
+      : cRecord.monto_total ??
+        cDomain.importeTotal ??
+        (cRaw.monto_total as number | undefined) ??
+        0;
 
   const carpMoneda =
     carpRecord?.moneda ||
@@ -241,15 +232,13 @@ export function classifyKanbanColumn(
     (carpRaw?.moneda as string | undefined);
   const compMoneda = cRecord.moneda || cDomain.moneda || (cRaw.moneda as string | undefined);
   const sameCurrency = !carpMoneda || !compMoneda || carpMoneda === compMoneda;
-  const alertaActiva =
-    cRaw.alerta_activa === true ||
-    cKanban.alerta_activa === true ||
-    (cRaw.metadata_raw as Record<string, unknown> | undefined)?.alerta_activa === true;
 
-  const hasDeviation =
-    (typeof desvioPct === 'number' && desvioPct > 0) ||
-    alertaActiva ||
-    (estimatedCost > 0 && sameCurrency && rawMonto > estimatedCost);
+  // An overage / deviation exists strictly if the net operational cost exceeds the approved estimate
+  const hasDeviation = Boolean(
+    estimatedCost > 0 &&
+    sameCurrency &&
+    operationalCost > estimatedCost + 1.0
+  );
 
   if (hasDeviation) {
     return 'desvios';
