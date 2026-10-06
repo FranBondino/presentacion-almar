@@ -586,7 +586,7 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 - **Badges:** `AUTORIZACIÓN DIRECTIVA & GOBERNANZA` | `FIDO2 / WEBAUTHN SHA-256`.
 - **Tiempo Asignado:** Minuto 14:45 - 16:00 (01:15 min).
 - **Stakeholders Clave:** Alejandro Noacco (velocidad sin trabas), Juan Andrés Arloro (validez probatoria Ley 25.506).
-- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, datos clave de la operación Acindar / Maersk (BL KA0018437, sobrecosto naviero de +USD 305, margen resultante de USD 142,50 / USD 95,00 por debajo del umbral de USD 200). A la derecha, captura UHD (`screenshots/caso_c1234_webauthn_sha256_light.png`) del modal de autorización con sensor biométrico animado y hash SHA-256 de 64 caracteres.
+- **Lo que ve la Audiencia:** Layout en cuadrícula 1:1.25. A la izquierda, datos clave de la operación Dis-Den Odontología / Calamante S.R.L. · Maersk (BL KA0018437, sobrecosto naviero de +USD 305, margen resultante de USD 142,50 / USD 95,00 por debajo del umbral de USD 200). A la derecha, captura UHD (`screenshots/caso_c1234_webauthn_sha256_light.png`) del modal de autorización con sensor biométrico animado y hash SHA-256 de 64 caracteres.
 - **Visual Cues & Guía de Interacción:**
   * Destacar el margen operativo resultante: **USD 142,50** (o USD 95,00 en caso extremo), encendiendo el semáforo amarillo preventivo (< USD 200).
   * Explicar el dilema directivo: Alejandro necesita no perder la venta por burocracia, mientras que Juan Andrés necesita respaldo pericial inatacable.
@@ -594,13 +594,13 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
   * Leer el hash de auditoría y citar la **Ley Nacional de Firma Digital Nº 25.506 (art. 5)**: autoría, integridad inalterable y no repudio pericial pleno.
 
 #### 🎙️ Guion Textual Verbatim (Fran):
-> *"En la Carpeta C1234 nos encontramos con un descalce típico: el margen proyectado era de 142,50 dólares, por debajo del umbral preventivo de USD 200 debido a un recargo imprevisto de Maersk y costos portuarios locales en pesos.*
+> *"En la Carpeta C1234 nos encontramos con un descalce típico: el margen proyectado era de 142,50 dólares, por debajo del umbral preventivo de USD 200 debido a un recargo imprevisto de Maersk y costos portuarios locales en pesos.
 > 
-> *El sistema encendió el semáforo amarillo preventivo y bloqueó la emisión de la prefactura. Pero acá viene la innovación que une los intereses de Alejandro y de Juan Andrés:*
+> *El sistema encendió el semáforo amarillo preventivo y bloqueó la emisión de la prefactura. Pero acá viene la innovación que une los intereses de Alejandro y de Juan Andrés:
 > 
-> *Alejandro necesita autorizar en el acto sin trámites ni llamadas [mirando a Alejandro]. Y Juan necesita que si se autoriza un desvío, quede un respaldo legal inatacable [mirando a Juan Andrés].*
+> *Alejandro necesita autorizar en el acto sin trámites ni llamadas [mirando a Alejandro]. Y Juan necesita que si se autoriza un desvío, quede un respaldo legal inatacable [mirando a Juan Andrés].
 > 
-> *Miren cómo funciona [señalando el modal de la derecha]:*
+> *Miren cómo funciona [señalando el modal de la derecha]:
 > *Gerencia abre el comprobante, selecciona el motivo formal y simplemente apoya su huella dactilar en la laptop con* **WebAuthn (Windows Hello o Touch ID)**.
 > 
 > *Cero contraseñas que se puedan compartir o filtrar. El chip de seguridad local genera un par de claves asimétricas y estampa un* **hash SHA-256 inalterable de 64 caracteres** *en el libro digital de auditoría, junto con el timestamp UTC exacto y la justificación comercial.*
@@ -612,14 +612,14 @@ No es una presentación conceptual, ni un informe preliminar de relevamiento, ni
 #### 📋 Ficha Técnica & Forense de Respaldo — Caso C1234:
 | Campo / Variable | Detalle Técnico Verificado |
 | :--- | :--- |
-| **Identificación / Carpeta** | Expediente `C1234` / Cliente: Acindar S.A. |
-| **Embarque y Equipamiento** | BL `KA0018437` / Contenedor `MSKU7842897` con insumos siderúrgicos críticos |
+| **Identificación / Carpeta** | Expediente `C1234` / Cliente: Dis-Den Odontología / Calamante S.R.L. (Horacio y Norberto Calamante S.H., CUIT 30-68048259-9) |
+| **Embarque y Equipamiento** | BL `KA0018437` / Contenedor `MSKU7842897` con instrumental odontológico Guilin Woodpecker |
 | **Armador y Facturas** | Maersk Line A/S (Facturas N° `7554566633` y N° `7554364222`) |
 | **Desglose Económico** | Venta Cotizada: USD 1.850,00 \| Costo Estimado: USD 1.450,00<br>Costo Real Facturado Maersk: USD 1.755,00 (**Sobrecosto +USD 305,00 / +21%** por BAF y estadía Zárate)<br>Margen Resultante: **USD 142,50** (7,7% sobre venta; modelado alternativo USD 95,00 / 5,1%) |
 | **Semáforo Preventivo (< USD 200)** | Activación de advertencia amarilla: evita que fluctuaciones cambiarias o gastos locales en pesos vuelvan negativa la operación. No bloquea ciegamente. |
 | **Mecanismo WebAuthn (FIDO2)** | Autenticación con sensor de hardware (Touch ID / Windows Hello) y chip TPM 2.0. Generación de par de claves asimétricas sin contraseñas en texto plano. |
 | **Firma SHA-256 Registrada** | `d8a4f91b72e045c83210bc6a98711e4f9b8c347d0182ec35ab120984de63f512` |
-| **Metadatos de Auditoría** | Timestamp: `2026-09-30T10:15:32.412Z` \| Autorizante: Alejandro Noacco / Vanesa Meggiolaro \| Justificación: *"Ajuste extraordinario de flete Maersk KA0018437 y estadía portuaria en Zárate autorizado para evitar paralización de insumos planta Acindar"* |
+| **Metadatos de Auditoría** | Timestamp: `2026-09-30T10:15:32.412Z` \| Autorizante: Alejandro Noacco / Vanesa Meggiolaro \| Justificación: *"Ajuste extraordinario de flete Maersk KA0018437 y estadía portuaria en Zárate autorizado para despacho instrumental odontológico Dis-Den Odontología / Calamante S.R.L."* |
 | **Marco Jurídico de Respaldo** | **Ley Nacional de Firma Digital Nº 25.506 (art. 5 y conc.)** e ISO 9001:2015 § 8.5.6 |
 
 ---
@@ -1179,7 +1179,7 @@ Uno de los problemas operativos más desgastantes que detectamos en el relevamie
 #### El Problema Operativo Real:
 - Las navieras (Maersk, MSC, Hapag-Lloyd) o las terminales (TRP, Terminal Zárate, Exolgan) emiten **una única factura consolidada** que agrupa varios contenedores o conocimientos de embarque (BLs) pertenecientes a **distintas carpetas y clientes**.
 - *Ejemplo real:* Factura de Maersk por USD 4.200 que ampara 3 contenedores:
-  * Contenedores 1 y 2 (Acindar) pertenecen a la Carpeta `C1234`.
+  * Contenedores 1 y 2 (Dis-Den Odontología / Calamante S.R.L.) pertenecen a la Carpeta `C1234`.
   * Contenedor 3 (Metalfor) pertenece a la Carpeta `C1482`.
 - **Cómo lo resuelven las chicas hoy:** Imprimen el PDF o lo abren en pantalla y van **subrayando a mano con resaltador fosforescente** qué renglón corresponde a cada carpeta, haciendo cuentas manuales con calculadora de escritorio.
 - **Riesgos críticos de este método manual:**

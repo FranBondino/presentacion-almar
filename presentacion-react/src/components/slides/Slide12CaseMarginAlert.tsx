@@ -13,7 +13,7 @@ export const Slide12CaseMarginAlert: React.FC<SlideProps> = ({ onOpenLightbox })
         categoryBadge="AUTORIZACIÓN DIRECTIVA & GOBERNANZA"
         slideNumber="12"
         title="CASO C1234: ALERTA PREVENTIVA & AUTORIZACIÓN BIOMÉTRICA WEBAUTHN"
-        subtitle="Gestión de descalces de rentabilidad (< USD 200) y aprobación gerencial con firma digital en 3 segundos."
+        subtitle="Dis-Den Odontología (Calamante S.R.L.) · BL KA0018437 — Gestión de descalces de rentabilidad (< USD 200) y aprobación gerencial con firma digital en 3 segundos."
       />
 
       <div className="flex-1 min-h-0 grid grid-rows-[minmax(0,1fr)] grid-cols-12 gap-3.5 overflow-hidden">
@@ -21,9 +21,17 @@ export const Slide12CaseMarginAlert: React.FC<SlideProps> = ({ onOpenLightbox })
         <div className="col-span-5 flex flex-col justify-between gap-2">
           {/* Visible Data Card for Immediate Legibility */}
           <div className="p-3 rounded-lg border border-amber-200 bg-amber-50/60 space-y-2">
-            <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-amber-900">
-              Datos Clave de la Operación en Pantalla
-            </span>
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-amber-900">
+                Datos Clave de la Operación en Pantalla
+              </span>
+              <span className="text-[9.5px] font-mono font-bold text-amber-800 bg-amber-100/80 px-1.5 py-0.5 rounded">
+                BL KA0018437
+              </span>
+            </div>
+            <div className="text-[11px] font-sans font-semibold text-slate-800 border-b border-amber-200/60 pb-1">
+              Dis-Den Odontología (Calamante S.R.L.) · Instrumental Odontológico
+            </div>
             <div className="grid grid-cols-2 gap-2 text-xs font-mono">
               <div className="bg-white p-2 rounded border border-amber-300">
                 <div className="text-[10px] text-slate-500 font-sans">Margen Resultante:</div>
@@ -81,11 +89,11 @@ export const Slide12CaseMarginAlert: React.FC<SlideProps> = ({ onOpenLightbox })
         {/* Right Column: Case C1234 Mockup (7 cols) with KeyData and Focal Zoom */}
         <div className="col-span-7 h-full">
           <BrowserMockup
-            url="/carpetas/C1234 · Autorización Biométrica WebAuthn"
+            url="/carpetas/C1234 · Dis-Den Odontología (Calamante S.R.L.) · BL KA0018437"
             badge="WEBAUTHN OK"
             imageSrc="./screenshots/caso_c1234_webauthn_sha256_light.png"
             imageAlt="Caso C1234 Autorización WebAuthn"
-            caption="Modal de Autorización con Selección de Motivo, Sensor Biométrico y Registro de Auditoría"
+            caption="Dis-Den Odontología (Calamante S.R.L.) · BL KA0018437: Modal con Selección de Motivo, Sensor Biométrico y Registro de Auditoría"
             keyData={[
               { label: 'Margen Real', value: 'USD 142.50', color: 'amber', highlight: true },
               { label: 'Alerta', value: 'Amarillo Preventivo', color: 'slate' },
