@@ -1,4 +1,6 @@
-'use client';
+const fs = require('fs');
+
+const fileContent = `'use client';
 
 import * as React from 'react';
 import type { CarpetaRecord } from '@/lib/mockData';
@@ -13,6 +15,7 @@ import {
   ExternalLink,
   Sparkles,
   BadgePercent,
+  Send,
 } from 'lucide-react';
 
 export interface MailMessage {
@@ -51,11 +54,11 @@ export interface ActorProfile {
 export const CARPETA_ACTORS_MAP: Record<string, ActorProfile[]> = {
   C1234: [
     {
-      rol: 'Cliente Directivo & Importador',
-      nombre: 'Horacio Calamante / Gustavo Weedon',
-      email: 'comex@disdendental.com.ar',
-      entidad: 'Dis-Den Odontología / Calamante S.R.L.',
-      tipo: 'CLIENTE',
+      rol: 'Director Comercial & Key Accounts',
+      nombre: 'Juan Andrés Arloro',
+      email: 'jarloro@almarrosario.com',
+      entidad: 'ALMAR Rosario',
+      tipo: 'ADMIN',
     },
     {
       rol: 'Ejecutiva Comercial',
@@ -65,13 +68,6 @@ export const CARPETA_ACTORS_MAP: Record<string, ActorProfile[]> = {
       tipo: 'COMERCIAL',
     },
     {
-      rol: 'Agente Internacional Shenzhen',
-      nombre: 'Vic Mai',
-      email: 'vic.mai@eversail-sz.com',
-      entidad: 'Eversail Shenzhen Logistics',
-      tipo: 'PROVEEDOR',
-    },
-    {
       rol: 'Operador Principal',
       nombre: 'Natali Hermoso',
       email: 'nhermoso@almarrosario.com',
@@ -79,18 +75,25 @@ export const CARPETA_ACTORS_MAP: Record<string, ActorProfile[]> = {
       tipo: 'OPERADOR',
     },
     {
-      rol: 'Dirección Comercial & Aprobador WebAuthn',
-      nombre: 'Alejandro Noacco',
-      email: 'anoacco@almarrosario.com',
+      rol: 'Directorio & Finanzas',
+      nombre: 'Vanesa Meggiolaro',
+      email: 'vmeggiolaro@almarrosario.com',
       entidad: 'ALMAR Rosario',
-      tipo: 'ADMIN',
+      tipo: 'FINANZAS',
     },
     {
       rol: 'Línea Marítima',
-      nombre: 'Maersk Line Operations',
-      email: 'ar.import@maersk.com',
-      entidad: 'Maersk Line A/S',
+      nombre: 'MSC Customer Operations',
+      email: 'ar-bookings@msc.com',
+      entidad: 'MSC Mediterranean Shipping Co.',
       tipo: 'PROVEEDOR',
+    },
+    {
+      rol: 'Cliente Corporativo',
+      nombre: 'Acindar Comercio Exterior',
+      email: 'compras@acindar.com.ar',
+      entidad: 'Acindar Industria Argentina de Aceros S.A.',
+      tipo: 'CLIENTE',
     },
   ],
   C1434: [
@@ -339,8 +342,8 @@ export const CARPETA_ACTORS_MAP: Record<string, ActorProfile[]> = {
     },
     {
       rol: 'Comercial Exportación',
-      nombre: 'Lucía Laje',
-      email: 'llaje@almarrosario.com',
+      nombre: 'Joaquín Sabina',
+      email: 'comercial@almar.com.ar',
       entidad: 'ALMAR Rosario',
       tipo: 'COMERCIAL',
     },
@@ -499,96 +502,86 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
   C1234: [
     {
       id: 'm-c1234-cot-01',
-      from: 'comex@disdendental.com.ar',
-      fromName: 'Gustavo Weedon / Horacio Calamante (Dis-Den Odontología)',
-      to: ['llaje@almarrosario.com'],
-      date: '2026-08-08T09:15:00Z',
-      subject: 'Solicitud Flete Marítimo Instrumental Guilin Woodpecker // Shenzhen a Bs As // C1234',
+      from: 'compras@acindar.com.ar',
+      fromName: 'Mariana Giménez (Acindar Comex)',
+      to: ['jarloro@almarrosario.com', 'llaje@almarrosario.com'],
+      date: '2026-08-08T11:20:00Z',
+      subject: 'Solicitud de Cotización FCL Shanghai a Buenos Aires // Acindar // Ref: ACIN-2608',
       bodyExcerpt:
-        'Estimada Lucía: Solicitamos cotización de flete marítimo para importación de instrumental odontológico Guilin Woodpecker (1x40HQ) desde Shenzhen (agente Eversail / Vic Mai) con destino Buenos Aires / Rosario. Requerimos servicio con Maersk Line y 14 días libres de estadía.',
+        'Estimado Juan, Lucía: Solicitamos cotización para 1x40HQ con repuestos siderúrgicos desde puerto Shanghai (CNSHA) hacia Buenos Aires (ARBUE). Carga lista para embarque el 10/08. Requerimos condición FOB y al menos 14 días libres de demoras en destino. Saludos cordiales.',
       esEtapaComercial: true,
-      codigoCotizacion: 'COT-2026-00010',
+      codigoCotizacion: 'COT-2026-00060',
     },
     {
       id: 'm-c1234-cot-02',
-      from: 'llaje@almarrosario.com',
-      fromName: 'Lucía Laje (Comercial ALMAR)',
-      to: ['comex@disdendental.com.ar', 'anoacco@almarrosario.com'],
-      date: '2026-08-10T14:00:00Z',
-      subject: 'Cotización Oficial COT-2026-00010 // Dis-Den Odontología (Calamante S.R.L.) // Maersk C1234',
+      from: 'jarloro@almarrosario.com',
+      fromName: 'Juan Andrés Arloro (Director Comercial ALMAR)',
+      to: ['compras@acindar.com.ar'],
+      date: '2026-08-10T16:07:49Z',
+      subject: 'Cotización Oficial Emitida COT-2026-00060 // Acindar FCL Shanghai-Buenos Aires',
       bodyExcerpt:
-        'Estimado Horacio, Gustavo: Adjuntamos cotización pactada por flete marítimo: Venta USD 1.950,00 All-In con Maersk Line (BL KA0018437). Costo estimado base naviera: USD 1.807,50. Margen proyectado resultante: USD 142.50. Debido a la competencia spot y al tratarse de cuenta estratégica, el margen de USD 142.50 activa semáforo preventivo (< USD 200) y cuenta con aprobación de Dirección.',
+        'Estimada Mariana: En respuesta a su requerimiento, adjuntamos la cotización oficial COT-2026-00060. Flete marítimo pactado: USD 3.200,00 All-In con buque MSC JEWEL. Días libres de demora concedidos: 14 días. Validez de tarifa: 30 días. Costo estimado provisión naviera: USD 2.450,00. Aguardamos su confirmación para proceder con el booking en origen.',
       esEtapaComercial: true,
-      codigoCotizacion: 'COT-2026-00010',
+      codigoCotizacion: 'COT-2026-00060',
       attachments: [
         {
-          name: 'C1234_factura_maersk.pdf',
-          size: '4.7 KB',
-          url: '/facturas/C1234_factura_maersk.pdf',
-          tipo: 'Cotización / Factura Maersk',
+          name: 'COT_2026_00060_Acindar_Shanghai.pdf',
+          size: '84.2 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Comercial PDF',
         },
       ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
-        montoExtraido: '1950.00',
+        montoExtraido: '3200.00',
         moneda: 'USD',
         cuitValido: true,
       },
     },
     {
       id: 'm-c1234-cot-03',
-      from: 'comex@disdendental.com.ar',
-      fromName: 'Horacio Calamante (Dis-Den Odontología / Calamante S.R.L.)',
-      to: ['llaje@almarrosario.com', 'nhermoso@almarrosario.com'],
-      date: '2026-08-11T11:20:00Z',
-      subject: 'Aprobación Cotización COT-2026-00010 // Orden de Embarque Dis-Den Calamante // C1234',
+      from: 'compras@acindar.com.ar',
+      fromName: 'Mariana Giménez (Acindar Comex)',
+      to: ['jarloro@almarrosario.com', 'nhermoso@almarrosario.com'],
+      date: '2026-08-11T10:15:00Z',
+      subject: 'Aprobación de Cotización COT-2026-00060 - Emisión OC 450098231 // Acindar',
       bodyExcerpt:
-        'Lucía: Aprobamos la tarifa de flete marítimo de USD 1.950,00. Adjuntamos confirmación de orden para Guilin Woodpecker Medical Instrument. Por favor coordinar con el shipper en Shenzhen y con Vic Mai de Eversail. Copiamos a Natali Hermoso para el seguimiento operativo.',
+        'Juan: Aprobamos formalmente la cotización COT-2026-00060 por USD 3.200,00. Adjuntamos la Orden de Compra 450098231. Por favor abrir carpeta operativa y coordinar booking con MSC en Shanghai. Copiamos a Natali Hermoso para seguimiento operativo.',
       esEtapaComercial: true,
-      codigoCotizacion: 'COT-2026-00010',
+      codigoCotizacion: 'COT-2026-00060',
     },
     {
       id: 'm-c1234-ops-04',
-      from: 'vic.mai@eversail-sz.com',
-      fromName: 'Vic Mai (Eversail Shenzhen Logistics)',
-      to: ['nhermoso@almarrosario.com', 'llaje@almarrosario.com'],
-      date: '2026-08-12T04:30:00Z',
-      subject: 'Booking & Pre-Alert: Guilin Woodpecker -> Calamante S.R.L. // HBL ESZFL26060067 // C1234',
+      from: 'ar-bookings@msc.com',
+      fromName: 'MSC Mediterranean Shipping Co.',
+      to: ['nhermoso@almarrosario.com', 'jarloro@almarrosario.com'],
+      date: '2026-08-12T14:30:00Z',
+      subject: 'Booking Confirmation MSCU123456 - MSC JEWEL EB2609A // C1234',
       bodyExcerpt:
-        'Dear Natali: Booking confirmed with Maersk Line. Shipper: Guilin Woodpecker Medical Instrument Co., Ltd. Consignee: Calamante S.R.L. (Dis-Den). Container: MSKU7842897. HBL: ESZFL26060067. MBL: KA0018437. Vessel scheduled to depart Shenzhen/Hong Kong to Buenos Aires.',
+        'Booking confirmed. Vessel: MSC JEWEL. Voyage: EB2609A. POL: Shanghai (CNSHA). POD: Buenos Aires (ARBUE). ETD: 2026-08-10. ETA: 2026-09-18. Container allocated: MSCU9876543 (40HC). MBL: MEDUSH123456.',
     },
     {
       id: 'm-c1234-ops-05',
-      from: 'nhermoso@almarrosario.com',
-      fromName: 'Natali Hermoso (Operaciones ALMAR)',
-      to: ['anoacco@almarrosario.com', 'vmeggiolaro@almarrosario.com'],
-      date: '2026-08-20T10:15:00Z',
-      subject: 'Alerta Preventiva Margen USD 142.50 (< USD 200) // Carpeta C1234 Dis-Den // Requiere WebAuthn',
+      from: 'ar-invoices@msc.com',
+      fromName: 'MSC Mediterranean Shipping Co. (Invoicing)',
+      to: ['vmeggiolaro@almarrosario.com', 'srossi@almarrosario.com', 'nhermoso@almarrosario.com'],
+      date: '2026-09-02T16:45:00Z',
+      subject: 'MSC Invoice 0098-00041234 // Ocean Freight C1234 - MSC JEWEL',
       bodyExcerpt:
-        'Alejandro: El costo de flete Maersk Line cierra en USD 1.807,50 y la venta pactada en USD 1.950,00, dejando un margen de USD 142.50. El sistema encendió el semáforo preventivo amarillo (< USD 200) por descalce con gastos locales en pesos. Se requiere tu autorización biométrica WebAuthn para liberar la prefactura a Calamante S.R.L.',
-    },
-    {
-      id: 'm-c1234-ops-06',
-      from: 'anoacco@almarrosario.com',
-      fromName: 'Alejandro Noacco (Dirección Comercial ALMAR)',
-      to: ['nhermoso@almarrosario.com', 'vmeggiolaro@almarrosario.com', 'llaje@almarrosario.com'],
-      date: '2026-08-20T10:18:22Z',
-      subject: 'AUTORIZACIÓN WEBAUTHN CONCEDIDA (SHA-256) // Carpeta C1234 Dis-Den Odontología',
-      bodyExcerpt:
-        'Autorización biométrica confirmada en 3 segundos vía WebAuthn FIDO2 (Touch ID). Hash de firma SHA-256: d8a4f91b72e045c83210bc6a98711e4f9b8c347d0182ec35ab120984de63f512. Motivo: Cuenta estratégica fidelizada Dis-Den Odontología / Calamante S.R.L. Operación destrabada y prefactura liberada.',
+        'Attached ocean freight invoice 0098-00041234 for USD 2,450.00. Concept: Flete Marítimo Internacional (FMA). Exento IVA Art 7 Inc b Ley 23.349. Tolerancia de costo controlada vs cotización COT-2026-00060.',
       attachments: [
         {
-          name: 'C1234_factura_maersk.pdf',
-          size: '4.7 KB',
-          url: '/facturas/C1234_factura_maersk.pdf',
+          name: 'MSC_Invoice_0098_00041234.pdf',
+          size: '112.5 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
           tipo: 'Factura FMA Naviera',
         },
       ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
-        montoExtraido: '1807.50',
+        montoExtraido: '2450.00',
         moneda: 'USD',
         cuitValido: true,
       },
@@ -619,6 +612,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Estimado César: Cotizamos flete marítimo Ningbo a Buenos Aires con Maersk Line: Flete venta USD 1.350,00 All-In con 14 días libres en Terminal 4. Costo base naviera estimado USD 848,00. Margen comercial: USD 502,00. Vigencia de tarifa: 15 días. Saludos cordiales.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00061',
+      attachments: [
+        {
+          name: 'COT_2026_00061_Siderar_Ningbo.pdf',
+          size: '76.8 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Comercial PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
@@ -652,7 +653,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '7554566633.PDF',
           size: '14.8 KB',
-          url: '/facturas/7554566633.PDF',
+          url: '/comprobantes/7554566633.PDF',
           tipo: 'Factura Local Charges',
         },
       ],
@@ -690,6 +691,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Estimados: Enviamos cotización oficial COT-2026-00357 para el tramo TRP Buenos Aires a Villa Gobernador Gálvez con chofer asignado de LGV Transportes. Tarifa pactada: $968.000,00 ARS + IVA 21%. Costo estimado chofer: $720.000,00 ARS. Margen: $248.000,00 ARS. Vigencia: 15 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00357',
+      attachments: [
+        {
+          name: 'COT_2026_00357_Paladini_Terrestre.pdf',
+          size: '68.4 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Terrestre PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FTE',
         desvioDetectado: false,
@@ -723,7 +732,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '0004-00000303.PDF',
           size: '18.2 KB',
-          url: '/facturas/0004-00000303.PDF',
+          url: '/comprobantes/0004-00000303.PDF',
           tipo: 'Factura A Terrestre',
         },
       ],
@@ -761,6 +770,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Estimados: Cotizamos flete aéreo exportación vía Lufthansa Cargo vuelo LH8265 directo EZE-FRA. Flete venta acordado: USD 5.200,00 All-In con gastos de emisión AWB. Costo provisión aerolínea: USD 4.150,00. Margen comercial: USD 1.050,00. Vigencia: 15 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00610',
+      attachments: [
+        {
+          name: 'COT_2026_00610_Vicentin_Aereo.pdf',
+          size: '91.2 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Aérea PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FIA',
         desvioDetectado: false,
@@ -804,13 +821,21 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
       date: '2026-04-10T11:20:00Z',
       subject: 'RE: SOLICITUD COTIZACION BOLEX PO 068 - Molinos // COT-2026-00226 // C1024',
       bodyExcerpt:
-        'Estimados Molinos Abastecimiento: Cotizamos con Hamburg Süd / Maersk servicio feeder Santos a Zárate: Flete venta USD 1.800,00 All-In con 14 días libres de demoras. Provisión de costo estimada: USD 1.200,00. Margen comercial: USD 600,00. Validez: 30 días.',
+        'Muchas gracias Cesar! Cotizamos con MSC servicio feeder Santos a Zárate: Flete venta USD 4.250,00 All-In con 14 días libres de demoras. Provisión de costo estimada: USD 3.400,00. Margen comercial: USD 850,00. Validez: 30 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00226',
+      attachments: [
+        {
+          name: 'COT_2026_00226_Molinos_Santos.pdf',
+          size: '81.5 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización FCL PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
-        montoExtraido: '1800.00',
+        montoExtraido: '4250.00',
         moneda: 'USD',
         cuitValido: true,
       },
@@ -899,6 +924,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Buenas tardes Mariela: Cotizamos flete marítimo Maersk Line con 14 días libres de demoras. Flete venta acordado: $1.617.000,00 ARS (FTE) + USD 791,00 (THC terminal). Provisión de costo estimada: $1.220.000,00 ARS. Margen comercial: $397.000,00 ARS. Validez: 20 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00105',
+      attachments: [
+        {
+          name: 'COT_2026_00105_Albertoni_FCL.pdf',
+          size: '88.1 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Comercial PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
@@ -932,7 +965,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '7555554402.PDF',
           size: '13.4 KB',
-          url: '/facturas/7555554402.PDF',
+          url: '/comprobantes/7555554402.PDF',
           tipo: 'Factura Maersk',
         },
       ],
@@ -970,6 +1003,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Paula, buenas tardes! Cotizamos la exportación aérea vía LATAM Cargo / Aerolíneas Cargo Ezeiza-Miami: Tarifa venta All-In pactada: USD 11.004,04. Costo estimado provisión: USD 9.200,00. Margen comercial: USD 1.804,04. Validez: 15 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00428',
+      attachments: [
+        {
+          name: 'COT_2026_00428_Bertot_Aereo.pdf',
+          size: '79.2 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Aérea PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FIA',
         desvioDetectado: false,
@@ -1014,6 +1055,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Dear Nicola, Mariana: Our agent AMA Freight will contact you in order to proceed with shipment. Flete venta acordado: EUR 10.848,55 con 21 días libres de demoras. Provisión estimada: EUR 8.850,00. Margen proyectado: EUR 1.998,55. Validez de tarifa: 20 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00067',
+      attachments: [
+        {
+          name: 'COT_2026_00067_Secco_Hamburg.pdf',
+          size: '95.6 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Marítima EUR PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
@@ -1035,7 +1084,7 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         {
           name: '261005130R.pdf',
           size: '22.4 KB',
-          url: '/facturas/261005130R.pdf',
+          url: '/comprobantes/261005130R.pdf',
           tipo: 'Invoice Internacional EUR',
         },
       ],
@@ -1073,6 +1122,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Buenos días: Dando continuidad a los requerimientos técnicos, cotizamos con Hapag-Lloyd / MSC: Flete venta acordado USD 2.800,00 All-In con 10 días libres de demoras. Provisión estimada: USD 2.240,00. Margen proyectado: USD 560,00. Validez: 30 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00457',
+      attachments: [
+        {
+          name: 'COT_2026_00457_Saprograf_Cartagena.pdf',
+          size: '83.0 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Exportación PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
@@ -1119,6 +1176,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Hola Juan, Ceci: Adjunto cotización oficial COT-2026-00113 confirmada en Kipintoch. Flete marítimo LCL acordado: USD 680,00 All-In con co-loader MSL Líneas Marítimas. Costo base estimado: USD 500,00. Margen: USD 180,00. Nota: Incluye provisión fiscal para recargo BUFF al 21% IVA. Validez: 15 días.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00113',
+      attachments: [
+        {
+          name: 'COT_2026_00113_Juan_Cuello_LCL.pdf',
+          size: '74.5 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización LCL PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FMA',
         desvioDetectado: false,
@@ -1165,6 +1230,14 @@ export const CARPETA_MAILS_MAP: Record<string, MailMessage[]> = {
         'Estimada Elena: Enviamos cotización oficial COT-2026-00018 para transporte aéreo urgente vía British Airways / SAA Logistics UK. Tarifa flete: £543 GBP (equivalente oficial BNA USD 740,00 al tipo vendedor 1.3628 a fecha de embarque). Costo provisión: USD 550,00. Margen comercial: USD 190,00. Blindaje cambiario con constancia BNA adjunta.',
       esEtapaComercial: true,
       codigoCotizacion: 'COT-2026-00018',
+      attachments: [
+        {
+          name: 'COT_2026_00018_CONICET_GBP.pdf',
+          size: '86.4 KB',
+          url: '/comprobantes/factura_ejemplo.pdf',
+          tipo: 'Cotización Multimoneda GBP PDF',
+        },
+      ],
       aiClassification: {
         tipoGasto: 'FIA',
         desvioDetectado: false,
@@ -1226,8 +1299,8 @@ export function CarpetaMailTimeline({
 
             return (
               <div
-                key={`${actor.email}-${idx}`}
-                className={`p-3.5 rounded-lg border transition-all ${
+                key={\`\${actor.email}-\${idx}\`}
+                className={\`p-3.5 rounded-lg border transition-all \${
                   isAdmin
                     ? 'bg-purple-50/70 border-purple-200 shadow-2xs'
                     : isComercial
@@ -1239,12 +1312,12 @@ export function CarpetaMailTimeline({
                     : isFinance
                     ? 'bg-emerald-50/50 border-emerald-200'
                     : 'bg-slate-50 border-slate-200'
-                }`}
+                }\`}
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="space-y-0.5">
                     <span
-                      className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
+                      className={\`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider \${
                         isAdmin
                           ? 'bg-purple-700 text-white'
                           : isComercial
@@ -1256,7 +1329,7 @@ export function CarpetaMailTimeline({
                           : isFinance
                           ? 'bg-emerald-600 text-white'
                           : 'bg-slate-600 text-white'
-                      }`}
+                      }\`}
                     >
                       {actor.rol}
                     </span>
@@ -1297,17 +1370,17 @@ export function CarpetaMailTimeline({
             <div key={mail.id} className="relative group">
               {/* Timeline marker bullet */}
               <div
-                className={`absolute -left-6 top-2 h-3.5 w-3.5 rounded-full border-2 border-white shadow-xs ${
+                className={\`absolute -left-6 top-2 h-3.5 w-3.5 rounded-full border-2 border-white shadow-xs \${
                   mail.esEtapaComercial ? 'bg-amber-500 ring-2 ring-amber-200' : 'bg-[#0072BC]'
-                }`}
+                }\`}
               />
 
               <div
-                className={`rounded-lg border p-4 transition-all space-y-3 ${
+                className={\`rounded-lg border p-4 transition-all space-y-3 \${
                   mail.esEtapaComercial
                     ? 'border-amber-200 bg-gradient-to-r from-amber-50/50 via-white to-amber-50/20 hover:border-amber-300'
                     : 'border-slate-200 bg-slate-50/60 hover:border-slate-300 hover:bg-white'
-                }`}
+                }\`}
               >
                 {/* Email Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-2 border-b border-slate-200">
@@ -1317,12 +1390,12 @@ export function CarpetaMailTimeline({
                         {mail.fromName}
                       </span>
                       <span className="text-[11px] text-slate-500 font-mono">
-                        {`<${mail.from}>`}
+                        {\`<\${mail.from}>\`}
                       </span>
                       {mail.esEtapaComercial && (
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-amber-100 text-amber-900 border border-amber-300">
                           <BadgePercent className="h-3 w-3 text-amber-700" />
-                          <span>Etapa Comercial {mail.codigoCotizacion ? `[${mail.codigoCotizacion}]` : ''}</span>
+                          <span>Etapa Comercial {mail.codigoCotizacion ? \`[\${mail.codigoCotizacion}]\` : ''}</span>
                         </span>
                       )}
                     </div>
@@ -1340,7 +1413,7 @@ export function CarpetaMailTimeline({
 
                 {/* Email Subject & Excerpt */}
                 <div>
-                  <h4 className={`text-xs font-bold mb-1 ${mail.esEtapaComercial ? 'text-amber-900' : 'text-[#0072BC]'}`}>
+                  <h4 className={\`text-xs font-bold mb-1 \${mail.esEtapaComercial ? 'text-amber-900' : 'text-[#0072BC]'}\`}>
                     {mail.subject}
                   </h4>
                   <p className="text-xs text-slate-700 leading-relaxed bg-white p-3 rounded-md border border-slate-200">
@@ -1388,7 +1461,7 @@ export function CarpetaMailTimeline({
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {mail.attachments.map((att, attIdx) => (
                         <div
-                          key={`${att.name}-${attIdx}`}
+                          key={\`\${att.name}-\${attIdx}\`}
                           className="flex items-center justify-between p-2 rounded-md bg-white border border-slate-200 hover:border-sky-300 transition-colors shadow-2xs"
                         >
                           <div className="flex items-center gap-2 min-w-0 pr-2">
@@ -1426,3 +1499,7 @@ export function CarpetaMailTimeline({
     </div>
   );
 }
+`;
+
+fs.writeFileSync('portal/components/carpetas/CarpetaMailTimeline.tsx', fileContent, 'utf8');
+console.log('Successfully wrote enriched CarpetaMailTimeline.tsx!');

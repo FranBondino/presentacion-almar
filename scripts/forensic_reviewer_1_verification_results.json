@@ -1,0 +1,1132 @@
+[
+  {
+    "testCase": "Case 1: Carpeta 900 (Decaroli / Agroleite / Quantum)",
+    "status": "PASS",
+    "messageId": "<05b701dcb195$04ab4950$0e01dbf0$@almarrosario.com>",
+    "date": "Wed, 11 Mar 2026 17:24:06 -0300",
+    "from": "Victoria Moyano <vmoyano@almarrosario.com>",
+    "to": "\"'Lucas Cerentini - Quantum Logistics'\" <cs.import09@quantumlogistics.com.br>, \"'Expo'\" <expo@almarrosario.com>, \"'Laje Lucia'\" <llaje@almarrosario.com>",
+    "subject": "ROS GRU - Air / Consol // Decaroli - Agroleite // EA900",
+    "snippet": "Hello dear, Please note that we have a new air shipment from DECAROLI to AGROLEITE MAWB PP and HAWB CC. Find attached commercial docs + drafts for approval Incoterm: FCA Rosario Customs broker at",
+    "attachments": [
+      {
+        "filename": "image001.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37876,
+        "attachmentId": "ANGjdJ97wUb2I_ibjjWk1lFcGdtv3vKt6F4ETvpG-krQU-sGmTnoLiLfWUVgJWrCwzXelpZfrfjWu1rJSLahY-Hb447vP-LUkQPKVzJAkzOJL-wzhPGPe4GJtmjFAIKcNlLWSE2wh4zgV-ROquYik8FEuLBMLk02Apl001F7WI66M8WOr47-rszQGgIpt6UtNmxxUIhQIJuA7F6PF6t1PmCP6VQfUeUzIX8jZnwfsdczNh2Kf9b1XbuYw-dxMnP85kuNIwdxnOpKmXNAqcdwNrsJDcqMGtyo5MdpYrlRbn26olH-XSI0XLDNpjfku2UfeQF620sSPQvLfOdeFFHUep55RY17F_3FMf1pozQZR67FBDgSO1glT7rDr4aFo84MGRL4zord-btSkS7FgeY_"
+      },
+      {
+        "filename": "DECAROLI - SIM 26052EC01002346J.pdf",
+        "mimeType": "application/pdf",
+        "size": 72953,
+        "attachmentId": "ANGjdJ99RGc8c4mOmzA0S9lC3UResOgraw_v8tqjxZjLDYmMlObJW1WnUdout7AtSeU5mFd0DBuxmQ112oW4HIn82ZXqAInoE9eJ-K_DnkUjAX2qrPs1scMQdJ24NRJkj3qFnqZHU-l9IuB5ra1eAomNxx3cocCmi0_afaYahgRkcIxwLoG3O2Hl10uYllGTRRTtvkjd1mJNSDqwYy_0Orxs_wEv2-rDbLCbr0JT-yik3FDWZB_g3KUcfjDVD-b05IuTvruc9RlaaIXxCTFV13bow19Ilnd3MhJSlWuLJ0hI6Q_qCZptGWkYSzr-RqsK9AtdhVuyFtdd1uwOwoA1GWRIYz-PZDScyJpdfAkM0d5Ry52O9nz9V_r8oT28ohmPljmOqQE5OpaaFO2T27Sy"
+      },
+      {
+        "filename": "MAWB 045-21444522_draft.pdf",
+        "mimeType": "application/pdf",
+        "size": 39701,
+        "attachmentId": "ANGjdJ-E3zOjA-XG5ClBK5pKwSBUNO2q4PI1bmICThmJTV9Z3tT1BWcqIc5CV2Ny3XH0gKrU-dc2zcCFS_LbJN2lyhi3nbUvmkfi62fEURnNPpEZ7aMZHFEXOPKjaVqt3kWVJlWAsgPjg-CGvmOVo_Cprpqtp6LIHZAiI6EBrUfiRCOKL8nd8fZ_Vh8WqmT0hzY49Iai8cJKX2gbWU9jcASxQBm8BuQtmybcu5RQet_zvyw8qX5lEWIb5ck7ePdXPm6lhL_OwKOs4ibY-zDdsI47AXqUjLzO4tn3rLn48O1NbTLF1Rc4IVeltNaxodIBvjPVhOVqDdXuy5_CL2EgJqzKQ6m8QHDQzKDK9EwILYoAOIz4Gh8ROAh2jQ26iV8"
+      },
+      {
+        "filename": "HAWB R900GRU_draft.pdf",
+        "mimeType": "application/pdf",
+        "size": 39828,
+        "attachmentId": "ANGjdJ9ECg23cvaFKSqQ1VJUWP8OApCXR3xT82i-TNIwljNrQr_LlDLsp62cJ9cStc5v9ku_zdlpWKmcYqrqFxT_ZKsAk54p5vvdaSqcBMWio_KnS05PxufWuhRqj3wPqSYdU9GWIPOovI_YPAJTOzONFpRSLjwEdjo8Prau4qEFpT6PL11sgBAMb6uYDknZDLj1UlyfXUhdsqtKy1wP7hIHZB6QvI5QCxLDA_lAEewGydvH10IWNO3LGTKthHubQNhP_8RmReNKW1SKRi96BEoIqLAFwACODBbdz0_3DNBXm8wknx0NZXf-ahLYxpmf-hlzShLJGEulIwFwnTYscgNtAjbLeRtf-EIegoG11pxkf9m1WykU_PvN5McCGIg"
+      },
+      {
+        "filename": "DECAROLI - FACT 148.pdf",
+        "mimeType": "application/pdf",
+        "size": 523483,
+        "attachmentId": "ANGjdJ-RP8gmstbHqXOuAjt0ZK0GM8tlYpiUFoi1pYx6DX52W2z2Wxa8_JG-vZVl_rQcB06R8x5TBIoc1CjPU_o0yg0JzQlbS54qPsPE-L4IYntcP2-Ki1Smwg9XwD50k64afeBvpK6a_kicTyHUTJdcKIuT4Heqyq7r7kSbkJWWpFZGTtL9vQdYJOPEU0T2R5ADWBsyU0tHegPfiWtNV9NIMTOufca4GKDrG71aJXH0yI0fAZXYKROqd07PyiJw5SCl2kbziSuS55AhXwCbDtmtNICSN7YjAHokwL40gyNGFErYeTqM-jD8G70UYvTGoPTcel5SQ-sE1Ka-xSHtK_wvIxcy4lgUrRWCR6zMV8zNID7XrYbXPyXTtiDZo0IQuxxTsBjbhG6bHOjOBe4-bjO1Wr7-smibxD752556HQ"
+      },
+      {
+        "filename": "DECAROLI - LE 148.pdf",
+        "mimeType": "application/pdf",
+        "size": 288719,
+        "attachmentId": "ANGjdJ91NQnSdAGWAj69l6En4_pxxpj-9rCmgoB8M1ys8o_mEgSjy_aBoP0innZMMK623apBlJzrD2GHbWp7ItqKCQKIAJp4dDfmK8SnjvtacxlSkhOQkWj9G1QLGmHk0zefnYuryYKEPe1972NkWv6jmHwmxxwMG3h1nvmJ2SpQZPvp-RpxeLvM5pFry3Ui1GYTbdPwmThC-wGTmtInogaNuPzEXxXOkLpUJZZghK7pnK0w7iS43k08-h4R-ZMC4Jfqpjm3Vn0I9XgIhpD9wmRjod8I0CN1ndezWYJjQDqukVrWblW-nO3AAKzs3tXaaKLZv3bA8XgaFgen2lQiZ4OqPHRxHW5QGXbHBoa-WbUuOmtLIPTaEfZ2LmXJvSx-3IKUT99WKXTATJgK0X5aKQLni1N8-2pOodEtX-ugeg"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 1: Correo 1.3 Multa R$ 5.000 Quantum",
+    "status": "PASS",
+    "messageId": "<RO2PR80MB7780A746AB542DBCFB04B793BB4BA@RO2PR80MB7780.lamprd80.prod.outlook.com>",
+    "date": "Mon, 23 Mar 2026 12:09:07 +0000",
+    "from": "Iago Silva Braga - Quantum Logistics <cs.import16@quantumlogistics.com.br>",
+    "to": "Victoria Moyano <vmoyano@almarrosario.com>, \"'Expo'\" <expo@almarrosario.com>, \"'Laje Lucia'\" <llaje@almarrosario.com>",
+    "subject": "RE: ROS GRU - Air / Consol // Decaroli - Agroleite // EA900 - IA Agroleite - 8",
+    "snippet": "Hi, dear Sorry, for the late reply. Actually, we received no fine notice until now. According to the law, we have up to five years to receive the fine. The penalty is stipulated in Article 107, item IV",
+    "attachments": [
+      {
+        "filename": "image006.png",
+        "mimeType": "image/png",
+        "size": 14803,
+        "attachmentId": "ANGjdJ-evGZMsLwIU-8aZZPsOX15O8BOqJUwU9fRas0zXx2n1SmzCrOJl6pa-T0Kn84oLM0r-5NplhdFys2CvvnIvifM1vo2w2NjMntJcYWUivkHF6NqWpu-bxl09OImxZNqAOahmMEPlPv4RTlH6fOQ8CaSrzqhOew3SXXon8SJCrJuGvhtDUZwOv_ScvSNCpOAukq8nAilWfFxp2rgV1afKEefeWyWDu-mzYa3wcedRCT1JuTlu643-MAcCnVbrWqNq3PrC56jsHKNiMLsFNq4d3P4zKwIhOJaxeO6i9mtRupZg-hBwHmzskiC_9ZLrqfHkpd3Vv9sU2iUSSIaGAs4qR5z7kKgkr8AOSYPB2zQAxcr5vd-9xot77h8TzFYwFpFtLpnr3W9tFDpzLYw"
+      },
+      {
+        "filename": "image020.png",
+        "mimeType": "image/png",
+        "size": 30832,
+        "attachmentId": "ANGjdJ-BkaQ4o8X0m_LqEaTDdkBsQZnXuIRrWoUxaPh2r5ARack08zpgdNh1NNwa7Fii4x9dTs4r0uv3dHblGPA2q1vTq_e1setgwmqXHUlAMzqODPpIZ9Aqgj2sQTP44i40HCqdatovTCPLcRgD2H5L08HJypqUVcZYirggsQ1k2FmX7fBFE5kdZUEHQHXs0zbYQU5pkjkisPOChWVn5MjJXpKqvdDGolMzK97aDdXLxj6klrEBzQrDxlH0D23DNr_IlNeYSQzFxEnBYU4tzlWswL_dvWUoC3H3kj7iTKEf6H3BopWqSE58nk_bB9CZmy1Id3yaYuYDeiV9SJqCO6Qx3wVJ_ck_fKLUet0a3R1uUaFAAGTvMCbn2nlsFFJR9JX7kEKwmLFFcUIH8d1YBBgnXIj7nrBjwy4-1aUN4A"
+      },
+      {
+        "filename": "image026.png",
+        "mimeType": "image/png",
+        "size": 26228,
+        "attachmentId": "ANGjdJ-L0d-JCUNZbATcobTVc-tgSCwMxF8mCY43ciBwP5V1raGXiXzEDwWCjaYKTrhZQ0Q70Lv78kon8xSeJOF-avXY4g93OWQZjFPG4Dx8EmVl46tkKfZN7raBxa9B53F3QBmhdgs4-TVINGB19-0_bKmBZN8ceQ_y2qY7II2aqNYpPii-yw4gbJ0-NmNXTdRoIWgNSz6Bgtpz511wFBMKVoNKccdDsVaqWLFt9NOszkvdzTK3NJxZfZNs5mncjo_IY19VAgZxM-BwQB6mbceQ0nmTaOBfO8dUYZZ6uzFOrYzN3d99KBT7Zcepi8tkMi5AKkZGP3kWb9-sl54U0CKCVkMQ4HecmwozQQ7AmkHD7dTgqZEr7iKU6AanLCs5eMsED8iyD-e5qAla_N8P"
+      },
+      {
+        "filename": "image002.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37919,
+        "attachmentId": "ANGjdJ9WxAziG3TlTCRYT-pXZs7NF4uW8wLIZiDRt4vn5yam4A1sNpH7Uh0mE3z2SrH-kZ6PxOW0rHwWN2hW3vGeSnoflI_MyGx5lTqGBktsGeWh1OPRdbYZvXpKKi0Xs0duhpnxFs-1VzDC3mxj0fiddw_JDVy2bZ0_EOzXbhfm0oOfe38p1kaOxEExoEoweGg2amYkCsk02BFTlCJ15AuMB3NRhwFPRQEfTROJodBupR2urJNqe5kpScE1HRHg7SxKZkW9NLGGPjh2mSjMEDW_EIPOGhbI9BU024pSBvvL_LnqEonokeqnj2Plz7o-wTaKYcCe1xe3xv0n32E1eR_x5Q1PCNjnR1Xv4ppQtwy-cnt43yHIIOIXTk15a8qnRVMc-BRDzZm-_AV64LnVCSwY16_uLx54_YJw5ieiLA"
+      },
+      {
+        "filename": "image004.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37697,
+        "attachmentId": "ANGjdJ8BDJCV-3c79A5jwN7EYcQp3F8poX4EqxWH8DHbUCOMKZW99E81opVIw3c1OwJY8ScngirN3M0EIMoieRC0gmbISijs6LJPIoHxJw11CdFBmWci-b0rlEjNux5Z4P0zExVtMsKKqG6Qq3zFHOdZ1aEOnB0otZUQnh6gBoM1Javqv4ci4OTx91qLEAr33DUglr8D-pi35EprKwQYcKRmRWCNYNngumcU1V37KvLcOWkwQDvfkl-X4rc4wPXwq_gXguSDYS1CHOt9ugZlseREk_GXF7mfgJt_3uRXG1C_wHN7PKNPeNe6jMU4VtbzDm_Isqf8U37RrpDUzyfHguikVErc4nabGa_yQ-us24d7UHO85CL_mxLIaNFAbzNq6Su2kRJ938fFN2dEEuGIm0tBZxsU4id2yA7e-TNGnw"
+      },
+      {
+        "filename": "image005.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35383,
+        "attachmentId": "ANGjdJ8ay08cDVH6YRfxxDAditWOuCNHSWL9Q3MBtt7VIyIHMVJ-4YYANE3NMfAUog_AzphFg_oAFHa5PPw-1BU1GWskk1nWR1cvY4v1LnmBf4YtL5Oz19IUU-EN8xoTPkJdJ5oON4vYa-0oqk6KTAFJiuN5WPgOv_Tcc_iZ4mlJ4hSXHSWGylFr6QbkeyUYghCnGcITKkNsw8z2kZE_R2oQNhE-qlUzNPyBMyW_rgR4KNEGRDIgltm48k-uMKoMAyubr57uPWDniI1Tjh_LmX7XpIDpRXqRQIjZ9IpEE5FxpUY4FXjxoVztn9SSwOP9tpB7q5tybjuI9gTageyyQPtxtRNDgwgzHsiDS0N6uc8rIwXynxcBFJD-aWtFuKa4unud2P1D_Og9hPjZ3PQF"
+      },
+      {
+        "filename": "image008.jpg",
+        "mimeType": "image/jpeg",
+        "size": 24528,
+        "attachmentId": "ANGjdJ-hpFpY33zwHWD45IMF6wDBKZG3SFoQOp6JM6EbgAliDyZ2jJ0VD8hS4-sHcUutxI9PgM35hlVjDC0VfYSFCYDdjB2KyPSaBfoAvOKXZz9n8I6u5p5r115i9txEABcn8Z7pFR6IdHa4YdgtYcuys-z8ZhLJ0BDFHcobBW1dkIzQHpJeToxLcLAmKehD2XG4mp-gafe_X6gY6j0K_jOEx3ys-GR1XmCtwR5bmuyvkE0aX_j4VQsjlHB5gaiCzGm-Hx60LvMmqyOI1heVbOYMOc3B5WGvcGn3EiGR9LH09JgjNVHQjisWdJeJDcrxJak28S1RjEvFjqUi7iv62Zvrg6kfNg-CDE-NEiUJmX3NZvsK-P0EV4RP3u6rJNi4LNfhiqRgl1yh-2Bq_fhdoD11Yq25tgWGJmNHSR5bpA"
+      },
+      {
+        "filename": "image009.png",
+        "mimeType": "image/png",
+        "size": 173443,
+        "attachmentId": "ANGjdJ_kH0knz3UM6N9rkiwnFCVTpYVl94qaZIO7wMfjvAUu9ExuPOcmjXjtld3NY3387tYLZg94teUMIC9GkaE6kl6hc9ATgi50pXduX5oPVQIVgwkg1xKSG1PIV-AFNnkju9DkAfTWrMUswv3iiboEd3OkoRIj5dDGVthc1kZSeyIWUdcSbUsg4dz3_xAiwHK3SDfzYP0kI5LKOu5klm1lZDhrDhDSO3Jx8xO5w0RNsaGW8Kgz-YcgTz_aOhY4um7e7VhmEvJzPsYsNbywtMrKYiPq_tekfMNOpbJk-B-HHEleuCqh7wzl3kwOtFWcLT7mytTk_1UKRkhrA1DTZPkIaO20jxa3lWLA0lWbTJ_FV9ee6HEUDe0XtVRq09AsLHKbEgqjemXkXxYrs8wgN7zu_CcFOmbyAcj_q68iwQ"
+      },
+      {
+        "filename": "image012.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35371,
+        "attachmentId": "ANGjdJ9OkcqvKF-ccIWsCXf--6wyQwMICRqqHQdKwjTtIXwXjbdEq3xLe31qvtbNsap3sYi2xLBky9T1nKENB8bMkH-MeSjt-_Nb5Vp2R1qn5vpnkRmmVI1aGIAq0DanL35Y9wszxxkPmqFOuNcNyQIrUYLFJ9SB6zwIvmihnNvnuvWLvDncUX2V3lhdOMbNp0BC_c2QEoRItMBMadPYGhnZ6MdAHfaBwQy5WxeSv_My2XDk4FD08r7VXqFlNawgafBJqL35KYXpWj2rQxdDGgNhpo5h80p8Y2QM-KNjtm_PQyUd02lW5eanlCyqXR9f5NkMyWkTnxu-OVJQ-afQaGsYK7cxYVrFNcTdtBOvke8zGKuOjbHqkephyicUrvJFDRMXkoU3LxlU6Pg5NRcWx8gVMoG2g4mFi1MSQWgEwA"
+      },
+      {
+        "filename": "image015.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35346,
+        "attachmentId": "ANGjdJ_UJ82eiJAtpvvgVj0OmYzxPOSCZrQBIosP3cMbEPO0srg3Txz8lLmEmKuJIY-TQqKdmQVlzrwZW5M96ZzdOWkNDzt5HQ_ezeGLFX06kvE8Mf3qYtINYISIhnuibbVxXLWmZuaVzFrPGl2KMfbG50njy5FMPxWMSJcHLnaYvrhx8l0_t5epGcPCNXDCgm7uqyVTmYn9rD5oKeEgW9CU0xGEt4MupnQ4hUJbdtsVQUSOk2FzeGO8m2sBQH0EvyhjYAo-sHjiHutfZsPY8Ig_-pm4eLuMYR6A06pJTBvn8e0x1brj4W01po5o939aKkN4T7HcnzWzBJzUA_XJRf1bkoELhDCqaRIYQMrCy6DC4e5fx2brdBPWhwWzp5fHwHtsJTpdeQdpw5uIB80aYtXNOALkOizIyYUoCZormw"
+      },
+      {
+        "filename": "image016.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35365,
+        "attachmentId": "ANGjdJ9Eu1SGyV5cEbYZ1cg5vDGAJRa7mUyzTFQ3ERE7z5VpPymXrsL7B-U_Vx0iW2E51pjyXxq6S8ZsMXAqUiafzJ3jViZCXAb_zGzEdK6YFJPtsQ8T2jiJswAH0rzGaCeqrFdFFCw6r9ZqhRprJlzIN4lG3ANdELhiEkbrSX7mbmaqZFGJsd39UwG_rsHjvR27LcTOq-5nEJmkHDezGW-6B7oJ0XFdl8Mcj2sU0Z3DRTfQ-5F_jrBrWG-FoAPgM0zcQ0X2N2SxsZG27b8_T4wR5fQzfJG3Skr4SohSjxGJZ0HqUh24mlU8B6pt4nke0Ml0oj2QkhHYrOID7fD20nVXIDOeV-w_OuaTra26dOJ1Tv7kgdydbJCJBxSmgOIZtRNiFQ02xirFPuN-1PVbX4OIKQmQAPT_OUAAJJzatA"
+      },
+      {
+        "filename": "image017.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35361,
+        "attachmentId": "ANGjdJ8NGsr9OvpzjgmPPJdXreRK6p0fVeXGvTOwmazyJE8wN3ymjFSw02Hs3RakHUFUS4C0o6sM6Jog6zYap0fL8PATqdTQ8axTzwiJCIJ2Cy-gkqzFl0cHiDt6DELmsJ5BYcxXym5zRr0NGjAlXH0TpGIfx-JwLvhHorHSL28I6kqvbCoOgt4FPcbHhiiz8JtgLpFHS3ZQrV0Qbm8x8GaxI1lsGLnv7efpkgE52wJo_AOeyKcisaW3dmSlAlelD5e8M7mX0_Qspe8qhFf5z5KYCO1arZtktFKL58SvwzNMkDTkfea2QxMpabxwAvOLZw8lHMup3RhlUFJylHPmaaK_e19MfIMH61hrrzyARxvS5Fn1ottF7JEUJriu3P7Wb5LnVaN64MwuBpLFFlNX-3-bAWoWsStFM0UyNK_5Og"
+      },
+      {
+        "filename": "image018.jpg",
+        "mimeType": "image/jpeg",
+        "size": 33465,
+        "attachmentId": "ANGjdJ_nX_fy83DfXrB1CqunOnZmBXEAsUN-iNxu_u2O9G6ZW0Wg4kDO_F6h9adw_BXduTuyS15z_1kj2vW29arEwvS5ZOtKcI853bwS3aCyIJ6Ey5F16V6olXB-o8uHKVXqnFDpCGFjK0ShaVJimZS7Cr8P5ZJmbZPZcTDuKC8kklqXtAa3XDP83HnlIXEOl-_L1kO5SDv1zBpL9lC6ad7HAMS-oh5GV4O6U_zs4jFMD1Wh3DVocSWtA56OipNoxPnpFqJ1Ap38gS4_TmMiaxx4LzLO3ZdBTRAm7RGTQQZvT397L48IdXUYHZgy5e-p-wFq8dzOE1ArYmQlj7vu5JUE42gyNCKZPfQOapLmFA-pfufKaP7EsoaPvqpAvnTPx6XF-x6zgw_KfJ_KHHSxj1KW4m71Xe6Q0tBYCE3xwA"
+      },
+      {
+        "filename": "image019.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35220,
+        "attachmentId": "ANGjdJ9Epzkz8QSSELZznr7XrmbufRwPGk3_PbmfeLY-AcBnuKCArT4gAhRicvouTb-nW9eAEvadm8Q527rJGC-1qQBp_v_zWDmvgNGOu2eMrcTlRXKfm4TjBX9e_qheX0TvFeD3nNXFaVg11b3hJjzjCVgpDHCXj0LHeK8K7_tmSicUFvZ7MzDtOs6pbAwQdaDR5KJRKA6xQMkqYZGdrThmwjTmaxSYw5REWFnHVF6sNKNqEy9gVrvLi60ZJkUzasFSBG2W460PBKBldIKlFnnKwtq_uv1jYWxmjDc5x1LxZa-7Y1IJa7ctgHQOv_Q0YlnEC_qEiACnbcwfoJmKlCkaOW4iaEzVCDoxKENzlfX4hgGcVmCGlMBhaMWZFtG1LtyoBXCg-R6pAZosc8JYJ8eYi9OY66cogsUSPaq-9g"
+      },
+      {
+        "filename": "image.png",
+        "mimeType": "image/png",
+        "size": 140672,
+        "attachmentId": "ANGjdJ-quf_MsmsasFUCvNa3z1EfCcPspxYebDujt6zZ-S6OdL11pPMWPfF6TBTVmm8hbIV6iZ_3uyAXofckq_-TOWKc_lhV8y36UHo314iqIrY-q8f_UTGy4sFzU4wOnydqVd3oQPwbQijD4LxFBvpOLsLF5H6dcxYGFRUEE3pvN-gY1l3Tlmqh--w1wYSffyq5MmMAJa_IZB32VDP8E9q57vKijs0tKjry1zmtuVVgqgJvUBpUMbuYIfybrIpp-3LyctjGQaoum9g86Z6UCVK7j9uUI6_5dbYsSSQbiJSQKmnpuCo6F6MZXZxRlmwwB5vmVjLl3HkVzg_oeV-VJiW4jBQGPJSMh_ufi-_L_o9YdfwFL9_d-37XJ9-2B83dLvMegllZg5jb7IciuzMp_4HTEBjmAUgC4qPVNNUDnQ"
+      },
+      {
+        "filename": "image.png",
+        "mimeType": "image/png",
+        "size": 98877,
+        "attachmentId": "ANGjdJ9v44OPUfq1D54SsxqbtPh9_tbz2eO5tqUsb11_vmAnuIMt_QdRlhTwXA-Sy2gvmPOK3hSULR8w-l8tqGl2Ru608w0CTAfav_nmNL-dqLxDjb5RsTprNDT32Hr1F9pIpNzw_BbAITUed29XhjpmEHaKR51_3qAfDY_5Z_6QLj10GHdcRCoqEL6iFmQE04_BnlrvEfw1U1yU3kANfDSVxLMh_OYBSNiC3txCbT5EoLZKoz2F59mOVLlH4pvOmBE2Sf5Ah7kfe1-0-B7SO_5LpXEs78oRff4J6yC67Eep8FA3EB4Jv6f332u63FdCJmmFImX9V5VjFUG4C8SSOvDWkYr_79KWBK0STuvLWEONuHu7JyMYsiN4Dl6_SoQxD26LQrxbfw1mmNO_XenhR6aH5LG6X23WBvkYWwO6EQ"
+      },
+      {
+        "filename": "image.png",
+        "mimeType": "image/png",
+        "size": 224207,
+        "attachmentId": "ANGjdJ85lN5QskrhibWVXNC6ZEk-253Rzg6fqThhYdTnconLC9SO_rJCoXMef81osVzrpQ-MCyZ_OISgdkYm4KnFDy2-XQarxso5sbssBg_VshuPgqnn0Y62EKQZ7GnxJgyN66vS5UkZMmBsnSk6M8fXwXN-9XpS79lkNmpm_oP9eoBIBJQpUFyBaEtBDCKY5ZaxDlilZeFkCEI-EgbghmO2dVj-iI7w1MeiXtozsHVdakD-u-xOOrbeBmty1fGom3bYXbdHIAb86gxq14fA4Qk0tdRu7croqQjOc_ol7eZy8a5RWPT3SBwcwRbIQM389p44jdmLNZ9QbfPfK8uV_TKs9cOdd-msh6SLpKGekJ790tQ5y18PHAFBdbN2wOjbpb1fw6DMwo3M5UyhT2y2pngqlGZqHBlCTxxwtZw4hQ"
+      },
+      {
+        "filename": "Outlook-2ypwgqo4.png",
+        "mimeType": "image/png",
+        "size": 14803,
+        "attachmentId": "ANGjdJ9g68g7_288VqAzmOAASZMbsQk9AtK5tu_rD9su3haSgI9BmU4lCO8poJpH-kqSjxvYsbqmgm3vnTPCNVWmXCPnLKHSmi5eljoR3zG52LEF7G3kusIJ5a5gocKJD9oE-86F7bEgtxEKfwhpZoLPqdN7Yfnt6ZDVHdFToXXiJ3iVknW4aolh1IyEoJHznr25mFP1vrRrcw4--EXhYxRF6254YbWnWui8h8l9qi6HBhO4rXy9MNr7gWE1dOwe-XaqJHttJy3Vzm3ZDGyYSFjd4ikPTjA62t6Vtgnjep-5O4tLrwlQN-7Cl6AXr2TB4JKAUVO3A2pkbkDh4P3scq1Sy6sgpwyufkgWk91lvcUAEykRHCJd4Q-hjlg9z5BdrpEdUK2y0jEY80BfmQP8zMfBkz1t-Mu0TgLVdVAZVA"
+      },
+      {
+        "filename": "1.png",
+        "mimeType": "image/png",
+        "size": 150781,
+        "attachmentId": "ANGjdJ-VKdl1q4KHmuNVFowtmSfRVMOJ2yiVv5JFrdtPBun_0j-4r_YHD-xzj--_kcZ3Pu8kflZ0F-6BbpTuNZm3EuH-UtFbd3eoX8FNuAOrw9MQywF4RCJ6CdcnY83g7kxWiOlDx6hAdvMpShdM_0Lf2cikyi26ubgBuJ8D2oLqNH15By0Uq4y5ptc3O0uEx-uy31pLJ5c1DSMnUCtP_qkfGSHU1GOFkOmP664KaFTLsQoMTFWibtkmb6jaPiB-BtuonZFrzFYKUvSlIvOqQ2EtHQJpv9Q8QANiRg45Y_KF7_Aa0mR_GPYfoZrJLjPhoTOTELFTf847KyRa7aunj0l2ep2m_4O-0QWM-w_xjqAQ270dHURyC4Ld-CWctfDol1-mvnxpKm1uyMHla3TDqKIw95mH3WbI9JsBGkhsQw"
+      },
+      {
+        "filename": "2.png",
+        "mimeType": "image/png",
+        "size": 251632,
+        "attachmentId": "ANGjdJ_fM4dTwXbcRCLZlS1pQLBE-GBuSX09cE01qrQMYWuTxSNnjfkTDvzecmi5NSyS2oOh-KuK6naNG4sJUDDB3QUAy64ZK88WP6sxVzG9ajC_xOcrngVTcybYiGRzoaoXxarPWsn39hZ6-lxVfCVifNOEML2XX9s23lP7LTU76qA0VPSNRm6GkkL7rRoP6N-eNag3t-FOVp-aPpHQlJTDNW-wip0ZhbDSXAludnf89iaj5chBzCfEomcw77fwyLmV0lw8ZRTfIN0P4Z1NgqaW3eNvVsV1yPC7RNKJLmIxWX_OjpZjW_fSI5ZVSNduqO-wr3VyWWcGUy_lc57WYjK-LDOjeZpVz2s8C5Vw4dBUcWnbox7UqQTK_YyVryb2okQAZEkkufharL019D5bP2tyr0YS6iYBGzJZ7RAgMA"
+      },
+      {
+        "filename": "3.png",
+        "mimeType": "image/png",
+        "size": 114994,
+        "attachmentId": "ANGjdJ_9nDdjazjRLFRUdSlq1Zo1dGg2FWX6PnTqtbeqrAzz97AvQbLwmZ2u5Z80ySGL6wVVW1VABOW_IbdT5E4ZLOXZ5OdJhgJ81Nw4f6VACwOwZii_GHC5apewGnlxZ6_ow9IplpahHhp6DsKORixV8Yvdbj-40dObr_-_nZeRkES0OBjO6C2u7HkrZH-gLFNVh4jQxUyckSFqgq6sE7y9U3_2DYeH6eKD_sdf3rgExK2LQvHDmywoprJ6H5RVEwL5GIC7dEfU3D69iM6GMU_42hmpBYPR8p_lVdE2jfGYK5rtpPXTVyF9fxHqNX66mUFrjOBhJX5_H2TxEESDzNsggdIEkfF-BmfKzXVLL45DeLdjR5HI8H2UjcuctQQ8b2Z1nLCCNG4qRXzxd_FhVO-QZwTrRIDRVFqeCVPRgA"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 1: Correo 1.7 SOA EA-00000900 Standby",
+    "status": "PASS",
+    "messageId": "<06a301dd109e$4f184250$ed48c6f0$@almarrosario.com>",
+    "date": "Fri, 10 Jul 2026 15:59:56 -0300",
+    "from": "Victoria Moyano <vmoyano@almarrosario.com>",
+    "to": "\"'Iago Silva Braga - Quantum Logistics'\" <cs.import16@quantumlogistics.com.br>, \"'Expo'\" <expo@almarrosario.com>, \"'Laje Lucia'\" <llaje@almarrosario.com>, \"'Marina Bastos - Quantum Logistics'\" <financeiro01@quantumlogistics.com.br>",
+    "subject": "RE: ROS GRU - Air / Consol // Decaroli - Agroleite // EA900 - IA Agroleite - 8",
+    "snippet": "Hello dear, We received the SOA today and noticed that invoice EA-00000900 has been included in the pending payment list Have you already received the fine? As agreed, this invoice was to remain on",
+    "attachments": [
+      {
+        "filename": "image008.png",
+        "mimeType": "image/png",
+        "size": 14803,
+        "attachmentId": "ANGjdJ-Z1Z3dbMmTkun9ZDbncnVUrVQJ4ILaUsM0TADjRPN8f6dJoSFqFqzi1J_epQdE7rAuoXT0_ryVOY3Bon0Pa5mKiSZCiC0fwzrlj91tpjv-PrPiOnyrQw6FFa-dqyWQ7-lHDvoVAYoJoVpY4O-iDLBtfCwP_MAgG3hOi7zZoVXxuVxqWn8oN61vXw4YxeMJQbKeUIqeEZyd6nICU0EHHybHT1dKb1cImD39rczgIZK6zUh3nxnFdhSaNZX1r9LD3Nhy0Q6kxsySnbDECtzWEKhWIQwZ-oQWyjyOwDu0oft2YSjooTaBM51z_dh39lRKEdRY1hYSEj8hJng6N1pY8wwn5yivC6o9TwAY61FTczKosikTOMuRJlKu0egBKJ5H6RN4ksJP7zV_EbiR"
+      },
+      {
+        "filename": "image022.png",
+        "mimeType": "image/png",
+        "size": 140672,
+        "attachmentId": "ANGjdJ87rgct08z2ZXIJyG9pchoBA4JHG40P9LpIr8HIskgE-E1_mVkrdDReiHl3wbyslR7jXoSlOKKXfjyRsIaAWeOetVK8GJx4jcRJGHVK8_gYoun-kqLYx2rgR1QfzLEcCcB7JN9JvL-uGxEEG0aQuQWZ9HrbR2zthF738O346yYNjFE8IEebIHgpu8uwrd0wl6gJdEhUomPPz9UOrLhAczoG-Ei-kjwAO02RkMWTC-_Cn3SyDcjcalNZ6wP2CDOe-dVtVeXhazFnggyq4SCKsJCCODcJBcj5xZeIhHp2s_9IWY6e_lyckTEF2fBezEz7yek1CjlTgFt4GM-jLHtVzFN8uEhsYHMhPhdrvOVEojHFo22T7ggidiFDe8TcnEV8ejKJlOM0A7cPoiAdyHwOf66Opb6MvslA6876lw"
+      },
+      {
+        "filename": "image023.png",
+        "mimeType": "image/png",
+        "size": 224207,
+        "attachmentId": "ANGjdJ-UgoNNd-E4eFl9HKZGWjhgtVaKn6tinLAUi1pNEYy8ORBZqhebkfp2s00ss2bPqMSHNaZZYUhu6si1yR4TBUto4iudIzVICj5zMu1NBmwh0_EGBi7p42UR5vRgygHIERBpCoVWI9M7V6nKwo59KWdvL7ySSVQi2HQbBCKI4fdYrNzTVtWntAvZPmB7110EjOqUm8uzUn_Y-_mXR9qnsziSgQu8TtdNceHz_6tZppEoRLUN_PoWs2eAz_zqB795P396AikSwgSTsAIz1pxyXIGG3hKOXTN3AI5gXtnX-PURjZ4oGGkQjQqBfvN0AsJYcnFaZWhQb0SY8_cmVgsFnmgwA-sxTorpslQhr5XaF5EiMPzu0K1-qD4mr-odGxkulLpQ0FwQVpOzA5uagOwNr0GBi6kkO0S-7h72KQ"
+      },
+      {
+        "filename": "image029.png",
+        "mimeType": "image/png",
+        "size": 98877,
+        "attachmentId": "ANGjdJ_GVd73ip2FchHe7TAdO27beB_tvsCcB9lxZMzVDU6W_rBpALKop-52w307h7drrvm-rHeM028d0xLysGCgo4RgqejS5wBY40Z6vQUWqVcp9X1dc5NKGaYcl9vVW7ancISa-UiaWqZ-OfU788yk7mxdTekXISCn6EQlHHB_IbKFuwrRSPAnnYRoS6QzFjPZerlxCYyJ3Jm_Zi-vg8QwDdPcASet32Dw252QRSP9_pViV6g4OfJbjtfP7KTM6BdSIhm-cMr5ZsXTYhRG_biRg_moKp7rE1uodQtZBBdB_cwu1BcRhyc-UjXCAh3pDzfI2ExYRv-yAoIAqkUJi8THXmsexT5mNG4jU18odSU69hQ_AOUjsji77O62JNoca1wpSuIr0BqvFxMM0-a5"
+      },
+      {
+        "filename": "image050.png",
+        "mimeType": "image/png",
+        "size": 30832,
+        "attachmentId": "ANGjdJ9-JHlLSZxS3mtD3fq9Ljy60g1EobiOwMFRimnsK6aBFJZ9tEBJuGVzRxrjPBYj1sq3JgzWnV_3cQjkLUhLaqvrWZOGpnoYMS5ZQOnBcfV4rsSFQBJClw4NAKfZkRMD_ESjppT_6ymz5ipKd2qw4O1HTc3pvO72ENTA-ebekcavPguIsBmhKYWie8mTRUEKStS70mIWrq5hjNIjkiJU-sLaqAH-lA7Z6-WJzYteX1zMYlT9w_mCq_exKgztQYVVrNvfzTVt-GbMCiGHlBV-K1EGZXBJM0VlhDl7qS17kJ2snTTN6vZ7W8ye3mGyuKcQDEgEsBTP54zHM78WgRYabSc39cUjcv6Js2ZwBVabNwW5hEZYI5A8Rjrrm8MwIemAK7aHFy62pkM6ZBLCh9QbrqjmNn1_TFM_m70CyQ"
+      },
+      {
+        "filename": "image058.png",
+        "mimeType": "image/png",
+        "size": 26228,
+        "attachmentId": "ANGjdJ8HTE11-fQPdnisc_EzpumlonW5umIgHVXKnrQuHmVVenku9Qxvk89oaukU9OYpWnA18j82E9o4SKvygi0pcgPZLY9qv5bnoj4vRlPl2hVonwj6_3QPhsVT4kOeb5KfhaUz6xRYT4M1seU5Of3wpUVKhS5IzupTrZ7r2qovi-xmMUcxn1cZVr5gcN5_g2K8dGpPsWUmtA5ZwJZL_sYr6xLmi5k56dSls7rRCC1NPlr24TK7DMR1vp0l9TefBPyBeGKy7wtRWaBVaqHOViZVhQiM5SD7aB3egyG7Jkb8dJYsNUXaTmUM8TfFb2OmZBK3qwQFX1khJvRh3HNO3YVZpjgFLc_4lhk3iJJifOH-jQM5gkqpKWO99pQipe1xiGGoE6pFTQ2SUS5fZ7qk"
+      },
+      {
+        "filename": "image001.png",
+        "mimeType": "image/png",
+        "size": 7716,
+        "attachmentId": "ANGjdJ-OPVjwsnaZ2ibElYd1JS1RuilMtRsIlfcgK8HN3NzovIF6Su7Ju5uMmPCAqFsRd215IdXseAS2osx_kvfB_5jG9O5xYDi44coUQ0ja-ZDNlQgKGg43PvwFhqOgiQiS0yPZ8sS1tS0RPWRlZwoXtLIyknxX6EXv4NmfU47njbsFp9xMKnCBxEemXKnwB2vOQeL--g9YdTVEfslNfSJWtDFDHMDJvVYrdPawbpQfBb4Es-lfoqBNEruT5l5USESXl7DlVdwFqAn-FVCu-Z8NgYPAmzEpmS9o2fwP-amCTsnoElfJJNXUbbXpdNkQmmHYnRXcLkFTXux8yKmSxBZfY3z5eYN0fBMmVFuP3QQZ5PGVMRAfmgkWbEmLXos05qYtALcRfjuS0SIbA9Rt"
+      },
+      {
+        "filename": "image003.jpg",
+        "mimeType": "image/jpeg",
+        "size": 29440,
+        "attachmentId": "ANGjdJ_QN0h0GqlMELRatgAjIryFCYxGCnkS4qgsGxZg50LXN86zG63lKZ1pew_7m1r-OuyseQ46ReqDmS9TRn1Pt1s-A8ASHsBTf6ErQR1Cnu91utfg-8npbZEbF2f-GeebdyZOJIljn9w6mRwsWlxQ65RFuUMgDNcou_BkAHvTCYBMwcxkvqA9_CVPlG1blSBcIMz6Yk6CnanncBiKCer514s8vVeDiqcP1EM9hgdN1Ls5KhbbgE5f4VuhnjYgF8230pGeVSW0J-7QpszeYJMlvTw_dlZZ-54DnDvIFE44ufVkCa6JAYFAPwEXC1N0ZkETIAa-LRHLIgTdzZhPgvAUILeHXyFJfpU_T25HDs9NAWAH3A7IT71ZFxCLZlgZ-sxFyFTLyNQAArgbdzib75T-go5N1uJTs21Cb-uUHw"
+      },
+      {
+        "filename": "image007.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37690,
+        "attachmentId": "ANGjdJ9hqp4saQgxi_JjHW9abdVjPLbK-aB22WnCJz34JNu-8m3gtOnLHEO5hHK-_Rg2Enh75giTWNlVEVWYdknBE2jJ2X8ENd25ONxhQzelPF6OqKYf1Ci4Bix-FzQdgfvsvl2XQEjWhJnQgSduyPi3i_j8WyaaTMn6Xl_bRImdR5_EnVuFBV0CHSWXWIhjjBOPrMzq0Z_ra7gu3lC0ciinFMINOrRb4LZcRrYZZS_KB6dfsuKxNNxra59StEjKG8DgcGmnTA2CIenyLkF9kOGTc5PHnfu1Jh2-SNY6mcOe4V_PP5cFdfsw5CAez1BRg-2DvoKc4xj6h6nQUa_t7aUc9V-yuiQ77MkY_12VQxKu-H4w8LJA64DruSJ9DORO9s5GQUzBkH8c8jcV2uut-UHJ1rFQ_ovSx-tsNEXjWQ"
+      },
+      {
+        "filename": "image010.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19876,
+        "attachmentId": "ANGjdJ--rK8Hx2kjXM9L1_LGV3Tvu1mIzxp_tapacQ1YmP_vdRXzRFebJIrlUlJTy9dpgvwZdMniMK8o9RUsnkIQLFahUId1Rd011hfIMyVDQxhAm2K91USkxp_1J_8WlAPFYgkKHdW0_QXY9fqY-iLpXLe_mC4cHyI9s95ul1bDqfXjsBszaBSKXhbnTGasrQLfEa02RCxIg0JnJ0N3NzVZNeQ9otstJza2i_FLxnRd2dnjJcJBDHQBOh-5qIABH7TGsWu02Hr7dBe202Nef7UjnCwBzmHG6a0TQg22p1iXKv4tPnFqJyn40xJrI0rKgrRinEk4xMuZ4SCK5o2CFk4kX84Fs-ywSDr1-gR1YTIORqVQEbhxIbYGs2a6Af2TIsEioMyOJJp5sob5E6BSrW_LNUOZfbeoX_We9tS3zg"
+      },
+      {
+        "filename": "image013.png",
+        "mimeType": "image/png",
+        "size": 179085,
+        "attachmentId": "ANGjdJ_FcXFc-kiUaTU0tfzUmf7G5u0krwd05sy8nbF8eUR1Vk06cSboCdB0s92FJ6artQBd-BBAVLbqHk5c461NVRSC1VaQR0HwuagBSF85fUhta5mfOlO_e4p5VtdnHcvUYZirLZBTPS690A8mktckAzTDQ3W9x3yYUfYTmTdrFgIQSAVve8C0CzACdn50iuO0Rp56YsrPKwyTYlNy0mGPPcpWWBqxz3X9P8YaSODdw95hep56V8cQxWqkVF_YwvXYNKZi8SFIezQaCPrKQsDYFU5WuQCRspWJrECc0oBHcAFo7cawqMmcL10etiCd2kqwEfkBHJ-TGwTikM6w1Od9ik_SVfbXj2AaJYCYPs1ooAlDCDYa_Okp8OZB0aZRhEYHIBlcb9X5huk72y1UEeFnarTkRtRjo5rZY3NYoA"
+      },
+      {
+        "filename": "image014.jpg",
+        "mimeType": "image/jpeg",
+        "size": 36800,
+        "attachmentId": "ANGjdJ-0HGvnz2cqEX2VkFht8kGaHIbUPxmahBTZ_LzWZXhGaL8UBnrOl91WGLdLox6D7-Fx_G85NU3S_Cx__EAhAA-dn3Yn69gTR4c1wS_idcc3za5eT8eAZ4g-njl0qejZ6iX1BUXDS98cseAJZEB1yT9c-tfeGCcCp2pC67S18LxAcMfKXFIx5KTgMkl4txobZ57c_xdaeOR8lgMXbW33cZls5nUzH4XDxn3CTvPP4RNoMHr90WhkOzckYmZHjQc5JOQp3KMfM8dEVT_FvLLHzP-1qs6hI-5inhKPrEDvMICZKO9PYGXAp6Q3VwsZ8DrHTT2C3XGLPFd6XwxOalO6F8ZvAKI5n48E2i_3Fkrc_Kxbf4ucJMSjxdVsQw_eMO_p5jROoCZ1NujqmfJ-a20RuQy8vDs_FP0zxlTtTA"
+      },
+      {
+        "filename": "image024.jpg",
+        "mimeType": "image/jpeg",
+        "size": 18815,
+        "attachmentId": "ANGjdJ-UH8lER3IpMmCQIqsyibLVcwPkEUYO9HRcbl0mXkg4lix1eg-K8EDXP1_CfG-SyatiCZW9uiBlbFqG9Iyj4rND2TgDiD0orXXHdHPVBxfQ4WlUcL0mhmN5AvAcRwc5yNO6XoYc4G_qxU1FUEVBw8ZIB7_XCeyDxXYOuOzxpch0UIU7kkUuUtTXZ6qEXWB7UwlhTiHsYrB4JA5Tdr0Y5Ng5_suy60AiqgWH9LnJOKjYlHQNUCnzffn7I6HA3F4DVtEqDlmhwwSOpvUJDRetRde0gO7v0Nzu1Ep5deZOm1UHRsNkYF2mq-bnV9nPP8Q3mZVeh55QacaawdxY9V5o2IS7tG2qktxloDJr7dpLGIEGvpqg89YNk79c0ZBdwI7cpsGJlS-p6gGgFelHTJExQwU6JUDRoYJ7tdhXmA"
+      },
+      {
+        "filename": "image025.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35307,
+        "attachmentId": "ANGjdJ_3cojw9drnoBI4gigAOYYKwvjCWMY1yU1KJ7gVYcmIxkeFu4-fci8qqdc-XOSPVa3_sihvGNGMHis02WoHtIhkfCI4O5rcYllf7sVy4BL5CQttKnh9kyI937hpVyZzXs9jolAUjPxRZl6Hkl7Jj1bWXDaf3WENzLK5cldu4xcMH9ylE6oHglJg1I55KBvMinazs6Gt9M73zb9Mbbx-x_57sYeu-O20-VCDX1MKX_GiomKGcRsayNkV68UeYAZOWv9SwH5NiIOuZwYJmb13QqqqD31sngych3lwAk4JPqv1_3rq3H4V-KjJnhcv16NdPDFU3uy58_G2dJF2jqk5j_FPOo3MQnb1CZT6bFzwSyBllJ_8yQFbRbRWNwaUkts27aLhkjhgbjtLvDS64ryQEAXieG0kafPRHh2FjA"
+      },
+      {
+        "filename": "image026.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35320,
+        "attachmentId": "ANGjdJ8WCRTpTS4SS1NmLcdA2cXkrIsWFiwj_xn5gjpIe-5XEMJ10dxXffhJQeKgIhyaIPOZrm0YlcrxJ0B_gW_TNaw6zWXQcVV7VDGf3TMl46DjWMqrCdHb0A1oGOEaJeKQi0uGzh58zOffbLTiW5Ncb1Rp-8W7BtsWi1rnO2jFu8A1jW1mQq6tRbJvEo4pA3_jAxHnKHcUAXFPFSEVCFxB9sZrA6SWeyu-3vsvKChQEQXn6VXIdTV6U1V12g5eHbcwh3EOUG88-hCX2Tus56aJv50I0-kxX20VD15pqPKZD21yxvLmRb8kjuaRdH0BqUdQoaoU9pPHENj496X8C7hWLvkbrBeR0P8r69YXhc3xNVk_mXi6YDkZ9gIifjihjNJl2oACkkcVRkkCBuOABw_0RYZOYiCIdeyHYroDjw"
+      },
+      {
+        "filename": "image027.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35298,
+        "attachmentId": "ANGjdJ8n3KFo0cTdhsUWKBfxyeumZVOp1gqCELIPRHd5an3DZk595vy8v3PfaOI7PRh0kfakbM0WESim9vQjrIWKu_9zgn19CLDnhk30Ab7yw__lwv4XLZVH8W_HsXRj2Va5jfJ6xGZIaNfDXHxJT2z4UYsA6Gt9hsmynsb_j8WGvOuBNjxZ48gn3iU_GRHgRkgz4QB0UpwU0GQoo8uQz-r23GiJ-OUqdmtrzs87JSfOTVFQC5VBtwayZqVEdRMOhkmQUCo2D4wPlKPrYU0-tVyJbu0s3xW8MXZtnJ-ytxDetaiCvcWlVKGkPQeoUaqzEHoOBo18JkANREmcrlihequCengt9YohZ2art-B1WTZb4r3mRJDTDndfyQvg2aO_XdNpn2aGo7L9aLi3tZDZGzkBwa2rgwOm35xuvywOrg"
+      },
+      {
+        "filename": "image028.jpg",
+        "mimeType": "image/jpeg",
+        "size": 24513,
+        "attachmentId": "ANGjdJ_R6v_6ZDFUpXYrBq0HB1vfqozMeluzXVoBx9dpDCWPek85kagmjkdbbqmAe5tDVHU1dg5GDJrEpVkCdJoD8eKcv1b4TRoNzxD2RWKMvfyr98tcs988WiMVY0sx2Xk9Udez5BsN5g2wdk9Qogy8vR8ktqBy8YEJtecubOP8C1c0jluYtRo5ZQmWMCPUiS5YpbUsoMvNmpio2MvV-eJAZ5Oj5p5jS0Q1Ql4x5alOPDunK30V1XLewYS3LnVDOEXPHVXbIIb335jvDPMRNkIh55VNYs_l0AWJsqhi1uxm7VH_fWJfNi3q3E_hiogtGpLzRSEZenZ6Lh4qpK_TUWoitBuccBfVjJpn_y-gf9VIMYEWUCvk0YANPpvtaWKyC-pNtw9SVgwa3sHfohpriyox7MqnQSyGxCwA0mWd5g"
+      },
+      {
+        "filename": "image032.png",
+        "mimeType": "image/png",
+        "size": 177647,
+        "attachmentId": "ANGjdJ_FxDkjIIhaKPGsaDO7FAH7fYbW_ynnDgYi4PDCKwRxl5G5g9bbdDv2gHcO4Y8qWWxX9hr1QiAJiW_rjRwUA9IMu-OGlXcLKQAFgWRH2NULtnLnE4OxnxvIvF9J7JRcrJ1AlBFY_AELupyrP82twNykeY91ZhJAMLvp4dk6aQq6wB1ukvxVhEhttmIwpQcqxnhlXGX6QCoguxuYcHXKMENVcGx57kw5RZpXo3Z5OPKFWDAPxuQXT85wRvUTlRvypnaB4JWh4P-qJG0N98Esk11WEaVdbWF00JPzdnCFUMjEep4xkLjaMwchN4peopHJDfABiJWuuitzvqhtFyHRvUvq8GiiOFlfoH_im18FtMl0E19ZI64ELfjbucEitSKfomnDQpjxSZjP7c7FVIS6YxwQCoL_MFg-Slyjzg"
+      },
+      {
+        "filename": "image033.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35291,
+        "attachmentId": "ANGjdJ-xmO03Vp74mmLv5GMzGk6sWvZi6nThluL_7zR979eLiW0JS6G-TxWe9sPR_B0FVI0YoXGvfC4LKl-n4a3wi5Fy148UrjHItaj3KYqrPc6wPVb-Ws5f38g9GcnY-q6frqOD4CkP8oQf2Fq-bc2C3K995HG9GyUMe4f37i8F_Q_asF9vKAvredz9om8XaXWr1j8OWj7MlnOZEHY_9Z4rXiz6JEwZFD42-kdRcJtpCHGy8Iw31fr31k4VOKjPIlMuuy14nvQGybZr_z986uPvmiLWpPsyFDtLX-YffY4ytSk4mwsvNJqoActDc924HB3PIw1sAkeUx-x3A1Yuw6TItySWD1xhN_Arj37U6bZxKF3X76zwmtEYVu0JKjBugQW5WQNBBgOCDeSUt98BHEd3fH8vDUhyMSWJRPWyLA"
+      },
+      {
+        "filename": "image034.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35275,
+        "attachmentId": "ANGjdJ9TCACe8RrZUoxFIMeBFpNQ0UTvL65Xos5xppjTYqZwmmQK7bfSnnYxEat49byBK9wjsCISogzqIhYbn3X25gKcBmvA7DMkx2CQTso1_VqjSkjj1uNIlcVWvgzDih6NPbxluhHUUG2N4RUggBoc4rMSGWMTzGomCxAaK3ZoZDOxwhNKK3P5Ym-kCCpD5aXoYsz6OuLE6sxn3r2UVWW7bLObqdPfOwyQxdMgWNjeujwlPrkltNqSlPg2kKwm2RBFKwLqAxP7uKEj0buYZJsU-GPrGgGtC3mTcqsvv1Ad5GJvUGH1olarwy0FcgSplwQbXZjePM3FfSrnzOn3GZcwFXc2V6-_bhv1O9izpvgHTA35NJc6pDz9NWZj_nZrEoxdXB9joYZ-3jkWYO2TfiwKSmoMMzD-8iBJ7kSjew"
+      },
+      {
+        "filename": "image035.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35270,
+        "attachmentId": "ANGjdJ-t8GWAhNuEE_OruXAZUJAMHm7KjDJinShC6GpwOYBLLmE8_dlpDB-jwpiAUfPWK_OXQRncLyuUc6zm8Q3YrmVhUbWyG87vs4hnL0YQKWmfENEJIgiAGiW2yIqMWKBD8XjTuL3teiIMF9AeJeEx_bTsKUQQn27_Wnsu6fmQcigOFYbz4X2Hm0qaaQFpueS3dRhKdbd6lNz9ktstDw-KCL0-lyFH7E-tEg4jNotDA8ECqP6gHimVPsdV1q53hHQfIFtxkPM4m4P1Kro0PEuF5cFQ7ZaaxIhGzmFGACu8vr_FvpzsE-ZuoO9DlHdkdl_IG8lTlyvbpcrPviTX0lS3gOsNOQTjXh0uqW2leqcr8NXn9Ntl5Wsys7VOQllEAOcip2oaWWJU3zrTJp2zbZikSYBimcdE5z73qJzvNQ"
+      },
+      {
+        "filename": "image036.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35282,
+        "attachmentId": "ANGjdJ9YxNUoETtw4h4qlQzToGQF8ixZTUer_m2zRyKLL6KMT2ezKJbP0m4R6zsWrKk5pfgjXD0AtJua72Us_6x8XlUJRcH5_8PNjv3ye57HwvErwSoCAaQ_cJqYLI3o9dEgGVqwSW52d1wovnKf9GGnXRR36AP3pwQHuLET3et9zw7eHuGLWMoBYq1m4oiEUMSUCVy2JxFGxR3ttd29cIXIpoxYtRpGIYqhAh85kUF5b8EoNiXhIw0xwfSQQ74mDp-vMFCLJKFTzNDV4Qf_K6Ucf4atGU5vNPb1AU1dqbRMnQ_QGlWHxifeJ6AyhKz7g4Jv_3Y1cCWP-UrcbNQ9IT2C9KfgDJ5YBFodug6oTZP7lsxlonJy97g98kBkfPTcDgUjXoXmpgPwWHKC71cSmM4Srso6wMMf26h72xJnnA"
+      },
+      {
+        "filename": "image048.jpg",
+        "mimeType": "image/jpeg",
+        "size": 33401,
+        "attachmentId": "ANGjdJ812SEkmNw-nHgyeA58GALzfZKb1v8ZUi4MPH_mc-bY5Oq8xypHCHdH899-yqyVq1M5cq_65jqo_ATeqE_-003yhse8HwG2lQTVOB89bJWan2nskhYBoOfXZqcOBHLFPP9TDDAUH6RJvHI2aivrDn_otiHT712vFk6-QAE-IFBIOTj_oPoOj3TGvhLV2GsimzA7JK-0FchYDKlo3r3ydBOzfn77KO5RjvvYqr39LY9tUXWDTvwi6UkLqgKyNMzJVEkyoSG6J13zzbaXABnKTj5TbbI7-C2OjDWxz9PFZKg2eOP6PAHMtYqJIMHw2CBb4WC9JZ4_6ih9LykU1irynnTX07dE3Ma5OzWEQZ_GQ6WUh1AUpuYqfXvHO-y5VDbw_-A5-rmvNM23ZNPLAIF-sCHXPsv3IYqMDgftcw"
+      },
+      {
+        "filename": "image055.jpg",
+        "mimeType": "image/jpeg",
+        "size": 35210,
+        "attachmentId": "ANGjdJ_P5ft8Yt4Tqz0OPEKuFe-0Jn7mYNIIOLDKtDleXuqM9s3IobBTO4I-hoS0QXl1avQ4BkiI56FfyGqYYIlvGjZxgLRPAhpZ843cWGJg5E5QgHmrWey7Ob1_tZ0ZM-nFq1HWHVnBRZCZCWCNi4uHnlSfBGtyfOoEwx5hN8GNdshF5rps7z233qGRxhl6JZZoZ3n9oXdxWSEFbchgCo24wZCPk8qSU0sbR0ht-T-Mj28vK2cdY5XpLf6RsY-1LF_3mSyvTh5HO1KBdhablWuxcZkqpBZr3smnWx86a_qmKp8qYNKB1Xv_xKPaTCBN38lPSo0jJbxERGe4w32nToc_RSXKvHVqkSnopw025rmn9jCbspfQ7Matm354Dnz8W45Dy6MDxxOEjIyhyz5CJnBoHENCq0emgDFuiINmRw"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 2: Carpeta 1056 (Saprograf / Net LLC / Gamalog) - Desvío Hapag",
+    "status": "FAIL",
+    "reason": "Not found in mailbox"
+  },
+  {
+    "testCase": "Case 2: Correo 2.4 Emisión Factura Net EM-00001056",
+    "status": "FAIL",
+    "reason": "Not found in mailbox"
+  },
+  {
+    "testCase": "Case 3: Carpeta 590 (Mastergom / COMITRAL) - Unidad Liberada",
+    "status": "PASS",
+    "messageId": "<CAE80ZBRyGDEHapp4Hy-o5i3G7GJq4_j=y0FJYgpq-3Jr36LxdQ@mail.gmail.com>",
+    "date": "Thu, 4 Dec 2025 15:57:15 -0300",
+    "from": "HERNAN RUSSO <hernanrusso@rhcomex.com>",
+    "to": "csexp@almarrosario.com",
+    "subject": "Re: ATA - Expo Mastergom a Brasil ref IT590",
+    "snippet": "Unidad Liberada!! El jue, 4 dic 2025 a las 14:12, HERNAN RUSSO (&lt;hernanrusso@rhcomex.com&gt;) escribió: Buenas tardes! El camión ya se encuentra cargado y precintado, cuando vuelva el sistema,",
+    "attachments": [
+      {
+        "filename": "image001.png",
+        "mimeType": "image/png",
+        "size": 8808,
+        "attachmentId": "ANGjdJ_ZbQ3zrLCsst6EYfHrN20mze7Jy_7vz_ac2gBzWLyAZPjbJQhco2qsy2ATpIQqDP64FaZ5nHq-xbDAK14dEAGgYsc-ZYDNDuAgkvGk354RFvHALJzLYSF8X3Yg33XI9_HbZJ7PxbQ6MbmSyqgGQSMYPMl0nguUgeDs95R_AdhLomSv0PgntKO9SMT1I7_Rdi4WlNsnEEHyMAYIZ7t-O9f-WHMfRXDC0WbUPzPkeFI_tX-3s5f98dIpL5eorh50yGzkMaeYXnCGuWvzVpBv-OhE_1oqHKt2AQvFmuKoxa49iszuevyKhnAhFH8k-N-JVa0B28qL8E3KeUdjrHsXg3ShbwqXSbtEWteWTukTgsjyAVldERBBlAvO2JCVwZHiiEavrqRoO-MxoB4S"
+      },
+      {
+        "filename": "image002.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19906,
+        "attachmentId": "ANGjdJ8DB0aMKXZj0UxUpzB-rmF3OufZs6LE-ISU8-PGXefxKol63kA7RNJVEDOrmIjuvtdu4_1QoMH_oNOVtEUQ9RqM0ZDT_eosl7qfTKXDyhozyWFmyLEmZakcfaEZR7VOWDnD4TTImUVf_IBn6_S6iHm17hVdO_8ytv6ko2yNWd235cMFXNVlGna5vkfbfaiL0NQp49hnh58cv-WzTjZez6v53aFA7R0pJR3lv3Qcio74vNY8c7pIM6_6S2SoZGj-50erI56CuZory8rMEON55MbQ8USjPy8G2HBy05mAhiJybCmefJ7pikHziFyd9scvXZlpNSfOHZFX_WIVIbvsmfl0obSTvNcrGSQfVqXk0qLz3qe5oGjuQhz9GuDUXh_YcEqOcxe9moNY5dvq"
+      },
+      {
+        "filename": "image003.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19906,
+        "attachmentId": "ANGjdJ9oUuSuXKRYdDhGF0uWz2jFbItrBUxtQSzsCtzjwo7N3vcFhmMRCSUjLAZm8vS_FG2IkLMJsNy5mhylV1GE2T9Py1_tOa1iT62ggogPq_OFPAlWDkpG5Rg4oQ0ipLB6-5Jw7R8Q9to50mrsjbwFWcjuoXz1Pzjfw1KSbrSZ-b1W4mbjqRHWuh7Yt_vUBWpdVP2uGWCNn78soVW_3XkOO1Z-FZ9u34ZLJaWnYLTTRUUkh8xr7JiSfM20qguta9lCx7-CDIBRDAXn5kqxtfRv6yk_RIpwv3xeKdFk8B_lfD_7H5yfQQgkAurYEG5Dlfg9dlRWZrr1MPfwpu0r1VvySC8ptF2HD2vKn4Wu8cGnGUN6nHo4guYNlhXY0rdDdcbxcZmaVo15slFwQVyfSESpotMnHV5ddoH10-bQOA"
+      },
+      {
+        "filename": "control salida mastergom.pdf",
+        "mimeType": "application/pdf",
+        "size": 132982,
+        "attachmentId": "ANGjdJ9FBRx-FSPxJPRIphqM8LqBgZPU2hdU3Hcwv3T3Cec40SRjbcwZL9ub9opjIeMozlnbWd_Z0gHdcoOzLKPb17oH3TQYmiuSeGqAbIT6j_KaJQ8YBb6GEaX74sIFPO0DHdZWT0lKHdpw5vNTbxKoZ-Q-SmBEIyxNb3u-6Omw96Vec7qCcSaU5m4UUzwgXNvgCArr2mef2bDFXSdzTl6S7emRsboAOfsfKjzBa61i4I2iItsgroTjMzmo2YNMj0-zbpaR2JYP8I_6QR2WlaGHHO9eEd-X1t4HYImy1X5Nu29rSEvJZqhk-8eOU8nT6JvupfrsIBBrY1WWGs3sypNY-MLm_d5A9C5EGNai8YDA-QoB_osuaT1N9jBg8cKnUHJIbs64_4fy5QxUgjviPu0gEhMl9DgIMeJh5_Le6w"
+      },
+      {
+        "filename": "Imagen de WhatsApp 2025-12-04 a las 15.55.41_3bc4882f.jpg",
+        "mimeType": "image/jpeg",
+        "size": 97518,
+        "attachmentId": "ANGjdJ_zX164QFh1XE8nmXMiwmRFK52VOTMQx0mKbNlkzDU3LuF06bjjHGoPiiQEfxzSl6R4974k4SspkgSy0LZGVEwAgGFo0kOXRBm6MsIuTqJesvN5Hm1RcP0sIx5avJ_0yDufWe_L9B-IG9tHVAeEreBee4GARjntqRFOuSyQZY-Lsyuhvnk6xDPIve0wFM7n6Y2OAOWZc7ZVY-tMRbKIbikkUHzbzZeJrR466wEzvCMiXUf6_BCijYK7nltIw0baZdHHd1Jf3BD5UqH92Z-yFsvT4Fem-ZLkqegHuuyG73yvpojXMjc-yX59r4gX0fWCTm3ZL6f6BvfNr3AxFvbZFc0q2uNZRH4gbAXIdIBZ4fgfQ6rDBKq9uOMbShWYzpab_trBGRe4e-P_3N5kti0_XGCk7rQ68CsOjSbpdw"
+      },
+      {
+        "filename": "Imagen de WhatsApp 2025-12-04 a las 15.55.41_7ab54743.jpg",
+        "mimeType": "image/jpeg",
+        "size": 178822,
+        "attachmentId": "ANGjdJ-7PuA1xVVKAMnZEbX5_HRgfy4TdyF_NANoSNxJlFoUs7ZAZUCiRTPYZZIYMRjoZdV56kp4kO86UECXFp4NdHSgJejIylwp7bz5_S7RyBHrsvG8mtsjT1o2Lyn4jJcofqTSJAxvVvbp84GSPnM3Ef-PbQLSyTZHAYBiqLA4N4AdJKK7b7DRmYPiKwNr0xfvF2BM_oKTvhKeMRuLpGX2HJi_Jy1I7K2UXTA7BsuYbf19xaeXU7cXnL3NoPHOB1dfCSuKW9SdW0VEFsZh-SZs_glMUm99uEefyK4gSGEDVJRhM7g-OcuXHx7A5EJu6GJLDt2ItbkizgOCC31w0yo6RQkkHOHVyXoolRrjjaXQfriD8-Q35-j8O8wRQZ0GOOh2ldsH0XHNM1EjKdet"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 3: Correo 3.3 Liquidación y reclamo USD 628,59 a Sergio",
+    "status": "PASS",
+    "messageId": "<00d901dc69f4$0a42a9f0$1ec7fdd0$@almarrosario.com>",
+    "date": "Wed, 10 Dec 2025 13:42:55 -0300",
+    "from": "Julia Arloro <csexp@almarrosario.com>",
+    "to": "\"'Sergio Villarreal'\" <sergiovillarreal@vapsistemas.com.ar>",
+    "subject": "RE: EXPO LCP BRASIL / ref IT590 / sergio",
+    "snippet": "Sergio, buenas tardes, Te envío a continuación los valores correspondientes a esta op para que puedan facturarle al cliente en destino Cobrar a LCP: Flete USD 3500 Seguro USD 328,59 Por otro lado, el",
+    "attachments": [
+      {
+        "filename": "image001.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19906,
+        "attachmentId": "ANGjdJ_CtC8Z4AskQTzYWZ8lPJ51sRx9kRE2-pNdHt_XdssBC27JvKTXS8o90V44robHFYiG-XJtURinUGRfQFB-YEu_gy3QrvntdCRQk6a_BR8-fbdX9phcu8V8LZ83oKn-yKlJbO-zWi-3XGu__G_6PF2HRALPRP6kM2ddPpJRZ_sNN-gGp2E_qK928ML5kkM3HE-NxO9xEMJTQDV5cUMg4U8t6uqdhOENVYaFNq-jFkY94rY-g3p7eagYscW0cUhczjmPzibTeJGIrB6N5E09fyN-BjxfOuPuSDxypQ6VRT45dPrA28GHwwNNd-sQ8SJVvYrBau97M6vlWinEgWR8k5HcysQxA6BZ0iEOjs6_jWgjAw7O-NlkBZ0EfAN3TpXH_i8Y6Izp-YtK0lxe"
+      },
+      {
+        "filename": "image002.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19906,
+        "attachmentId": "ANGjdJ_4vSRJZrF77H7UJTKmS9q32rpp1cRxcdIzlTCqgN0ecbKtGP8ToR1xcpXDBP4AP-jUch5NxW9Jr60TNj6tWcFCgn5XnppO0cJYxOQjUaV94ei5euq3FxFAk5hCDutc4dqiffna3IZvxxcl5H0XlEDn23GxH0cStnbvTr7jNdzLguQsWjVP5HEDeEAk5YZnc6ZjEhd2tlVDq5H5P8jGBmJE2Lv0TYMs4wBnGMiEq6OAlLNZbWDDLvgjn-PtH2AanO4bxz8W6mMrOrM7BEwg1NG6qX1tDYQYXA-YB7_cPROkLvAapAc6pxNDtLtvC4eKFp7k38BYU7yAbzzsDxnek92-8pGAYUhrwT644ELF80vq0cX47YhkDjQGlKmEF6i9dW2zSs1qTWsWI8n1"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 4: Carpeta 1134 (Mastergom / ET1134) - Cobro en destino USD 986,55",
+    "status": "PASS",
+    "messageId": "<00d501dce922$c9302dd0$5b908970$@almarrosario.com>",
+    "date": "Thu, 21 May 2026 10:07:28 -0300",
+    "from": "Victoria Moyano <vmoyano@almarrosario.com>",
+    "to": "\"'SDV NAHUEL'\" <sdv-logistica@vapsistemas.com.ar>, \"'Sergio Villarreal'\" <sergiovillarreal@vapsistemas.com.ar>",
+    "subject": "RE: EXPO BINDER 2 - ITUMBIARA | ET1134",
+    "snippet": "Sergio/ Nahuel, buenos días, Les detallo lo que deben cobrar en destino por esta operación FLETE USD 4250 + USD 486.55 (SEGURO) Quedamos atentos a la NC por la diferencia de flete Muchas gracias!",
+    "attachments": [
+      {
+        "filename": "image008.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19926,
+        "attachmentId": "ANGjdJ-wSTdHAn70KbAdNWaJBpbKBoPy_HT41Ek_kDB0kt0gnMBKgUfvYQwECDUYjK-eZ6nXnI8ABT5_UlbOxG288Q9za6SqHZxlWk4rZ7qqodNoiWUOCJc86vefxXMwTVFUxu2t1ypMVNJoKcqErQIx4eiTkAmNr0orcL6E-Li5L0ZAdaCk_wUfPpOtrF5J7OROuzs8jgGaBwnf9JhPsFE7wT8S5v2XVGbLxUFY4bqQ1tYtfVY1VDYFTyQ5eM1JZMqbvdRKC5_djuRX2F8a-dP_qOQFwaVmCi7zPzsyxAUxj6gDcxbCaMEauJR63oYRLlr8yfVhhy8gon6v4XJ0jMlTqWgpJo58ny2Tsi4-f0kivl9o2nN6a6aWdXN0mAriTXlQ9_rP4-DGWwQ-EbOe"
+      },
+      {
+        "filename": "image009.png",
+        "mimeType": "image/png",
+        "size": 31561,
+        "attachmentId": "ANGjdJ-LCoInFb4FG6o9qCJHJsPnFXfkIThKokVn75cqNsmcc8yIlIMI3ZKf27iZiXsUkIudBP4XyKgl4J-C9NDccQXwTWTTFgr-DuWtRL9nPtWgNU6nhFX84IfChzR2-jt0e1l0hsC9ZdBtP3oKGpZO_x71cxvstEf2K-jGWUbER6frGepSoWgBx7iTHa4gW6CrEAFgCeDSKyxKi-I6D6bmcfsOvkG9keLiEbMk8x5nnkkzlROJezg4du1BGhuxU5k8xfuNCrMZxy30a5Fpk4FyY85Bb4mZGaevH6pvmcUtpTktYp4ApufsDqkajCmeH8I0qgsD4RJSCYSAhLp1rnhxxGIxW9cUALFAtec8KxyFJwHlgvVnEWa5efzxiyL0vdmNToYHHKjJmkbfL_RK"
+      },
+      {
+        "filename": "image010.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19930,
+        "attachmentId": "ANGjdJ9vOngmOsCIP-zsVmmZ7PfW-erhM_idinoQKlr78y1aoNupRfjBn_AewQUkFcyPrd8PTstOzJwRHtyZBMlcqjR8VqUim1Qak6D145fpq8HWD-X_Oh_oHZFllUisFf78xjaE7Vi1GbSuqE_enC5hqx367ahPZMjcUS5pSaTM2HTgF4PLvN6cINLqfxVt_WhsfmZbypwEKugthlaA5eBplrfnl1QtAg_dxITZK_lA9umrAtvDxO5sjjr2ohesMFdF4maGjTQ7NJKIPA2fsJz5Nmj8Si0TUN0sWbB6dswxUpuZJGZs5n4avAyd3vNOtUnEHih7kBqgkWNM78CfYCep1jCZvYUSJEud6nNJ8WB-yczLxXruiudguVQ816fB9uNXNfirWOR_B2y_WCNvyJK5MAChpeXPq4dhEAK03Q"
+      },
+      {
+        "filename": "image003.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37915,
+        "attachmentId": "ANGjdJ-ocCnflGBHeyh82D3lWtCeAUY6Lw2vymkYLXKY7kg115XM39-XEm5v_JHsAAnTIamUbKde4XljiWrw6z2r2kuF35mQ3SgwpKPbCYPWIeUqvh2ggTse30672SIN2aomI5Gbk5QdNrWh0ISsq6PcHV9p83UTCaEHkWxlMgjsrAGFeAuVxS7_rKLceIhq4bZtlY_5R8839sxTuqxth0gP_eo7L2_LLgxC0EvNxZ-7Bi-S5YqCKV88alk3FtPZt4pi2lTeTbFud4hyjQ-svOKQD8nBc04Q6UcXZdEjQ7XDg3iUccIeuQ-MpK-gFzVeEZkuGxfjZHn2dLRYYWR949kXYIgFwsnPaebXltk-_64AYeW5kXHe6pSILgaKsxEVIx9RBYNva4QWvyUsW5xkN0gN54qI3F5TLTE9G-BvNg"
+      },
+      {
+        "filename": "image004.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37706,
+        "attachmentId": "ANGjdJ-kM7154NorODFcgvnC4hSmf-dFcZ_3LSyl8arYpOh6_-66zUrQnVZRcn71tlrrXH8Jgbj3DLmOHevVh3eCAkOurJnHd8I5bRv_LzqBkfA7au4gyb_EqnwBII_QgCeiXWErRjdP_uYXTYbIOwUsuhl8m30t__GUrawYZrM8uan-JyX8KMmiLQYoogz4YPnabuUUy5gsySVO7ZEO9RgZs4i0MFPgeyD6Tw-wm2nUNxR45MNGh_SoWEBGC7OfJTQoAo8LT3T69Fcfi3ecUoQ1dHWvaOF0Px8yUYrl3uwDszTodzDpl1PSckY6x2V-72NkQ5CwMfGjqcFY63zyw2e_WY9jdwlLNTgLdSOQ9P-eXi-HWQFEpMlWi0qG8ikmypYHzSeANi3RzyYMQP-C6KRJTb-qKCVfSR36ReaPLg"
+      },
+      {
+        "filename": "image005.jpg",
+        "mimeType": "image/jpeg",
+        "size": 37597,
+        "attachmentId": "ANGjdJ-HASK0rCjDqgDCEALHCB7ihVfWVlX1qPEWUFSgc-ZCsFphMKWgiu_pka7Cuuydb7u7mbD-pBmG263FdCDW3q1V4nzFo1eFiVP0ufnl_IZm5rs9ISr2mTqP9KoiO_D5y1EWI81US4HMM52l0aEku_szOJD60OEB2Bd_uwKDLJonOtYiCd4FbMA4PNzVRiade6teFV1j_D9i5o7LlmPOULsez_6_2W_9If106eLJOPXH68CbW8g1tMtYGBl2sb16lm-0ML0zUHckI83c-G_W02vAtAyLb2Y9UfKoUCD22DpyTJD6e3Ki5-Ez1dcQ2nsYQWUwclC8FOJ8Iga1LvE6bWO7Ua4UismS8UAPuPeYVdpXYioztszsQOqMCB4xWHiRh9ltITH2nwZwGkzf"
+      },
+      {
+        "filename": "image011.jpg",
+        "mimeType": "image/jpeg",
+        "size": 1421,
+        "attachmentId": "ANGjdJ9MOnRtvyL4FvrGHWdi5Cn2gPoE5Q1NbgISREjK6xQ-JjU0g8j3lYYoaOjCQxOjAJ1CRvpe-qt0_deYe82rGfB5fjHzxERfVC6rkHIHxguGiWGeAovG5v83bIkhWB3qJCZfIB0MInNxeIsOixZz3jJhNCq3wTMFXZacNVUZ77c9zyKIjE8OVhiEZpPnAx_u7lXYFnHGgA7FTC2iz8hAEoWU2sETOl6InieLfBxPU4CKnjtl9Txl2tffpRmi1jD4oUVSaNAj6uou6-SDZuZT4iSWuDCUQTwW3Vd0XNTsckKF_mgxWUSaPAa3LEvXDOvthMJ0x-KQGXKJOefhZzK_97i2R5yJhQwUZ6oTHbYskikbN1FwGUYwK89XqWX4CKBIjAOZf5abR2Pb9zLi"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 4: Correo 4.3 Factura Prontolog traslado Binder",
+    "status": "FAIL",
+    "reason": "Not found in mailbox"
+  },
+  {
+    "testCase": "Case 4: Correo 4.4 Factura FCA Mastergom Stefania",
+    "status": "PASS",
+    "messageId": "<019401dcea1d$3ebd8070$bc388150$@almarrosario.com>",
+    "date": "Fri, 22 May 2026 16:00:22 -0300",
+    "from": "Stefania Rossi <srossi@almarrosario.com>",
+    "to": "\"'Cauchos - Mastergom'\" <cauchos@mastergom.com.ar>",
+    "subject": "FACT A 2-11832 // MASTERGOM",
+    "snippet": "Estimado cliente, En adjunto enviamos factura correspondiente a los servicios prestados. Notar datos bancarios para el pago: Cuenta Bancaria en Pesos Banco Macro &quot;Almar Rosario SRL&quot; Cuenta",
+    "attachments": [
+      {
+        "filename": "image001.png",
+        "mimeType": "image/png",
+        "size": 242,
+        "attachmentId": "ANGjdJ_OQTmtYQWOFgAmv1x_Jut4ICAlogGDrAcn4TL5d2eyf7bnayr94aERz39QyuQDs33k7JhC3_Su7A8hslfhFjVBMBar9Mfo74P4goDkqf6Hp3W0tBY-s8Zr2B5dM5ag7C253LKyX-X3e_DgSJUitJYGc8YANa30THTPvfwMSjlCsIeb3r53YzOiBNvm-ZjLf64L186vGoVBkjqMednwlWMAF9My09JPWbMrFjJr-uD8xQHpMOloDsRnQl-Kj22nk6fKSO34_24FVCybwY8m5INdg1qzxaQ04p78LSwohaaAxVD5twEsYczp2b60IKfjE9vsmq4XPFsdKuKcRCtAm7O2x2v8oL7iK9PWMuI6EBLsrZvjtnW3uTlFYQIKsZmCnN0J26mAri32J9rY"
+      },
+      {
+        "filename": "image002.jpg",
+        "mimeType": "image/jpeg",
+        "size": 20775,
+        "attachmentId": "ANGjdJ9a41N06-9LJLcNijvqxCwGn0vNByfSTh0tfBVMvuHKCo8qyvuUHf3lO7gl2HnBDxM0YxVfgvFeWtTF2Xu9lJx7zYa6G_FtbbfslORl0LrOm-2y9nTC6GlmiNfUWk1Pl6hr61fG0qNmymXtVKtLMeEpGqiWOjC-fSp58M2X3kG5AtFXTXAbkO-xCSwdWbPfZGXLzTd_IBZQQYqwFr0Tu8268jIYWZgxlE7e_h5TSAZTYVmHmzMVh88rpDO5obgHN5siSFUa9YIMKQGOa5_NLeKJKML53zxvimDonOIiTreP3W6fxdnyb8fYViWBiueSOsEDQGeMVBz8as_Tj58h3WVsnk9QKuGHrK4sTI5rIGz6aVvuri-gGcduQnS9GigqRFODYbpkAXKOoH1q"
+      },
+      {
+        "filename": "Factura A de venta N° FCA A 0002-00011832.pdf",
+        "mimeType": "application/pdf",
+        "size": 132516,
+        "attachmentId": "ANGjdJ_E4lhCG2RhLbwZskSXjs9nWGUQx7gwfQFsPrMkOSKmuAVrxCb5hnOLKiWJy7dqif6JCCMIxV2GVBntjpNHi0StsAWgaN6el8UWofefgyHHzDxotlqvPRz0YBLysVy1qcBBWib4FSVebQp2NWgBj3KFFecl-w9RysqLrn7thxbn4TC3UQukK-3ExUasGXZz_k95LXpPR5Ek_s1DcvH9fS1nOUNpmWspcSoT9cY9NyRh407qLRteisDFeGJon-FqwT_oEkl-S46TDzf0fNKk7WGSHv_Xw4htohsUseRie1mHCq-MF7NeVA8I-WLldLHK3gwYxhUanRaV2dlhlVuSRbynzyHgHdfXAZlzuuhu5orqDW8EVHV4iLZQhyw"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 4: Correo 4.5 Honorarios Hernán Russo FC 229",
+    "status": "FAIL",
+    "reason": "Not found in mailbox"
+  },
+  {
+    "testCase": "SWIFT Deducción USD 2.836,27 - Instrucción Juan Arloro",
+    "status": "PASS",
+    "messageId": "<0bed01dce92a$642c37f0$2c84a7d0$@almarrosario.com>",
+    "date": "Thu, 21 May 2026 11:01:55 -0300",
+    "from": "Juan Andres Arloro <jarloro@almarrosario.com>",
+    "to": "\"'Sergio Villarreal'\" <sergiovillarreal@vapsistemas.com.ar>, \"'Victoria Moyano'\" <vmoyano@almarrosario.com>, \"'Vanesa Meggiolaro'\" <vmeggiolaro@almarrosario.com>, \"'Dalia Silvi'\" <dsilvi@almarrosario.com>",
+    "subject": "RE: FACTURA  DE COBRO",
+    "snippet": "Vanesa, Agrego otro embarque a descontar: CRT 052AR373609477 Dif de Flete USD 300 Seguro USD 328,59 CRT 052AR37360.9167 Dif de Flete: USD 750 Seguro: USD 471.13 CRT 052AR373609571 Dif de Flete: USD 500",
+    "attachments": [
+      {
+        "filename": "image003.jpg",
+        "mimeType": "image/jpeg",
+        "size": 19577,
+        "attachmentId": "ANGjdJ-Ahz9YavEVC1dGIC6nJ6CSN7ISJHcwwPWxoJIlMAZMsJEYluffxYtyLPjkD2wk0ERKMWdi4NGvN8-BAdqWppy00ZmduMTPoMUVngpPhyRC4byKLIzAyHxc9yceWOYg8hJbYoAlRsqS6rN9iCQig9NtJdr6FFPntha50ZvfkPEvZJwrPl0LhXMzMrKcfp-AAS-yR_dkwksh5GT1YvATf16In4yRItDoqYpLZjxnS43PciF5pCkfoBNQipVZDrR6cLs69hyM5pnZSz-_ij9dmPCpmf_qBqdEfTr11-7n2sb5v767x8Sx6Tqp5zMhLFbIt3ThFmzuiwpt9tzhCRrCwoOWOnQqcl2CEofIPRTMWz9ErJCebqFSVkRN0aMpMrGew1xqSBBdoah6IIn2"
+      }
+    ]
+  },
+  {
+    "testCase": "SWIFT Deducción USD 2.836,27 - Transferencia y Deducción a Sergio",
+    "status": "PASS",
+    "messageId": "<00c901dd49c3$8e6c3750$ab44a5f0$@almarrosario.com>",
+    "date": "Mon, 21 Sep 2026 09:20:10 -0300",
+    "from": "Dalia Silvi <dsilvi@almarrosario.com>",
+    "to": "<sergiovillarreal@vapsistemas.com.ar>",
+    "subject": "Payment Notification // ALMAR ROSARIO SRL",
+    "snippet": "Dear Sergio, Please find attached transfer Swift for invoice: 0063/2026. Note that we have deducted the difference between the freight cost quoted to us for the shipment and the freight amount we",
+    "attachments": [
+      {
+        "filename": "image001.jpg",
+        "mimeType": "image/jpeg",
+        "size": 168544,
+        "attachmentId": "ANGjdJ9APSlZAEAdnG3Z-semyQaeWnCEmLTDnqFR7MXdW7UpVMvRTq9WCTj7F82L_GxM46EkSEboC5-o29b--kwaVXe8_5T2P4avVSyldiguGPU__RO6yTCp7sxsClj_Ye3UvtPjSPsF27VPcHus6pSZAORwLXon3hWkdyQjnYJBSqnMvfcYOsHLGbnJbzrN3YHsttlnRt_eQMWeD3uYrIvXDd63Hi1QOjyZSwCfIu-LHFM13L4i7Zsz_ZgLbiSxusGNJ8RoLMan0bljFHRmf7_vwOKlI1xoGKRSZo9iQhrmPl1RANo0oTIMAJccA_5ca5-uGoHvu7LXQRZ-WihKgpx1_bvSyGOsWYr2VHkYtu36E4x0RtaExPVoyqCurnTfpiuxmkZ1EsB41j27NvOE"
+      },
+      {
+        "filename": "Swift.pdf",
+        "mimeType": "application/pdf",
+        "size": 4858,
+        "attachmentId": "ANGjdJ9ZrcGJBWQvWiXWc2PNA1MrAJW82S9Ylzv98N6am5svwIPaQexabIaRnnKs_mkoKbiaRyj-tWXzEdVE-VcnV_SVXCOr-NNnhkSOcS_oiLqaKRAnI2WABx9Vu0Ozte7RO-kwSDEN9Aya5DSfmj77DWqOhdJlbm4GFHJyN9SupqtEvCiwrvlwRHJoi_8BBTI9mFk5uvOFWfOommEEQ8FgnWK7ubdTOggPMHkmNwiSDPfSo4JmIDHbaB6pGZfiXL49ki3RsN0IAw2PYGG6lYD6Mu7LW1r6HWjWjiKZ6-40jKTdTQBUc8dL1CwH3r82yOcNYKA_Yqm8SVqrEGzJJb39fBIgR1gF5bXQF7r9jDd3dUkobS4rc55D_rIy5SMWpgpg2QMYBvGpNfJKETOf"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 5: Carpeta 367 (Juan Cuello) - Cotización inicial MSL",
+    "status": "PASS",
+    "messageId": "<DM3PPF954CD43878F0CC90B80EB76F5A8F5F2C72@DM3PPF954CD4387.namprd19.prod.outlook.com>",
+    "date": "Thu, 16 Jul 2026 20:35:34 +0000",
+    "from": "Lucila Urriza - MSL Argentina <lurriza@mslcorporate.com.ar>",
+    "to": "\"cdellamea@almarrosario.com\" <cdellamea@almarrosario.com>, Romina Rosa - MSL Argentina <rrosa@mslcorporate.com.ar>, \"'Martin Fusco'\" <mfusco@almarrosario.com>, \"'Nerea Guida'\" <nguida@almarrosario.com>, \"'impo'\" <impo@almarrosario.com>, \"comercial@almarrosario.com\" <comercial@almarrosario.com>",
+    "subject": "RE: JUAN CUELLO -EXW GUANGZHOU / ROSARIO 6.75 M3 NUEVA CARGA (2DA) // C1367 / ROI 318920",
+    "snippet": "Buenas tardes Ceci, Adjunto el Booking. Debajo se encuentran los detalles de la carga. S/Hunan Xingyuan Technology Co.,Ltd C/TO: Cuello Juan ramon vending machine / 2PKGS/760KGS/6CBM CARGO READY DATE:",
+    "attachments": [
+      {
+        "filename": "image014.png",
+        "mimeType": "image/png",
+        "size": 30005,
+        "attachmentId": "ANGjdJ9-PLOMKhZOR2PDYXn0IQu_K3R3vsFYaIwl5ZCbUqsl0H5l1fTjs1LDl-cy3c9xXJC4Sk1jixxehG-qvpE8b3TqQVFs5Xo0fQ6r7P1Eqq32mKDFhi4lI6YwwQsF-DaC_Fqdj3zQbrhoX4qzadVMkV_QCt_jIgNr3B3lG7Z0WSuR4P5CeUvBZbYQ7MbEr8pcXpIn1fB9i4webmRV3uEoRlvVqN6V2dGgzDtkSMdgJ-7N09K69p4Y5O2GmQpN4o4jHNySFui9WewwiK3XNG0XaJdZIIQpa_6JIvODRgWb9e0TAePJU-g_nzeJT9MDEr11b8r2FMGMYJ7uSDUsp7WMco5XSv6XKhC0r6zUSFDg-4Fq_JYxiyL0t5BzQbgx4afw8S7F7YmrqfgwSnhWzvx8iodVwEw3EXLA0iYomQ"
+      },
+      {
+        "filename": "image015.jpg",
+        "mimeType": "image/jpeg",
+        "size": 20678,
+        "attachmentId": "ANGjdJ81vFruZAP9Pi8aXLRXEasB1QvLnm2VkS9egJdy7q22YmqGZhThLLCz456KfX8_4qyeHSNIw5fbwzvUz-1X-2ziMQXGIJBfSslEU0x1UZq6KcxroefzzNCyPBnNa5iKPwoVzVRzUcWQ5E3xMXsSqhzqTfFA8xuqdghk2UzcrNstzBXRbgMnNcJ1qJuddLnbpPN0hfuH62MfAaMp1dH3MivtT3gir70_VGDN1-mUNkMNa3r2qCW9AAsVATF1pZB5OT7dEUqPGAWdBMpHIrSnJEwnAz8oHzDT-YJTG_FGbGEJnFMf94bupwLHwIpvCDSjKGkZeZaWS6MxeTda6qqUZHsXsFZw3raMCUPhxH2BYTXB9F_drHmEGfS0EOQQ-COdyU87zmZpg5tdxBfLa9wdW6RrhVpXKkx_vSaEEg"
+      },
+      {
+        "filename": "image016.png",
+        "mimeType": "image/png",
+        "size": 33141,
+        "attachmentId": "ANGjdJ-D1KpYE35XkZnrgzotWElZPlHHx3mBgREhAnmpUkrAXId4xLw7JeprDsHHQvjT8dUAKPWbhMdNbdNExGKW15_3tnLASRjktNQURVVf-zB9M9hGMR3Mwxl8Q3IUnMuClEP-a9Gax7KRBLwVM6aX_I_z33bScO-MiAlAirHuYYKJMhZ9i_kyyByR0HcOV02Ou8pPzb-vMtqy2MUN-YUZWNJwlNUi3ZvMk_KK8vWcx2jvDzWVeIVZcpaw7NIQEA4F2M59oKI_m1d9aCGzdZzA7Pjrw8Tfo93e_4TKMH6lo7LnFpwMQ4oi8URoFs09se2-lYycvnZ402_Larro9NuUIhYxbqYeozsUkyFU5JsPbiPPvAZvqN__qVsRXFG0eqF1iHHet6JIZU_ZmBGUQuzWWC4Zc7KdljRZxCbL4w"
+      },
+      {
+        "filename": "image017.jpg",
+        "mimeType": "image/jpeg",
+        "size": 18210,
+        "attachmentId": "ANGjdJ-zdvXUM74-bHfwTMo-6OATuntKUkuFHDFOi_a51IP2lNMDdQufA_CmV2kaMKgEIiRsKoM2KNBh2bBoPqexyXIZM26YI5nKJ0jiBn5QZDHDO5K6VL_B74GULORg7hfOcL-DcKkJExtGdbRJ132RZ5v8ZYOi71Cjdj58BJYr5ddNq9FAj528M8fC-yHyAS9ZLmdD4NZzfI57SJnWu_Gr8WsF9At_CZeFHINOmI7Ou8mQAcvigcBTwVsL_5wSemGy6rPaI7hBAY4HbJEVyt7w0zZG0eDti5RSq3zATxSb4IXXdUKJBt6QvuWZOPtPIXmjZsjXOFUJh2pJXYaUYgTp_1nyLdWHhmcdUSkWVYmtwExlO27pqYDkfroEzDgFPnFcae7yflSsDoLqRIJ5g1xGpQ8ZzMv777m2Dsp7lQ"
+      },
+      {
+        "filename": "image018.png",
+        "mimeType": "image/png",
+        "size": 33364,
+        "attachmentId": "ANGjdJ-QgoF1igtECm_YiKV4HFG-WVdzcf5uPrcZnrPp82hHfwC-g8-ApyAsompff5aMZeJumhl3ES9_nB2ibjWBaxUtySqcwWQf7RoXTQ2A_N60LME__eqefmAdTVOplibc29JGAqJl5OFGUIbD2O0K2hOMigXJo5CTz_6_r-tS_qRLEUDwxYDHrCdr4WkCmao31LCxHWf4vv9QKvgnEYF2jYj7vwGysaKMvs3zer_Mc0F9VBFp4I8yL9M5bXKM8D34yNNZHkDEk4kAXmFQKv2-QYj2Xf_V8Yn4pkPQgETvsxZ-Qi2DJhiK36uO-h0akQb6-7srNkwiVEAFO5AFKC-U-v7mOYpwUX_6TuZnzq4E23ngIu4OapcziKS3TG9mUkmIqU4o_1sytQh9s_56vu8XN2XcgZEwamv17I7isg"
+      },
+      {
+        "filename": "image019.png",
+        "mimeType": "image/png",
+        "size": 18841,
+        "attachmentId": "ANGjdJ9Ai-e82DyV_kiQ8PhOcHLygsoYxliyQJ_aIcL5-91Af1v9VH2Hsj19mZ3ayA-lhvL5sPMIzN8CFHHDaPdEKGiqR0FXF9k6QURDBvJSx3VS4q6O-IZjt4OwS4zL4eDXmDCe_Nyx968SR_AMacRaPLoxKhONhYX28r1yD6dOWR0M9h0R4AuY7M6bZSF2jmxfaqS_1AiXTnileoBY7E8-vDJUnL9B0ioVlOgnBA0WBVKRzGSWM607p2EYNMqGlOGn2evA7eYNMYnj4IP7SkHb1_h8RQE3SP-50Iq2ig6Q9e5f6cy55Gx-T8auZ4v4_zOA4T3r7HFQsxJO7EdRoHacz1LMCAzQfqRzWlbTGcD3rbLIpnqtH77jK9pi6zJ6s2ZTHaLmPvf_A97RrKIipNsW9Pn6Sq114hBiF2Q82A"
+      },
+      {
+        "filename": "image020.png",
+        "mimeType": "image/png",
+        "size": 33747,
+        "attachmentId": "ANGjdJ8N6kt2TcgJFcOV58R9XfgXO0ZSrxFfeKkfR2lrcmkb0GjHQvnD2zrLJguSBENQRLZy9zfz51Eg52X2xsgFqUjvhbXTvuBqF1JC0NmTeNLJROAvzJSuCfM9gzm2CCb70EztNhy01O9LKDpJ1cTpXQYobLzP9dKtwF_wA9VkoUkUA-vFzZzRSOJX4yvJKhEEZrjoVvdE28SfwmhUiQnsyWf07-pAReFLWiJJFxd73-kFh8jWsH4xpnd8wV1v3N01_Lls4r_SnRj-nXx_f1xft0tiBnNemHLbAakcs1FQ3Gn3sYV2KIn04iaTeGVIYxhL7ym_dD9VRIQnTRebe53GvRpm5we_VR1A319DpSDKq4W1tx-Nfl2jCjJVUeTx0aVnfIM2wsHaIzEJiyEQI6yD0lgltJfk-azxeSaqNQ"
+      },
+      {
+        "filename": "image021.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21564,
+        "attachmentId": "ANGjdJ_7Rol7VSzrwCEK7BmLymo26Yyk2-K-8QkVxlaLH-6-S3LfU3hAHjOxUXsObZJz8tyCQRafZQi60V2GJLPbq72-j9U6rCE2_R0liLJ4ZEOfrn-8rPGz-ewFMV2beaj_pd5PVaaO-_-BD-Mi1EO-PHLz6brFG3w5N8tUrra0GMaqy2huJMQ_QPi4XuMFWJAtvPixDwzTUFoysz0AQVRufERcG9PnLT6Qf420ueVhlSvmbIwYLhmEJfMPjN14ITwNkjkXeMgA8BKMz7ALZyvUmq3lyG_RDwZBxbpGHKYI7YccvdLpF8WYkPm0xTs-orXKnUwUCxpBYPY2YG7FX0MccEnNcugqusJca_f0HfLQwPMQ4K0rI658CksNOa6PJK6KGkPotUBfTeh7URXiVsgBnEo7wvMPz4l9ggoCKw"
+      },
+      {
+        "filename": "image022.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21565,
+        "attachmentId": "ANGjdJ_ybZgcNfxFaNApOv8DGFJRrKTGP5qOfW6CUo8glNfItTjr3nhE_OoCW9Qmi0s61UBFxxvA-IyTwCYmU-fi_i95kCxGoa21Ifw2HKKcDnfCqRVs70lTJAvQPiCLhRzRkf1KYiY6fVK5cD40eKcIjBfq6ODRmJ6U8RfYbo0wN5a4wtqYqzOnWJAFVwhATgtuRBgKzaq76qaSDgxF5c8Ui1wHVo7yCwsgDkqJRFBL5ZprxgaHwN82jCLXsORe1S7OCwXK6Ot2jylQ8mWV_d6R-kydvCFo5ZITNcCwlH1AiUbzCocwP2dgQ8a2R9txJ0Bh9ZHSt8YED3dHOPxCMs1qjJWtpj4CpvA1s-SXDrEGWTCL_hWSAoy0vJErRANZh-6I0t935tKBB1I_EbNyz9hbwmuQagGU6zlI69yZ2g"
+      },
+      {
+        "filename": "image023.png",
+        "mimeType": "image/png",
+        "size": 33341,
+        "attachmentId": "ANGjdJ90OZe08YXCxNy8O7-EFRY7CaenyTK5StzWM1wmIOnfb_Mbfil9yrsf6NZ_qxSYgPsqn3fAZTodjbHnyAwfOTWj2HNGjy4qBoO1KBM6iix0K3rPkn2H8SGcP3CT4eiubdK2xAVuP3GNmK7snr8-Pl8jStxK9lY7IpxDDP6ZKw7BMjoBrS_F_MCMXjdsRGCqNtqgyi2V3mVXYb-8hykdu7JkOo3x65qpxFqEPfNYNfX5lk7KonzxvM0dXjylFJ2VSBSFXBcx5Lb3o_1DBk23HY4BH7fClGxTtYWZ5abb42LkSqODoZJFuJmQQG3I-5YeJ1wvcRF5wABeKF92kT608HZ3STCvp8tEWKSILRuXUhI3aeRgIYVfzmIT5DykuPmF819exk3uwK41Sp_2aeV1Dla6RH3ziKDdriqD2A"
+      },
+      {
+        "filename": "image024.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21536,
+        "attachmentId": "ANGjdJ8dcIay8EHulMxiuwyMI0Vyg2_5Z0UpkwyHEDeRkrjchE917KFBRY_kPs2ESH5iwn_z4QKSQ9gnQRsyGyWA9XEU8WnNtPhsORvCPJLfBXwC4tJBDMP8x92erVMSX7ThsYtDFnh1GaJORs--6SPGvQIRzDs2Ti5yAypAFztMBFxA7hwS9l3sX9gX-hM7H5Sy8aazGjs8F5GzXpyFRwFn8BVmz597EBs5kyEYAQpU3wi8ZGDMsBIKmuuo2IZLHpCv1IT5ohDoHvg7rgilvhfDKTj6mKlaKfMWJpxdmz71QeMSRg78zH4_6KBlOfLPzlimlVZW1_Rp6tOSmRL9U9WJH2KCKbxgGkYPkZFK839jEXxReTS1BhDSMkb_Tf5v5QyiO7gtfS0uFmQLVTBoChwuVWPmMHFsUvFHskr9fA"
+      },
+      {
+        "filename": "image002.png",
+        "mimeType": "image/png",
+        "size": 30001,
+        "attachmentId": "ANGjdJ_O3nDPaa6jGPbxlq8B_HrZTZ5fORg4ZqBmw7-HdZmjxxFN4ktFqcuK0BUA-zSH_E-yX886cCfYCm3yLcYGZN1RInqcSXDqTtJQLNK-6FalGugCD06h4bPvpTAskrg4XlGzaMtlV-3GFIM09tbHklZaGRDiR1cO0qummpZA02DMFpLJtk0VIF3RcfnlhU2QOD3zHChzeJr8CT4CTqVcI_O9I8v61YnbOiOLdDBuYJdw77bIY8axLUW6rMY9h6jJ6SdUeoUHB0USSnMuiwtse7yyg_OEAI2Bbph1PZMuDzBk81CqtQir0q1fifApUEYLdWBwp9sEqPn3ebmjESs1x8s9bhh6I4UTLBEfpvzwmyT6HX0he0u9XxGo-9TUIZv9wMDPUkT2GLmi_2jv"
+      },
+      {
+        "filename": "booking form FCI(1).xls",
+        "mimeType": "application/vnd.ms-excel",
+        "size": 97280,
+        "attachmentId": "ANGjdJ93ZqYRpuUsj5mMKBs--hqve5obIkg3T8RSKr9xiWXKDgvOYdxG7CeIu7DLfdYO_jJn486P7tPBQxgT2R7FZdwq6NX85gra1uaAlqZx2nYlleXZNl0O45oh4FPqp0dEVv1UQHBycU80w5MDDSqwwwmVgpylGY1IGIiphPJSsRKmyTEIi0oluVTzfZG1m9GAKvtEbL-hkQwm1lMfFtmlqCQs51US03d4j1e36OT1sAOKFBMFQoCVjgZQYoIckwD3N_lrqc5GNbKwtU9ZGhmyQqltI3mo4mwbabSuSTp1MufldWwGcarQtRIMiLJakBU_qInzmJhI-BZBoU2bRjmlhtkI-FO1Us4BENA8vWLo_WLJTSwspBNUEZJ3aoT2mZtnTOa2848XGwm3DsBw2iUT4u99QzUGYaKvbYcnQQ"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 5: Carpeta 367 - Reclamo BUFF vs FCA Cecilia",
+    "status": "PASS",
+    "messageId": "<034301dd49e0$71214290$5363c7b0$@almarrosario.com>",
+    "date": "Mon, 21 Sep 2026 12:46:57 -0300",
+    "from": "Cecilia Dellamea <cdellamea@almarrosario.com>",
+    "to": "\"'Ailén Ferragut - MSL Argentina'\" <aferragut@mslcorporate.com.ar>, \"'Martin Fusco'\" <mfusco@almarrosario.com>, \"'Nerea Guida'\" <nguida@almarrosario.com>, \"'impo'\" <impo@almarrosario.com>, <comercial@almarrosario.com>",
+    "subject": "RE: JUAN  -EXW GUANGZHOU / ROSARIO 6.75 M3 NUEVA CARGA (2DA) // C1367 / ROI 318920",
+    "snippet": "Gracias Saludos De: Ailén Ferragut - MSL Argentina &lt;aferragut@mslcorporate.com.ar&gt; Enviado el: lunes, 21 de septiembre de 2026 11:56 Para: &#39;Martin Fusco&#39; &lt;mfusco@almarrosario.com&gt;;",
+    "attachments": [
+      {
+        "filename": "image001.jpg",
+        "mimeType": "image/jpeg",
+        "size": 20678,
+        "attachmentId": "ANGjdJ8ezzRmSMLtp9b10pUn3ipa88nKvUvti0rk5aB3lmDi9qaU5UZo3lRrWoueoPo8EDPY_WLlNkqWAXNdYwkOO8OMDu4eGGs0z7nDZ32i9bxCmXWukG82FcQmYC8JjVK8iueJKGqTvuIb4eUNFo-11scFRVemOyE-s2KriV3mwrtF2ZG4rMYvQDH2HrTsjIO3zeK32j3fumnoDdUN4MA9lHpAZTfxSKBAb7X3n1DhzkxRtC1A0hRk0P4SlQ1q109_a5SCTN03QVaAuQgcjXSSjFZpEsUvD8_EaBtjDs5cRh1glG31Ht9sPQ23zYwfj_JvjNTaa5MPNitI2tXIQUZD-MDixhGapMwPpPboCzSos1PO3CHV8LVfGUkwgRznZPhyUKxvARf2RuHH9niG"
+      },
+      {
+        "filename": "image002.png",
+        "mimeType": "image/png",
+        "size": 25932,
+        "attachmentId": "ANGjdJ_3QrwupDZ-aUbuixoR4UB4K3xCPw8OybWtuEQqpV9tpNcv6ONeZyjsftemMsW-UsUx-VbKQu5dUM40OaX0Ny2EuNvO2SG5VBM7zZ-rzpUzt-ADtC_NppPKDFSW8CCy1-0eaOp-AOccFjz2BJMG1JgPQ2xvGEMLSFqZfyRz4GciXqfG81iVxRs-nWFXDKPYv4CzBV9ZXjVzavzZEu97BxJRyrPAP8UleevhP6cHo6hPTzUigCVY335G_fC-JNZ-e69LpV-KzDKFLgQsMnoVbe4NyPSIhCAOMmeruaP9tgrBSBoOQCiiQX2xO_-E7achfSF_JcRnu2paM26YiWGcXVaZr8A2Hrdk7ZU9QlOaAFnGBVgDc6rzqGjM_ajFfcNX2sPYXARrX2OJA_qG"
+      },
+      {
+        "filename": "image003.png",
+        "mimeType": "image/png",
+        "size": 30005,
+        "attachmentId": "ANGjdJ_tZPZh_DxPphtkUa8LC4eVtMB-FCVPTFCC5EV30F3htvFjofmwbfjd0uJDeg-j6Tb6ieLkBByqXJLzkbaoU8keJhkeh45_yPrOTRVT_1GL2-CQBdWCv2W1RF8XKJbPWWQx0yOXmpyfygSQ9NFEFKu2bVoCRY807C_AyQogMH6jibK_OC8z03jU3QwUcbihXfHA9m-HswecUPlNlx3nPuddCcuBXSYolLDO6SP31BBjlpgAdC1qLjkXxEFgEBq0CZm7njGbmqyxYfwqJV8Quzfph7FCmdwPU2LbduGIBLXO7J_Ox4tH3-549yWYqTMb4YDz7P1T3jfb8ln5e-VRPS79rCnkYW2AQcQp2Ux9IpLTw3ERI60ysEVdbMfMjHVxURBdl9UcUbXX9k0P"
+      },
+      {
+        "filename": "image004.png",
+        "mimeType": "image/png",
+        "size": 42954,
+        "attachmentId": "ANGjdJ-mQQuwcj5K90xDBaV9TScW2-F6QdzPakRNZE20b0O05X75W2mrSzyie3f3tg9UrLnzwq_TnBf50dALXZDmYBqiPugSwk4N7yGe5w2s0iiO5WNVQbNCIsfbj6VoOuWDlOOwxOLgyWJ3xuO8uvjEK9aLyLVYVxUNpW3lLNx7bbSyfUv0Pn_HYOqMsBNZEO9u44Z244BohLY0Q9cVIFtlzhAX44fWbDx32O8qwBNN7V1Su6P2TYmwb4mup_NO_C9Gw8meUkL-WR2RzomjZu79Pv2YmmB4vEZ9vF8wF0dWa8noZWo0X-BMnnIGV6ZKH4ibs54ssfLuJw8vGVBX9Rwd2U51zsRsdGEQjps4oRO2SLLJ32-GVGlKjoCvYCvS28Uo-9E65uZ0yfkOCHoy"
+      },
+      {
+        "filename": "image005.png",
+        "mimeType": "image/png",
+        "size": 71759,
+        "attachmentId": "ANGjdJ8faI_qGrHj-xDpV4tXVbyXRAQ4SfoZc4LLaU2blI_CVD5niS78VNvpBGG88t5bfacIaqR_CqTTM3xZR1b95_0ZwQk9Ym3E7r2gEiY7godbKFLk-Vy3yVSM-0uFKs0VcXEx4_WmvKOdDgv_lEuYK03gLqqkpZMC-MIqYTnhhPK6NFYJ-7sK47GZ_I6Lfa5Xiw21CcFAk9ROiG5HW94HllRQYDp7tv42r-DdL0ZV_JR9D_QJ4focVFDq6y0sM44JdHySOYxR0SWpwjUUTVyQ19q_wquV57vYrO1GL_7YqKpfKEqzsCv10S40omwRfEgaiv1CXzJqttfrkN4PAEsyZFoG8MnuK9qvcbJLnMaK3ErDFdvL6_G7d3WP6fnvG6MJC2-GT6q_JWm4onON"
+      },
+      {
+        "filename": "image006.png",
+        "mimeType": "image/png",
+        "size": 29998,
+        "attachmentId": "ANGjdJ8OBsTznEtnhZ8YoEBUp78afxJs145a9itOSujBFJ1bxCZn9d1ypifKnDKf7loQu5guRcGDoPjecigGp-DxBUoqTjBbUopX9Guwgy4M57hTzhDTMRThJow1lERyWCiQ1kMNLbVn4E2At_ftUklrNyjEmxOdKioGQUXNu-pOEgGfzG5r0t1par6JMja8z3AFK7XL3LL4O3kS7MMFyqNb3FxwwUiKVEprDzX2QqDDeiKht3GXlm6a7IrxbxMwMgmUq7BQ6qZMXv1atvQFVW5LEmYRlDbhumeE3xCmuLh9FDh8xgPvIcBS3893MePpt8W6-GdRVpze6bVPuFqAblXV69ePtV-nJ3WNwT9L1EpeQwbufn-30-xlg5KGKY8WsXfGVnMCyrEHd99mwqi_"
+      },
+      {
+        "filename": "image007.png",
+        "mimeType": "image/png",
+        "size": 30003,
+        "attachmentId": "ANGjdJ-OGErhl-JZUZd3dDJZin9Mr4dQk1O-ZB8C8-3u0CTuso8kZx07i4LRQ47hQVJQ8-Jv50KM4Hv8LBju8WjxRJ0VOZeNVA1OTCf3djI95YCfTMRAANJo1edmfq5tgr75fC-rVKKvSO6ppR6Yc93zUiBiVI6z3C5eAmQHC3UWIJFe8KSdoWkLjnBYdyXIA9tmNN1BXYTTGrJGnZZBvtDqocoYR1ho84R3rOCV-OwWG1eLs4zKPDaxZpSVG2N3HsPHfRygzwfHFl2HH_UBnxMmfi_SUoDgR2-tbdZ2mBYdRMsra4LNO7kVcCqot9sszDJtVr1d02WJffVfuPkVoDJVhT5YiwqPmSuUzWfAEqfbpu57-jAiQjbeiJ45AeQ6M-VpD8tAaIkMPy_JHNZ1"
+      },
+      {
+        "filename": "image008.png",
+        "mimeType": "image/png",
+        "size": 29996,
+        "attachmentId": "ANGjdJ_zXoxE7azLPY20kZK2HVz5bcB5IrZA_-RCWVtTu-t8slDJt1ko-YKJtVHM-jCcrpY--UpztlTV6F6mImC4R4-Rd3Ru7UKpXa0yMHEHoiBKREPxA-m8yIokDQmSROIJrMDeQhYT3oT3itFUhMYUjfHy0BJ41oZbj6bCG5LygZVg-W-hacWRtPxa6VraFCx4rSLPYzbmxYRtv7qVFm0YpqQNZmBKWVgybh57cMynTYV4e4tiXLQ3n9_qJcUrE8onG2Mi_b75FPT7IE4i9MZ-iI9zGrId3Lyrmu7R3hrXdKiSAePrjAnb-dIse8gD3_miWzrEaf01YT2vGQcuTn2UaIab0DbOch7Se0IOH-cN3TmljJcijrl0ky__-KVloxVEbtNzqfqIAl6Byxj4"
+      },
+      {
+        "filename": "image009.png",
+        "mimeType": "image/png",
+        "size": 60028,
+        "attachmentId": "ANGjdJ-USklUSVWmzZpnMe72zUjCkpaDOvh_TEA3fsTtn0Z8ObDmuLNsHn3w7IYFvLAd6IdZMZpGF_pfckbFi9j6hZF-krIjCjXp8nsuCPVRMGVmh41jFCvQjQp-7u1Pdbs_VAOgVO5GG0oGYv7TuH9MVmr9AcXIO0zP3R3p8e_8qByKqVZJuMpPAbLtiaN-xDR-Tn1JnE6f2ZEmfpBBFe3LnoHitVfi8CL8xd7FsBOMY7qFl4Ov-7Q2WtwZ9r1gzzvqdzYHjulCsILUnAU41hWwP6_2Tc_V9qzCDPLVC-igcicoPTPdvxW0oN4dLMZjo7OQ7Rj1cjQ_C5X3GuqYV4b-7-3BNwaVfvzPOK-zEtPSY3k36CA9kvOYw7Pttmixt7zzEwd9nOW9H3Q7J_nA"
+      },
+      {
+        "filename": "image010.png",
+        "mimeType": "image/png",
+        "size": 30009,
+        "attachmentId": "ANGjdJ_K1dIar427BqUTT3Wy20lNkJTwNhFLk-0_cVxr7QQEpo68WDhA9_Ivuvk8JAoh6cnl-xy4vRLnGWK1b9Ma7hQ7zIspJjK6eKlZs5nfn_xAC184F3o11OdQIL1Ul0AI034GF_vUpNhLwsOc0vNivxDPU-BsotsYk_P11wICgGLAXeiLvIDDSZfzR5tJtzgPSoBM7bsOPBCSR9rmOaZhRV6HT_KcE3YBDc1lvMTCf9iZpLMBzwOv_AG6Eaqi_LDG3qc7Gqu1S8Jc_XGE3MYEkAxmVfEn11W7BdLyZrIBfWGSLsj8PbpRGFBD0xrWlYh-IOvYY-kXZhHoG3eWcUPKqsqQDNRkoWF7QFg1xyQTMm3m9wxWMnVKTcZd4wnCXky21-tqHcoxug8MB9au"
+      },
+      {
+        "filename": "image011.png",
+        "mimeType": "image/png",
+        "size": 30001,
+        "attachmentId": "ANGjdJ_cK4RhE63_xGx848C_CmgzOaBUygfvD92KS0YLlLVPFJApbzDtmbZh3T3XwlqmEcVg_LwK16KwwjRhXNx4LHunrUWQ3mL2VYkdh-YID6EZmBvPxW1i_-KeW9W5BG_ayNS6xKGn80-axwZAabcHPx5SN9nHSND1Ydhje2IA7tMhDPWiAA_y86zLx68RwFb3tR7qF1aFyDA21Xc1Kiam2To-DrfrPa6fpdL2frekZoLbwA5-XBWU1WhxaIzLlX_RRn1-U4-QZn9sb9V9tZoD4RNU2OI30Qk0cVezAWqnI03rqi3eznmtt_eL4tw-ljX5kM96aGnoyzymvOllfhUx_2gi5sX2aa13Jh3qPwgf16nrl9y3H6YCiPtJpSDPO2xcYM07NWtTv3TUZdh7"
+      },
+      {
+        "filename": "image012.png",
+        "mimeType": "image/png",
+        "size": 33141,
+        "attachmentId": "ANGjdJ_cC-H7L5mL2U2RhSUAJahbzs-F6cd27ocJ4JEgu6RfZMPf7tu0rfmcOrKUk0KLjtODQYeDyfYBx1s3Sxz0ngKfaiX1g3knpBAo2WHpIfZIm0etdqg1tqX-XpxsvMTOZlAB74KGS1kMaQJd7sCCRtmMHmCR_HvjJVuUwsCuEhy0OSyc9gr7L00jNR4DyO3tVenaFIMnXPZvMcng_FTRYE7VXnl20_ZNWjXs8FZ1pd_yjy13QvtR-5gTNs-X5JlcxPgvagCr983Yg3wEtrItb2Hjym-Lv9M89vNgu8XlBuGL35eLOh59VpHxF3KD-3HYee7kSVNVRNPEU3x4YxnbFYbrKKg1GqQQD3WSJDZm1y2PWvzJwjH3KcSH6vTYgQyVOBR12fmOjlGNFqFd"
+      },
+      {
+        "filename": "image013.jpg",
+        "mimeType": "image/jpeg",
+        "size": 18210,
+        "attachmentId": "ANGjdJ8vi4_enPkEYo5Z3mVbnIiuM6EiE6e14mztdJyUx6jdF47PPUajlDi-m8M28PP79NPoC9ktlpDJJ0O1xz-SwlJ8sh7JgMUXgMRDphsRqrSlUnHQ8_-EwxkINXqTlw7ig8OyS52rNL-mISybylEMqzUrmbxo9Adt-eNTDj6e63eUHBUv22kco2D9n4jbTzSRJ9kjyjIrGziL9XfaViNWjFNQ4zNjpEOZB6CZN3wuNwpv4dXGRknNM2vpdGMPxP3xi9vnQanfit_48bQf3kOzlyFYRWMBwQt7UlakfBMvh5IEoVSO7JCa9L0hu7XH7OS8WA9yIMrjLD2gr4pxOyTpgwTkq4sDkXraj5UZ2VSLCt3gSl88TIxR40T2hiYO2jyeEGesYJ4rMp9njEKD"
+      },
+      {
+        "filename": "image014.png",
+        "mimeType": "image/png",
+        "size": 33364,
+        "attachmentId": "ANGjdJ9OHNWS_Tf75RXHiC9YU6Tpa8dr4a8xYyRgqG0QtQhcSbuia4hSdLkp1gJ9RL5aXhptvj1UYLJD_ypHlIa-c0fTE-I6WQiM6lMciMOoqLb4napan11X251n-oPF8TbRAbv9QoiJav_sxUpTHCpf-NfrxA5D55sLz9ZwkkSyZqN_5e1iY0ASn4OkEfgIuYBcd90srwDpSe-43USSrakg2TaGlCCF1elNaiKQLf4EV6bm76UJOYahSE8dITQAvSkp-1IiDUXbk5NNa4FQOxvUZ9QNh4IQPBDBBlZFpUBd8fv6bETFpjprenZfG4iEPu_ZvbpxMduGIWYJJ6tACt1dz5-v8deRj6jN3oipquc6sNMbUYw1HjlmntfG05dNydxjc7fyVNg4fi9oIjnA"
+      },
+      {
+        "filename": "image015.png",
+        "mimeType": "image/png",
+        "size": 18841,
+        "attachmentId": "ANGjdJ-88P5LllsL3Ab_pdRL3cBm3tueRK2fr-dEFkYl1dimdei7izTHUo5MtKzuTqwYLrtsxOUqYCMfXkRAg56JidbAGgK2wjBk_6FYjmEFlKV-KbNJZ_vIUv0aM72X8qxtfffDOf28Gq4j7nVshCztlTgjedZMBEVqoBgRwFnJFV3TECh-U4RBnUi8pL3i7z82bSvPVGM576O5jA72mJMPmvp7lLkE1IS9jYhF9mVlOa4rA6PqemPNxP-SNlbM7fT8_RUBJRuC5UN3Whq4-rNd0NUvifAfGauZwUFbzhbvmKjijEexvelrXVXETGzU68p5GUit9wMPBK1h7qZeLhnr7GVfLhwubh7CnAU8QAQBwAW-kzIC7vyg1bUOCQ_7VbhLpN4ie5MexJ9VNSBV"
+      },
+      {
+        "filename": "image016.png",
+        "mimeType": "image/png",
+        "size": 33747,
+        "attachmentId": "ANGjdJ9EOrxdiaiy2-tvyG71Vbu4GT8Vko5FeaQW7jfNz7crVBsSxsD8AOIsWaw7qOsPfB-WgSw2FMMY-L70eQ_8Q5SW6k3jDnHHlRcf5vk0SLOLSLT9MMJRphK3GRoV6dJesGIGl9qqtWy242DYkE040I0mm5YSEfepI1q-rXVFctpgvsO6iqt5aPrWpZMa0-R7NAu1xlTqc65vwdAOMVXylTrBWpsuceC6qZ1xlNe8JCXdhuA5nD2T9c_M5ZwDJJYnfNvDASKC0dj_Dl__IoCFYRiR88gozuUeGsDdJTsq02AKOpcM2-eYqGJH7Mit33mkxsBW1eODJd03Vl5ddLyzynmJBV8xDsT9YAc5NRF7zCh5VLPQa4cqm23LPKor8KgercV02gf3lsfCKN3h"
+      },
+      {
+        "filename": "image017.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21564,
+        "attachmentId": "ANGjdJ_XuKQf1du9bQG4SP9G-1jxQLbXzD9_AWvzQVP-5IWpjr_Ie35qce7MFCzXCtwFgo3QxWGLBxYk3xFbvlqIGyAbSXQE_vi7ABbOhOJVV1zTjRx985Exv5Kvg9YwkbYCACDQASIu4rCFZCxKJOmO-dKONoZ5CrM6j_4d8oynJL_mew2zXgNIY02J_VB2TWuzeNox7gspN4z4FC7Lozld08aUIem4WL033TKj2DAwj_O8U2egZScn4LP_XhZa9ZXQZnV8TzaqXrpS0e6AGXxXFvsGN6j7Lud1cmSvaK1B5wMf82nJ5AOROpAR6hYIKEVIx7qcvXN_k8kSOKVMwyvLrsHrNc4KtRKzRlS2jWjoJ_WFgaIfclQptHqFGXXsL28i3cWWBMEZLctIOJJe"
+      },
+      {
+        "filename": "image018.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21565,
+        "attachmentId": "ANGjdJ9i8JMAF2JdNgkakLDseCcoeQMJ3y5UPsJQ3YaHr_1A9Q7XdOVs-s-ua_x1KQwuoJXsQebOkf2lkp-dl6DQOLgy8VzLsif8qDEp4Mo0ciGP4w5QoK5QiIXEG95tiM8EOKAAla0nWEkgBRSZJVyjU15-618-bYJ-GOTfWZ4GPX_9zkcCsmB4SYQTMVHzPT8XozYOwXMyZdEa1_TlxouKyH1cwFTa1Y8UQ37fZS7SkohrsK0Q61voaxCFG4gLCxnE5atzNMOD_sPOr3Tx26NCdIi4UIiTMPA03OBnPstADCZGp-qrdsD5uuz_plCH4c2vlqPdX0dHxCeitxYWjG0WbuYrEU9Zl7KJspOxye38gx7Y-ZY5sv3I7NGFqDqyJh3vqW9e6xsxZQX7zxl_"
+      },
+      {
+        "filename": "image019.png",
+        "mimeType": "image/png",
+        "size": 33341,
+        "attachmentId": "ANGjdJ_nPuetHFi4lrBIPUdDfTY3qZ0QgEdbKkCu5rV_UYEikG4yEdL6HIpfIZxLHc1xBh1sUlUNgdGCuAuRCqIIgGTD0WZKPkql85LIJw4CXMUjwC6mNPyKr9II-F2H6hFyopNJO4UVNWeNNaQqHsKZoezpOGn3NpdhdczPR_jCiGEayifoddwdt1fVnRcAaOfO68b5WZ_KWLKyVf-8U4NvpHRbUqj7ThsEve_ivav6sYnf9NM9ubV1HDX7bswEO7t1nWrgaEh62hjdKPm7CC7rV20JANu0QKfJB9ONEeIuguUERmNjXhVOVfdLgUu40Zm0UOZPsEqMconVsPHSbVtsTqSIiUza0GwPiLYilxR-5c4YVM-kqTPkGctlVpydpWufdS_DH2MMpypt7OoI6bL1BjN2Gx4EVnRqRNRffg"
+      },
+      {
+        "filename": "image020.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21536,
+        "attachmentId": "ANGjdJ8WFUok_qOCUx-JGo89uSrLMJYCVTNSOZMKHca93uquXV-Vw1JgjiMT9dMEkSXP0pZzH3h9Mmnt9WLDG5g5kIqYSB7qodOoN5Rep0mpltB8G8jeKozQcZ25iZomrtqDs9Dcr-XfQnA5UAoMqh6KwVhqgWL3IWAFq_RL8NRJtPJHiMGKxd5ewp0Xn6sdz54QPhJMEOSdu78EONp2hDoQ-tI7aTAe9SdVSc_4d6e4gR9KRPXMK4R1ZSEECc0dDb_pdIu0qEzM96PsYrBxv74IKKOcR2C6MZO4csyUoBaatMPk4uIPrDn6RNoyhRqF5kQSk0_Qcq4pvwT0nN4b_uefZXyf5z-uOxtF7eDYV6zeTiCKPccsU4lHw7sslZ7KMwB4vwFYXfNSsZETAatIOmWrGhb13aQjSIAOBSjQvg"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 5: Carpeta 367 - Nota de Crédito 46188 MSL",
+    "status": "PASS",
+    "messageId": "<BLAPR19MB4450C51605EBBDAE159D01E393842@BLAPR19MB4450.namprd19.prod.outlook.com>",
+    "date": "Mon, 21 Sep 2026 15:31:14 +0000",
+    "from": "\"'Jemima Bareiro - MSL Argentina' via Importacion\" <impo@almarrosario.com>",
+    "to": "Lucila Urriza - MSL Argentina <lurriza@mslcorporate.com.ar>, \"cdellamea@almarrosario.com\" <cdellamea@almarrosario.com>, \"Ailén Ferragut - MSL Argentina\" <aferragut@mslcorporate.com.ar>, \"'Martin Fusco'\" <mfusco@almarrosario.com>, \"'Nerea Guida'\" <nguida@almarrosario.com>, \"'impo'\" <impo@almarrosario.com>, \"comercial@almarrosario.com\" <comercial@almarrosario.com>, MSLAR-Caja <mslar-caja@mslcorporate.com.ar>",
+    "subject": "RE: JUAN CUELLO -EXW GUANGZHOU / ROSARIO 6.75 M3 NUEVA CARGA (2DA) // C1367 / ROI 318920",
+    "snippet": "Buenas tardes, como estan? Adjunto NC. Muchas gracias! Saludos. De: Lucila Urriza - MSL Argentina &lt;lurriza@mslcorporate.com.ar&gt; Enviado: lunes, 21 de septiembre de 2026 10:42 Para: cdellamea@",
+    "attachments": [
+      {
+        "filename": "image002.png",
+        "mimeType": "image/png",
+        "size": 42954,
+        "attachmentId": "ANGjdJ9l6F04tok3XJRCkVQNt3lr2dQDTe91tL9OQa6k8R3VDVdQ8vCuFytBd7_4Ilhxmaxp3Qk2PaN_55xDPkfSlXp9BUagzbVwHN6bJyfjwUBzbCcAoF4yzaKARArP_yeoqnxa2Bp12k_pjxuz5LFzpmyx8EmSOgNJz1ZgZacIgiuj4S6qzMztNvWWR0cW5fuz10woEvKBIUaPucN0SIW7NS-kbPEQUdG2oLXvjIXS7lgjUzHDFuqLrBp1MeCwVPcCYNXtRANwQtfJHF0vjc81e7A-WZ1XP_eBTNK2SYlEsSNnueFnCjjvdZ8c9SVjp8GD5_Vl8H8veI28Qu7brFEnuONUW2ceejCIuj5dKc2c8aLDGfWUvZNmmf6-BRKQf4itfox2fMj9WOeo-SNd"
+      },
+      {
+        "filename": "image003.jpg",
+        "mimeType": "image/jpeg",
+        "size": 20678,
+        "attachmentId": "ANGjdJ_0jotW-7cYXiQB5E95BNC8tIZ94lt1FHiuH3lWD7u1hysoNUku0nirypwCbhBRQpkOpmgSIxkz0b5OpRLM90jn_KrtzRI-_93mXmd9hixOEdXkR2PBVmokixhWDXowzDkW-4S5OKs6s4BCLIm4LD2ctyIP6zo49Gai2y_opS6gKYZtKX4G1HLnyKAHLb6ajmDvvioUNIN3HcbLfMts_UrL8zJP9IIrvWuVMWnhu_huwU_Ezku2BDNvQ4pBIxD2lneC_dXoPWkjAGzmid65MF734sGturIqmve7AEtRGWVfxBiXxjg92DwNNfGI5ld4ctwzGKfcxjLGIwpNiPNvV5gZX7TR3JTjIaJy0WAk-GlYOOnMMYIjDpSshdULkg95JUZg0FnVpgQzmEOJ"
+      },
+      {
+        "filename": "image004.png",
+        "mimeType": "image/png",
+        "size": 71759,
+        "attachmentId": "ANGjdJ_ZBte5o7JpctS9dadZcW5lrD4TfNyz9sQidi2Q7xgIYsPT-OgX5kWIOtQMol3hyWkwytuO5qVhBh-LKTJCqLLVfbuT2dst2eMNqwyY8M4mIOKrUSC4Kjwrb9NKwWTz8OTHIHNXojhR07_1f3ayDGyJgChaComZwshxGJBzwA54I14NLb5nJALYyuzc-iNFgVjH2FY0lVOH2VEldultYrn4RR3y-NIG_uqWE1yQ1ufiY34XzL5CgUxe21RnOnOaUTxymC5vtj8RGGIPgAvIovrG0i72YZnI9h6wbDlCZl-tzGat2CiIjpWTmAMyYyTl64hImIrTmi_MOngAHd0yl00biXb9TKv2Tm4zAetlEnicaR3nFplJVh7nSbavAoOqoIR9kORQnYdyRQnH"
+      },
+      {
+        "filename": "image005.png",
+        "mimeType": "image/png",
+        "size": 29998,
+        "attachmentId": "ANGjdJ_Uuo3FZVWpyGZS6iBD4sp1HWEo8KvJWi0QymwHDtHUQ8Xc6g4SRkkhZaSwDOZHC0Dl_WDD5Y7gxX2XOqerRwYtRQJmM-KsKISg8oCHHUODf0tmwxbQvIR0t69i3jAt1ruHkT12yZJp82DBMxS18VqSzQedMmHV8Bd_O-wZnGNrD0ZCaNeg7O1HI-F8pNnfd2XY7aDyN7ezvbcwv1UGEI9syI_o9Dh7fG7_lOoDwTPCNJ0-TwygRAETecVdqwIA3cSebL7n4kSiGk2tpBKp8LBm5cT9TXUpsRdv68xH_jcjZXEdx_yjT2CMPFy27yK8_73jvglTTgXX3YwCNVkn_P14vjwieo4hjSdbJOEtKeDihV38sFLsUHFlDK5zJ9pE-wJdDfHiMOciKbzU"
+      },
+      {
+        "filename": "image006.png",
+        "mimeType": "image/png",
+        "size": 25932,
+        "attachmentId": "ANGjdJ8b5eADO1Y2Whnqe-3ur6O2HCZdVoH3Gf0Xd-JdkYZ_VGbGL7O56G37f1YFklV9dOmaxCT_Jj-fVdAlYMAcqdVfEl5gHdbA-mAHsQgkul0KGGj_2AEdiRd8TxBzf4l9EvCr4HXm7cHrwgYEJZ3sEOxFWC44mSyzVTSLReiUp8CPELvzAo2_OVvfJ5blmi63D_5kaRSBi_gbJQInM2J9-qUxGJTGNHFRVX6Hboj8jnqbj_4pa8LiyMjxBuGLeiuoKj7yfNaSo490ITiTXSLnPYrbN905x8Ovzf-psfeWKu6z4ew8Y9sdEgmldXwrky11yKn_MVNxw0oET0JmpcOLR9WtRg-q653mj9m3GsT3zwKV_NVmVndm9nYaWHbhmi6heC8geWrG59zLnEdY"
+      },
+      {
+        "filename": "image007.png",
+        "mimeType": "image/png",
+        "size": 30003,
+        "attachmentId": "ANGjdJ9dxlB6704G0lWlR7MkeRSr_DxWxlgbNGIlwQ-QnWBjTDExEArfjTrDmxOesepucoR2t43qaxbzdlGgduLq0oz8Ub0vymrdWBhVPfzDlzcCSh5GDkr27CiCzFm90yU3nhEQtNMxeDJu06yDufuxVdfQOAKItJCYZyffihalvSTL3zv6T8ZkGE1lYeREt6gnMjoZcfpClbgvYU1rP8vpJIUTTwpzaP_WbKGKkx7W7xlAn-QUQP_gIm1eu-KV57Zz5N9SapHwuhH6wB2GyLUCqvhZpNqkvGuQgoxDy6rCEST37wAtcpRWz_kj98pef4HOy-TaQotBT_XJ2WKB8xnoJQqsNu-dTaG0QIVu4hqzFS7UPok2a-FhP6WIX807S0wF8gugJ7EnoRFOPubU"
+      },
+      {
+        "filename": "image008.png",
+        "mimeType": "image/png",
+        "size": 29996,
+        "attachmentId": "ANGjdJ8loA3EUwpLkHKVFrgKkszS-gYq4ywKzpcxpuXxfsoXU8UXJnYc1YhEWlMFSgnWx3JZkkJjQgHoTTZX6KgYEZacJz8RfbEw497PTlmPBL4YXu8U7ldWxpaekXK54bZ5Jr2bnEYA3DpR4HCEGkizmO2Fgy4SK6gaqDhJdliARWq5BBQkDuoT1Ec0srcDzdA4Ye5lL2NgZpEozaLHe0bvSx76XRj6aqh5NEJBkb8DR61AqYMU8fJUBWVVKu18C16JDt5Yffy847mfbAz1t9_doszoZClhiXner3xdvJDF1W6eZJ_l0vO4RCPWU7wND5w-XUEFeLlzWcvYORd4CpmN0MVi-yqIEn3xH11gyX2YhUfk9pO_ejpCIWz1gcUFequTW9zVFMyMq2IGZJ-G"
+      },
+      {
+        "filename": "image009.png",
+        "mimeType": "image/png",
+        "size": 60028,
+        "attachmentId": "ANGjdJ8W985QtabYu03c0YCRkWlXI_DgYT34cFvJwf0yfeYpRmRcikEPSxsZW6T0fOABRvVnXKHM0qFucv6ANss3nFOWb7rwMkEvKUTqr5B1gCMavsoqAN2_6BmQgrE6__Ewg6uO6daP0xnpVL5aJ6UboZRW-lA3AJtifSkVUEO8o1J3NmmSop25y0zwshUaNQGaNEKxu7mU-TbikX4oLT7rmz439AbZW8RlgSOVNnXLAN10_DRWvZQRAjuJawu2vPrdVlBFBP5WQ39eoXOvv5BByIAwx1GCgYU8XZu7hv_mR_dOb0IB86XCyIHazgj7feCDD331d_4wGGWJw6_eW-AjDEuyIk3z297123GSW-DaDZSjIJ9i7G7SLA8vDh6PJ__YzGKqn-f8R1lh79sY"
+      },
+      {
+        "filename": "image010.png",
+        "mimeType": "image/png",
+        "size": 30009,
+        "attachmentId": "ANGjdJ-1KNFisqG3SurUiWJjfDc-vE-hFhmIwrMDt-JR-fOh45BlQHGPiFMcZlK2NZlADT0eCeLRoI9krHXMTSHS0PHQgtTkFLW1ezcOQXvwnvKhxlVr0TFfnjg_d0CzQbLKcs3GG45HgziwG_yrzFx1E8VwN6lBBat_y1kS-N1dcvdGFd8JcmwasYDiOiRVYIDzTNupdJeCgTlQ3exLPMA_jm2XPftD7g6HgeQJmv0Y_Mq0-GComYAAY9-VEgwB9kcPMYKOftFLTSQRH7gMCdUSKtep--Cjze4KPw5D25mvlkHPXAMV7U1xa3p9VVKQdmcmS5KmsO-VzC43lkr5HFm00UaenXAcvzt160JK6XQ8RTTpYKo4ogKC2j1TfGa-1LQc7GNxrI-xwgl4xlkP"
+      },
+      {
+        "filename": "image011.png",
+        "mimeType": "image/png",
+        "size": 30005,
+        "attachmentId": "ANGjdJ_M7Wp4v9PXibrs3fVXmiMmyHZJCoKcGri1-Z_meBV5lQ6y9gMTvwIksWZ_QB7c84havnb5q4dw2M1xGMPjqvI0X9seK7bP9TdHAkWpHcpW3cgK9gazt1wO40eEhsCcEn3moFje4pvYF9szPtBEtZHBKRSlxGKUZ5d-bn51QfdNg-fLxlKiDqksjr7SW6u0-UAYw9kNwTHO6FBwqu5sfUsN2JtpygIB1Ycq1P_pXWmpnfB3uVCQw2mfHzl5l9w3vZACTJxsEKxWzV62Oh-ev8LZE95T6mY9X9QSninQJElhA-W2TWzFZpkG0k5UD7bR28bCN_0RlO0MoGS4FrtgYFYIErzi72e6o1IDDmcCL2tBwNQA-WsTLggdUfGaD0sdfQmLw3ODsvml1h3F"
+      },
+      {
+        "filename": "image012.png",
+        "mimeType": "image/png",
+        "size": 30001,
+        "attachmentId": "ANGjdJ_tW8rscNgvwOWWml4_PvJnxonGUzs0-t7ZS9nV5aFbVmJVo922qqvlqUYvjo0YfFIKiSNO4N0-3WbhCjsCfDyewhLFNus9XRKbpPCwKTZby-oW_r7_TR35x5xewcJPDQOPBIQQAwww3lkoKl55N1vSL-SprgroDeL6Jv18i2vaSnq4_H0CSYdm6_233yQslvxmEVnXjICRJYVhJ5VgE1GRqzl2tOOGOBMNZIACTBKnLIdh9z9lyG04ysasmKYx7IkJEl_-KpVQpactUyZW31j2AjMr4sIgowxiytoq7cO_I6Iht5-UNE6FMUnFN9-879cEjxbwRFQQYQZKTnL2qqIC_BMjyD1r9xytcrPynOBNI3ZJqXYm8WxAow88vLIL21Fgqs755yhWUUio"
+      },
+      {
+        "filename": "image013.png",
+        "mimeType": "image/png",
+        "size": 33141,
+        "attachmentId": "ANGjdJ8PSL6_Dz_-N7RtXyOD6LdurALNAbL-9_DUl0OQSatzZmIH7WWU13Ss8U0o5g0gAgRshja29xo85nwChDysQFdtGh2HmWRb3HTYKu5saPj0NZIPzyp6l-Qn6xEww29XYLzvTZw4PCaqjzOX7kg1PtVViODQ51PMHeTzs3Z8tvvogm_jQ4ribiSprohoV7DzgMNuxX80yu-PnD19YyP1_oP6AVEgxp7SUvJXIdrw4xMARHq2Obs6AuPWlYXJySvetihdb0JPEYUE2QZpcXIajDTE6sOt56HiNH6comaH1_1IqxBGcMqRvPAimwI6uNy2JBWCWcnjzybUp7787EDDmqQYiLqA7K02h0s0OE3DafxCzUBS1at0EGevq-6d9qszueDayW8q0yBvr3Ab"
+      },
+      {
+        "filename": "image014.jpg",
+        "mimeType": "image/jpeg",
+        "size": 18210,
+        "attachmentId": "ANGjdJ9csgek54qJgKl0qsz-SUNR_Ea1ccfgHBi5WOj94xLmFRIv4dJ766SbyjKU_ouy97OxtoVbtg_QRaeY1kd2OS9VfiPlFMjjDJt6YFiglB_x4dQDWynOz5IMecqu8fz9kjOYmFRaf2lpXa_vFyxEsglYzvzRtU9AXbUvF6D2sevtl56M-UMyxea1KMElbtJcgK6IAkJTQKELnPzlE-kG1izeII0BLXnzSDUJFa03rHJIP-UBVVhk9c-bhQ0JF6HFBDfJrK8xaHdvVVijnMeZL-b0s0InnH8TpMrKgpLIPkYv862Ty-dfyNISRGhHDvBLWkl4B-n--EZSHxcQUJqaW_x_1iyFPlqb-XrO0y4Q9MNK3oCly81t8NFbhvAu4G78S7o7w-skpFNxRCvw"
+      },
+      {
+        "filename": "image015.png",
+        "mimeType": "image/png",
+        "size": 33364,
+        "attachmentId": "ANGjdJ_RJoVtFe0Qvo6wJR0aVxxl2UWgTC44b2VBJqDIlwcbFSCgXX1v_HBk9OHoLdiOntVh4MXFYAdXrlfdbBNFkI1nAhROweRmXt_SaMQyWW8Drv9-4G9-KYcZAaVptP82J417FAPoBxA4qwGoWj-0cflTSnkevK6z5Lmxc2bviH8OrBeTFIZWCDgH1Mu_YIfsHgmnNU9Z2lDd02ey8VbHG3IoCT7uDr6nWilSaPz7Y8TkZL1rb7O8kmBxE72gpt9OGbFMJ-l8mLemOdlXOXB4vWnRWz_I7Xee88bA9zwp0O0WOOMwHdWBYII1de69BgVQt0hBFUrfdUKmtzljPSVXpXbpZhn1HVf9ZKsY-K86HizMmTRuS0_0xlEvng2aDweRy82pw1_Qo7DU8Ka_"
+      },
+      {
+        "filename": "image016.png",
+        "mimeType": "image/png",
+        "size": 18841,
+        "attachmentId": "ANGjdJ-WMYrDGG1i1Jjlhe57PmZtAudsdEMU3ymhFPtH7Kk4dIT6MK8rA3cffTBhi-rIa-6loxf7TjFmxaaKgbRCyhTJ9pdXfC-vtvwKZK13-2ZZnCfZ3uKsIsolyWV9D527HU57WIHi3undlpsFMd2gO4w68lfWY7GEvGN-RhOu0M4ivnN06Uw-z5bs6ySig3cyOOqCdZ-o4Fsn0inEUZ3lwv_6SEcztNA2wqgtjS8tT0AFSzm2IXqyYmQ80cwU3hXSKx-rPOHzxAyD9-juz2nSzpAURiXi8p6fR6EvUsd7sg1FhoBypHE6-PnQt5v37zsEyJeG5sacjeaG-oJlf1Yyvi7_FhGCe762iNrukT3mht2xN6iRvavhEq7BgMlGvIfZmifhHX0CZYRgKv_w"
+      },
+      {
+        "filename": "image017.png",
+        "mimeType": "image/png",
+        "size": 33747,
+        "attachmentId": "ANGjdJ--NjDT-ZVXjNS1i9fuUiQENepgUVLbrfotUVg0zaaGsp-8yjeHKVYDOP994JpoIcX0hCRfAWof1X3XEdqLuNQ2em74NktllK3Fgx7avA431E8zJrGFTYekSPVqByySDZ1DpOZHnuYyLO63sViuF5yYGtpS1FRX9dVWXvlsQQa5rpP1Mmv2CPlnDf5_i5w8ovAoeVgL7LgdwYOyZ8dpjgwXwOsVgFaHcaX1CZ1uBkR9hdC3X4tlHWRoVAmuNOBTbnmB_dQTaV9hLa0Q19DgbqftMOMiYm_iVu-pXHiJTd-8VJp7kLNbErTLrYME7P4TvpJvsuLAecdBZ1RLwMZTTe_Hb3LUzPp5rCj1CiUKY5q7VEDxAo7Z4utMI9K7veiE9XKCwb0WnyrklgEd"
+      },
+      {
+        "filename": "image018.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21564,
+        "attachmentId": "ANGjdJ_HaxjM_ahrkVdWRSI3gQNoZU7qpRaTwA9UfHINxfg3Y8uJB17YYHD-bTl0uKhJREjL-Rn16HtwK9mp539tvQmNEF-Yt-dNnqmCsNV-CnIyLbNr9tGmMBEoqd7WZjmSaZjKlqo6vZwi0GY32njUNU9OQT6hq8ehkVuduPZoqzrVthp45NpoW7dzjYlVNqqnLRDINXiFb9fNxoVNCQbsjt7JQGTUqoAAqB5E-7nATLA-rhr74HZeXwEVsvtGNg-WPMpOCMB1xTN_KRaV8fpJXq8Bupt4lmDoqhrZyyf5WGe70aGHwMzvtuptRAV07HhWZShaxhrTg0YqGPIdM8l2i8ETQH520BX5SCqWEQG3mYsZoEspdqJatHcdvPs0jMp9LhedywnNjxc0JLFrhq_Oh0BEpdjbthhSvuzOzQ"
+      },
+      {
+        "filename": "image019.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21565,
+        "attachmentId": "ANGjdJ8_0JqdN4e-y2dShHFPsf8Ziyzj6dKKf35YstXnWYGK-Y2h_vSeRp7e8RFxT4Cl8IbBYpm8vQZcPx7oR5arJFzzbBtjubM4WzZYetS-Era3lTBYgNJclpPHOuonmaISUJj5GioSb3g2XbtpjzGbdqtf-6w0dCA12DW1wv0AdyIdZr9kL5t5iRmPCGVAFwaq8YsxEVnEwWFOYUHtV4wABdddJe6uU4D20papCsySnBUZoF8371Ny2z80Yu3cEF4DYYO2N0TtKjutE1RJ2ee_OAppOOWxlboCXQmS-0CiwbB0HXi0jXqWbv2SwMeTvXM5bRl1gBpL0oQqMRiNYsT9akCBI-1BDcEirOek9ddhcxzc45u1psrcSkfFQfCtMM3lxESGF8AUOdfF7rNgTKGYbTNpRXzKVt70ppjSAg"
+      },
+      {
+        "filename": "image020.png",
+        "mimeType": "image/png",
+        "size": 33341,
+        "attachmentId": "ANGjdJ-UCkKwNZEiiGOFS6dAxRScLcHsl-A0nJh0--ovV-C0O6ySijATS19IDBu481f86BnlMAedXDggX0-9aRbYrUF2CdeIePp3fH-jPEgwCnY_WOxzvlMxH7On2x63mIMi3eQkTZCb1uCnVrq482dB_B3JOpvwVA7lDNCMX44-dUoZqPB-Vx_3jj6rScIg3CH-sCEVfxtbZDGntGJkmCp0GZ7yzln5LI4Oq8oIAp3z9c3ZNwpYZBbwWNxUgKE7H_lMQltw_2dKxtCYF3syY2VtzFye_3Ls3vcYTPXZHk6YRc8OhDNGMn7ftHRSwErzH9Bb2wZm_Fn5UcjS3KhxKs9lPqaT6qA-jC48CtLXDb5oDCmltuZHMBz7QRsQ4OHj2HS4Rjb_NtSQB6VgEleaVH3iZjsV1kG9Bgm1R2hU-g"
+      },
+      {
+        "filename": "image021.jpg",
+        "mimeType": "image/jpeg",
+        "size": 21536,
+        "attachmentId": "ANGjdJ-B3ApKDI-FJ-sFcU-Maa45qihaPvTkv1VlwQS3lzADmiQr2fvDkoWh5nNNuPo3sqtmiS1MVsgdBDL1UnHBkxUdYo409RjAw6waGUj9LawTcT3Ff63fdbtFTus8iWluqO-kMebwPV6VeZhgpf4DYIDaFqJCy05KsSddpa0KYSEJTklHihx91jIUL_vpBsbUdFYUKXzeEzoVSOpyq4LrkEbCaD8yOhNuIhSO4GOy1926cbr697m9hj0RyOmD7KI2AniDttFhsfaXpYezCOWS1OoAmClFyEgKp65fsL1BHUE8oZoh-vUMJYWe_tVhxGMLyaLvTUVtTdbiKVMwsb38vohuuv7oEUI17q0n8Yg7CqJjA7v7VknsM8-yJOP28VKidGEIKEIo8ScunYRObX7gMKudfIsebiKcx_54xg"
+      },
+      {
+        "filename": "image022.png",
+        "mimeType": "image/png",
+        "size": 30005,
+        "attachmentId": "ANGjdJ8EijC97NtCwPZ0MWSvJ5zIixZDTHomcOKprcl6-RCag0KDLH0RnUcx0F6pacBPLay12rT1jkjK-FRXk1XrwqntoSXtXLmKiNTsVOsLlUu9Q89AZ34vSmhEfvthwfBGt1KcbFr3tAxF7maMd9cMT85oFXKFMfdll46CaOcTOo_BfElgRqcR6ONuf2YhoeWKsrunhPAuwMlsh-KHtBclp_3NlP94ANuTuJtIvz36Nn-gJotdTJarNOgiG5rur9xndUuMB87Z4Cxh_MSKo52ES5LVB8pfD5IWyZoVjjcrkyJW7_FuWjW2ntolcJW0ik6bQGxOdqYI6I9BZBqV1JWu6Ju_ztNoPeti_nJb5jURhvVhLPlo8v2ukkC-GawYCyhYLu4Jz-Q6wzo9S_HZPRl-XXyTdAjhfj7k4hS3Hw"
+      },
+      {
+        "filename": "image.png",
+        "mimeType": "image/png",
+        "size": 122029,
+        "attachmentId": "ANGjdJ_TNOac_di-lJ0XqxVQL_I8BEOQg63-2755bwdYP0oqwtREPFnAmWCU0jQKDMd10VBAlQTvDzla_XEVOwnG13AsldQiSWzJb7_LlTfqi9upvlNbbUwGdmI9swVTavzK3KCu5BSHL9gQgqEbzoWV6PEYhaoEX16hmWCWzWCgef2ryiOR1pli0pBoiNd5ESJf7VNnpQRFjh5jxGWU0n3rLLAvvjaH4vN-0t5PqKQZx_4IPvGbo3XYF3SQTi1G1KNAs409BhW-o9_p3ivRwi3zBKLgLRQ5A-6KJ0y-3AOrNCkdqtp9UYZd8Tpay4JAuiW7pGtLF-cOLEyLGay2kiWH_C0_AQRxLiCsn9RDhNg6Q14iX8w1dOlaYapUy2XGwxtaVbIeM6UoilVwrYz0vKsgmrnDra3kfAbWeN_9Yg"
+      },
+      {
+        "filename": "image.png",
+        "mimeType": "image/jpeg",
+        "size": 660162,
+        "attachmentId": "ANGjdJ-sMM8F0h9mnpWBjRDKCeoTovGu43EnempPZUTHf1Zw344g3d_KjvLBnDRm_OGKxawAibZHGC6MyQCftgF2XqwpKu3MosVMAz-wMmUgb2gkX-TOsKeGbwQ7borMZhfP0J3ZDXaf2mdoIfdxvrjOlGkfQvh6qxGJ2avTLo1jpnjltAaOz8mU2iJ_Ly0QbjXVYOA8T6ENIjciyQZYeDZlArV292drcDpc4gKYsEo2xBxUzfPgZ609YSS-udCuxRFpbVLktZyJLuyLSrCRJE8k1facr3GglPY4O8cejxo73E1gW3gwpbd-Q9GLtzBSSX9rlZQ7bj1kwS5hCBFrPwGEu3BU-ZQa7tHvmoUZcc-FH-CPUlQbUFam6niv8-qRmND8vm2m5rbad9Tv6scta1sf4y-QkGraUeqvwiWCTw"
+      },
+      {
+        "filename": "ComprobanteEmitido(6181ea5b-c896-474a-8ddd-0f813a2239b5)46188(650912).PDF",
+        "mimeType": "application/pdf",
+        "size": 69622,
+        "attachmentId": "ANGjdJ84_cp90bcx8ZZhfiNWdkJFKHhFtx3jQRDEa6n-LBZUDowFfbAkQUyBOaSWLIaEYfPMgpXXcwmh1h_6aKt0YqCNct6MK75povl_oQUUu9Pgawm8ZptQiKOFuJjd5hO9VlGu6BrIzTnIUf4BI3V3MQKV3XsY-Az3_601_xU0rf7aOPamP814VFfM5-r__c1zogPXPlnfHpgdyArTCE59o86u5nYC-U-u2gYJ5U5uU6I_5qHQHICJHYzgGv0o80qjCn8Gxy1xhNmoAfk9oUBZvXhdD1L9lZexLnXwrVfHL0VD1_84rZCDWsVTsG_V0aDiiPCbjHpjxlaU36hEa9n5tBOZRLHBYCSmZSAEVe9Sx0pn5VukRg5n3N8Ms9GwWJKHE2Z9wF9Jvtu_tMI5mvF2hLr8j5_npHFdKDXKQg"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 6: Razón Social (RosCyTec -> IQUIR) - Solicitud Sergio CONICET",
+    "status": "PASS",
+    "messageId": "<5abe0f4d310c917fc5832189ba916071@rosario-conicet.gov.ar>",
+    "date": "Tue, 06 Jan 2026 11:52:49 -0300",
+    "from": "comex-cct@rosario-conicet.gov.ar",
+    "to": "Stefania Rossi <srossi@almarrosario.com>",
+    "subject": "Re: FACT B 2 - 28 // Fundación para la Promoción Científico Tecnológica de Rosario y su Región",
+    "snippet": "¿Qué tal Stefania? Hay alguna posibilidad de rehacer la factura?? De ser posible, a nombre de: Instituto de Química Rosario - IQUIR CUIT: 30-64953551-1 Como en el caso anterior, agregar en alguna parte",
+    "attachments": [
+      {
+        "filename": "image001.png",
+        "mimeType": "image/png",
+        "size": 242,
+        "attachmentId": "ANGjdJ8uDfbozu830eo1XtCoAwDEdx2CN24DEhzw2EGTXg1pfK0UIEVyx3fFqeZvSI-oALGv8djqYeXbf5yvyNiWn5uPmbiJGRYQLknSfpsb0KZ8T3MtoXZsoaeX3a_UjcMCA5ZVcFqHLEYQEW5WXgwZv4yj64tptv3qhJWIPboNTOSJo4V_gyZ6yx-4JPSzMr2cGjDcmby0npuNDm1R5YFfSYErBNaGsI8r4FUzAcVOvHVlEd9eehfMRxu3XnMp9bpIWAJ7lfBQaUzk70dvlp3Dhg2NVwzhV7W01kBe9kN71XONe_pNQZtrWpe_uEYfqxNllQfuSN8LiNADzDPlDNWysQrj2vmTDm_eIT8kXJdcwaGz5e6MHkcdQr5-BmoyGSfpVZhyVgy4ecEYbXSL"
+      },
+      {
+        "filename": "image002.jpg",
+        "mimeType": "image/jpeg",
+        "size": 20775,
+        "attachmentId": "ANGjdJ-_yIATH0bKcbiCRkB75Nz_4FAUpH4yWMX2FWzW_7UbUp9lTbxABK4ivzCQdbpWrfL4DJ7s-GORlwkQT-uR5X6TbNjzyCwMLgzezy6mLCJCgDbaIZMnTCBbtef7YvRWPRLWJMGvX9oKZ5yZSGN6zp-UNzLBKgked591nJfc0IDjB-pTQxjtxT3fWsw7N-mRD9GLb4HwnbFsoXrFTu-y31Vfzv7AzT_t-bcEmT06uR6xVAETnVBQ313XkdFBUBDwVNgH_JoSwJQog5-JBIqG4qTd6MYfnlzTRFihDf4RBhWHybq2mZq4AoCQtNbAqL75W-142U0nlv_O1K5SiTmcvSEMKCo4uoGgVZuXrHfgu9Q7zbMTag-pM5XFu3S8RLNnWLzHGWH-mMTJURxs"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 6: Razón Social - Prefactura NCB 797 en Kipin",
+    "status": "PASS",
+    "messageId": "<6eebe6b04c8d284a655e99d6f339663a@api.almarrosar.kipincargo.com>",
+    "date": "Tue, 06 Jan 2026 12:25:04 -0300",
+    "from": "Aldana Gomez <agomez@almarrosario.com>",
+    "to": "srossi@almarrosario.com",
+    "subject": "Prefactura - NCB 0002-00000797 - FUNDACION - EUR",
+    "snippet": "NC",
+    "attachments": [
+      {
+        "filename": "Pre Factura NCB 0002-00000797.pdf",
+        "mimeType": "application/octet-stream",
+        "size": 41841,
+        "attachmentId": "ANGjdJ8xpHpJyUi0JYXFM6B3-c5D74r21RVyKkYlkK7gEHM1nr9Lz6MMIPgsv6CeLSTiHDaDHdFo_aeuAtfE9QPgh29XVC8jhBkxATn_zrve-_bmL-JhpjNlH-_RRoXm3pTTnqbdIDVNEgVbLId3-Jbt7ID1C0fu0-v3dTg0wgLkScOlO0-V-9ay-zn2YstyupOh9nb-10qyCflvnyVBUmwmxygsdgz_zM2BgDd_bnf7tDycExxwPY9tR1VBG75wsIFOx1AuMvmh2cFc9mACacFRCLIvwnn28d6nk-v1EK0beZN1OpWe9wpkuOjMnPdb8PUxAhMUcGDwu9XnVJzmqwQktKRH8Sonq1DCRa4VrHKJxjQCTY_g2Nzkgg6P4e_iLFlEOnz54CWt-wyszdqt"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 6: Razón Social - Acuse Dra. Gabriela Ledesma (IQUIR)",
+    "status": "PASS",
+    "messageId": "<7dd76138a0532581ee062a1b6dba03eb@iquir-conicet.gov.ar>",
+    "date": "Mon, 19 Jan 2026 10:55:33 -0300",
+    "from": "Gabriela Ledesma <ledesma@iquir-conicet.gov.ar>",
+    "to": "srossi@almarrosario.com",
+    "subject": "FACTURA PENDIENTE DE CANCELACION",
+    "snippet": "Buen día Stefania, Hemos recibido la FC N°00002-00000029, de la cual una parte fue abonada por la Fundación RosCyTec. El importe restante será abonado por el INSTITUTO DE QUIMICA ROSARIO (IQUIR). Tengo",
+    "attachments": [
+      {
+        "filename": "image001.png",
+        "mimeType": "image/png",
+        "size": 242,
+        "attachmentId": "ANGjdJ_DCzbSivHQngATStyDyKWs1Q_I1tTSQMKRp3_FRB7I6rXGyCZzlVpbHQ1ILY4EuWv7e6Tgpuw-wCkGSirSec6SdbIUM8JZcV3ja6HwvV7mEkgiL7ewZ4zgQAwaMbQ9DtcUHu3Xs7CSaA-dtY4b3notbxhJ_jYieAh4IASwn0bJNloQ0-Wp7KqfoZgqKbXPmNfrmMS3d5L0G4eaXKKpCrbwmutoyI8D83BA5gDWR2KR_f7fnoW-nfN3_7E78_Zcb7eKrYI5n5OzzCb86Xivj12m23ptIM_sExGZXQ73_7dIZdRyopdnahXUavHwVu6klbfMVciOLiXQSdDjtjiGsUIs503hthSmqJHm2mKfGD4uDgSXoY90krBuHqK7rLOyzjNAU_1swY7JXrsE"
+      },
+      {
+        "filename": "image002.jpg",
+        "mimeType": "image/jpeg",
+        "size": 20592,
+        "attachmentId": "ANGjdJ9TQK5q-c0DXlsBNuduClIIOmrhyWFyO7-RJSUqIPQN-y3ADiqca41YpFAilPfdF7s6Q5xQ1Jt83RLkQQabz5NHslfDRi79NzjiwdhP8qYKC4j4kB3_xXhcXJdUO2TRanNLWrfZy9QPOkCO1YTlqLQEIYiK_jYrfmEyKlwNwzcug2hhxGmaW8_-EkyjwnUpPJQ5jqX8YDmWW84zGv1PPN-4Sq8zEbX-3DWbB1Z0ny_nLCfs_ym7oumbD2H2hTmDynFeXgJJJuW5mSieatx6q5HdVtzunABHPfPQCY79MiXLq4SFG79yN2GZWwhOMA5qTtQ0yAKksqcuCbTPWeS_jTRMIkQBuF9XkD-b96OyugSO_UJPam53vhg_QAkeJaa3rlZGBgYdm_m4bXS9"
+      },
+      {
+        "filename": "Factura B de venta N° FCB B 0002-00000029.pdf",
+        "mimeType": "application/pdf",
+        "size": 136113,
+        "attachmentId": "ANGjdJ_D_ClCVt8kRuAt04d53tM0Qwjy4cqmbZN9CwFUwUYIzQaU18mWsyIWbGuPf-kvOs3TfcESYJNGeCzeiuoxiKQNKlISICOHRLBoKgwNi1k76Vvvq24rPnmKJ6fGFfWu1f6_SNu4Ss1Y2NGRLoiA9qhIUis5_ndreGaTWFZvXtHwpdMGnTtQrh9O3MKrst_fN3-41YWcS77NEUlQcIi7k09x8qFoi06_Fte22RP8q7EkEQLAxF0fbmIv0nxfLFHeDpdUs-h2nc7AhBg_hf6gapqfT6LvG6CbdzfMdzZ8QRkZZ9F5QcO_u8X9JPdCBfkdu-ZkuzjZjjc_QS5BWoFmTOhur12iFgCz10c1tN7Gw7NHcdyOP0HhNQEtV0yDLJcaEjC0hnXkyBnor-4b"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 7: GBP (Carpeta C620 CONICET) - Flete 506 GBP SAA UK",
+    "status": "PASS",
+    "messageId": "<02f701dc7bef$98bb3c80$ca31b580$@almarrosario.com>",
+    "date": "Fri, 2 Jan 2026 10:56:26 -0300",
+    "from": "Aldana Gomez <agomez@almarrosario.com>",
+    "to": "\"'Suzie Tran'\" <suzie@saalogistics.co.uk>, \"'Lucia Laje'\" <llaje@almarrosario.com>",
+    "subject": "RE: URGENT AIR FREIGHT EXW UK TO ROS // CONICET C 266 16/10/25 // C620 // SALJ054596",
+    "snippet": "Dear Suzie, The air Freight should be 506 GBP, right? Please reconfirm, thank you in advance Saludos / Best Regards CARTA DE GARANTIA 2026 ---&gt; Carta Garantia Almar Rosario De: Suzie Tran &lt;suzie@",
+    "attachments": [
+      {
+        "filename": "image001.png",
+        "mimeType": "image/png",
+        "size": 242,
+        "attachmentId": "ANGjdJ8iEdKGHq2mzUYu6NAciIJd-gtv_uzJEyHr9mgQAX0zZ1l6BX09h5OHP-Ls677tQ_RS9OgnhtnTrzg1M0hPKpWxfBeRSIysCowZiX6huTtKeO_2o3mNkvaL8bdZKQZ8Tz1XhJXtS4ogO-vc12SP2vcIINU5Nja3Bn7K0r9nYrchjHdvzf1_u1ivEIKP2PHk18H2TpD_pTCq-pDf6pKB0pddCbu-1EfQPnyKizOc2U6pDTUUq9kVev-hzlSkC5Xy2Z71VtitjCs5YOlRS0RXlqwVqaTlRwvtjURgAiMHbWIO2L875D9wCTgkGv3lrZcKM-n8BzL0VQNGuZ6UYq09Va4rJoB0UuK6HvBkdhLK-WOOsvHOM2nncw4_NuppxV43sS_0XLlJ1Unq0VIi"
+      },
+      {
+        "filename": "image003.png",
+        "mimeType": "image/png",
+        "size": 107661,
+        "attachmentId": "ANGjdJ_0Dcvjzom6XzumPAdY8jawrjsvUEjy6bA2_HLjh8t5SFve0uybw778OcgGSkCPQsMvuvsa6uOYMLY77lmXak-xZ3Ps7PEyqTip61sQCLeSGVRhgLpO5Rmy6s7k7_-RVyyh_GfmD_bflkUxAaXrEV58cIKHJHgeVx_zAIRjLCHh1CIYhxTdZ73RBMX2QFLPK8JnfQ7dJ5CwTkvJlSU1lO7s94N5sPWXlKc98Nrkx9xlNMaBeqseIgn977BlkZLhhWDb20eRctnDOIq8DPOzR-o2QFogxc5kKTtVx83y9fUwOIH5Jn9Bdu2qfoMTpMs7UDQa1xUWCY1V9BW3fUrVsKGj1aYIwAx8SHZ9pafmi363W21EUhDW43hlt69yZYuCKR3SXVY6Tih9ZAMyFtxBlyEJhjigtH5ZEFrIQg"
+      },
+      {
+        "filename": "image004.png",
+        "mimeType": "image/png",
+        "size": 270714,
+        "attachmentId": "ANGjdJ9P-a0ALJdiVVJAjj2Q0hbidFyaoLv49i3L6WEIfaemQVwaiHuM8-XwYRmGfMYS9e295bI9LYPflwovgds9mZeSw56riKLqZKwFh0hEfnz-hOiWambyIb-hc_5xWux5-S_USsY0xPU5mxhnQi0r_q-w31v6H0epWj36LzrinzISF4YNb-KIgHJwKudI2vcNQoKvvWb2ruI07_RPvh5U4ET7zTYAeSzFuBJTyXMgCReknbMInopGDd0ukHFPSAgI0jJOhaK4_4xVg8JZn-zr-nAcXTilHIqMxkbrwwINIB2odicYYyDjgdCkOOQruwDAfimOpkmcs9ZkdaiEDC6p_4Br7iVavra1SJHlMHa6vb5Nw5dBzJy_yV1wUSL-1s2t2NoDQnBlsn0RKmSYtWhaGfjKkhkzMgmveJkZbQ"
+      },
+      {
+        "filename": "image005.png",
+        "mimeType": "image/png",
+        "size": 9873,
+        "attachmentId": "ANGjdJ-DX0iQQ-NPG96DfVxcuW20eCZYfOd9yrlaMJCOMJx_ToFlQnzzutlfXi3kx_SxnBVVzTswFdzz4MEMNtb3pBlcgbNEqEu_pGBEUbM5_bZEtJzZBXKdkhgp-n6MsP1r8FtA8IsDM4D8lOeQZ3ZxWzVmdtvBL-SfadpC1M8_pMcGuLH1_uSIgjz5IYa6dyjRfnrEvliQJzlHrJEm0XM5BYiaCBzIS_ZgcL6aJmuA78HI6xcBvKcDzKYsiWYmqJVnAlKahvhm_ll_BhHdGnn5okupZidcLzLifFF8UqsvkrS_f8Q1S9asnwMey8N3z1xHwDMg3T_l3CmPczYWzejVOLSbXHWTgvy1iLg6SlSMJiu1DyaXMC-A3mL5MNGU0YH6ejW0KwT7GxJylJSL"
+      },
+      {
+        "filename": "image006.png",
+        "mimeType": "image/png",
+        "size": 15095,
+        "attachmentId": "ANGjdJ_3ivVYyGwIXiIiyc8FyclV1QAn1TTm4tBOwxd6iCHFle8Sr__UffcsKNajvsxNPgHW4726NdfLK3SCY2DHiOdYJYpkcE1nvw7q4tuVsK3LPM-pfnQ5HJ3xeR7BHhGcAeLvVAaDs94V-tFdAA4HueE9x75x5Pl4_S9HPSIjI4N0JQaz7AlfMYHP1LcOinaZzH5E32sLSefhVKmtzTIDtaEZ0Bc1fZjWG1rbN_5aHPrPuasnQsXjxBvz1ROXE_7E3mrgT80X5Ug-MSY_cep9yYgk2qt7A7ydmcvKsg2W0Ah4yhXW3UWSqxOw-PzSDnpsDRVHxBijS2DczUK46bYWvT4ILkylWboQsdu3U4Xv6xZW0c3A9edRUl9kWDYaAZmwgsKa-PQC2cZ9E7sk"
+      },
+      {
+        "filename": "image007.png",
+        "mimeType": "image/png",
+        "size": 15403,
+        "attachmentId": "ANGjdJ8PxAqBTc_1D_jwtQXV4YJcVYbt8H0evCnxx_EstdNp5p4t9nxmysGDoxNy-UqC8YL-R0fIAATJXjD9on_lV-yB8y5w-Ft2JEhQw5VbOyrp5bQcjv32VGsaLTNWRw_q4JMwje9Sei2C8pX9AJylXkSaVjVgLuJnhrwnqYGaA-8YKc7nmzRWnbL4N5neSnYlqGK4t_O5vl8oKNWfSvRvKnrWFlLX2jso_X-RXuwNgmHw8qqsZnyM8_KdoDVmZaWC_SFTwOjtmABxNN7eD8At4DWgsynxdF4W2kEnd8120mxECzpsNTz2Bpk5DjQxYLDe7UsawAhIig7h2ixTf_r5fkMRM-5OgA0_WLtgiK29VhRLAgVZ6wlkyen1rHnvGOx-91CBh_N_JkpgomqS"
+      },
+      {
+        "filename": "image008.png",
+        "mimeType": "image/png",
+        "size": 30565,
+        "attachmentId": "ANGjdJ_sJL-Ips9aLaUA9iCZStSR4f8uhO5ExvjPfheVrez0pdTmE52ht4lJeH3vvg-FmNqjvxDjz_R1Dg9n7xDKU-addlYjL-hoFoxAJTiCBftbWx7RxvLDKVTSv-YFV9cFa5shFuvwP8mLQ12h_J8ZtzJ01TKZ-hQ6kkmahf8ycMyLr9DwUsddGti0arWlSuIa2BQT-M_3-PCjHWZzvgILbTSuv372f6SnnBKfqN__8VQ6_goNjYwU785pUqXsfJoqAxnFAaYTwN1PAHy9a99aQyo4N2gia6KwWD_ftMIg2-gF3YUe_4wh0uIHnyMgRO8uhPxxQegDwm9w3INvUIPcfeyc_0V46tlaQ2R-6btVYb2bUX09HvjnubjMYPijx8lJbgd__FOIVRlkfeUHgrF-Hd-Uv3al3i6d4AQOYA"
+      },
+      {
+        "filename": "image009.png",
+        "mimeType": "image/png",
+        "size": 330827,
+        "attachmentId": "ANGjdJ-2aBeYi7v0J-6aMrPhZMWV48-npElDZ2VIyvi-EvOwRPie98-EfSD6bGBSjhRTHmpmFB16BbczEMsluf17GYdH25RtLg8XrCctAmpo4JGj_18HdT90fPr-ey-BH0cfvRCKxqc4EGW4_QWZsgaF88D6JJMqBSod4Wn1iIHAgUX7ye8XZbM_XPOdEnOQW7IDXPheYi546UYfy85GmtAuu6iDOw1ijOedjk2vV1SrQHcRCanBN1pCVTLo0BmrR1mPr8HQOJ9nteiUJMMgeOryp0KaW0Y1CGrx0AQfb4OlXTHn8mYGDiB2bodburEXnM73GlFGBCC4H7lx2Bg1ND8_l7DfxW7OAJUdYbz2Y_g-ZB-CT5yLMDpe07NNemAOpr5rLUw-Y8xvnjpSqUOe--g22_SHVbD474a5IiJHbQ"
+      },
+      {
+        "filename": "image010.png",
+        "mimeType": "image/png",
+        "size": 115302,
+        "attachmentId": "ANGjdJ_LOu1aGJtlIDSBT0P_qYF2QOBy8SioAP6aP8qKFWX7NkuLmDun-JJDEE9HKJmca84jekE7Wd-NWeCGkBx2aUTs3VVuJAr2Umd98douP97-kBT03Z2wW_rx5V-oyywU4MVoGsaY86FVlBs-4EqftyE_5I_ismbGrNLofv_yE6Zj45QcyzoxvSVh4OPGmLkpxRxFNJSegHPXatpaFR__g5-NWCB7ySv0GEblgwzywomDDrLIEuMuUGspOPWn8MCXsQ8sr3wZitapRKir91m5vvE7YJJiy5KnmxH46eP4bzzH9HB0kKdvMLtHkjNha8jiTu6FRY3x_Lh8im8KWFokPxY5XZF3RDg2u6FrYmTDNx1ucuVmAu4M3m0mbyBb521sGPDDepZJVF6xKUTvXaam3SWHbGrc-e8rzqQ0PA"
+      },
+      {
+        "filename": "image011.png",
+        "mimeType": "image/png",
+        "size": 105122,
+        "attachmentId": "ANGjdJ_xOwKbWcmT8zzZUQtEN8wZlquwM6UK2pXQb94E7lTTOkZp37AwVF6IthW6pCTVhvvIg7Yq2otefIjph340Q_hKHf1osCzIV64qO3O-J1TTfG0MixOm00vWlezMTm9NVGxZBmKTYWce55paJ0LRlba1KJ1xWQD6gc7t0VMSUN8HTtrVyAG6W7rYOjDnxiP309yRgp7iime8X-N_6Ak1Sn9p8oy9Rrf6QKdrE8RGXRYxhXopfJQeiw18q7C505c3rn2kW1JcrMI2lDCG_oxh_FouGnnHVqn0r_ITWVZc4SZIPBz6Ss9aejH3-AsYaLNBiy_WY3_93WurLmqmclV_pabxRbwRsZ5ewX3jynecvE1IJ5w-mdfbkgShnFEP8uKlkF2PTEuaCprVB-ad75STBaMlojfwa813A_44MA"
+      },
+      {
+        "filename": "image012.png",
+        "mimeType": "image/png",
+        "size": 265838,
+        "attachmentId": "ANGjdJ9w30u2Suu9PalkiDUiWQosewPRWx_pcSScNGqUdnZUk0J1lLuC6rELA-CtOnq3jUjHtdplmZY37gMwx3C3ZncWMUGX96ajen4q4_zlWe_FWPoZVCm6M-7YkgNa3KahjntJ0S6HBAm2oAJXTq2husm_nH90dsq-7MpK5wQqQaQkM1iuFmUmEDtB5_0ZfM6jMXwhSyU4ZvtxwvvoVR1qDOsb_M1PiL43qdxnCUOsbxmnLsQb-zsk5l_nASAaj0jlC8wi5pKTSZymGrSh3_--E9ZOKaAyiUqhrHmDoBmsW7sdn64ZrGGduKW_VhkneiB4PiJg_am2bvhqT5iJ30im0PCnDBCWpToENSxsCUXzW8HTLId2uijaTWzADEOJqeer9xe3Vpnap4x_C8IKfa7WFeA8j4qi8bxS69ILaw"
+      },
+      {
+        "filename": "image013.png",
+        "mimeType": "image/png",
+        "size": 17062,
+        "attachmentId": "ANGjdJ_EoifvEi8y5c6rMWL2QW3UV4eqvQGCbdAy0OYjlcO5Cw16ZwDTRDthiE9VLhqgZAxyWkreLKOyrnoEa100tm6ZRdj3R7-FmzPLfkdrcC51uBJ_rzE40GiLiqcw4skFPYyK4JjSVfnF3ojRxafMtcYHbNjUQhuW6GGPdthCgllz_SMxgTLHHfi50bF3VsbS2ZEs9Kk0OXWtlfC8k8npzDzcJ8THJCw2f7GQS-WV9SMuGynKX_2RPbqeSEOPR-NhoK1FursadgDGDFtnlQfHxNup-uR1HmDaMpMIcSzC_Mbs1RsB4trh8SPF7NIRy8jhEVgTNg6IqulsLbGBP7j4zFqNEBTi3pZId0-E-cXzgI-35Rbtv2Jg3KaNys3efw_leZWjwm-VAiM2mO1Qgm03mKoSKCrpcnOCNHEOfQ"
+      },
+      {
+        "filename": "image014.png",
+        "mimeType": "image/png",
+        "size": 115702,
+        "attachmentId": "ANGjdJ8evpVNaa0tjMAr9OlAcLWCEveFZmbjmttLIg8EEWawGGy56k-h5jfCLWJbUyApQQkwJHRuUVFjiJvnBm0AtsWsD1OZFB6QHKg1x2L7sdh6fDqaI_h6JpqWaxH3Kca-f6MHLEYPgiTquZq5LQBzxssIBtL0lLKFw-aNJ9dnFAbEHE-hnW0yhTo-sF4yETcbuyraa4ORlcDfQ5du-a0226zHYtcVHNGFO1XXdDwAm6c4p9JSP0of8O5Jxy6yRRvUBkImQ4Ibo2uzc-etsjJFU6CwuF4lsE49Nl6tjbF5HfOGCTgzWcwtMd5YmHSE2iR8ZExUZ8g6zQfTAEIt5jXp7YzOL4WFPNqjjC_wfsk-GQFgYDOcEL1qDpkfNcTLJTNycAM47ZaUAPr-ySr18FENEMynUxWyO_vz-CJg_w"
+      }
+    ]
+  },
+  {
+    "testCase": "Case 7: GBP - Smoking Gun Vanesa Meggiolaro Hardcodeo PE",
+    "status": "PASS",
+    "messageId": "<02d101dca691$299c7360$7cd55a20$@almarrosario.com>",
+    "date": "Wed, 25 Feb 2026 16:58:47 -0300",
+    "from": "Vanesa Meggiolaro <vmeggiolaro@almarrosario.com>",
+    "to": "\"'Dalia Silvi'\" <dsilvi@almarrosario.com>",
+    "subject": "RE: PE SAA",
+    "snippet": "Mofifica el PE , el recuadro del flete, sacale los “***********” y ponele el valor de lo q hay q pagar en USD, que creo q son aprox USD 740 (Serian las 543 libras pasadas a dólares) Prometo visitarte",
+    "attachments": [
+      {
+        "filename": "image002.png",
+        "mimeType": "image/png",
+        "size": 242,
+        "attachmentId": "ANGjdJ9DY1I9t2kpwgR09NZF81Dv-AEXlX4yyZMf5yYHTeokjY7at0w0rwllKSFbsv5y9yEJXxpeySRqCnxP7yEmc-Fu82gZtjC3GyrMT1metPGb7Rf307XfIW8UksdvTDeOH5FstzmGzBy9QBSi5k5Ba_9r0RhvNvoinuh4ODF_a8mp81821UWdjEIEVu9noUr9X8yQuQ0lI9SsmBwySCv6PE6WIsbHs7HSOyLwEYKv4oXb9yxZiwszmT2UreL6eg_b3rdd1KG95hh2CSJo3PQXufCsEgjzGZidCdlo8Yo3C8j9UvqM8GDNExDX8DNfxZyNZS7gBwdfjPbbMd4O_QO4O4PU4iwgTti4AqZsj5b4P-mrkmmv-vx2Ha0QI0_LzNjSrFmhhNVuU-Wvn65n"
+      },
+      {
+        "filename": "image003.jpg",
+        "mimeType": "image/jpeg",
+        "size": 173647,
+        "attachmentId": "ANGjdJ9Nw_D2lWeJlQDt_-G7jtT98sIwMjQon8KQaavRh5iqt35fDSSj_yPXS14A03X9pB8liqnzc1c45L_m8321K2Y_xnpH2zD6twffhwnuHc0ggJzH8IN09UiozSAlnaSQSzefGHqdTUJSYW-D7f14qym1L790oJnv6NaNEr_GMANKunULnKRQ_ixb25ibquzxGQ6CFM_UVxrF8s2_iAsrZfnZrMG93GvK41DwaTQfoPTACCRbXqtJEuNXoOa0xxsXspIwbTLO_B02XVZcKrtkc1ivLa4Rtb2RxRpFZRX-DYKQ2eStb0XUOuWuN2_rnKkw-o0ZTjaQOkLrK3XuHtIu4gq9nUK5SCIRBdfTuXAiHbtFlcgB05fMfg_adury2Kg01NoHo6Us9RT9pHx8"
+      },
+      {
+        "filename": "image004.jpg",
+        "mimeType": "image/jpeg",
+        "size": 168544,
+        "attachmentId": "ANGjdJ9BEQSFWgjFu1pqM6YiAyjyPw6i7hG7ho19ezWywD-IGBXfzfJ4sq2z4R1DR6zEHymEXPUhJZmJangJmoCz_MsPVEzm-YPS-nBqU5c2Euzz17PObtPrMJha6V3GJadHV7jtACfhMXlYZfu3IA0c7A2oJk_mEYjhZIkKALS9xj74Rab8sT4128sD1lUn9Rh6wNv547Qdh6GZFs_cEoN8WUJXPy2FA4_V3BM1MemjaYu9XXNc9FZ0M_i4hytPXqXQ7sU8lbQbmyEbH872NBgJCLMDJcYEARrX8O9BWMg1y3p36ctNuoW5xmEcsyBkeaY362T1aQs43CndEN6MARm9-8Y9hxDMRgpmbWxEh13nsDwJiotGykqcXxTo1nnuP3ZDVv46qR77-7ze958wcaAT_wgzbQq__jmOwmCRNw"
+      }
+    ]
+  }
+]

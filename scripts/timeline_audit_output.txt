@@ -1,0 +1,410 @@
+================================================================
+CARPETA: C1234
+ACTORES (6):
+  1. [CLIENTE] Cliente Directivo & Importador: Horacio Calamante / Gustavo Weedon <comex@disdendental.com.ar> (Dis-Den Odontología / Calamante S.R.L.)
+  2. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  3. [PROVEEDOR] Agente Internacional Shenzhen: Vic Mai <vic.mai@eversail-sz.com> (Eversail Shenzhen Logistics)
+  4. [OPERADOR] Operador Principal: Natali Hermoso <nhermoso@almarrosario.com> (ALMAR Rosario)
+  5. [ADMIN] Dirección Comercial & Aprobador WebAuthn: Alejandro Noacco <anoacco@almarrosario.com> (ALMAR Rosario)
+  6. [PROVEEDOR] Línea Marítima: Maersk Line Operations <ar.import@maersk.com> (Maersk Line A/S)
+CORREOS (6):
+  Email 1: ID: m-c1234-cot-01
+    Fecha: 2026-08-08T09:15:00Z
+    De: comex@disdendental.com.ar (Gustavo Weedon / Horacio Calamante (Dis-Den Odontología))
+    Para: 'llaje@almarrosario.com'
+    Asunto: Solicitud Flete Marítimo Instrumental Guilin Woodpecker // Shenzhen a Bs As // C1234
+    Cotización Vinculada: COT-2026-00010
+    Cita: "Estimada Lucía: Solicitamos cotización de flete marítimo para importación de instrumental odontológi..."
+  Email 2: ID: m-c1234-cot-02
+    Fecha: 2026-08-10T14:00:00Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'comex@disdendental.com.ar', 'anoacco@almarrosario.com'
+    Asunto: Cotización Oficial COT-2026-00010 // Dis-Den Odontología (Calamante S.R.L.) // Maersk C1234
+    Cotización Vinculada: COT-2026-00010
+    Adjunto: C1234_factura_maersk.pdf (/facturas/C1234_factura_maersk.pdf)
+    Cita: "Estimado Horacio, Gustavo: Adjuntamos cotización pactada por flete marítimo: Venta USD 1.950,00 All-..."
+  Email 3: ID: m-c1234-cot-03
+    Fecha: 2026-08-11T11:20:00Z
+    De: comex@disdendental.com.ar (Horacio Calamante (Dis-Den Odontología / Calamante S.R.L.))
+    Para: 'llaje@almarrosario.com', 'nhermoso@almarrosario.com'
+    Asunto: Aprobación Cotización COT-2026-00010 // Orden de Embarque Dis-Den Calamante // C1234
+    Cotización Vinculada: COT-2026-00010
+    Cita: "Lucía: Aprobamos la tarifa de flete marítimo de USD 1.950,00. Adjuntamos confirmación de orden para ..."
+  Email 4: ID: m-c1234-ops-04
+    Fecha: 2026-08-12T04:30:00Z
+    De: vic.mai@eversail-sz.com (Vic Mai (Eversail Shenzhen Logistics))
+    Para: 'nhermoso@almarrosario.com', 'llaje@almarrosario.com'
+    Asunto: Booking & Pre-Alert: Guilin Woodpecker -> Calamante S.R.L. // HBL ESZFL26060067 // C1234
+    Cita: "Dear Natali: Booking confirmed with Maersk Line. Shipper: Guilin Woodpecker Medical Instrument Co., ..."
+  Email 5: ID: m-c1234-ops-05
+    Fecha: 2026-08-20T10:15:00Z
+    De: nhermoso@almarrosario.com (Natali Hermoso (Operaciones ALMAR))
+    Para: 'anoacco@almarrosario.com', 'vmeggiolaro@almarrosario.com'
+    Asunto: Alerta Preventiva Margen USD 142.50 (< USD 200) // Carpeta C1234 Dis-Den // Requiere WebAuthn
+    Cita: "Alejandro: El costo de flete Maersk Line cierra en USD 1.807,50 y la venta pactada en USD 1.950,00, ..."
+  Email 6: ID: m-c1234-ops-06
+    Fecha: 2026-08-20T10:18:22Z
+    De: anoacco@almarrosario.com (Alejandro Noacco (Dirección Comercial ALMAR))
+    Para: 'nhermoso@almarrosario.com', 'vmeggiolaro@almarrosario.com', 'llaje@almarrosario.com'
+    Asunto: AUTORIZACIÓN WEBAUTHN CONCEDIDA (SHA-256) // Carpeta C1234 Dis-Den Odontología
+    Adjunto: C1234_factura_maersk.pdf (/facturas/C1234_factura_maersk.pdf)
+    Cita: "Autorización biométrica confirmada en 3 segundos vía WebAuthn FIDO2 (Touch ID). Hash de firma SHA-25..."
+================================================================
+CARPETA: C1434
+ACTORES (6):
+  1. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operador Principal: Aldana Gómez <agomez@almarrosario.com> (ALMAR Rosario)
+  3. [SUPERVISOR] Lead de Operaciones: Natali Hermoso <nhermoso@almarrosario.com> (ALMAR Rosario)
+  4. [FINANZAS] Directorio & Finanzas: Vanesa Meggiolaro <vmeggiolaro@almarrosario.com> (ALMAR Rosario)
+  5. [PROVEEDOR] Línea Marítima: Maersk Customer Support <facturas.argentina@maersk.com> (Maersk Line A/S)
+  6. [CLIENTE] Cliente: Logística Ternium Siderar <logistica@terniumsiderar.com> (Siderar S.A.I.C.)
+CORREOS (4):
+  Email 1: ID: m-c1434-cot-01
+    Fecha: 2026-07-19T10:00:00Z
+    De: logistica@terniumsiderar.com (César Cusit (Siderar Comex))
+    Para: 'llaje@almarrosario.com'
+    Asunto: SOLICITUD COTIZACION ATLAS PO 071 - Siderar // Ningbo-Bs As // C1434
+    Cotización Vinculada: COT-2026-00061
+    Cita: "Hola Lucía: Necesitamos cotización de flete marítimo para 1x20ST repuestos de laminación desde Ningb..."
+  Email 2: ID: m-c1434-cot-02
+    Fecha: 2026-07-21T17:15:25Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'logistica@terniumsiderar.com'
+    Asunto: RE: SOLICITUD COTIZACION ATLAS PO 071 - Siderar // COT-2026-00061
+    Cotización Vinculada: COT-2026-00061
+    Adjunto: COT_2026_00061_Siderar_Ningbo.pdf (/facturas/COT_2026_00061_Siderar_Ningbo.pdf)
+    Cita: "Estimado César: Cotizamos flete marítimo Ningbo a Buenos Aires con Maersk Line: Flete venta USD 1.35..."
+  Email 3: ID: m-c1434-cot-03
+    Fecha: 2026-07-22T09:30:00Z
+    De: logistica@terniumsiderar.com (César Cusit (Siderar Comex))
+    Para: 'llaje@almarrosario.com', 'agomez@almarrosario.com'
+    Asunto: Confirmación Cotización COT-2026-00061 // PO 7001434 Siderar
+    Cotización Vinculada: COT-2026-00061
+    Cita: "Lucía: Confirmamos la tarifa de USD 1.350,00 bajo cotización COT-2026-00061. Se abre expediente inte..."
+  Email 4: ID: m-c1434-01
+    Fecha: 2026-08-25T11:15:00Z
+    De: donotreply@maersk.com (Maersk Customer Service Argentina)
+    Para: 'agomez@almarrosario.com', 'vmeggiolaro@almarrosario.com'
+    Asunto: Arrival Notice & Local Charges - BL MAEU123456789 - Siderar C1434
+    Adjunto: 7554566633.PDF (/facturas/7554566633.PDF)
+    Cita: "Vessel MAERSK MC-KINNEY MOLLER / Voyage 2608W has arrived at Terminal 4 Puerto Buenos Aires. Contain..."
+================================================================
+CARPETA: IT1486
+ACTORES (5):
+  1. [COMERCIAL] Comercial Terrestre & Aéreo: Abril Stampfli <astampfli@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operaciones Tráfico Terrestre: Alexis Bucardo <abucardo@almarrosario.com> (ALMAR Rosario)
+  3. [FINANZAS] Directorio & Finanzas: Vanesa Meggiolaro <vmeggiolaro@almarrosario.com> (ALMAR Rosario)
+  4. [PROVEEDOR] Transportista Terrestre: Despacho & Tráfico LGV <operaciones@lgvtransportes.com.ar> (LGV Transportes S.R.L. / Lisandro G. Villalba)
+  5. [CLIENTE] Cliente Receptor: Logística Paladini <abastecimiento@paladini.com.ar> (Paladini S.A. / Tadeo Czerweny SA)
+CORREOS (4):
+  Email 1: ID: m-it1486-cot-01
+    Fecha: 2026-08-10T09:15:00Z
+    De: abastecimiento@paladini.com.ar (Logística Paladini / Tadeo Czerweny)
+    Para: 'astampfli@almarrosario.com'
+    Asunto: IMPO- OS 16676 // Solicitud Cotización Flete Terrestre TRP a Villa Gdor Gálvez // IT1486
+    Cotización Vinculada: COT-2026-00357
+    Cita: "Abril: Solicitamos tarifa de flete terrestre para traslado de 1 semirremolque con insumos refrigerad..."
+  Email 2: ID: m-it1486-cot-02
+    Fecha: 2026-08-11T13:42:00Z
+    De: astampfli@almarrosario.com (Abril Stampfli (Comercial Terrestre ALMAR))
+    Para: 'abastecimiento@paladini.com.ar'
+    Asunto: Cotización Aprobada COT-2026-00357 // Tramo Puerto BUE a V.G. Gálvez Paladini
+    Cotización Vinculada: COT-2026-00357
+    Adjunto: COT_2026_00357_Paladini_Terrestre.pdf (/facturas/COT_2026_00357_Paladini_Terrestre.pdf)
+    Cita: "Estimados: Enviamos cotización oficial COT-2026-00357 para el tramo TRP Buenos Aires a Villa Goberna..."
+  Email 3: ID: m-it1486-cot-03
+    Fecha: 2026-08-12T11:00:00Z
+    De: abastecimiento@paladini.com.ar (Logística Paladini)
+    Para: 'astampfli@almarrosario.com', 'abucardo@almarrosario.com'
+    Asunto: Aceptación Cotización COT-2026-00357 - Orden de Traslado // IT1486
+    Cotización Vinculada: COT-2026-00357
+    Cita: "Abril: Aprobada la cotización COT-2026-00357 por $968.000,00. Queda coordinado el ingreso del chofer..."
+  Email 4: ID: m-it1486-01
+    Fecha: 2026-08-20T17:40:00Z
+    De: operaciones@lgvtransportes.com.ar (LGV Transportes S.R.L. / Lisandro G. Villalba)
+    Para: 'astampfli@almarrosario.com', 'srossi@almarrosario.com'
+    Asunto: Envío Factura Electrónica 0004-00000303 - Paladini IT1486
+    Adjunto: 0004-00000303.PDF (/facturas/0004-00000303.PDF)
+    Cita: "Adjuntamos factura A 0004-00000303 por el viaje de Puerto Buenos Aires a Villa Gobernador Gálvez. Im..."
+================================================================
+CARPETA: C1482
+ACTORES (5):
+  1. [ADMIN] Director Comercial & Aéreo: Juan Andrés Arloro <jarloro@almarrosario.com> (ALMAR Rosario)
+  2. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  3. [OPERADOR] Operador Tráfico Aéreo: Abril Stampfli <astampfli@almarrosario.com> (ALMAR Rosario)
+  4. [PROVEEDOR] Aerolínea Internacional: Lufthansa Cargo Operations <fra-cargo@lufthansa.com> (Deutsche Lufthansa AG)
+  5. [CLIENTE] Cliente Exportador: Vicentin Comercio Exterior <comex@vicentin.com.ar> (Vicentin S.A.I.C.)
+CORREOS (3):
+  Email 1: ID: m-c1482-cot-01
+    Fecha: 2026-08-16T14:10:00Z
+    De: comex@vicentin.com.ar (Vicentin S.A.I.C. Comercio Exterior)
+    Para: 'jarloro@almarrosario.com', 'llaje@almarrosario.com'
+    Asunto: SOLICITUD COTIZACION AEREA EZE-FRA // Vicentin // Muestras Industriales C1482
+    Cotización Vinculada: COT-2026-00610
+    Cita: "Juan: Necesitamos cotizar flete aéreo urgente desde Ezeiza a Frankfurt para muestras de subproductos..."
+  Email 2: ID: m-c1482-cot-02
+    Fecha: 2026-08-19T19:38:36Z
+    De: jarloro@almarrosario.com (Juan Andrés Arloro (Director Comercial ALMAR))
+    Para: 'comex@vicentin.com.ar'
+    Asunto: Cotización Oficial COT-2026-00610 // Aéreo EZE-FRA Vicentin C1482
+    Cotización Vinculada: COT-2026-00610
+    Adjunto: COT_2026_00610_Vicentin_Aereo.pdf (/facturas/COT_2026_00610_Vicentin_Aereo.pdf)
+    Cita: "Estimados: Cotizamos flete aéreo exportación vía Lufthansa Cargo vuelo LH8265 directo EZE-FRA. Flete..."
+  Email 3: ID: m-c1482-cot-03
+    Fecha: 2026-08-20T10:30:00Z
+    De: comex@vicentin.com.ar (Vicentin S.A.I.C.)
+    Para: 'jarloro@almarrosario.com', 'astampfli@almarrosario.com'
+    Asunto: Aprobación Tarifa Aérea COT-2026-00610 // C1482
+    Cotización Vinculada: COT-2026-00610
+    Cita: "Aprobamos la tarifa de USD 5.200,00 bajo cotización COT-2026-00610. La carga ingresará al depósito f..."
+================================================================
+CARPETA: C1024
+ACTORES (5):
+  1. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operador Principal: Natali Hermoso <nhermoso@almarrosario.com> (ALMAR Rosario)
+  3. [FINANZAS] Directorio & Finanzas: Vanesa Meggiolaro <vmeggiolaro@almarrosario.com> (ALMAR Rosario)
+  4. [PROVEEDOR] Agente en Origen Brasil: Santos Port Forwarding <ops@santosforwarding.com.br> (Santos Logistics Brasil)
+  5. [CLIENTE] Cliente Importador: Molinos Abastecimiento Comex <comex@molinos.com.ar> (Molinos Río de la Plata S.A.)
+CORREOS (3):
+  Email 1: ID: m-c1024-cot-01
+    Fecha: 2026-04-08T09:40:00Z
+    De: comex@molinos.com.ar (Molinos Río de la Plata Abastecimiento)
+    Para: 'llaje@almarrosario.com'
+    Asunto: SOLICITUD COTIZACION BOLEX PO 068 // Santos a Zárate // C1024
+    Cotización Vinculada: COT-2026-00226
+    Cita: "Lucía: Solicitamos tarifa marítima FCL para insumos agroalimentarios desde Santos a Terminal Zárate ..."
+  Email 2: ID: m-c1024-cot-02
+    Fecha: 2026-04-10T11:20:00Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'comex@molinos.com.ar'
+    Asunto: RE: SOLICITUD COTIZACION BOLEX PO 068 - Molinos // COT-2026-00226 // C1024
+    Cotización Vinculada: COT-2026-00226
+    Adjunto: COT_2026_00226_Molinos_Santos.pdf (/facturas/COT_2026_00226_Molinos_Santos.pdf)
+    Cita: "Estimados Molinos Abastecimiento: Cotizamos con Hamburg Süd / Maersk servicio feeder Santos a Zárate..."
+  Email 3: ID: m-c1024-cot-03
+    Fecha: 2026-04-11T15:00:00Z
+    De: comex@molinos.com.ar (Molinos Río de la Plata)
+    Para: 'llaje@almarrosario.com', 'nhermoso@almarrosario.com'
+    Asunto: Confirmación Cotización COT-2026-00226 // PO 068 Molinos C1024
+    Cotización Vinculada: COT-2026-00226
+    Cita: "Lucía: Confirmamos cotización COT-2026-00226. Natali Hermoso queda a cargo del tracking y la recepci..."
+================================================================
+CARPETA: TL1436
+ACTORES (4):
+  1. [COMERCIAL] Comercial Tráfico Terrestre: Abril Stampfli <astampfli@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operador Terrestre: Alexis Bucardo <abucardo@almarrosario.com> (ALMAR Rosario)
+  3. [PROVEEDOR] Transportista Carga Seca: Logística Terrestre Biton <trafico@bitontransportes.com.ar> (Biton Transportes S.A.)
+  4. [CLIENTE] Cliente Agroexportador: Bunge Logística Portuaria <logistica.puerto@bunge.com> (Bunge Argentina S.A.)
+CORREOS (3):
+  Email 1: ID: m-tl1436-cot-01
+    Fecha: 2026-07-28T10:15:00Z
+    De: logistica.puerto@bunge.com (Bunge Argentina Logística)
+    Para: 'astampfli@almarrosario.com'
+    Asunto: Pedido de Tarifa Flete Terrestre San Lorenzo a Terminal Zárate // TL1436
+    Cotización Vinculada: COT-2026-00379
+    Cita: "Abril: Buen día. Solicitamos tarifa de flete para traslado de 12 pallets de carga seca consolidada d..."
+  Email 2: ID: m-tl1436-cot-02
+    Fecha: 2026-07-29T13:14:09Z
+    De: astampfli@almarrosario.com (Abril Stampfli (Comercial Terrestre ALMAR))
+    Para: 'logistica.puerto@bunge.com'
+    Asunto: TARIFA TRAMO PORTUARIO SAN LORENZO - ZARATE - COT-2026-00379 // TL1436
+    Cotización Vinculada: COT-2026-00379
+    Cita: "Estimados, buen día! Cotizamos el retiro de 12 pallets (12.646 kg) tramo San Lorenzo a Zárate: Tarif..."
+  Email 3: ID: m-tl1436-cot-03
+    Fecha: 2026-07-30T11:20:00Z
+    De: logistica.puerto@bunge.com (Bunge Argentina)
+    Para: 'astampfli@almarrosario.com', 'abucardo@almarrosario.com'
+    Asunto: Aprobación Tarifa Terrestre COT-2026-00379 // TL1436 Bunge
+    Cotización Vinculada: COT-2026-00379
+    Cita: "Aprobado. Alexis Bucardo coordinará la orden de carga y los datos del camión y chofer para el ingres..."
+================================================================
+CARPETA: C1289
+ACTORES (7):
+  1. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  2. [COMERCIAL] Ejecutivo Comercial Senior: Martín Fusco <mfusco@almarrosario.com> (ALMAR Rosario)
+  3. [OPERADOR] Operador Principal: Natali Hermoso <nhermoso@almarrosario.com> (ALMAR Rosario)
+  4. [FINANZAS] Directorio & Finanzas: Vanesa Meggiolaro <vmeggiolaro@almarrosario.com> (ALMAR Rosario)
+  5. [FINANZAS] Finanzas & Facturación: Stefania Rossi <srossi@almarrosario.com> (ALMAR Rosario)
+  6. [PROVEEDOR] Línea Marítima: Maersk Customer Support <facturas.argentina@maersk.com> (Maersk Line A/S)
+  7. [CLIENTE] Cliente Importador: Albertoni S.A. Comex <comex@albertoni.com.ar> (Albertoni S.A.)
+CORREOS (4):
+  Email 1: ID: m-c1289-cot-01
+    Fecha: 2026-06-01T10:15:00Z
+    De: comex@albertoni.com.ar (Albertoni S.A. Comex)
+    Para: 'llaje@almarrosario.com', 'mfusco@almarrosario.com'
+    Asunto: NUEVA CARGA LISTA EN BREMERHAVEN / NINGBO // Solicitud Tarifa C1289
+    Cotización Vinculada: COT-2026-00105
+    Cita: "Lucía, Martín: Les informamos que tenemos carga de repuestos industriales lista en origen. Requerimo..."
+  Email 2: ID: m-c1289-cot-02
+    Fecha: 2026-06-03T18:46:43Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'comex@albertoni.com.ar'
+    Asunto: Cotización Oficial COT-2026-00105 // Albertoni S.A. FCL C1289
+    Cotización Vinculada: COT-2026-00105
+    Adjunto: COT_2026_00105_Albertoni_FCL.pdf (/facturas/COT_2026_00105_Albertoni_FCL.pdf)
+    Cita: "Buenas tardes Mariela: Cotizamos flete marítimo Maersk Line con 14 días libres de demoras. Flete ven..."
+  Email 3: ID: m-c1289-01
+    Fecha: 2026-08-05T09:30:00Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'comex@albertoni.com.ar', 'nhermoso@almarrosario.com'
+    Asunto: Cotización Aprobada FCL Ningbo-Rosario / Albertoni S.A. - Carpeta C1289
+    Cotización Vinculada: COT-2026-00105
+    Cita: "Estimados, confirmamos la aceptación de la tarifa marítima FCL 1x40HQ Shanghai/Ningbo a Rosario vía ..."
+  Email 4: ID: m-c1289-02
+    Fecha: 2026-08-26T14:25:00Z
+    De: donotreply@maersk.com (Maersk Customer Service)
+    Para: 'vmeggiolaro@almarrosario.com', 'srossi@almarrosario.com'
+    Asunto: Maersk Line - Invoice & Payment Advice BL 272860120 / Ref: C1289
+    Adjunto: 7555554402.PDF (/facturas/7555554402.PDF)
+    Cita: "Attached please find the freight invoice 7555554402 and official payment receipt for Bill of Lading ..."
+================================================================
+CARPETA: EA1561
+ACTORES (4):
+  1. [COMERCIAL] Comercial Tráfico Aéreo: Abril Stampfli <astampfli@almarrosario.com> (ALMAR Rosario)
+  2. [COMERCIAL] Comercial Exportación: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  3. [PROVEEDOR] Aerolínea de Carga: Aerolíneas Cargo Ezeiza <cargo@aerolineas.com.ar> (Aerolíneas Argentinas Cargo)
+  4. [CLIENTE] Cliente Exportador: Bertot Comercio Exterior <comercioexterior@bertot.com.ar> (Bertot Metalmecánica S.R.L.)
+CORREOS (3):
+  Email 1: ID: m-ea1561-cot-01
+    Fecha: 2026-05-28T11:20:00Z
+    De: comercioexterior@bertot.com.ar (Paula Baroldi (Bertot Metalmecánica))
+    Para: 'astampfli@almarrosario.com', 'comercial@almar.com.ar'
+    Asunto: Solicitud Cotización Aérea Exportación Miami // 2 Cajones Maquinaria // EA1561
+    Cotización Vinculada: COT-2026-00428
+    Cita: "Abril: Solicitamos cotización para exportación aérea desde Rosario/Ezeiza a Miami International Airp..."
+  Email 2: ID: m-ea1561-cot-02
+    Fecha: 2026-06-01T15:42:57Z
+    De: astampfli@almarrosario.com (Abril Stampfli (Comercial ALMAR))
+    Para: 'comercioexterior@bertot.com.ar'
+    Asunto: RE: LCL BERTOT MKE - USA // 2 CAJONES 1030 KG / Cotización COT-2026-00428
+    Cotización Vinculada: COT-2026-00428
+    Adjunto: COT_2026_00428_Bertot_Aereo.pdf (/facturas/COT_2026_00428_Bertot_Aereo.pdf)
+    Cita: "Paula, buenas tardes! Cotizamos la exportación aérea vía LATAM Cargo / Aerolíneas Cargo Ezeiza-Miami..."
+  Email 3: ID: m-ea1561-01
+    Fecha: 2026-08-28T16:00:00Z
+    De: cargo@aerolineas.com.ar (Aerolíneas Argentinas Cargo Ezeiza)
+    Para: 'comercioexterior@bertot.com.ar', 'astampfli@almarrosario.com'
+    Asunto: Pre-Alerta Guía Aérea AWB 044-88992211 - Vuelo AR1302 EZE-MIA / Ref: EA1561
+    Cita: "Confirmamos recepción y pesaje en terminal TCA Ezeiza de 2 cajones maquinaria pesada (1030 kg tasabl..."
+================================================================
+CARPETA: C1471
+ACTORES (5):
+  1. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operador Principal: Natali Hermoso <nhermoso@almarrosario.com> (ALMAR Rosario)
+  3. [FINANZAS] Directorio & Finanzas: Vanesa Meggiolaro <vmeggiolaro@almarrosario.com> (ALMAR Rosario)
+  4. [PROVEEDOR] Agente en Origen Alemania: Andreas Hoppenberg (AMA Freight) <operations@amafreight.de> (AMA Freight Agency GmbH)
+  5. [CLIENTE] Cliente Corporativo: Industrias Secco Comex <magimenez@secco.com.ar> (Industrias Juan F. Secco S.A.)
+CORREOS (3):
+  Email 1: ID: m-c1471-cot-01
+    Fecha: 2026-08-01T10:00:00Z
+    De: magimenez@secco.com.ar (Industrias Juan F. Secco Comex)
+    Para: 'llaje@almarrosario.com'
+    Asunto: Atlas - 200MH / OC 75000669 - Legajo # 202613589 // Solicitud Tarifa C1471
+    Cotización Vinculada: COT-2026-00067
+    Cita: "Lucía: Requerimos cotización de flete marítimo para generador eléctrico Hotstart desde Hamburgo (DEH..."
+  Email 2: ID: m-c1471-cot-02
+    Fecha: 2026-08-04T15:31:15Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'magimenez@secco.com.ar'
+    Asunto: RE: Atlas - 200MH / OC 75000669 // Cotización Oficial COT-2026-00067 // C1471
+    Cotización Vinculada: COT-2026-00067
+    Adjunto: COT_2026_00067_Secco_Hamburg.pdf (/facturas/COT_2026_00067_Secco_Hamburg.pdf)
+    Cita: "Dear Nicola, Mariana: Our agent AMA Freight will contact you in order to proceed with shipment. Flet..."
+  Email 3: ID: m-c1471-01
+    Fecha: 2026-08-22T08:50:00Z
+    De: operations@amafreight.de (AMA Freight Agency GmbH (Hamburg Hub))
+    Para: 'nhermoso@almarrosario.com', 'vmeggiolaro@almarrosario.com'
+    Asunto: Shipping Advice & Departure Notice - MBL HAM2608441 / Ref: C1471
+    Adjunto: 261005130R.pdf (/facturas/261005130R.pdf)
+    Cita: "Dear ALMAR Team: Container TCKU4499112 loaded on board vessel CMA CGM PUGET voyage 09W. ETD Hamburg ..."
+================================================================
+CARPETA: C1056
+ACTORES (4):
+  1. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Customer Service Exportación: Victoria Moyano <vmoyano@almarrosario.com> (ALMAR Rosario)
+  3. [PROVEEDOR] Línea Marítima: Hapag-Lloyd Argentina <buenosaires@hlag.com> (Hapag-Lloyd A.G.)
+  4. [CLIENTE] Cliente Exportador: Saprograf Exportaciones <export@saprograf.com.ar> (Saprograf S.A.S. / Litamex)
+CORREOS (3):
+  Email 1: ID: m-c1056-cot-01
+    Fecha: 2026-04-18T14:10:00Z
+    De: export@saprograf.com.ar (Saprograf S.A.S. Exportaciones)
+    Para: 'llaje@almarrosario.com'
+    Asunto: Solicitud Tarifa Exportación 1x40HC Indigo 6K a Cartagena // C1056
+    Cotización Vinculada: COT-2026-00457
+    Cita: "Lucía: Por favor cotizar flete marítimo para exportación de equipo gráfico industrial Indigo 6K desd..."
+  Email 2: ID: m-c1056-cot-02
+    Fecha: 2026-04-21T09:22:00Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'export@saprograf.com.ar'
+    Asunto: Cotización Oficial COT-2026-00457 // Saprograf 1x40HC Buenos Aires-Cartagena
+    Cotización Vinculada: COT-2026-00457
+    Adjunto: COT_2026_00457_Saprograf_Cartagena.pdf (/facturas/COT_2026_00457_Saprograf_Cartagena.pdf)
+    Cita: "Buenos días: Dando continuidad a los requerimientos técnicos, cotizamos con Hapag-Lloyd / MSC: Flete..."
+  Email 3: ID: m-c1056-cot-03
+    Fecha: 2026-04-22T11:00:00Z
+    De: export@saprograf.com.ar (Saprograf S.A.S.)
+    Para: 'llaje@almarrosario.com', 'vmoyano@almarrosario.com'
+    Asunto: Confirmación y Apertura Carpeta C1056 // COT-2026-00457
+    Cotización Vinculada: COT-2026-00457
+    Cita: "Confirmamos cotización COT-2026-00457. Victoria Moyano asume la coordinación del booking y despacho ..."
+================================================================
+CARPETA: C367
+ACTORES (4):
+  1. [COMERCIAL] Ejecutivo Comercial Asignado: Martín Fusco <mfusco@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operaciones Impo & Corporativas: Ana Laura Talaban <atalaban@almarrosario.com> (ALMAR Rosario)
+  3. [PROVEEDOR] Co-Loader Marítimo: MSL Consolidaciones <ops@msl.com.ar> (MSL Líneas Marítimas S.A.)
+  4. [CLIENTE] Cliente Importador: Juan Cuello / Metalúrgica Rosarina <cuellojr@metalurgicarosarina.com.ar> (Metalúrgica Rosarina S.R.L.)
+CORREOS (3):
+  Email 1: ID: m-c367-cot-01
+    Fecha: 2026-06-29T10:30:00Z
+    De: cuellojr@metalurgicarosarina.com.ar (Juan Cuello (Metalúrgica Rosarina))
+    Para: 'mfusco@almarrosario.com'
+    Asunto: LCL LBS INTELLIGENT - JUAN CUELLO - CAFETERAS - GUANGZHOU / Solicitud Tarifa C367
+    Cotización Vinculada: COT-2026-00113
+    Cita: "Martín: Tenemos lista la carga consolidada de cafeteras industriales en Guangzhou. Requerimos flete ..."
+  Email 2: ID: m-c367-cot-02
+    Fecha: 2026-07-02T15:58:58Z
+    De: mfusco@almarrosario.com (Martín Fusco (Comercial ALMAR))
+    Para: 'cuellojr@metalurgicarosarina.com.ar'
+    Asunto: RV: LCL LBS INTELLIGENT - JUAN CUELLO - CAFETERAS // Cotización COT-2026-00113
+    Cotización Vinculada: COT-2026-00113
+    Adjunto: COT_2026_00113_Juan_Cuello_LCL.pdf (/facturas/COT_2026_00113_Juan_Cuello_LCL.pdf)
+    Cita: "Hola Juan, Ceci: Adjunto cotización oficial COT-2026-00113 confirmada en Kipintoch. Flete marítimo L..."
+  Email 3: ID: m-c367-cot-03
+    Fecha: 2026-07-03T11:45:00Z
+    De: cuellojr@metalurgicarosarina.com.ar (Juan Cuello)
+    Para: 'mfusco@almarrosario.com', 'atalaban@almarrosario.com'
+    Asunto: Aprobación Cotización COT-2026-00113 // Carpeta C367 Juan Cuello
+    Cotización Vinculada: COT-2026-00113
+    Cita: "Martín: Aprobamos la tarifa de USD 680,00. Ana Laura Talaban puede avanzar con la coordinación del c..."
+================================================================
+CARPETA: C620
+ACTORES (5):
+  1. [COMERCIAL] Ejecutiva Comercial: Lucía Laje <llaje@almarrosario.com> (ALMAR Rosario)
+  2. [OPERADOR] Operador Principal: Natali Hermoso <nhermoso@almarrosario.com> (ALMAR Rosario)
+  3. [FINANZAS] Directorio & Finanzas: Vanesa Meggiolaro <vmeggiolaro@almarrosario.com> (ALMAR Rosario)
+  4. [PROVEEDOR] Agente en Reino Unido: Suzie Tran (SAA Logistics UK) <suzie@saalogistics.co.uk> (SAA Logistics UK Ltd.)
+  5. [CLIENTE] Institución Cliente: CONICET Rosario / IBR <compras@rosario-conicet.gov.ar> (CONICET Instituto de Biología Molecular)
+CORREOS (3):
+  Email 1: ID: m-c620-cot-01
+    Fecha: 2026-02-28T09:15:00Z
+    De: compras@rosario-conicet.gov.ar (Dra. Elena Rossi (CONICET Rosario / IBR))
+    Para: 'llaje@almarrosario.com'
+    Asunto: URGENT AIR FREIGHT EXW UK TO ROS // CONICET C 266 16/10/25 // Solicitud C620
+    Cotización Vinculada: COT-2026-00018
+    Cita: "Lucía: Requerimos cotización aérea urgente para reactivos biológicos refrigerados desde Londres hast..."
+  Email 2: ID: m-c620-cot-02
+    Fecha: 2026-03-02T16:38:05Z
+    De: llaje@almarrosario.com (Lucía Laje (Comercial ALMAR))
+    Para: 'compras@rosario-conicet.gov.ar'
+    Asunto: RV: URGENT AIR FREIGHT EXW UK TO ROS // CONICET C 266 // Cotización COT-2026-00018
+    Cotización Vinculada: COT-2026-00018
+    Adjunto: COT_2026_00018_CONICET_GBP.pdf (/facturas/COT_2026_00018_CONICET_GBP.pdf)
+    Cita: "Estimada Elena: Enviamos cotización oficial COT-2026-00018 para transporte aéreo urgente vía British..."
+  Email 3: ID: m-c620-cot-03
+    Fecha: 2026-03-03T14:00:00Z
+    De: compras@rosario-conicet.gov.ar (CONICET Rosario)
+    Para: 'llaje@almarrosario.com', 'nhermoso@almarrosario.com'
+    Asunto: Aprobación Orden de Embarque COT-2026-00018 // Expediente C620 CONICET
+    Cotización Vinculada: COT-2026-00018
+    Cita: "Lucía: Aprobamos los términos y la cotización multimoneda. Natali Hermoso asume la custodia del emba..."

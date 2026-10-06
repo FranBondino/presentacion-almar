@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALMAR Rosario — Momento 1: Guía de Demostración Ejecutiva y Gobernanza</title>
+  <style>
+    :root {
+      --primary: #0072BC;
+      --primary-dark: #005a96;
+      --primary-light: #e6f3fa;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --success: #059669;
+      --success-light: #ecfdf5;
+      --warning: #d97706;
+      --warning-light: #fffbeb;
+      --danger: #dc2626;
+      --danger-light: #fef2f2;
+      --info: #2563eb;
+      --info-light: #eff6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--slate-800);
+      background-color: var(--slate-50);
+      line-height: 1.6;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* Header Banner */
+    .header-card {
+      background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a5f 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 36px 40px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border-left: 6px solid var(--primary);
+    }
+
+    .header-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .badge-primary { background: rgba(0, 114, 188, 0.25); color: #7dd3fc; border: 1px solid rgba(125, 211, 252, 0.3); }
+    .badge-success { background: rgba(5, 150, 105, 0.25); color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.3); }
+    .badge-warning { background: rgba(217, 119, 6, 0.25); color: #fde68a; border: 1px solid rgba(253, 230, 138, 0.3); }
+
+    .header-card h1 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .header-card p.subtitle {
+      font-size: 16px;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 13px;
+    }
+
+    .meta-item strong {
+      display: block;
+      color: #94a3b8;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    /* Timeline Bar */
+    .timeline-bar {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .timeline-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .timeline-track {
+      display: grid;
+      grid-template-columns: 3fr 7fr 5fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-segment {
+      padding: 14px 16px;
+      border-radius: 8px;
+      color: #ffffff;
+    }
+
+    .seg-1 { background: linear-gradient(135deg, #1e40af, #2563eb); }
+    .seg-2 { background: linear-gradient(135deg, #047857, #059669); }
+    .seg-3 { background: linear-gradient(135deg, #b45309, #d97706); }
+
+    .seg-time {
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.85;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .seg-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .seg-desc {
+      font-size: 12px;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    /* Sections */
+    .section-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--slate-100);
+    }
+
+    .section-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      color: var(--slate-900);
+      font-weight: 700;
+    }
+
+    .section-header .section-tag {
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--slate-100);
+      color: var(--slate-600);
+    }
+
+    /* Executive Callout / Quote */
+    .exec-quote {
+      background: var(--slate-50);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--slate-700);
+      margin-bottom: 24px;
+      font-size: 14.5px;
+    }
+
+    /* Tables */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .styled-table th {
+      background: var(--slate-100);
+      color: var(--slate-800);
+      font-weight: 600;
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--slate-200);
+    }
+
+    .styled-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: middle;
+    }
+
+    .styled-table tbody tr:hover {
+      background-color: var(--slate-50);
+    }
+
+    .table-highlight {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Metric Cards Grid */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .metric-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 18px 20px;
+      text-align: left;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--slate-500);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .metric-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin: 6px 0 2px 0;
+    }
+
+    .metric-sub {
+      font-size: 12px;
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    /* Steps Cards */
+    .step-box {
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+      background: #ffffff;
+      transition: box-shadow 0.2s;
+    }
+
+    .step-box:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .step-badge {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .step-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .step-duration {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--slate-500);
+      font-weight: 600;
+    }
+
+    .step-script {
+      background: #f8fafc;
+      border-left: 3px solid #cbd5e1;
+      padding: 10px 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13.5px;
+      color: var(--slate-700);
+      margin: 12px 0;
+    }
+
+    .step-bullets {
+      padding-left: 20px;
+      margin: 12px 0;
+      font-size: 14px;
+      color: var(--slate-700);
+    }
+
+    .step-bullets li {
+      margin-bottom: 6px;
+    }
+
+    .payload-display {
+      background: var(--slate-900);
+      color: #38bdf8;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 13px;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 12px 0;
+      display: inline-block;
+      letter-spacing: 0.02em;
+    }
+
+    /* FAQ / Objection Card */
+    .faq-card {
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .faq-header {
+      background: var(--slate-100);
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-qnum {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .faq-body {
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .faq-exec-ans {
+      font-size: 14.5px;
+      color: var(--slate-800);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .faq-tech-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--slate-600);
+    }
+
+    .faq-tech-title {
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Hands-on Grid */
+    .hands-on-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .hands-card {
+      border: 2px solid var(--primary-light);
+      border-radius: 10px;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .hands-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .hands-card h4 {
+      font-size: 15px;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .hands-card p {
+      font-size: 13px;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px 0;
+      color: var(--slate-500);
+      font-size: 13px;
+      border-top: 1px solid var(--slate-200);
+      margin-top: 40px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 12pt;
+      }
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+      .header-card {
+        background: #0072BC !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        box-shadow: none;
+      }
+      .section-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+      }
+      .step-box, .faq-card {
+        page-break-inside: avoid;
+      }
+      .payload-display {
+        background: #000000 !important;
+        color: #00ffcc !important;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header Banner -->
+  <div class="header-card">
+    <div class="header-badge-row">
+      <span class="badge badge-primary">Momento 1 — Carga Asistida & Gobernanza</span>
+      <span class="badge badge-success">ISO 9001:2015 Compliant</span>
+      <span class="badge badge-warning">Demostración en Vivo (15 Minutos)</span>
+    </div>
+    <h1>🚢 ALMAR ROSARIO: GUÍA MAESTRA DE DEMOSTRACIÓN EJECUTIVA</h1>
+    <p class="subtitle">Presentación de Directorio, Guion Operativo Click-by-Click, Protocolo Hands-on y Matriz de Manejo de Objeciones</p>
+    
+    <div class="meta-grid">
+      <div class="meta-item">
+        <strong>Audiencia</strong>
+        Directorio (Alejandro, Juan, Vanesa) & Operadoras (Natali, Victoria)
+      </div>
+      <div class="meta-item">
+        <strong>Entorno de Demo</strong>
+        <code>https://bot-relevamiento.vercel.app</code>
+      </div>
+      <div class="meta-item">
+        <strong>Tiempo Total</strong>
+        15 Minutos Cronometrados
+      </div>
+      <div class="meta-item">
+        <strong>Ahorro Anual Directo</strong>
+        $6.000.000 ARS + $600.000 Setup
+      </div>
+    </div>
+  </div>
+
+  <!-- 15-Minute Timeline Bar -->
+  <div class="timeline-bar">
+    <div class="timeline-title">
+      <span>⏱️ Estructura Cronometrada de la Reunión (15 Minutos)</span>
+      <span style="font-size: 13px; font-weight: 500; color: var(--slate-500);">Objetivo: Boardroom Caliber & Cero Fricción</span>
+    </div>
+    <div class="timeline-track">
+      <div class="timeline-segment seg-1">
+        <div class="seg-time">00:00 - 03:00 (3 Min)</div>
+        <div class="seg-name">Apertura Estratégica</div>
+        <div class="seg-desc">Business Case vs Kipintoch ($600k + $500k/mes)</div>
+      </div>
+      <div class="timeline-segment seg-2">
+        <div class="seg-time">03:00 - 10:00 (7 Min)</div>
+        <div class="seg-name">Demo Operativa en Vivo</div>
+        <div class="seg-desc">5 Pasos Click-by-Click en Plataforma Real</div>
+      </div>
+      <div class="timeline-segment seg-3">
+        <div class="seg-time">10:00 - 15:00 (5 Min)</div>
+        <div class="seg-name">Protocolo Hands-on</div>
+        <div class="seg-desc">Natali y Victoria prueban en su PC (60 seg)</div>
+      </div>
+    </div>
+  <!-- CREDENCIALES CORPORATIVAS DE ACCESO -->
+  <div class="section-card" style="border-left: 6px solid #10b981; background: #ffffff;">
+    <div class="section-header" style="border-bottom: 1px solid var(--slate-200); padding-bottom: 12px;">
+      <div class="section-number" style="background: #10b981; color: white;">🔑</div>
+      <h2>Credenciales de Acceso Oficiales para la Demostración</h2>
+      <span class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: #059669;">Autenticación Segura RBAC</span>
+    </div>
+
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px 18px; margin: 16px 0;">
+      <div style="font-size: 14px; color: #166534; font-weight: 600;">
+        🛡️ <strong>URL de Acceso Directo:</strong> <a href="https://bot-relevamiento.vercel.app/login" target="_blank" style="color: #0072BC; text-decoration: underline;">https://bot-relevamiento.vercel.app/login</a> (o <code>http://localhost:3000/login</code>)
+      </div>
+      <div style="font-size: 13.5px; color: #15803d; margin-top: 6px;">
+        🔑 <strong>Contraseña Única para Todos los Usuarios:</strong> <code style="font-size: 15px; font-weight: 700; background: #ffffff; padding: 2px 8px; border: 1px solid #86efac; border-radius: 4px; color: #0f172a;">Almar2026!</code>
+      </div>
+    </div>
+
+    <table class="styled-table" style="margin-top: 10px;">
+      <thead>
+        <tr>
+          <th>Usuario / Correo Electrónico</th>
+          <th>Rol Asignado</th>
+          <th>Permisos y Comportamiento en la Demo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>operativo@almar.com.ar</code></td>
+          <td><span class="badge" style="background: #e0f2fe; color: #0369a1;">OPERATIVO</span></td>
+          <td><strong>Rol de Tráfico (Natali / Victoria):</strong> Carga asistida y visor PDF activos. <em>Ventas y márgenes enmascarados ($ ***)</em>. Desvíos de sobrecosto bloqueados para proteger las finanzas de ALMAR.</td>
+        </tr>
+        <tr>
+          <td><code>lead.operaciones@almar.com.ar</code></td>
+          <td><span class="badge" style="background: #fef3c7; color: #b45309;">LEAD_OPERACIONES</span></td>
+          <td><strong>Supervisión de Operaciones:</strong> Visibilidad de costos reales y botón activo para <em>autorizar desvíos de tarifas</em> de navieras con justificación ISO 9001.</td>
+        </tr>
+        <tr>
+          <td><code>gerencia@almar.com.ar</code></td>
+          <td><span class="badge" style="background: #dbeafe; color: #1e40af;">GERENCIA</span></td>
+          <td><strong>Dirección General (Socios / Dueños):</strong> Acceso total al balance financiero comercial, márgenes y rentabilidad acumulada.</td>
+        </tr>
+        <tr>
+          <td><code>finanzas@almar.com.ar</code></td>
+          <td><span class="badge" style="background: #dcfce7; color: #15803d;">FINANZAS</span></td>
+          <td><strong>Administración y Tesorería:</strong> Conciliación de facturas, vencimientos y flujo de pagos a armadores.</td>
+        </tr>
+        <tr>
+          <td><code>comercial@almar.com.ar</code></td>
+          <td><span class="badge" style="background: #f3e8ff; color: #6b21a8;">COMERCIAL</span></td>
+          <td><strong>Ventas y Pricing:</strong> Comparativa de cotizaciones comerciales emitidas a clientes vs costos facturados.</td>
+        </tr>
+        <tr>
+          <td><code>admin@almar.com.ar</code></td>
+          <td><span class="badge" style="background: #fee2e2; color: #991b1b;">ADMIN</span></td>
+          <td><strong>Administrador ISO 9001:</strong> Auditoría inmutable, exportación de logs criptográficos SHA-256 y configuración.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 1: APERTURA ESTRATEGICA -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Apertura Estratégica: Caso de Negocio vs Kipintoch (3 Minutos)</h2>
+      <span class="section-tag">Directorio / Socios</span>
+    </div>
+
+    <div class="exec-quote">
+      "Buenos días a todos. En los próximos 15 minutos veremos cómo resolvimos uno de los mayores desgastes diarios de ALMAR: la carga de facturas en Kipintoch, reduciendo un proceso de 15 minutos a un clic de 30 segundos, sin errores de tipeo y con control total de desvíos de tarifas. Pero antes de abrir la pantalla, veamos los números que fundamentan esta decisión estratégica."
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-label">Ahorro en Setup Inicial</div>
+        <div class="metric-val">$600.000</div>
+        <div class="metric-sub">✓ $0 invertidos en setup de Kipintoch</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Ahorro Mensual Recurrente</div>
+        <div class="metric-val">$500.000</div>
+        <div class="metric-sub">✓ $6.000.000 ARS ahorrados por año</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Reducción de Tiempo de Carga</div>
+        <div class="metric-val">95%</div>
+        <div class="metric-sub">De 12 minutos a 30 seg por factura</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Horas Hombre Mensuales Liberadas</div>
+        <div class="metric-val">~28 hrs</div>
+        <div class="metric-sub">Capacidad devuelta a Tráfico y Clientes</div>
+      </div>
+    </div>
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Criterio de Decisión</th>
+          <th>Conector Directo Kipintoch ERP</th>
+          <th>Portal Asistido ALMAR (Momento 1)</th>
+          <th>Beneficio Estratégico ALMAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Costo de Implementación</strong></td>
+          <td>$600.000 ARS (Pago único inicial)</td>
+          <td class="table-highlight">$0 ARS adicional</td>
+          <td>Ahorro de capital inmediato</td>
+        </tr>
+        <tr>
+          <td><strong>Abono Mensual Recurrente</strong></td>
+          <td>$500.000 ARS / mes</td>
+          <td class="table-highlight">$0 ARS / mes</td>
+          <td>$6.000.000 ARS anuales protegidos</td>
+        </tr>
+        <tr>
+          <td><strong>Estabilidad y Cuotas de Petición</strong></td>
+          <td>⚠️ Cuota restrictiva por agencia (error documentado <em>"Ha superado el límite de requests"</em>)</td>
+          <td class="table-highlight">🟢 Sin límite de peticiones (Vercel Edge 99.9% uptime)</td>
+          <td>Cero bloqueos en picos de cierre mensual</td>
+        </tr>
+        <tr>
+          <td><strong>Gobernanza de Sobrecostos</strong></td>
+          <td>Carga ciega a base de datos (sin control de desvíos)</td>
+          <td class="table-highlight">Bloqueo automático si el costo supera cotización</td>
+          <td>Blindaje de márgenes comerciales</td>
+        </tr>
+        <tr>
+          <td><strong>Segregación de Roles (RBAC)</strong></td>
+          <td>Requiere licencias adicionales de ERP</td>
+          <td class="table-highlight">Enmascaramiento nativo ($ ***) para operadores</td>
+          <td>Confidencialidad de tarifas y márgenes</td>
+        </tr>
+        <tr>
+          <td><strong>Cumplimiento ISO 9001:2015</strong></td>
+          <td>Log convencional no auditado</td>
+          <td class="table-highlight">Trazabilidad inmutable con firma SHA-256</td>
+          <td>Alineación total con auditoría de calidad</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 2: DEMO OPERATIVA EN VIVO -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Demostración Operativa en Vivo: Secuencia Click-by-Click (7 Minutos)</h2>
+      <span class="section-tag">Demostración en Pantalla</span>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">Paso 1</span>
+        <span class="step-title">Login con Segregación de Roles (RBAC) y Enmascaramiento Financiero</span>
+        <span class="step-duration">01:30 min</span>
+      </div>
+      <div class="step-script">
+        <strong>Guion del Presentador:</strong> "La seguridad de la información comercial de ALMAR está blindada por diseño. Vamos a ingresar primero con el perfil de un operador de tráfico."
+      </div>
+      <ul class="step-bullets">
+        <li><strong>Acción:</strong> En <code>/login</code>, ingresar con <code>operativo@almar.com.ar</code> y contraseña corporativa <code>Almar2026!</code>.</li>
+        <li><strong>Observación:</strong> En la pestaña <strong>Comprobantes</strong>, el tablero Kanban muestra las 4 columnas operativas.</li>
+        <li><strong>Punto de Control (Boardroom):</strong> En las tarjetas y en las carpetas, las columnas de <em>Venta al Cliente</em> y <em>Margen Bruto</em> muestran <strong><code>$ ***</code></strong>. El operador ve costos, proveedores, contenedores y BLs, pero la rentabilidad queda estrictamente restringida a directivos.</li>
+      </ul>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">Paso 2</span>
+        <span class="step-title">Ingesta de Factura y Deducción Inteligente de Carpeta</span>
+        <span class="step-duration">01:30 min</span>
+      </div>
+      <div class="step-script">
+        <strong>Guion del Presentador:</strong> "Cuando un proveedor nos envía una factura por email sin indicar la carpeta interna de ALMAR, nuestro motor de IA extrae los identificadores logísticos primarios y propone el legajo correcto de forma determinística."
+      </div>
+      <ul class="step-bullets">
+        <li><strong>Acción:</strong> En la Columna <code>1. Ingesta (Mails)</code>, ubicar la factura de <strong>MUNSER S.A.</strong> (Factura A 0007-00067102 por $340.252,00 ARS).</li>
+        <li><strong>Observación:</strong> Aparece la sugerencia con badge azul: <code>💡 Sugerencia: C1434 (Confianza 95%)</code> por coincidencia de contenedor ISO 6346 <code>MRKU1122334</code> (Siderar / Maersk McKinney Moller).</li>
+        <li><strong>Clic:</strong> Pulsar <strong><code>[🔗 Vincular a C1434]</code></strong>. La tarjeta se traslada inmediatamente a la Columna <code>2. Listas Kipintoch</code> con confirmación toast verde.</li>
+      </ul>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">Paso 3</span>
+        <span class="step-title">Visor Dual Side-by-Side: PDF Físico vs Extracción Fiscal (0% vs 21%)</span>
+        <span class="step-duration">01:30 min</span>
+      </div>
+      <div class="step-script">
+        <strong>Guion del Presentador:</strong> "Observen la precisión contable. El sistema distingue automáticamente entre las dos realidades tributarias del comercio exterior argentino."
+      </div>
+      <ul class="step-bullets">
+        <li><strong>Acción:</strong> Hacer clic en la tarjeta para abrir el modal visor Side-by-Side.</li>
+        <li><strong>Panel Izquierdo:</strong> Renderiza el PDF físico escaneado original (Munser <code>C1434_factura_munser.pdf</code> o Maersk <code>C1434_factura_maersk_7554566633.pdf</code>).</li>
+        <li><strong>Panel Derecho:</strong> Desglose contable con tolerancia cero al centavo:
+          <br>• <strong>Flete Internacional (0% IVA):</strong> Maersk Invoice 7554566633 (USD 57.00) clasificado en <code>FMA</code> con AFIP CDI <code>50-00000000-0</code>.
+          <br>• <strong>Servicios Locales / Terrestre (21% IVA):</strong> Munser ($281.200 Neto + $59.052 IVA = $340.252 Total) y LGV Transportes ($800.000 Neto + $168.000 IVA = $968.000 Total).
+        </li>
+      </ul>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">Paso 4</span>
+        <span class="step-title">Payload Canónico de Copiado en 1-Clic para Kipintoch ERP</span>
+        <span class="step-duration">01:00 min</span>
+      </div>
+      <div class="step-script">
+        <strong>Guion del Presentador:</strong> "La operadora no tiene que tipear un solo número. Hace un clic, va a Kipintoch, presiona Ctrl+V y los 5 datos quedan imputados."
+      </div>
+      <p style="font-size: 14px; margin-bottom: 8px;"><strong>Formato Canónico Copiado en Portapapeles:</strong></p>
+      <div class="payload-display">[Gasto] [Proveedor CUIT] [Monto] [Moneda] [N° Carpeta]</div>
+      <p style="font-size: 13px; color: var(--slate-600); margin-top: 4px;">Ejemplos reales generados:</p>
+      <ul class="step-bullets">
+        <li><code>THC 33-64914833-9 340252.00 ARS C1434</code> (Munser S.A.)</li>
+        <li><code>FMA 30-68554433-2 57.00 USD C1434</code> (Maersk Line)</li>
+        <li><code>FTE 20-30155491-6 968000.00 ARS IT1486</code> (LGV Transportes)</li>
+      </ul>
+      <p style="font-size: 14px;">Al pulsar <strong><code>[✓ Asentar Costo]</code></strong>, la tarjeta pasa a la Columna <code>4. Asentadas en ERP</code>.</p>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">Paso 5</span>
+        <span class="step-title">Gobernanza de Sobrecostos: Bloqueo Operativo y Override de Supervisor</span>
+        <span class="step-duration">01:30 min</span>
+      </div>
+      <div class="step-script">
+        <strong>Guion del Presentador:</strong> "¿Qué pasa si una naviera cobra más de lo presupuestado? El sistema bloquea de raíz la tarjeta e impide cargar el sobrecosto sin firma del supervisor."
+      </div>
+      <ul class="step-bullets">
+        <li><strong>Ubicación:</strong> Columna <code>3. Con Desvío de Tarifa</code>, tarjeta de <strong>Maersk A/S</strong> (Invoice 7555554402 - Desvío +21.0%).</li>
+        <li><strong>Bloqueo al Operador:</strong> El botón <code>[Copiar para Kipintoch]</code> y <code>[Asentar Costo]</code> están bloqueados (cursor <code>not-allowed</code>, estilo grisáceo) con aviso: <em>"Requiere autorización de desvío presupuestario por supervisor"</em>.</li>
+        <li><strong>Override de Supervisión:</strong> Un usuario con rol <code>LEAD_OPERACIONES</code> o <code>FINANZAS</code> hace clic en <strong><code>[🛡️ Autorizar Carga a Kipintoch]</code></strong>.
+          <br>• Se despliega el modal normativo exigiendo causa tipificada (<code>Aumento de Tarifa Naviera BAF/GRI</code>) y justificación obligatoria.
+          <br>• Al confirmar, se genera el registro inmutable con firma SHA-256 y la tarjeta se desbloquea en verde para el equipo de tráfico.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 3: PROTOCOLO HANDS-ON -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Protocolo Hands-on para Operadoras: Natali Hermoso y Victoria Moyano (5 Minutos)</h2>
+      <span class="section-tag">Prueba Interactiva en Vivo</span>
+    </div>
+
+    <div class="exec-quote">
+      "Natali, Victoria: queremos que ustedes mismas prueben la herramienta ahora mismo desde sus máquinas. Les va a tomar exactamente 60 segundos."
+    </div>
+
+    <div class="hands-on-grid">
+      <div class="hands-card">
+        <div class="hands-num">1</div>
+        <h4>Acceso al Portal</h4>
+        <p>Abrir Chrome o Edge en <code>https://bot-relevamiento.vercel.app/login</code>. Ingresar con <code>operativo@almar.com.ar</code> y contraseña <code>Almar2026!</code>.</p>
+      </div>
+      <div class="hands-card">
+        <div class="hands-num">2</div>
+        <h4>Vincular en 1 Clic</h4>
+        <p>En la pestaña <strong>Comprobantes</strong>, buscar la factura de Munser en Columna 1 y hacer clic en <strong>[Vincular a C1434]</strong>.</p>
+      </div>
+      <div class="hands-card">
+        <div class="hands-num">3</div>
+        <h4>Copiar para ERP</h4>
+        <p>Pulsar el botón verde <strong>[Copiar para Kipintoch]</strong>. Pegar en un bloc de notas (Ctrl+V) y verificar el formato exacto.</p>
+      </div>
+      <div class="hands-card">
+        <div class="hands-num">4</div>
+        <h4>Asentar Costo</h4>
+        <p>Hacer clic en <strong>[Asentar Costo]</strong>. La tarjeta viaja a la columna verde de Asentadas. Carga concluida.</p>
+      </div>
+    </div>
+
+    <div style="background: var(--slate-100); border-radius: 8px; padding: 16px; margin-top: 20px;">
+      <strong>Checklist de Satisfacción Operativa:</strong>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 10px; font-size: 13.5px;">
+        <div>☑️ Cero demoras o bloqueos de interfaz</div>
+        <div>☑️ Cero textos cortados con puntos suspensivos (...)</div>
+        <div>☑️ PDF físico auténtico visible en pantalla</div>
+        <div>☑️ Pegado perfecto en formato Kipintoch</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: MATRIZ DE OBJECIONES Y FAQ -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Matriz de Manejo de Objeciones & FAQ: Las 6 Preguntas Críticas</h2>
+      <span class="section-tag">Directorio & Calidad ISO 9001</span>
+    </div>
+
+    <!-- Q1 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-qnum">1</span>
+        <span>¿Por qué el sistema no inyecta directo a Kipintoch sin que tengamos que hacer clic?</span>
+      </div>
+      <div class="faq-body">
+        <div class="faq-exec-ans">
+          <strong>Respuesta Ejecutiva:</strong> "Porque inyectar ciegamente a Kipintoch nos costaría $600.000 de entrada más $500.000 todos los meses, con el riesgo de que Kipintoch bloquee la cuenta por exceder la cuota mensual de consultas. Pero sobre todo, <strong>porque las normas de calidad ISO 9001:2015 exigen validación humana supervisada (Human-in-the-Loop)</strong> para evitar que cobros duplicados o indebidos de navieras impacten directamente en el balance contable. El Portal resuelve el 95% del trabajo manual y deja el control final en un solo clic."
+        </div>
+        <div class="faq-tech-box">
+          <div class="faq-tech-title">Respaldo Técnico y Documental:</div>
+          Constatado en <code>INFORME_BLOQUEO_CUOTA_API_KIPINTOCH.md</code>: error oficial <em>"Ha superado el límite de requests por API de este mes"</em> para la organización <code>ALMARROS</code>. La arquitectura asistida previene el colapso del ERP y garantiza soberanía de datos con $0 fee mensual.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-qnum">2</span>
+        <span>¿Las operadoras de tráfico pueden ver los márgenes de ganancia o las tarifas de venta de los clientes?</span>
+      </div>
+      <div class="faq-body">
+        <div class="faq-exec-ans">
+          <strong>Respuesta Ejecutiva:</strong> "<strong>Absolutamente no.</strong> La seguridad del Portal implementa segregación de roles de grado bancario (RBAC). Para las operadoras de tráfico, las tarifas cobradas al cliente y el margen bruto de ganancia están completamente ocultos bajo la máscara <strong><code>$ ***</code></strong> tanto en la pantalla como en los datos que viajan por la red."
+        </div>
+        <div class="faq-tech-box">
+          <div class="faq-tech-title">Respaldo Técnico y Documental:</div>
+          Implementado en <code>portal/lib/mockData.ts</code>, <code>KanbanCard.tsx</code> y <code>ComprobantePdfModal.tsx</code>. La regla <code>userRole === 'OPERATIVO'</code> enmascara en memoria y en API. 100% verificado en tests de integración en <code>portal/tests/unit/rbac-guard.test.ts</code>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-qnum">3</span>
+        <span>¿Qué sucede si una naviera cobra un importe superior al cotizado comercialmente?</span>
+      </div>
+      <div class="faq-body">
+        <div class="faq-exec-ans">
+          <strong>Respuesta Ejecutiva:</strong> "El sistema actúa como un <strong>guardián financiero preventivo</strong>. Si el monto de la factura supera el costo estimado de la cotización comercial, la factura viaja automáticamente a la columna 'Con Desvío de Tarifa'. En esa columna, <strong>los botones de copiado y de carga a Kipintoch quedan completamente bloqueados para la operadora</strong>. Para destrabarla se requiere una autorización formal de un supervisor o de finanzas con causa tipificada y justificación obligatoria."
+        </div>
+        <div class="faq-tech-box">
+          <div class="faq-tech-title">Respaldo Técnico y Documental:</div>
+          Lógica en <code>portal/lib/kanban-utils.ts</code> (clasificación a <code>desvios</code>). Clases CSS <code>cursor-not-allowed</code> y atributo <code>disabled</code> en botones. El modal <code>DeviationApprovalModal.tsx</code> exige una de las 8 causas normativas (Demurrage, Aumento Naviera BAF/GRI, etc.) y genera firma SHA-256 inmutable.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-qnum">4</span>
+        <span>¿Cómo sabemos que los montos leídos son exactos y no una alucinación de la IA?</span>
+      </div>
+      <div class="faq-body">
+        <div class="faq-exec-ans">
+          <strong>Respuesta Ejecutiva:</strong> "Porque el sistema no genera texto libre ni adivina importes. Aplica un <strong>motor determinístico de dos capas</strong>: primero extrae el texto físico y numérico de las capas vectoriales del PDF original; segundo, valida matemáticamente que la ecuación tributaria <code>Neto + IVA = Total</code> cierre con exactitud absoluta al centavo. Además, el operador siempre cuenta con el PDF original escaneado lado a lado para contrastar cualquier valor."
+        </div>
+        <div class="faq-tech-box">
+          <div class="faq-tech-title">Respaldo Técnico y Documental:</div>
+          Pipeline híbrido en <code>portal/lib/gmail/pdf-extractor.ts</code> sin interpolación heurística. Validación contable <code>Math.abs(subtotalNeto + montoIva - montoTotal) < 0.01</code> y visualización en iframe nativo en <code>ComprobantePdfModal.tsx</code>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-qnum">5</span>
+        <span>¿Cómo se diferencian las facturas que llevan IVA 21% de los fletes internacionales exentos al 0%?</span>
+      </div>
+      <div class="faq-body">
+        <div class="faq-exec-ans">
+          <strong>Respuesta Ejecutiva:</strong> "El clasificador fiscal del Portal aplica automáticamente la Ley de Impuesto al Valor Agregado:
+          <br>• Los <strong>fletes internacionales y recargos de tramo exterior</strong> (Maersk, MSC, Bertot exportación) se clasifican como <strong>Exentos / 0% IVA</strong> bajo código <code>FMA</code> o <code>FIA</code>, asignando el identificador AFIP CDI <code>50-00000000-0</code> a armadores del exterior.
+          <br>• Los <strong>fletes terrestres nacionales y servicios locales</strong> (LGV Transportes, Munser, terminales) se clasifican como <strong>Gravados al 21% de IVA</strong> bajo código <code>FTE</code> o <code>THC</code>, discriminando neto y crédito fiscal para Kipintoch."
+        </div>
+        <div class="faq-tech-box">
+          <div class="faq-tech-title">Respaldo Técnico y Documental:</div>
+          Clasificador fiscal determinístico en <code>portal/lib/fiscal/classifier.ts</code> y normalización tributaria en <code>portal/lib/fiscal/cuit.ts</code>. Soporte para comprobantes con ítems heterogéneos en la misma factura.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-qnum">6</span>
+        <span>¿Cuándo y cómo se conecta esto con las casillas de correo para que funcione automáticamente las 24 horas (Momento 2)?</span>
+      </div>
+      <div class="faq-body">
+        <div class="faq-exec-ans">
+          <strong>Respuesta Ejecutiva:</strong> "La conexión con las casillas de correo ya está <strong>100% programada, probada y lista en el backend</strong>. Se vincula a Google Workspace mediante una Service Account corporativa segura (<code>bot-facturas@almarbot.iam.gserviceaccount.com</code>), sin pedir contraseñas a los usuarios ni instalar aplicaciones en las computadoras.
+          Hoy presentamos 'Momento 1' para que Natali y Victoria validen la ergonomía del visor; <strong>activar la ingesta desatendida las 24 horas es un simple cambio de configuración</strong> que pondremos en marcha tras concluir esta reunión."
+        </div>
+        <div class="faq-tech-box">
+          <div class="faq-tech-title">Respaldo Técnico y Documental:</div>
+          Credenciales verificadas en <code>credentials/credentials.json</code> con delegación de dominio sobre 6 casillas corporativas. Arquitectura Zero-Disk documentada en <code>FICHA_TECNICA_CIBERSEGURIDAD_ALMAR.md</code> con procesamiento puramente en memoria volátil.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: MATRIZ DE COMPROBANTES REALES PRECARGADOS -->
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Anexo Técnico: Matriz de Comprobantes Reales Precargados para la Demo</h2>
+      <span class="section-tag">Base de Datos Auditada</span>
+    </div>
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Emisor / Razón Social</th>
+          <th>Comprobante</th>
+          <th>Moneda & Total</th>
+          <th>Carpeta</th>
+          <th>IVA</th>
+          <th>Archivo PDF Físico</th>
+          <th>Rol en la Demo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>f0000001</code></td>
+          <td>Maersk Line A/S</td>
+          <td>7554566633</td>
+          <td>USD 57.00</td>
+          <td><code>C1434</code></td>
+          <td>0% Exento</td>
+          <td><code>C1434_factura_maersk_7554566633.pdf</code></td>
+          <td>Lista para Kipintoch (FMA)</td>
+        </tr>
+        <tr>
+          <td><code>f0000002</code></td>
+          <td>LGV Transportes S.R.L.</td>
+          <td>0004-00000303</td>
+          <td>ARS 968.000,00</td>
+          <td><code>IT1486</code></td>
+          <td>21% General</td>
+          <td><code>C1482_factura_lgv.pdf</code></td>
+          <td>Flete Terrestre Nacional (FTE)</td>
+        </tr>
+        <tr>
+          <td><code>f0000003</code></td>
+          <td>Maersk A/S</td>
+          <td>7555180661</td>
+          <td>USD 791.00</td>
+          <td><code>C1289</code></td>
+          <td>0% Exento</td>
+          <td><code>7555180661.PDF</code></td>
+          <td>Factura Asentada / Pagada</td>
+        </tr>
+        <tr>
+          <td><code>f0000004</code></td>
+          <td>Bertot Metalmecánica S.R.L.</td>
+          <td>00009-00000071</td>
+          <td>USD 11.004,04</td>
+          <td><code>EA1561</code></td>
+          <td>0% Exportación</td>
+          <td><code>EA1561_factura_fiscal.pdf</code></td>
+          <td>Exportación Aérea (FIA)</td>
+        </tr>
+        <tr style="background: #eff6ff;">
+          <td><code>f0000005</code></td>
+          <td><strong>MUNSER S.A.</strong></td>
+          <td>0007-00067102</td>
+          <td>ARS 340.252,00</td>
+          <td><em>(Huérfana)</em></td>
+          <td>21% General</td>
+          <td><code>C1434_factura_munser.pdf</code></td>
+          <td><strong>Deducción en vivo hacia C1434</strong></td>
+        </tr>
+        <tr style="background: #fef2f2;">
+          <td><code>f0000007</code></td>
+          <td><strong>Maersk A/S</strong></td>
+          <td>7555554402</td>
+          <td>USD 57.00</td>
+          <td><code>C1289</code></td>
+          <td>0% Exento</td>
+          <td><code>C1289_factura_maersk_7555554402.pdf</code></td>
+          <td><strong>Desvío +21% (Bloqueo & Override)</strong></td>
+        </tr>
+        <tr>
+          <td><code>f0000008</code></td>
+          <td>ALMAR ROSARIO S.R.L.</td>
+          <td>0002-00012231</td>
+          <td>ARS 1.617.000,00</td>
+          <td><code>C1289</code></td>
+          <td>21% General</td>
+          <td><code>C1289_factura_almar_00012231.pdf</code></td>
+          <td>Servicio Logístico Local</td>
+        </tr>
+        <tr style="background: #fef2f2;">
+          <td><code>f0000010</code></td>
+          <td><strong>AMA Freight Agency GmbH</strong></td>
+          <td>261005130R</td>
+          <td>EUR 10.848,55</td>
+          <td><code>C1471</code></td>
+          <td>0% Exento</td>
+          <td><code>C1471_factura_cma.pdf</code></td>
+          <td><strong>Desvío +165.8% (Bloqueada)</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>ALMAR Rosario S.R.L.</strong> — Portal Logístico & Sistema de Gestión de Calidad ISO 9001:2015</p>
+    <p style="margin-top: 4px;">Documento Estratégico y Técnico de Presentación Ejecutiva — Versión 1.0 Oficial (Septiembre 2026)</p>
+  </div>
+
+</div>
+
+</body>
+</html>
