@@ -1,0 +1,40 @@
+{
+  "id": "/",
+  "name": "ALMAR Rosario — Portal Operativo & Logístico",
+  "short_name": "ALMAR Rosario",
+  "description": "Plataforma de gestión de operaciones freight forwarding, trazabilidad de comprobantes, carpetas y control fiscal para ALMAR Rosario.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#081433",
+  "theme_color": "#081433",
+  "lang": "es-AR",
+  "categories": ["business", "productivity", "finance"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

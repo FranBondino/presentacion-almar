@@ -3,6 +3,7 @@
 import React, { useState, Suspense } from 'react';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
+import { PwaInstallButton } from '@/components/pwa/PwaInstallButton';
 import {
   Lock,
   Mail,
@@ -392,12 +393,12 @@ export default function LoginPage() {
         {/* Institutional Branding Header */}
         <div className="relative z-10">
           <div className="flex items-center gap-3.5">
-            <div className="bg-white rounded-xl p-2 shadow-sm inline-flex items-center justify-center shrink-0 w-12 h-12 overflow-hidden">
+            <div className="bg-white rounded-xl p-1.5 shadow-sm inline-flex items-center justify-center shrink-0 w-12 h-12 overflow-hidden">
               <Image
-                src="/images/logo-header2.png"
+                src="/images/logo-almar.png"
                 alt="ALMAR Rosario Logo"
-                width={44}
-                height={44}
+                width={40}
+                height={40}
                 className="h-full w-full object-contain"
                 priority
               />
@@ -521,10 +522,10 @@ export default function LoginPage() {
           <div className="lg:hidden flex justify-center items-center gap-3 mb-6">
             <div className="relative w-12 h-12 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shadow-xs overflow-hidden shrink-0">
               <Image
-                src="/images/logo-header2.png"
+                src="/images/logo-almar.png"
                 alt="ALMAR Rosario Logo"
-                width={44}
-                height={44}
+                width={40}
+                height={40}
                 className="h-full w-full object-contain"
                 priority
               />
@@ -540,12 +541,12 @@ export default function LoginPage() {
             {/* Desktop Card Branding Header */}
             <div className="hidden lg:flex items-center justify-between gap-3 mb-6 pb-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <div className="relative w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 p-1 flex items-center justify-center overflow-hidden shrink-0">
+                <div className="relative w-10 h-10 rounded-lg bg-white border border-slate-200 p-1.5 flex items-center justify-center overflow-hidden shrink-0">
                   <Image
-                    src="/images/logo-header2.png"
+                    src="/images/logo-almar.png"
                     alt="ALMAR Rosario Logo"
-                    width={36}
-                    height={36}
+                    width={32}
+                    height={32}
                     className="h-full w-full object-contain"
                     priority
                   />
@@ -579,6 +580,11 @@ export default function LoginPage() {
             >
               <LoginForm />
             </Suspense>
+          </div>
+
+          {/* PWA Mobile / Desktop App Install Banner */}
+          <div className="mt-4">
+            <PwaInstallButton variant="login" />
           </div>
 
           {/* Bottom Trust Line */}
