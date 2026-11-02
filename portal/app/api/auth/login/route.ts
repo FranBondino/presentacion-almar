@@ -78,11 +78,10 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const { email, password, isUatQuickLogin } = validationResult.data;
     const normalizedEmail = email.toLowerCase().trim();
 
-    // 1. Server-Side UAT Quick Persona Authentication (disabled in production unless explicitly enabled)
+    // 1. Server-Side UAT Quick Persona Authentication (strictly disabled in production/UAT runtime; allowed only in automated test runner)
     if (isUatQuickLogin) {
       const uatQuickLoginEnabled =
-        process.env.NEXT_PUBLIC_ENABLE_UAT_QUICK_LOGIN !== 'false' &&
-        (process.env.NEXT_PUBLIC_ENABLE_UAT_QUICK_LOGIN === 'true' || Boolean(process.env.VITEST));
+        Boolean(process.env.VITEST) && process.env.NEXT_PUBLIC_ENABLE_UAT_QUICK_LOGIN !== 'false';
       if (!uatQuickLoginEnabled) {
         return NextResponse.json(
           {

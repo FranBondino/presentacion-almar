@@ -457,11 +457,10 @@ export const ROLE_CORPORATE_PASSWORDS: Record<UserRole, string> = {
 
 /**
  * Checks whether UAT Quick-Switch Mode is enabled.
- * Disabled by default in production/UAT unless NEXT_PUBLIC_UAT_MODE is explicitly 'true'.
+ * Strictly disabled in production/UAT browser & server runtime; enabled only inside automated Vitest suites.
  */
 export function isUatModeEnabled(): boolean {
   if (process.env.NEXT_PUBLIC_UAT_MODE === 'false') return false;
-  if (process.env.NEXT_PUBLIC_UAT_MODE === 'true') return true;
   return Boolean(process.env.VITEST);
 }
 

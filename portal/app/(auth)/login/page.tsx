@@ -129,7 +129,8 @@ function LoginForm() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const isUatQuickLoginEnabled = process.env.NEXT_PUBLIC_ENABLE_UAT_QUICK_LOGIN === 'true';
+  // NEXT_PUBLIC_ENABLE_UAT_QUICK_LOGIN is strictly disabled in UAT/Production so users must authenticate with their own credentials
+  const isUatQuickLoginEnabled = false;
 
   const performQuickLogin = async (rawUser: string) => {
     setError(null);
