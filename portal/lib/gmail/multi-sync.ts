@@ -1037,8 +1037,30 @@ export async function syncAllAlmarMailboxes(
           attachmentNames: msg.attachments.map((a) => a.filename),
         });
 
-        const rawFolderCode =
+        let rawFolderCode =
           refs.primaryFolder || (refs.folderCodes.length > 0 ? refs.folderCodes[0] : null);
+
+        // If no explicit Cxxxx code in subject/body, also match against manually or automatically created folders by Container / BL / Booking
+        if (
+          !rawFolderCode &&
+          (refs.containerNumbers.length > 0 || refs.blNumbers.length > 0 || refs.bookingNumbers.length > 0)
+        ) {
+          const emailDeduction = deduceFolderForInvoice(
+            {
+              concepto_gasto: `${msg.subject} ${msg.snippet || ''}`,
+              metadata_raw: {
+                email_subject: msg.subject,
+                detected_containers: refs.containerNumbers,
+                detected_bl: refs.blNumbers,
+                detected_bookings: refs.bookingNumbers,
+              },
+            },
+            loadLiveStore().carpetas
+          );
+          if (emailDeduction) {
+            rawFolderCode = emailDeduction.suggestedCarpeta.numero_carpeta;
+          }
+        }
 
         // Process message for operational folder detection & timeline attachment even without PDF
         if (rawFolderCode) {
