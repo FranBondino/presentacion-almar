@@ -931,7 +931,9 @@ function calculateProveedores(
   }
 
   for (const comp of comprobantes) {
-    const rawName = (comp.emisor_razon_social || 'PROVEEDOR NO ESPECIFICADO').trim();
+    const rawName = (comp.emisor_razon_social || 'PROVEEDOR NO ESPECIFICADO')
+      .trim()
+      .replace(/\bHANDY\s+WAY\b/gi, 'HANDYWAY');
     const key = rawName.toUpperCase();
     const cuit = comp.emisor_cuit?.trim() || '50-00000000-0';
     const categoria = resolveSupplierCategory(rawName, cuit);
@@ -972,7 +974,7 @@ function calculateProveedores(
       item.totalFacturadoArs += normComp.monto;
     }
 
-    // Check audited tariff deviation on this invoice or its folder
+    // Check audited tariff deviation on this specific invoice
     const compNum = String(comp.numero_comprobante || '');
     let compDesvioUsd = 0;
     if (compNum.includes('7559533541')) {
@@ -983,14 +985,6 @@ function calculateProveedores(
       compDesvioUsd = 182.29;
     } else if (typeof (comp as any).desvio_monto === 'number' && (comp as any).desvio_monto > 0) {
       compDesvioUsd = (comp as any).desvio_monto;
-    } else {
-      const folderKey = comp.carpeta_id || comp.carpeta_codigo;
-      if (folderKey && folderMap.has(folderKey)) {
-        const f = folderMap.get(folderKey)!;
-        if (typeof f.desvio_costo_usd === 'number' && f.desvio_costo_usd > 0) {
-          compDesvioUsd = f.desvio_costo_usd;
-        }
-      }
     }
 
     if (compDesvioUsd > 0) {
@@ -1069,7 +1063,7 @@ function calculateProveedores(
 }
 
 const ADMIN_PROCESSED_VOUCHER_EMAIL_RE =
-  /\b(?:factura|invoice|debit\s*note|credit\s*note|pago|transferencia|comprobante|retenci[oó]n|liquidaci[oó]n|recibo|estado\s*de\s*cuenta|statement|remito|aviso|cierre|iva|arba|afip|arca)\b/i;
+  /\b(?:factura|invoice|debit\s*note|credit\s*note|pago|transferencia|comprobante|retenci[oó]n|liquidaci[oó]n|recibo|estado\s*de\s*cuenta|statement|remito|aviso|cierre|iva|arba|afip|arca|carpeta|c\d{4}|ea\d{3,4}|bl|awb|hawb|arribo|embarque|liberaci[oó]n|cotizaci[oó]n|tarifa|despacho|cliente|adjunto|env[ií]o|re:|rv:|fwd:)\b/i;
 
 function calculateOperadores(params: {
   mailboxes: typeof AUTHORIZED_ALMAR_MAILBOXES;

@@ -2247,6 +2247,24 @@ export function reconcileComprobantesList<T extends Record<string, unknown>>(
       seenSignatures.add(sig);
     }
 
+    // Normalize HANDY WAY -> HANDYWAY and enforce IVA 0% on international non-taxed invoices
+    const rawEmisor = String(c.emisor_razon_social || '').trim();
+    if (/\bHANDY\s+WAY\b/i.test(rawEmisor)) {
+      (c as Record<string, unknown>).emisor_razon_social = rawEmisor.replace(/\bHANDY\s+WAY\b/gi, 'HANDYWAY');
+      changed = true;
+    }
+    const isIntlNoGravado =
+      c.categoria_fiscal === 'INTERNACIONAL_NO_GRAVADO' ||
+      String(c.emisor_cuit || '').startsWith('50-') ||
+      /maersk\s*a\/s|tradewings|csi\s*cargo|miami\s*air\s*cargo|eversail|net\s*trade\s*llc/i.test(rawEmisor);
+    if (isIntlNoGravado && (c.tipo_iva !== 0 || Number(c.importe_iva || 0) > 0)) {
+      (c as Record<string, unknown>).categoria_fiscal = 'INTERNACIONAL_NO_GRAVADO';
+      (c as Record<string, unknown>).tipo_iva = 0;
+      (c as Record<string, unknown>).importe_iva = 0;
+      (c as Record<string, unknown>).subtotal_neto = Number(c.monto_total || 0);
+      changed = true;
+    }
+
     // Fix domestic ARS voucher 1700A00041795 from DHL EXPRESS (ARGENTINA) S.A. mislabeled as USD 1,401,215.50
     if (
       c.id === 'fc6b1f7d-4438-47ad-b25c-b98e362b900e' ||
