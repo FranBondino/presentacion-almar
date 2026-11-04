@@ -70,9 +70,19 @@ export function resolveForeignCdi(comp: AnyComprobante): string {
   }
 
   const cleaned = rawCuit.replace(/\D/g, '');
-  const isArgentinePrefix = ['20', '23', '24', '27', '30', '33', '34'].includes(cleaned.slice(0, 2));
+  const isValidCuitOrCdiPrefix = [
+    '20',
+    '23',
+    '24',
+    '27',
+    '30',
+    '33',
+    '34',
+    '50',
+    '55',
+  ].includes(cleaned.slice(0, 2));
 
-  if (isForeign && (!isArgentinePrefix || cleaned.length !== 11)) {
+  if (isForeign && (!isValidCuitOrCdiPrefix || cleaned.length !== 11)) {
     return FOREIGN_CARRIER_CDI;
   }
 
@@ -233,14 +243,34 @@ export function classifyKanbanColumn(
   const compMoneda = cRecord.moneda || cDomain.moneda || (cRaw.moneda as string | undefined);
   const sameCurrency = !carpMoneda || !compMoneda || carpMoneda === compMoneda;
 
+  const desvioPct =
+    (typeof cRaw.desvio_porcentaje === 'number' ? cRaw.desvio_porcentaje : undefined) ??
+    (typeof cDomain.desviacionPorcentaje === 'number' ? cDomain.desviacionPorcentaje : undefined) ??
+    (typeof (cRecord.metadata_raw as Record<string, unknown> | undefined)?.desvio_porcentaje === 'number'
+      ? ((cRecord.metadata_raw as Record<string, unknown>).desvio_porcentaje as number)
+      : undefined) ??
+    (typeof cRaw.desviacionPorcentaje === 'number' ? cRaw.desviacionPorcentaje : undefined);
+
+  const isDeviationAuthorized =
+    cRaw.desvio_autorizado === true ||
+    ((cRecord.metadata_raw as Record<string, unknown> | undefined)?.desvio_autorizado === true) ||
+    ((cRaw.metadata_extraida as Record<string, unknown> | undefined)?.desvio_autorizado === true);
+
+  const hasExplicitDeviation = Boolean(
+    !isDeviationAuthorized &&
+    ((desvioPct !== undefined && desvioPct > 0) ||
+      cRaw.alerta_activa === true)
+  );
+
   // An overage / deviation exists strictly if the net operational cost exceeds the approved estimate
   const hasDeviation = Boolean(
+    !isDeviationAuthorized &&
     estimatedCost > 0 &&
     sameCurrency &&
     operationalCost > estimatedCost + 1.0
   );
 
-  if (hasDeviation) {
+  if (hasExplicitDeviation || hasDeviation) {
     return 'desvios';
   }
 
@@ -307,7 +337,7 @@ export function calculateCostVariance(costoReal?: number | null, costoEstimado?:
  * Prioritizes c.archivo_pdf_url, with strict identifier matching and zero deceptive fallbacks.
  */
 export function getComprobantePdfUrl(comp?: AnyComprobante | null): string {
-  if (!comp) return '/facturas/C1289_factura_maersk_7555554402.pdf';
+  if (!comp) return '';
   const c = comp as Record<string, unknown>;
 
   // 1. Direct explicit URL if provided on the voucher record
@@ -325,6 +355,16 @@ export function getComprobantePdfUrl(comp?: AnyComprobante | null): string {
   const concepto = String(c.concepto_gasto || '').toLowerCase();
   const filename = String(c.nombre_archivo || '').toLowerCase();
   const storage = String(c.ruta_storage || '').toLowerCase();
+
+  // 2a. Live Gmail-ingested documents and invoices: route directly to live Gmail PDF streamer
+  if (typeof c.nombre_archivo === 'string' && c.nombre_archivo.trim() && !c.tipo_comprobante) {
+    return id
+      ? `/api/documentos/preview?id=${encodeURIComponent(id)}&file=${encodeURIComponent(String(c.nombre_archivo))}`
+      : `/api/documentos/preview?file=${encodeURIComponent(String(c.nombre_archivo))}`;
+  }
+  if (id && (c.gmail_message_id || c.source_mailbox)) {
+    return `/api/comprobantes/${encodeURIComponent(id)}/pdf`;
+  }
 
   const searchStr = `${id} ${num} ${emisor} ${concepto} ${filename} ${storage}`.toLowerCase();
 
@@ -390,7 +430,17 @@ export function getComprobantePdfUrl(comp?: AnyComprobante | null): string {
   if (id.startsWith('f0000008')) return '/facturas/C1289_factura_almar_00012231.pdf';
   if (id.startsWith('f0000010')) return '/facturas/C1471_factura_cma.pdf';
 
-  return '/facturas/C1289_factura_maersk_7555554402.pdf';
+  // 6. Live Gmail-ingested documents and invoices: route to live PDF streamer
+  if (typeof c.nombre_archivo === 'string' && c.nombre_archivo.trim() && !c.tipo_comprobante) {
+    return id
+      ? `/api/documentos/preview?id=${encodeURIComponent(id)}&file=${encodeURIComponent(String(c.nombre_archivo))}`
+      : `/api/documentos/preview?file=${encodeURIComponent(String(c.nombre_archivo))}`;
+  }
+  if (id && (c.gmail_message_id || c.source_mailbox || c.tipo_comprobante)) {
+    return `/api/comprobantes/${encodeURIComponent(id)}/pdf`;
+  }
+
+  return '';
 }
 
 // ============================================================================

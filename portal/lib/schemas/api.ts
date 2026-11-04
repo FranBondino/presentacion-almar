@@ -324,9 +324,11 @@ export const CreateComprobanteSchema = z.object({
   costos_asignados: z.coerce.number().optional().nullable(),
   costosUSD: z.coerce.number().optional().nullable(),
   asentado_en_erp: z.boolean().optional().nullable(),
+  desvio_porcentaje: z.coerce.number().optional().nullable(),
   desvio_autorizado: z.boolean().optional().nullable(),
   motivo_desvio: z.string().optional().nullable(),
   justificacion_desvio: z.string().optional().nullable(),
+  estado_workflow: z.string().optional().nullable(),
   resolucion_alerta: z.boolean().optional().nullable(),
 });
 

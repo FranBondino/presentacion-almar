@@ -2205,12 +2205,20 @@ export function isFalsePositiveComprobante(c: Record<string, unknown>): boolean 
   if (num.startsWith('INV-') && [121, 100, 7.26, 1210, 12100].includes(monto)) {
     return true;
   }
-  // Filter out-of-window legacy pre-H2-2026 comprobantes (#526, #1143)
+  // Filter out-of-window legacy pre-H2-2026 comprobantes (#526, #683, #1143, #1299)
+  const rawFolderCode = String(c.carpeta_codigo || c.carpeta_id || '').toUpperCase().trim();
+  const folderNumMatch = rawFolderCode.match(/^(?:C|EA|EM|ET|IA|IM|IT|TL)(\d{3,4})$/i);
+  if (folderNumMatch && Number(folderNumMatch[1]) < 1379) {
+    return true;
+  }
   if (
     c.id === '3c3d5e1d-22c1-4c25-a8fa-bf4bd6c50ccc' ||
     c.id === '44b31a34-3900-4a39-9491-439c50a1a409' ||
-    String(c.carpeta_codigo || '').toUpperCase() === 'C526' ||
-    String(c.carpeta_codigo || '').toUpperCase() === 'C1143'
+    rawFolderCode === 'C526' ||
+    rawFolderCode === 'C1143' ||
+    rawFolderCode === 'C1299' ||
+    rawFolderCode === 'EA683' ||
+    /\b(?:C1299|IA-00001299|EA683)\b/i.test(`${num} ${concepto}`)
   ) {
     return true;
   }
@@ -2255,12 +2263,21 @@ export function reconcileComprobantesList<T extends Record<string, unknown>>(
     }
     const isIntlNoGravado =
       c.categoria_fiscal === 'INTERNACIONAL_NO_GRAVADO' ||
+      c.categoria_fiscal === 'INTERNACIONAL_EXENTO_0' ||
       String(c.emisor_cuit || '').startsWith('50-') ||
-      /maersk\s*a\/s|tradewings|csi\s*cargo|miami\s*air\s*cargo|eversail|net\s*trade\s*llc/i.test(rawEmisor);
-    if (isIntlNoGravado && (c.tipo_iva !== 0 || Number(c.importe_iva || 0) > 0)) {
+      /maersk\s*a\/s|tradewings|csi\s*cargo|miami\s*air\s*cargo|eversail|net\s*trade\s*(?:llc|and\s*logistics)/i.test(rawEmisor);
+    if (
+      isIntlNoGravado &&
+      (c.tipo_iva !== 0 ||
+        Number(c.importe_iva || 0) > 0 ||
+        Number((c as Record<string, unknown>).alicuota_iva || 0) > 0 ||
+        Number((c as Record<string, unknown>).monto_iva || 0) > 0)
+    ) {
       (c as Record<string, unknown>).categoria_fiscal = 'INTERNACIONAL_NO_GRAVADO';
       (c as Record<string, unknown>).tipo_iva = 0;
+      (c as Record<string, unknown>).alicuota_iva = 0;
       (c as Record<string, unknown>).importe_iva = 0;
+      (c as Record<string, unknown>).monto_iva = 0;
       (c as Record<string, unknown>).subtotal_neto = Number(c.monto_total || 0);
       changed = true;
     }
