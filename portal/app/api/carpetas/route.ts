@@ -161,7 +161,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     const paginated = carpetas.slice(offset, offset + limit);
 
     // 4. Financial Masking for OPERATIVO & unauthorized roles
-    const showFinancials = canAccessFinancials(role);
+    const showFinancials = canAccessFinancials(role) || role === 'LEAD_OPERACIONES';
     const sanitizedCarpetas = paginated.map((c) => {
       if (!showFinancials) {
         return {

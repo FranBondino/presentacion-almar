@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { formatDate, formatCurrency } from '@/lib/utils';
 import { useAuth } from '@/components/auth/RoleGuard';
-import { canAccessFinancials } from '@/lib/auth';
+import { canViewFolderFinancials } from '@/lib/auth';
 import { getCotizacionByCarpeta } from '@/lib/carpetasCotizacionesMap';
 import {
   Search,
@@ -92,7 +92,7 @@ export function CarpetaList({
     };
   }, [effectiveInitial]);
 
-  const showFinancials = canAccessFinancials(role);
+  const showFinancials = canViewFolderFinancials(role);
 
   const filteredCarpetas = React.useMemo(() => {
     return carpetas.filter((c) => {
@@ -415,27 +415,37 @@ export function CarpetaList({
                 <div className="flex items-center justify-between border-t border-slate-100 pt-2.5">
                   <div className="flex items-center gap-2">
                     {(carp.cotizacion_codigo || cotizacion?.codigo) && (
-                      <span className="text-[10px] font-mono font-bold text-[#0072BC] bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
+                      <Link
+                        href={`/cotizaciones?search=${encodeURIComponent(
+                          carp.cotizacion_codigo || cotizacion?.codigo || ''
+                        )}`}
+                        className="text-[10px] font-mono font-bold text-[#0072BC] bg-sky-50 px-2 py-0.5 rounded border border-sky-200 hover:underline"
+                      >
                         {carp.cotizacion_codigo || cotizacion?.codigo}
-                      </span>
+                      </Link>
                     )}
                     {showFinancials ? (
-                      <span
-                        className={`text-xs font-mono font-bold ${
-                          (carp.margen_estimado ?? 0) > 0
-                            ? 'text-emerald-700'
-                            : (carp.margen_estimado ?? 0) < 0
-                            ? 'text-rose-700'
-                            : 'text-slate-600'
-                        }`}
-                      >
-                        {(carp.margen_estimado ?? 0) > 0
-                          ? `+${formatCurrency(carp.margen_estimado!, carp.moneda)}`
-                          : formatCurrency(
-                              Number.isFinite(carp.margen_estimado) ? carp.margen_estimado : 0,
-                              carp.moneda
-                            )}
-                      </span>
+                      (() => {
+                        const effMargen =
+                          (carp.margen_estimado ?? 0) !== 0
+                            ? carp.margen_estimado!
+                            : (cotizacion?.margen_proyectado ?? 0);
+                        return (
+                          <span
+                            className={`text-xs font-mono font-bold ${
+                              effMargen > 0
+                                ? 'text-emerald-700'
+                                : effMargen < 0
+                                  ? 'text-rose-700'
+                                  : 'text-slate-600'
+                            }`}
+                          >
+                            {effMargen > 0
+                              ? `+${formatCurrency(effMargen, carp.moneda)}`
+                              : formatCurrency(effMargen, carp.moneda)}
+                          </span>
+                        );
+                      })()
                     ) : (
                       <span
                         className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200"
@@ -531,7 +541,9 @@ export function CarpetaList({
                           {(carp.cotizacion_codigo || cotizacion?.codigo) && (
                             <div className="pt-0.5">
                               <Link
-                                href="/cotizaciones"
+                                href={`/cotizaciones?search=${encodeURIComponent(
+                                  carp.cotizacion_codigo || cotizacion?.codigo || ''
+                                )}`}
                                 className="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-[#0072BC] hover:underline bg-sky-50 px-1.5 py-0.2 rounded border border-sky-200"
                                 title="Ver cotización comercial vinculada"
                               >
@@ -623,52 +635,43 @@ export function CarpetaList({
                         {renderKipintochBadge(carp)}
                       </TableCell>
 
-                      {/* Financials (RBAC Protected: Directorio and authorized roles only) */}
+                      {/* Financials (RBAC Protected: Folder-level visibility) */}
                       {showFinancials ? (
                         <TableCell className="text-right py-2.5">
-                          <div className="tabular-nums font-mono text-right">
-                            {(carp.venta_estimada_total ?? 0) === 0 && (carp.costo_estimado_total ?? 0) === 0 ? (
-                              <div>
-                                <span className="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded inline-block font-sans">
-                                  Venta pend. Kipin
-                                </span>
-                              </div>
-                            ) : (carp.venta_estimada_total ?? 0) === 0 && (carp.costo_estimado_total ?? 0) > 0 ? (
-                              <div>
-                                <div className="font-bold text-xs text-slate-700">
-                                  Costo: {formatCurrency(carp.costo_estimado_total, carp.moneda)}
-                                </div>
-                                <div className="text-[10px] font-medium text-amber-700 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded inline-block mt-0.5 font-sans">
-                                  Venta pend. Kipin
-                                </div>
-                              </div>
-                            ) : (
-                              <div>
+                          {(() => {
+                            const effVenta =
+                              (carp.venta_estimada_total ?? 0) > 0
+                                ? carp.venta_estimada_total!
+                                : (cotizacion?.flete_venta_pactado ?? 0);
+                            const effCosto =
+                              (carp.costo_estimado_total ?? 0) > 0
+                                ? carp.costo_estimado_total!
+                                : (cotizacion?.flete_costo_estimado ?? 0);
+                            const effMargen =
+                              (carp.margen_estimado ?? 0) !== 0
+                                ? carp.margen_estimado!
+                                : (cotizacion?.margen_proyectado ?? Number((effVenta - effCosto).toFixed(2)));
+                            return (
+                              <div className="tabular-nums font-mono text-right">
                                 <div className="font-bold text-xs text-slate-900">
-                                  {formatCurrency(
-                                    Number.isFinite(carp.venta_estimada_total) ? carp.venta_estimada_total : 0,
-                                    carp.moneda
-                                  )}
+                                  {formatCurrency(effVenta, carp.moneda)}
                                 </div>
                                 <div
                                   className={`text-[11px] font-bold px-1.5 py-0.5 rounded inline-block mt-0.5 border ${
-                                    (carp.margen_estimado ?? 0) > 0
+                                    effMargen > 0
                                       ? 'text-emerald-700 bg-emerald-50 border-emerald-200'
-                                      : (carp.margen_estimado ?? 0) < 0
-                                      ? 'text-rose-700 bg-rose-50 border-rose-200'
-                                      : 'text-slate-600 bg-slate-50 border-slate-200'
+                                      : effMargen < 0
+                                        ? 'text-rose-700 bg-rose-50 border-rose-200'
+                                        : 'text-slate-600 bg-slate-50 border-slate-200'
                                   }`}
                                 >
-                                  {(carp.margen_estimado ?? 0) > 0
-                                    ? `+${formatCurrency(carp.margen_estimado!, carp.moneda)}`
-                                    : formatCurrency(
-                                        Number.isFinite(carp.margen_estimado) ? carp.margen_estimado : 0,
-                                        carp.moneda
-                                      )}
+                                  {effMargen > 0
+                                    ? `+${formatCurrency(effMargen, carp.moneda)}`
+                                    : formatCurrency(effMargen, carp.moneda)}
                                 </div>
                               </div>
-                            )}
-                          </div>
+                            );
+                          })()}
                         </TableCell>
                       ) : (
                         <TableCell className="text-right py-2.5">

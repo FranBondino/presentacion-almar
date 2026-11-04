@@ -29,237 +29,180 @@ export interface CotizacionVinculada {
   notas: string;
 }
 
-export const CARPETAS_COTIZACIONES_MAP: Record<string, CotizacionVinculada> = {
-  C1234: {
-    codigo: 'COT-2026-00010',
-    cotizacion_id: 'cot-010',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-08-10T14:00:00Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-08-25T23:59:59Z',
-    incoterm: 'FOB Shanghai (CNSHA)',
-    dias_libres_demora: 14,
-    naviera_aerolinea_cotizada: 'Maersk Line A/S — MAERSK MC-KINNEY MOLLER / BL KA0018437',
-    flete_venta_pactado: 1950.0,
-    flete_costo_estimado: 1807.50,
-    margen_proyectado: 142.50,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Dis-Den Odontología / Calamante S.R.L. Instrumental Guilin Woodpecker vía Eversail Shenzhen Vic Mai. Margen proyectado USD 142.50 (< USD 200) autorizado vía WebAuthn por Alejandro Noacco.',
-  },
-  C1434: {
-    codigo: 'COT-2026-00061',
-    cotizacion_id: 'cot-side-1434',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-07-21T17:15:25Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-08-05T23:59:59Z',
-    incoterm: 'FOB Ningbo (CNNGB)',
-    dias_libres_demora: 14,
-    naviera_aerolinea_cotizada: 'Maersk Line A/S — MAERSK MC-KINNEY MOLLER',
-    flete_venta_pactado: 1350.0,
-    flete_costo_estimado: 848.0,
-    margen_proyectado: 502.0,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'PO Atlas 071 Siderar. Flete marítimo Ningbo a Buenos Aires con 14 días libres en Terminal 4.',
-  },
-  IT1486: {
-    codigo: 'COT-2026-00357',
-    cotizacion_id: 'cot-pala-1486',
-    responsable_nombre: 'Abril Stampfli',
-    responsable_email: 'astampfli@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-08-11T13:42:00Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-08-26T23:59:59Z',
-    incoterm: 'CPT Villa Gobernador Gálvez',
-    dias_libres_demora: 0,
-    naviera_aerolinea_cotizada: 'LGV Transportes S.R.L. (Lisandro G. Villalba)',
-    flete_venta_pactado: 1150000.0,
-    flete_costo_estimado: 800000.0,
-    margen_proyectado: 350000.0,
-    moneda: 'ARS',
-    estado: 'GANADA',
-    notas: 'Tráfico terrestre enlace portuario TRP Puerto Buenos Aires a planta frigorífica Paladini Villa Gdor Gálvez.',
-  },
-  C1482: {
-    codigo: 'COT-2026-00610',
-    cotizacion_id: 'cot-vice-1482',
-    responsable_nombre: 'Juan Andrés Arloro',
-    responsable_email: 'jarloro@almarrosario.com',
-    responsable_rol: 'ADMIN',
-    fecha_emision: '2026-08-19T19:38:36Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-09-03T23:59:59Z',
-    incoterm: 'FCA Ezeiza (EZE)',
-    dias_libres_demora: 0,
-    naviera_aerolinea_cotizada: 'Lufthansa Cargo / Swiss LX (EZE → FRA)',
-    flete_venta_pactado: 5600.0,
-    flete_costo_estimado: 4200.0,
-    margen_proyectado: 1400.0,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Exportación aérea urgente muestras de derivados oleaginosos a Frankfurt. Coordinado con agente europeo IMAI.',
-  },
-  C1024: {
-    codigo: 'COT-2026-00226',
-    cotizacion_id: 'cot-moli-1024',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-04-10T11:20:00Z',
-    vigencia_dias: 30,
-    validez_hasta: '2026-05-10T23:59:59Z',
-    incoterm: 'FOB Santos, Brasil (BRSSZ)',
-    dias_libres_demora: 14,
-    naviera_aerolinea_cotizada: 'Hamburg Süd / Maersk A/S (Santos → Rosario)',
-    flete_venta_pactado: 1800.0,
-    flete_costo_estimado: 1200.0,
-    margen_proyectado: 600.0,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Carga de insumos alimenticios Santos a Terminal Zárate con escala fluvial a Rosario.',
-  },
-  TL1436: {
-    codigo: 'COT-2026-00379',
-    cotizacion_id: 'cot-bung-1436',
-    responsable_nombre: 'Abril Stampfli',
-    responsable_email: 'astampfli@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-07-29T13:14:09Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-08-13T23:59:59Z',
-    incoterm: 'CPT Zárate',
-    dias_libres_demora: 0,
-    naviera_aerolinea_cotizada: 'Trans-Cargas Rosario S.R.L. / Biton',
-    flete_venta_pactado: 920000.0,
-    flete_costo_estimado: 650000.0,
-    margen_proyectado: 270000.0,
-    moneda: 'ARS',
-    estado: 'GANADA',
-    notas: 'Tramo terrestre interplanta San Lorenzo a Terminal Zárate 12 pallets carga consolidada.',
-  },
-  C1289: {
-    codigo: 'COT-2026-00105',
-    cotizacion_id: 'cot-albe-1289',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-06-03T18:46:43Z',
-    vigencia_dias: 20,
-    validez_hasta: '2026-06-23T23:59:59Z',
-    incoterm: 'FOB Bremerhaven / Ningbo',
-    dias_libres_demora: 14,
-    naviera_aerolinea_cotizada: 'Maersk Line A/S',
-    flete_venta_pactado: 1550.0,
-    flete_costo_estimado: 1400.0,
-    margen_proyectado: 150.0,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Importación piezas industriales con tramo THC liquidado por Terminal 4 y flete marítimo Maersk.',
-  },
-  EA1561: {
-    codigo: 'COT-2026-00428',
-    cotizacion_id: 'cot-bert-1561',
-    responsable_nombre: 'Abril Stampfli',
-    responsable_email: 'astampfli@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-06-01T15:42:57Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-06-16T23:59:59Z',
-    incoterm: 'FCA Ezeiza / Rosario',
-    dias_libres_demora: 0,
-    naviera_aerolinea_cotizada: 'Aerolíneas Argentinas Cargo / LATAM Cargo (EZE → MIA)',
-    flete_venta_pactado: 12808.08,
-    flete_costo_estimado: 11004.04,
-    margen_proyectado: 1804.04,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Exportación a Miami de 2 cajones maquinaria pesada (1.030 kg tasables). Despacho en Ezeiza.',
-  },
-  C1471: {
-    codigo: 'COT-2026-00067',
-    cotizacion_id: 'cot-secc-1471',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-08-04T15:31:15Z',
-    vigencia_dias: 20,
-    validez_hasta: '2026-08-24T23:59:59Z',
-    incoterm: 'FOB Hamburg, Alemania (DEHAM)',
-    dias_libres_demora: 21,
-    naviera_aerolinea_cotizada: 'AMA Freight Agency GmbH / Hapag-Lloyd',
-    flete_venta_pactado: 12847.10,
-    flete_costo_estimado: 10848.55,
-    margen_proyectado: 1998.55,
-    moneda: 'EUR',
-    estado: 'GANADA',
-    notas: 'Equipamiento de generación eléctrica Hotstart/Atlas PO 75000669. Retiro coordinado con agente AMA Freight.',
-  },
-  C1056: {
-    codigo: 'COT-2026-00457',
-    cotizacion_id: 'cot-sapr-1056',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-04-21T09:22:00Z',
-    vigencia_dias: 30,
-    validez_hasta: '2026-05-21T23:59:59Z',
-    incoterm: 'FOB Buenos Aires',
-    dias_libres_demora: 10,
-    naviera_aerolinea_cotizada: 'Hapag-Lloyd / MSC (BUE → CTG)',
-    flete_venta_pactado: 3185.0,
-    flete_costo_estimado: 2835.67,
-    margen_proyectado: 349.33,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Exportación de equipo gráfico Indigo 6K 1x40HC a Cartagena. Sujeto a sobrecosto de flete Hapag auditado.',
-  },
-  C367: {
-    codigo: 'COT-2026-00113',
-    cotizacion_id: 'cot-cuel-0367',
-    responsable_nombre: 'Martín Fusco',
-    responsable_email: 'mfusco@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-07-02T15:58:58Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-07-17T23:59:59Z',
-    incoterm: 'FOB Guangzhou (CNCAN)',
-    dias_libres_demora: 10,
-    naviera_aerolinea_cotizada: 'MSL Líneas Marítimas S.A. (Co-Loader)',
-    flete_venta_pactado: 680.0,
-    flete_costo_estimado: 520.0,
-    margen_proyectado: 160.0,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'LCL importación cafeteras industriales Guangzhou. Retención preventiva y recupero de recargo BUFF USD 80 + IVA.',
-  },
-  C620: {
-    codigo: 'COT-2026-00018',
-    cotizacion_id: 'cot-coni-0620',
-    responsable_nombre: 'Lucía Laje',
-    responsable_email: 'llaje@almarrosario.com',
-    responsable_rol: 'COMERCIAL',
-    fecha_emision: '2026-03-02T16:38:05Z',
-    vigencia_dias: 15,
-    validez_hasta: '2026-03-17T23:59:59Z',
-    incoterm: 'FCA London Heathrow (LHR)',
-    dias_libres_demora: 0,
-    naviera_aerolinea_cotizada: 'SAA Logistics UK / British Airways World Cargo',
-    flete_venta_pactado: 950.0,
-    flete_costo_estimado: 740.0, // Equivalente oficial BNA de £543 GBP (1.3628)
-    margen_proyectado: 210.0,
-    moneda: 'USD',
-    estado: 'GANADA',
-    notas: 'Multimoneda GBP con conversión oficial BNA blindada (£543 @ 1.3628 = USD 740.00). Reactivos científicos CONICET.',
-  },
-};
+export const CARPETAS_COTIZACIONES_MAP: Record<string, CotizacionVinculada> = {};
 
-export function getCotizacionByCarpeta(numeroCarpeta: string): CotizacionVinculada | undefined {
-  return CARPETAS_COTIZACIONES_MAP[numeroCarpeta];
+const COMMERCIAL_EXECUTIVES: Array<{
+  nombre: string;
+  email: string;
+  rol: 'COMERCIAL' | 'ADMIN';
+}> = [
+  { nombre: 'Lucía Laje', email: 'llaje@almarrosario.com', rol: 'COMERCIAL' },
+  { nombre: 'Martín Fusco', email: 'mfusco@almarrosario.com', rol: 'COMERCIAL' },
+  { nombre: 'Nerea Guida', email: 'nguida@almarrosario.com', rol: 'COMERCIAL' },
+  { nombre: 'Zamira Abraham', email: 'zabraham@almarrosario.com', rol: 'COMERCIAL' },
+];
+
+function extractNumericSeed(code: string): number {
+  const m = code.match(/(\d{3,5})/);
+  return m && m[1] ? Number(m[1]) : 1750;
+}
+
+export function buildLinkedQuoteForFolder(
+  numeroCarpeta: string,
+  carpetaRecord?: Record<string, unknown> | null
+): CotizacionVinculada {
+  const cleanCode = (numeroCarpeta || 'C1750').trim().toUpperCase();
+  const numSeed = extractNumericSeed(cleanCode);
+  const existing = carpetaRecord?.cotizacion_vinculada as Partial<CotizacionVinculada> | undefined;
+
+  const area = String(carpetaRecord?.area || 'MARITIMO').toUpperCase();
+  const sector = String(carpetaRecord?.sector || 'IMPORTACION').toUpperCase();
+  const tipoCarga = String(carpetaRecord?.tipo_carga || 'FCL').toUpperCase();
+  const moneda = String(existing?.moneda || carpetaRecord?.moneda || 'USD');
+
+  const sectorMarginPct =
+    sector === 'EXPORTACION' || sector === 'NACIONAL'
+      ? 0.19
+      : area === 'TERRESTRE'
+        ? 0.27
+        : 0.33;
+
+  const jitter = (numSeed % 9) * 45;
+  const fallbackCosto =
+    sector === 'EXPORTACION'
+      ? 1480 + jitter
+      : area === 'AEREO'
+        ? 1240 + jitter
+        : area === 'TERRESTRE'
+          ? 1190 + jitter
+          : tipoCarga === 'LCL'
+            ? 1120 + jitter
+            : 2150 + jitter;
+  const fallbackVenta = Number((fallbackCosto / (1 - sectorMarginPct)).toFixed(2));
+
+  const rawCosto = Number(
+    (existing?.flete_costo_estimado && existing.flete_costo_estimado > 0
+      ? existing.flete_costo_estimado
+      : carpetaRecord?.costo_estimado_total) || 0
+  );
+  const rawVenta = Number(
+    (existing?.flete_venta_pactado && existing.flete_venta_pactado > 0
+      ? existing.flete_venta_pactado
+      : carpetaRecord?.venta_estimada_total) || 0
+  );
+
+  const fleteCosto = rawCosto > 0 ? Number(rawCosto.toFixed(2)) : Number(fallbackCosto.toFixed(2));
+  const fleteVenta =
+    rawVenta > fleteCosto
+      ? Number(rawVenta.toFixed(2))
+      : rawVenta > 0
+        ? Number((fleteCosto / (1 - sectorMarginPct)).toFixed(2))
+        : fallbackVenta;
+  const margen = Number((fleteVenta - fleteCosto).toFixed(2));
+
+  // Resolve Commercial Executive
+  const vendedorRaw = String(existing?.responsable_nombre || carpetaRecord?.vendedor_nombre || '').trim();
+  let exec = COMMERCIAL_EXECUTIVES[numSeed % COMMERCIAL_EXECUTIVES.length]!;
+  if (/luc[ií]a|laje/i.test(vendedorRaw)) {
+    exec = COMMERCIAL_EXECUTIVES[0]!;
+  } else if (/mart[ií]n|marcos|fusco/i.test(vendedorRaw)) {
+    exec = COMMERCIAL_EXECUTIVES[1]!;
+  } else if (/nerea|guida/i.test(vendedorRaw)) {
+    exec = COMMERCIAL_EXECUTIVES[2]!;
+  } else if (/zamira|zahira|abraham/i.test(vendedorRaw)) {
+    exec = COMMERCIAL_EXECUTIVES[3]!;
+  } else if (/arloro|juan\s*andr[eé]s/i.test(vendedorRaw)) {
+    exec = { nombre: 'Juan Andrés Arloro', email: 'jarloro@almarrosario.com', rol: 'ADMIN' };
+  }
+
+  const modPrefix =
+    sector === 'EXPORTACION'
+      ? area === 'AEREO'
+        ? 'EA'
+        : area === 'TERRESTRE'
+          ? 'ET'
+          : 'EM'
+      : area === 'AEREO'
+        ? 'IA'
+        : area === 'TERRESTRE'
+          ? 'IT'
+          : 'IM';
+  const defaultQuoteCode = `Q-202610${modPrefix}-${String(numSeed).padStart(8, '0')}`;
+  const codigo = String(
+    existing?.codigo ||
+      carpetaRecord?.cotizacion_codigo ||
+      carpetaRecord?.cotizacion_vinculada_codigo ||
+      defaultQuoteCode
+  ).trim();
+
+  const vigenciaDias = existing?.vigencia_dias || (area === 'AEREO' ? 7 : 14);
+  const rawDateStr = String(
+    existing?.fecha_emision || carpetaRecord?.etd || carpetaRecord?.created_at || '2026-10-10T10:00:00Z'
+  );
+  const baseDate = new Date(rawDateStr);
+  const validEmision = Number.isNaN(baseDate.getTime()) ? new Date('2026-10-10T10:00:00Z') : baseDate;
+  const fechaEmision = validEmision.toISOString().slice(0, 10);
+  const validezDate = new Date(validEmision.getTime() + vigenciaDias * 86400000);
+  const validezHasta = existing?.validez_hasta || validezDate.toISOString().slice(0, 10);
+
+  const incoterm =
+    existing?.incoterm ||
+    (sector === 'EXPORTACION' ? 'CFR' : area === 'AEREO' || area === 'TERRESTRE' ? 'FCA' : 'FOB');
+  const diasLibres = existing?.dias_libres_demora ?? (area === 'MARITIMO' ? 14 : 0);
+  const naviera = String(
+    existing?.naviera_aerolinea_cotizada ||
+      carpetaRecord?.transportista_nombre ||
+      carpetaRecord?.buque_vuelo ||
+      (area === 'AEREO'
+        ? 'LATAM Cargo / Lufthansa Cargo'
+        : area === 'TERRESTRE'
+          ? 'Transporte Terrestre Internacional Habilitado'
+          : 'MSC / Hapag-Lloyd / Eversail')
+  );
+  const cliente = String(carpetaRecord?.cliente_nombre || 'Cliente COMEX');
+  const origen = String(carpetaRecord?.origen || 'Origen Internacional');
+  const destino = String(carpetaRecord?.destino || 'Rosario / Buenos Aires');
+
+  return {
+    codigo,
+    cotizacion_id: existing?.cotizacion_id || `cot-live-${cleanCode.toLowerCase()}`,
+    responsable_nombre: exec.nombre,
+    responsable_email: existing?.responsable_email || exec.email,
+    responsable_rol: existing?.responsable_rol || exec.rol,
+    fecha_emision: fechaEmision,
+    vigencia_dias: vigenciaDias,
+    validez_hasta: validezHasta,
+    incoterm,
+    dias_libres_demora: diasLibres,
+    naviera_aerolinea_cotizada: naviera,
+    flete_venta_pactado: fleteVenta,
+    flete_costo_estimado: fleteCosto,
+    margen_proyectado: margen,
+    moneda,
+    estado: 'GANADA',
+    notas:
+      existing?.notas ||
+      `Propuesta comercial ${codigo} aprobada para ${cliente} (${origen} → ${destino}). Condición ${incoterm}, tarifa transferida a Operaciones para carpeta ${cleanCode}.`,
+  };
+}
+
+export function getCotizacionByCarpeta(
+  numeroCarpeta: string,
+  carpetaRecord?: Record<string, unknown> | { cotizacion_vinculada?: CotizacionVinculada } | null
+): CotizacionVinculada | undefined {
+  const clean = (numeroCarpeta || '').trim().toUpperCase();
+  const existing = (carpetaRecord as { cotizacion_vinculada?: CotizacionVinculada } | null | undefined)
+    ?.cotizacion_vinculada;
+  if (
+    existing &&
+    existing.codigo &&
+    existing.flete_venta_pactado > 0 &&
+    existing.flete_costo_estimado > 0
+  ) {
+    return existing;
+  }
+  if (CARPETAS_COTIZACIONES_MAP[clean]) {
+    return CARPETAS_COTIZACIONES_MAP[clean];
+  }
+  return buildLinkedQuoteForFolder(clean, carpetaRecord as Record<string, unknown> | null | undefined);
 }
