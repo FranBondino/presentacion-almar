@@ -201,7 +201,7 @@ export function UserNav() {
         </div>
         <Badge
           variant={getRoleBadgeVariant(role)}
-          className="ml-0.5 text-[10px] py-0 px-2 font-mono shrink-0 shadow-2xs"
+          className="hidden sm:inline-flex ml-0.5 text-[10px] py-0 px-2 font-mono shrink-0 shadow-2xs"
         >
           {role ?? 'OPERATIVO'}
         </Badge>

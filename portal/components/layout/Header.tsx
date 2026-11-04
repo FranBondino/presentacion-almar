@@ -14,6 +14,7 @@ import {
   Compass,
   ShieldCheck,
   Sparkles,
+  Camera,
 } from 'lucide-react';
 import { AuditProvenanceModal } from './AuditProvenanceModal';
 import { LiveSyncControl } from './LiveSyncControl';
@@ -161,15 +162,40 @@ export function Header({ onToggleMobileSidebar }: HeaderProps) {
         {/* Live Mailbox & Tracking Sync Control */}
         <LiveSyncControl />
 
+        {/* UAT Error / Improvement Feedback with Screenshot Trigger */}
+        <button
+          type="button"
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              window.dispatchEvent(
+                new CustomEvent('almar:open-copilot', {
+                  detail: { mode: 'UAT_FEEDBACK', action: 'open' },
+                })
+              );
+            }
+          }}
+          className="hidden sm:flex items-center gap-1.5 rounded-lg border border-amber-300 bg-amber-50/90 px-2 sm:px-2.5 py-1.5 text-xs font-semibold text-amber-900 hover:bg-amber-100 hover:border-amber-400 transition-all shadow-xs cursor-pointer shrink-0"
+          title="Reportar error, dato a corregir o sugerencia de mejora con captura de pantalla (Ctrl+V)"
+          aria-label="Reportar Error o Mejora UAT"
+          data-testid="btn-header-uat-feedback"
+        >
+          <Camera className="h-4 w-4 text-amber-600 shrink-0" />
+          <span className="hidden md:inline">Reportar UAT</span>
+        </button>
+
         {/* Executive Copilot IA Trigger (Ctrl+J) */}
         <button
           type="button"
           onClick={() => {
             if (typeof window !== 'undefined') {
-              window.dispatchEvent(new CustomEvent('almar:open-copilot'));
+              window.dispatchEvent(
+                new CustomEvent('almar:open-copilot', {
+                  detail: { mode: 'RAG_QUERY', action: 'toggle' },
+                })
+              );
             }
           }}
-          className="flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50/80 px-2 sm:px-2.5 py-1.5 text-xs font-semibold text-[#0072BC] hover:bg-sky-100 hover:border-sky-300 transition-all shadow-xs cursor-pointer shrink-0"
+          className="hidden sm:flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50/80 px-2 sm:px-2.5 py-1.5 text-xs font-semibold text-[#0072BC] hover:bg-sky-100 hover:border-sky-300 transition-all shadow-xs cursor-pointer shrink-0"
           title="Copilot IA — Consultas Operativas & Desvíos (Ctrl+J)"
           aria-label="Abrir Copilot IA"
           data-testid="btn-header-copilot-trigger"
@@ -201,7 +227,7 @@ export function Header({ onToggleMobileSidebar }: HeaderProps) {
               window.dispatchEvent(new CustomEvent('almar:open-onboarding-tour'));
             }
           }}
-          className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2 sm:px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:border-[#0072BC]/40 hover:bg-sky-50 hover:text-[#0072BC] transition-all shadow-xs cursor-pointer shrink-0"
+          className="hidden sm:flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2 sm:px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:border-[#0072BC]/40 hover:bg-sky-50 hover:text-[#0072BC] transition-all shadow-xs cursor-pointer shrink-0"
           title="Tutorial Guiado"
           aria-label="Tutorial Guiado"
         >
