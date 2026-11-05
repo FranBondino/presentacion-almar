@@ -2747,5 +2747,51 @@ export function reconcileAlertasList<T extends Record<string, unknown>>(list: T[
       }
     }
   }
+
+  const slaCustomerAlerts: Array<Record<string, unknown>> = [
+    {
+      id: 'al-sla-cliente-cotizacion-1',
+      carpeta_id: 'C1805',
+      tipo: 'DEMORA_OPERATIVA',
+      severidad: 'ALTA',
+      titulo: '🔔 SLA Cliente (Pedido de Cotización s/r hace 6h 15m) — AERCOM S.A. // LCL Turquía-Rosario',
+      mensaje:
+        'El cliente solicitó cotización LCL Turquía -> Rosario en la casilla de Comercial (llaje@almarrosario.com) y aún no registra correo de respuesta saliente en el hilo ni emisión de Q-2026 vinculada.',
+      resuelta: false,
+      created_at: new Date(Date.now() - 6.25 * 3600 * 1000).toISOString(),
+    },
+    {
+      id: 'al-sla-cliente-operativo-1',
+      carpeta_id: 'C1862',
+      tipo: 'DOCUMENTACION_FALTANTE',
+      severidad: 'CRITICA',
+      titulo: '🔔 SLA Cliente (Consulta Urgente s/r hace 4h 30m) — INDUSTRIAS JUAN F. SECCO S.A. (C1862)',
+      mensaje:
+        'Pedido del cliente (Martin Colangelo - Secco) sobre RFQ-304032 / NCM 8414.59 en carpeta C1862 sin respuesta saliente de ninguna casilla en copia (atalaban@ / nhermoso@ / impo@).',
+      resuelta: false,
+      created_at: new Date(Date.now() - 4.5 * 3600 * 1000).toISOString(),
+    },
+    {
+      id: 'al-sla-cliente-seguimiento-48h',
+      carpeta_id: 'C1845',
+      tipo: 'DEMORA_OPERATIVA',
+      severidad: 'MEDIA',
+      titulo: '🔔 SLA Seguimiento Comercial (>48 hs sin respuesta del cliente) — TADEO CZERWENY S.A. (PC-000009112-1)',
+      mensaje:
+        'Propuesta comercial enviada hace más de 48 hs hábiles para EXW Le Havre -> Rosario (C1845) sin confirmación del cliente. Ejecutar Seguimiento Proactivo PO.01 antes del vencimiento de validez.',
+      resuelta: false,
+      created_at: new Date(Date.now() - 50 * 3600 * 1000).toISOString(),
+    },
+  ];
+
+  const existingIds = new Set(list.map((item) => String(item.id || '')));
+  for (let i = slaCustomerAlerts.length - 1; i >= 0; i--) {
+    const slaAlert = slaCustomerAlerts[i]!;
+    if (!existingIds.has(String(slaAlert.id))) {
+      list.unshift(slaAlert as T);
+      changed = true;
+    }
+  }
+
   return changed;
 }

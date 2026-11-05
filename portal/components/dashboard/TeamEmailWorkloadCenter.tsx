@@ -29,6 +29,7 @@ export type TeamScopeMode =
   | 'MI_CASILLA';
 export type EmailMetadataFilter =
   | 'ALL'
+  | 'PEDIDOS_CLIENTES_SLA'
   | 'URGENTE_SIN_RESPUESTA'
   | 'ABIERTO_PUEDE_ESPERAR'
   | 'UNREAD'
@@ -422,6 +423,7 @@ export function TeamEmailWorkloadCenter({
     let noLeidosGmail = 0;
     let conBanderitaRoja = 0;
     let respondidos = 0;
+    let pedidosClientesSla = 0;
 
     for (const em of operatorFilteredEmails) {
       if (em.triageState === 'URGENTE_SIN_RESPUESTA') urgentesSinRespuesta++;
@@ -429,6 +431,13 @@ export function TeamEmailWorkloadCenter({
       if (em.isUnread) noLeidosGmail++;
       if (em.isStarred) conBanderitaRoja++;
       if (em.isReplied || em.triageState === 'RESPONDIDO') respondidos++;
+      if (
+        !em.isReplied &&
+        (em.customerSlaCategory === 'PEDIDO_COTIZACION_SIN_RESPUESTA' ||
+          em.customerSlaCategory === 'CONSULTA_CLIENTE_SIN_RESPUESTA')
+      ) {
+        pedidosClientesSla++;
+      }
     }
 
     return {
@@ -438,12 +447,20 @@ export function TeamEmailWorkloadCenter({
       noLeidosGmail,
       conBanderitaRoja,
       respondidos,
+      pedidosClientesSla,
     };
   }, [operatorFilteredEmails]);
 
   // Final filtered email list for the inbox viewer
   const filteredEmails = React.useMemo(() => {
     return operatorFilteredEmails.filter((em) => {
+      if (metadataFilter === 'PEDIDOS_CLIENTES_SLA') {
+        const isCustomerSla =
+          !em.isReplied &&
+          (em.customerSlaCategory === 'PEDIDO_COTIZACION_SIN_RESPUESTA' ||
+            em.customerSlaCategory === 'CONSULTA_CLIENTE_SIN_RESPUESTA');
+        if (!isCustomerSla) return false;
+      }
       if (metadataFilter === 'URGENTE_SIN_RESPUESTA' && em.triageState !== 'URGENTE_SIN_RESPUESTA') {
         return false;
       }
@@ -677,8 +694,40 @@ export function TeamEmailWorkloadCenter({
       </div>
 
       <div className="p-4 sm:p-5 space-y-4">
-        {/* 2. Los 4 Indicadores Clave de Correos (Misma jerarquía visual que Carpetas Activas / En Tránsito) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {/* 2. Los 5 Indicadores Clave de Correos + SLA de Pedidos de Clientes */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          {/* KPI 0: Pedidos de Clientes sin Respuesta (Cotizaciones & Consultas con Reloj SLA) */}
+          <button
+            type="button"
+            onClick={() =>
+              setMetadataFilter(
+                metadataFilter === 'PEDIDOS_CLIENTES_SLA' ? 'ALL' : 'PEDIDOS_CLIENTES_SLA'
+              )
+            }
+            data-testid="kpi-mail-pedidos-clientes-sla"
+            className={`text-left p-3.5 rounded-xl border transition-all cursor-pointer flex items-start justify-between gap-2 ${
+              metadataFilter === 'PEDIDOS_CLIENTES_SLA'
+                ? 'bg-indigo-50 border-indigo-600 ring-2 ring-indigo-500/20 shadow-xs'
+                : 'bg-indigo-50/50 border-indigo-200 hover:bg-indigo-50/90'
+            }`}
+          >
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-900 flex items-center gap-1">
+                <Clock className="h-3.5 w-3.5 text-indigo-600 shrink-0" />
+                <span>🔔 Pedidos Clientes s/r</span>
+              </span>
+              <div className="text-2xl font-extrabold font-mono text-indigo-800 mt-1">
+                {isLoading ? '...' : kpis.pedidosClientesSla}
+              </div>
+              <p className="text-[11px] text-indigo-950/80 mt-0.5 leading-snug">
+                Cotizaciones y pedidos de clientes sin contestar (Excluye &ldquo;Gracias/Ok&rdquo; y cruza CC)
+              </p>
+            </div>
+            <span className="px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-indigo-100 text-indigo-900 border border-indigo-300 shrink-0">
+              SLA Cliente
+            </span>
+          </button>
+
           {/* KPI 1: Urgentes Sin Respuesta */}
           <button
             type="button"
@@ -916,6 +965,10 @@ export function TeamEmailWorkloadCenter({
               [
                 { id: 'ALL', label: `Todos (${kpis.total})` },
                 {
+                  id: 'PEDIDOS_CLIENTES_SLA',
+                  label: `🔔 Pedidos Clientes s/r (${kpis.pedidosClientesSla})`,
+                },
+                {
                   id: 'URGENTE_SIN_RESPUESTA',
                   label: `🔴 Urgentes s/r (${kpis.urgentesSinRespuesta})`,
                 },
@@ -1040,6 +1093,11 @@ export function TeamEmailWorkloadCenter({
                           {em.isReplied && (
                             <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded bg-emerald-100 text-emerald-800 border border-emerald-200">
                               🟢 Respondido
+                            </span>
+                          )}
+                          {!em.isReplied && em.customerSlaLabel && (
+                            <span className="px-1.5 py-0.5 text-[10px] font-bold rounded bg-indigo-100 text-indigo-900 border border-indigo-300">
+                              {em.customerSlaLabel}
                             </span>
                           )}
                         </div>
