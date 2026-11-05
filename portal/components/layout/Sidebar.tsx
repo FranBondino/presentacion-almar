@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { canAccessMulticotizador } from '@/lib/auth';
+import { canAccessMulticotizador, canAccessMetricas } from '@/lib/auth';
 import { useAuth, RoleGuard } from '@/components/auth/RoleGuard';
 import { PwaInstallButton } from '@/components/pwa/PwaInstallButton';
 import {
@@ -19,6 +19,7 @@ import {
   AlertTriangle,
   BarChart3,
   History,
+  Sparkles,
   LogOut,
   X,
   PanelLeftClose,
@@ -111,7 +112,7 @@ export function Sidebar({
 }: SidebarProps) {
   const rawPathname = usePathname();
   const pathname = rawPathname ?? '/';
-  const { role, logout } = useAuth();
+  const { user, role, logout } = useAuth();
 
   const [activeAlertsCount, setActiveAlertsCount] = React.useState(0);
 
@@ -130,7 +131,7 @@ export function Sidebar({
       cancelled = true;
     };
   }, []);
-  const isDirectorio = role === 'ADMIN' || role === 'GERENCIA' || role === 'FINANZAS';
+  const isDirectorio = canAccessMetricas(role, user?.email);
 
   const visibleNavItems = PRIMARY_NAV_ITEMS.filter((item) => {
     if (item.href === '/metricas') {
@@ -195,6 +196,12 @@ export function Sidebar({
       return {
         label: 'Directiva',
         className: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
+      };
+    }
+    if (href === '/mejoras-directorio') {
+      return {
+        label: 'Directorio',
+        className: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
       };
     }
     if (role === 'ADMIN' && href === '/audit-log') {
@@ -382,6 +389,15 @@ export function Sidebar({
                 </div>
               )}
               <nav className="space-y-1">
+                {renderNavItem(
+                  {
+                    title: 'Mejoras & Aprobación',
+                    href: '/mejoras-directorio',
+                    icon: Sparkles,
+                    section: 'secondary',
+                  },
+                  compact
+                )}
                 {renderNavItem(
                   {
                     title: 'Registro de Auditoría',
