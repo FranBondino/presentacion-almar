@@ -20,7 +20,13 @@ import {
   Filter,
 } from 'lucide-react';
 
-export type TeamScopeMode = 'IMPO_TEAM' | 'ALL_TEAM' | 'EXPO_TEAM' | 'MI_CASILLA';
+export type TeamScopeMode =
+  | 'ALL_TEAM'
+  | 'IMPO_TEAM'
+  | 'COMERCIAL_TEAM'
+  | 'EXPO_TEAM'
+  | 'ADMIN_TEAM'
+  | 'MI_CASILLA';
 export type EmailMetadataFilter =
   | 'ALL'
   | 'URGENTE_SIN_RESPUESTA'
@@ -35,15 +41,18 @@ interface OperatorProfile {
   shortName: string;
   rolLabel: string;
   sector: 'IMPORTACION' | 'EXPORTACION' | 'COMERCIAL' | 'ADMINISTRACION';
+  clientProtocol: 'GMAIL_WEB' | 'OUTLOOK_GWORKSPACE';
 }
 
 const TEAM_OPERATORS: OperatorProfile[] = [
+  // Importación
   {
     email: 'nhermoso@almarrosario.com',
     nombre: 'Natali Hermoso',
     shortName: 'Natali (Impo Lead)',
     rolLabel: 'Jefa Importación',
     sector: 'IMPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
   {
     email: 'agomez@almarrosario.com',
@@ -51,6 +60,7 @@ const TEAM_OPERATORS: OperatorProfile[] = [
     shortName: 'Aldana Gómez',
     rolLabel: 'Operaciones Impo',
     sector: 'IMPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
   {
     email: 'atalaban@almarrosario.com',
@@ -58,6 +68,7 @@ const TEAM_OPERATORS: OperatorProfile[] = [
     shortName: 'Ana Laura Talabán',
     rolLabel: 'Impo & Cuentas Clave',
     sector: 'IMPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
   {
     email: 'cdellamea@almarrosario.com',
@@ -65,13 +76,41 @@ const TEAM_OPERATORS: OperatorProfile[] = [
     shortName: 'Cecilia Dellamea',
     rolLabel: 'Impo & Reclamos',
     sector: 'IMPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
+  // Comercial & Pricing
+  {
+    email: 'llaje@almarrosario.com',
+    nombre: 'Lucía Laje',
+    shortName: 'Lucía Laje',
+    rolLabel: 'Comercial & Pricing',
+    sector: 'COMERCIAL',
+    clientProtocol: 'OUTLOOK_GWORKSPACE',
+  },
+  {
+    email: 'mfusco@almarrosario.com',
+    nombre: 'Martín Fusco',
+    shortName: 'Martín Fusco',
+    rolLabel: 'Comercial & Pricing',
+    sector: 'COMERCIAL',
+    clientProtocol: 'OUTLOOK_GWORKSPACE',
+  },
+  {
+    email: 'nguida@almarrosario.com',
+    nombre: 'Nerea Guida',
+    shortName: 'Nerea Guida',
+    rolLabel: 'Comercial & Pricing',
+    sector: 'COMERCIAL',
+    clientProtocol: 'GMAIL_WEB',
+  },
+  // Exportación & Coordinación
   {
     email: 'vmoyano@almarrosario.com',
     nombre: 'Victoria Moyano',
     shortName: 'Victoria (Coord.)',
     rolLabel: 'Coordinación & Expo',
     sector: 'EXPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
   {
     email: 'astampfli@almarrosario.com',
@@ -79,20 +118,32 @@ const TEAM_OPERATORS: OperatorProfile[] = [
     shortName: 'Abril Stampfli',
     rolLabel: 'Aéreo & Terrestre',
     sector: 'EXPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
   {
-    email: 'llaje@almarrosario.com',
-    nombre: 'Lucía Laje',
-    shortName: 'Lucía Laje',
-    rolLabel: 'Comercial & Pricing',
-    sector: 'COMERCIAL',
+    email: 'csexp@almarrosario.com',
+    nombre: 'CS Exportación',
+    shortName: 'CS Exportación',
+    rolLabel: 'Tráfico Exportación',
+    sector: 'EXPORTACION',
+    clientProtocol: 'GMAIL_WEB',
   },
+  // Administración & Finanzas
   {
     email: 'srossi@almarrosario.com',
     nombre: 'Stefanía Rossi',
     shortName: 'Stefanía Rossi',
     rolLabel: 'Facturación & Cobros',
     sector: 'ADMINISTRACION',
+    clientProtocol: 'OUTLOOK_GWORKSPACE',
+  },
+  {
+    email: 'dsilvi@almarrosario.com',
+    nombre: 'Dalia Silvi',
+    shortName: 'Dalia Silvi',
+    rolLabel: 'Administración & Pagos',
+    sector: 'ADMINISTRACION',
+    clientProtocol: 'GMAIL_WEB',
   },
 ];
 
@@ -103,11 +154,31 @@ const IMPO_EMAILS = new Set([
   'cdellamea@almarrosario.com',
 ]);
 
+const COMERCIAL_EMAILS = new Set([
+  'llaje@almarrosario.com',
+  'mfusco@almarrosario.com',
+  'nguida@almarrosario.com',
+  'zabraham@almarrosario.com',
+]);
+
 const EXPO_EMAILS = new Set([
   'vmoyano@almarrosario.com',
   'astampfli@almarrosario.com',
   'abucardo@almarrosario.com',
   'csexp@almarrosario.com',
+]);
+
+const ADMIN_EMAILS = new Set([
+  'srossi@almarrosario.com',
+  'dsilvi@almarrosario.com',
+  'vmeggiolaro@almarrosario.com',
+]);
+
+const DIRECTORIO_EMAILS = new Set([
+  'jarloro@almarrosario.com',
+  'anoacco@almarrosario.com',
+  'vmeggiolaro@almarrosario.com',
+  'consultor@almarrosario.com',
 ]);
 
 function buildFallbackEmails(): DashboardEmailItem[] {
@@ -235,25 +306,31 @@ export function TeamEmailWorkloadCenter({
   const userEmail = (user?.email || 'nhermoso@almarrosario.com').toLowerCase();
 
   // Default scope according to ALMAR organizational rules:
-  // - Natali Hermoso (nhermoso@ / LEAD_OPERACIONES) -> IMPO_TEAM (Aldana, Ana, Ceci y Natali)
-  // - Victoria Moyano (vmoyano@) or Directorio (ADMIN, GERENCIA, FINANZAS) -> ALL_TEAM (Coordinación ve todo el equipo)
+  // - Directorio (ADMIN, GERENCIA, jarloro@, anoacco@, vmeggiolaro@) & Coordinación (vmoyano@) -> ALL_TEAM (Todo el Equipo)
+  // - Natali Hermoso (nhermoso@ / LEAD_OPERACIONES) & Impo -> IMPO_TEAM (Aldana, Ana, Ceci y Natali)
+  // - Comercial (Lucía Laje llaje@, Martín Fusco mfusco@, Nerea Guida nguida@, COMERCIAL) -> COMERCIAL_TEAM
+  // - Exportación (Abril astampfli@, Agustina abucardo@, csexp@) -> EXPO_TEAM
+  // - Administración (Stefanía srossi@, Dalia dsilvi@, FINANZAS) -> ADMIN_TEAM
   const defaultScope: TeamScopeMode = React.useMemo(() => {
-    if (userEmail === 'nhermoso@almarrosario.com' || role === 'LEAD_OPERACIONES') {
-      return 'IMPO_TEAM';
-    }
     if (
+      DIRECTORIO_EMAILS.has(userEmail) ||
       userEmail === 'vmoyano@almarrosario.com' ||
       role === 'ADMIN' ||
-      role === 'GERENCIA' ||
-      userEmail === 'vmeggiolaro@almarrosario.com'
+      role === 'GERENCIA'
     ) {
       return 'ALL_TEAM';
     }
-    if (IMPO_EMAILS.has(userEmail)) {
+    if (userEmail === 'nhermoso@almarrosario.com' || role === 'LEAD_OPERACIONES' || IMPO_EMAILS.has(userEmail)) {
       return 'IMPO_TEAM';
+    }
+    if (COMERCIAL_EMAILS.has(userEmail) || role === 'COMERCIAL') {
+      return 'COMERCIAL_TEAM';
     }
     if (EXPO_EMAILS.has(userEmail)) {
       return 'EXPO_TEAM';
+    }
+    if (ADMIN_EMAILS.has(userEmail) || role === 'FINANZAS') {
+      return 'ADMIN_TEAM';
     }
     return 'ALL_TEAM';
   }, [userEmail, role]);
@@ -282,8 +359,14 @@ export function TeamEmailWorkloadCenter({
     if (scopeMode === 'IMPO_TEAM') {
       return TEAM_OPERATORS.filter((op) => IMPO_EMAILS.has(op.email));
     }
+    if (scopeMode === 'COMERCIAL_TEAM') {
+      return TEAM_OPERATORS.filter((op) => COMERCIAL_EMAILS.has(op.email));
+    }
     if (scopeMode === 'EXPO_TEAM') {
       return TEAM_OPERATORS.filter((op) => EXPO_EMAILS.has(op.email));
+    }
+    if (scopeMode === 'ADMIN_TEAM') {
+      return TEAM_OPERATORS.filter((op) => ADMIN_EMAILS.has(op.email));
     }
     if (scopeMode === 'MI_CASILLA') {
       const mine = TEAM_OPERATORS.filter((op) => op.email === userEmail);
@@ -297,7 +380,9 @@ export function TeamEmailWorkloadCenter({
     return localEmails.filter((em) => {
       const mb = em.mailbox.toLowerCase();
       if (scopeMode === 'IMPO_TEAM') return IMPO_EMAILS.has(mb);
+      if (scopeMode === 'COMERCIAL_TEAM') return COMERCIAL_EMAILS.has(mb);
       if (scopeMode === 'EXPO_TEAM') return EXPO_EMAILS.has(mb);
+      if (scopeMode === 'ADMIN_TEAM') return ADMIN_EMAILS.has(mb);
       if (scopeMode === 'MI_CASILLA') return mb === userEmail;
       return true;
     });
@@ -308,10 +393,19 @@ export function TeamEmailWorkloadCenter({
     const counts: Record<string, number> = {};
     for (const op of TEAM_OPERATORS) {
       const firstName = op.nombre.split(' ')[0]!.toLowerCase();
-      const matched = carpetas.filter((c) =>
-        (c.operador_nombre || '').toLowerCase().includes(firstName)
-      ).length;
-      counts[op.email] = matched > 0 ? matched : op.sector === 'IMPORTACION' ? 28 : 16;
+      const matched = carpetas.filter((c) => {
+        const rec = c as unknown as Record<string, unknown>;
+        const opName = String(rec.operador_nombre || rec.vendedor_nombre || '').toLowerCase();
+        return opName.includes(firstName);
+      }).length;
+      counts[op.email] =
+        matched > 0
+          ? matched
+          : op.sector === 'IMPORTACION'
+          ? 28
+          : op.sector === 'COMERCIAL'
+          ? 24
+          : 16;
     }
     return counts;
   }, [carpetas]);
@@ -449,14 +543,16 @@ export function TeamEmailWorkloadCenter({
       className="rounded-xl border border-slate-200 bg-white shadow-xs overflow-hidden"
       data-testid="team-email-workload-center"
     >
-      {/* 1. Encabezado con Alcance de Supervisión (Victoria = Todo el Equipo / Natali = Importación) */}
+      {/* 1. Encabezado con Alcance de Supervisión para Directorio, Coordinación y Todas las Áreas */}
       <div className="p-4 sm:p-5 bg-gradient-to-r from-slate-900 via-[#0b2545] to-[#0072BC] text-white border-b border-slate-200">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3">
           <div className="space-y-1">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-400/20 text-emerald-200 border border-emerald-400/30">
                 <RefreshCw className="h-3 w-3" />
-                <span>Metadatos Gmail en Vivo: UNREAD (No Leído) · STARRED (🚩 Banderita Roja) · Hilos Sin Respuesta</span>
+                <span>
+                  Servidor Central Google Workspace (@almarrosario.com): Sincroniza Gmail Web + Microsoft Outlook (IMAP \Seen · \Flagged)
+                </span>
               </span>
             </div>
             <h2 className="text-base sm:text-lg font-bold flex flex-wrap items-center gap-2">
@@ -466,44 +562,31 @@ export function TeamEmailWorkloadCenter({
             <p className="text-xs text-sky-100/90 leading-relaxed max-w-4xl">
               {scopeMode === 'IMPO_TEAM' ? (
                 <>
-                  <strong>Vista Jefatura Importación (Natali Hermoso):</strong> Supervisión directa de los correos y carga operativa de{' '}
+                  <strong>Vista Importación (Natali Hermoso):</strong> Supervisión directa de correos y carga operativa de{' '}
                   <strong>Aldana Gómez, Ana Laura Talabán, Cecilia Dellamea y Natali Hermoso</strong>.
                 </>
-              ) : scopeMode === 'ALL_TEAM' ? (
+              ) : scopeMode === 'COMERCIAL_TEAM' ? (
                 <>
-                  <strong>Vista Coordinación General (Victoria Moyano / Dirección):</strong> Supervisión integral de los correos y carga operativa de{' '}
-                  <strong>todo el equipo de ALMAR Rosario</strong>.
+                  <strong>Vista Comercial &amp; Pricing (Lucía Laje, Martín Fusco, Nerea Guida):</strong> Seguimiento de cotizaciones, órdenes confirmadas y correos sincronizados tanto desde <strong>Outlook Desktop</strong> como <strong>Gmail Web</strong> sobre el servidor de Google Workspace.
+                </>
+              ) : scopeMode === 'EXPO_TEAM' ? (
+                <>
+                  <strong>Vista Exportación, Aéreo &amp; Terrestre (Victoria Moyano, Abril Stampfli, CS Expo):</strong> Control de Cut-Off documental, reservas e instrucciones de embarque.
+                </>
+              ) : scopeMode === 'ADMIN_TEAM' ? (
+                <>
+                  <strong>Vista Administración &amp; Finanzas (Stefanía Rossi, Dalia Silvi):</strong> Seguimiento de facturación de venta, liquidaciones y avisos de pago / cobranzas.
                 </>
               ) : (
                 <>
-                  Distinción automática entre <strong>correos urgentes sin respuesta</strong>,{' '}
-                  <strong>correos ya abiertos/leídos que todavía no se respondieron pero pueden esperar</strong>,{' '}
-                  <strong>marcados como No Leído</strong> y <strong>con Banderita Roja en Gmail</strong>.
+                  <strong>Vista Control Directorio &amp; Coordinación General (Victoria Moyano / Dirección):</strong> Supervisión integral de los correos y carga operativa de <strong>todas las áreas de ALMAR Rosario</strong> (Importación, Comercial, Exportación y Administración).
                 </>
               )}
             </p>
           </div>
 
-          {/* Selector de Alcance de Equipo */}
+          {/* Selector de Alcance de Equipo (Todos los Sectores + Directorio/Coordinación) */}
           <div className="flex flex-wrap items-center gap-1.5 bg-white/10 p-1.5 rounded-lg border border-white/15 shrink-0">
-            <button
-              type="button"
-              onClick={() => {
-                setScopeMode('IMPO_TEAM');
-                setSelectedOperatorEmail('ALL');
-              }}
-              data-testid="scope-impo-team"
-              className={`px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
-                scopeMode === 'IMPO_TEAM'
-                  ? 'bg-white text-[#0b2545] shadow-xs font-bold'
-                  : 'text-sky-100 hover:bg-white/10'
-              }`}
-              title="Vista de Natali Hermoso: Aldana, Ana Laura, Cecilia y Natali"
-            >
-              <Users className="h-3.5 w-3.5" />
-              <span>Importación (Natali, Aldana, Ana, Ceci)</span>
-            </button>
-
             <button
               type="button"
               onClick={() => {
@@ -516,10 +599,44 @@ export function TeamEmailWorkloadCenter({
                   ? 'bg-white text-[#0b2545] shadow-xs font-bold'
                   : 'text-sky-100 hover:bg-white/10'
               }`}
-              title="Vista de Victoria Moyano (Coordinación): Todo el equipo de ALMAR"
+              title="Control Directorio y Coordinación (Victoria Moyano): Todas las áreas de ALMAR"
             >
               <Users className="h-3.5 w-3.5" />
-              <span>Todo el Equipo (Coordinación Victoria)</span>
+              <span>Todo el Equipo (Directorio / Coord.)</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setScopeMode('IMPO_TEAM');
+                setSelectedOperatorEmail('ALL');
+              }}
+              data-testid="scope-impo-team"
+              className={`px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
+                scopeMode === 'IMPO_TEAM'
+                  ? 'bg-white text-[#0b2545] shadow-xs font-bold'
+                  : 'text-sky-100 hover:bg-white/10'
+              }`}
+              title="Importación: Natali Hermoso, Aldana Gómez, Ana Laura Talabán y Cecilia Dellamea"
+            >
+              <span>Importación (Natali, Aldana, Ana, Ceci)</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setScopeMode('COMERCIAL_TEAM');
+                setSelectedOperatorEmail('ALL');
+              }}
+              data-testid="scope-comercial-team"
+              className={`px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all cursor-pointer ${
+                scopeMode === 'COMERCIAL_TEAM'
+                  ? 'bg-white text-[#0b2545] shadow-xs font-bold'
+                  : 'text-sky-100 hover:bg-white/10'
+              }`}
+              title="Comercial & Pricing: Lucía Laje, Martín Fusco y Nerea Guida"
+            >
+              <span>Comercial (Lucía, Martín, Nerea)</span>
             </button>
 
             <button
@@ -534,8 +651,26 @@ export function TeamEmailWorkloadCenter({
                   ? 'bg-white text-[#0b2545] shadow-xs font-bold'
                   : 'text-sky-100 hover:bg-white/10'
               }`}
+              title="Exportación, Aéreo y Terrestre: Victoria Moyano, Abril Stampfli y CS Expo"
             >
               <span>Exportación &amp; Aéreo</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setScopeMode('ADMIN_TEAM');
+                setSelectedOperatorEmail('ALL');
+              }}
+              data-testid="scope-admin-team"
+              className={`px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all cursor-pointer ${
+                scopeMode === 'ADMIN_TEAM'
+                  ? 'bg-white text-[#0b2545] shadow-xs font-bold'
+                  : 'text-sky-100 hover:bg-white/10'
+              }`}
+              title="Administración & Finanzas: Stefanía Rossi y Dalia Silvi"
+            >
+              <span>Administración</span>
             </button>
           </div>
         </div>
@@ -715,10 +850,19 @@ export function TeamEmailWorkloadCenter({
                       : 'bg-slate-50/70 border-slate-200 hover:bg-white hover:border-slate-300'
                   }`}
                 >
-                  <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0">
-                      <div className="text-xs font-bold text-slate-900 truncate">{op.nombre}</div>
-                      <div className="text-[10.5px] text-slate-500 truncate">{op.rolLabel}</div>
+                      <div className="text-xs font-bold text-slate-900 truncate flex items-center gap-1.5">
+                        <span>{op.nombre}</span>
+                      </div>
+                      <div className="text-[10.5px] text-slate-500 truncate flex items-center gap-1.5 mt-0.5">
+                        <span>{op.rolLabel}</span>
+                        <span className="text-[9.5px] font-mono px-1.5 py-0.2 rounded bg-slate-200/70 text-slate-700">
+                          {op.clientProtocol === 'OUTLOOK_GWORKSPACE'
+                            ? 'Outlook ↔ Server Gmail'
+                            : 'Gmail Web'}
+                        </span>
+                      </div>
                     </div>
                     <span className="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-[10.5px] font-mono font-bold text-[#0072BC] shrink-0 flex items-center gap-1">
                       <FolderKanban className="h-3 w-3" />
