@@ -4,7 +4,7 @@ import { DirectorioMejorasApprovalPanel } from '@/components/feedback/Directorio
 export const metadata: Metadata = {
   title: 'Panel de Mejoras & Aprobación Diaria (Directorio) | ALMAR Rosario',
   description:
-    'Panel consolidado del Directorio (Juan Andrés Arloro, Alejandro Noacco y Vanesa Meggiolaro) para revisar, modificar y aprobar diariamente las mejoras propuestas por el equipo para Francisco.',
+    'Panel consolidado del Directorio (Juan Andrés Arloro, Alejandro Noacco y Vanesa Meggiolaro) para revisar, modificar y aprobar diariamente las mejoras propuestas por el equipo.',
 };
 
 export default function MejorasDirectorioPage() {

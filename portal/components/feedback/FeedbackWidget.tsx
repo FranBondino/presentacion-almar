@@ -506,7 +506,7 @@ export function FeedbackWidget() {
                         ? 'Vanesa Meggiolaro (Admin/Finanzas)'
                         : 'Juan Andrés Arloro (Operaciones)'}
                     </strong>{' '}
-                    para confirmar lote diario a Fran.
+                    para su evaluación y aprobación diaria.
                   </div>
                   <Link
                     href="/mejoras-directorio"

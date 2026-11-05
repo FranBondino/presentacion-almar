@@ -244,9 +244,9 @@ export function DirectorioMejorasApprovalPanel({
         setTickets((prev) => prev.map((item) => (item.id === ticket.id ? json.data : item)));
         const label =
           decision === 'APROBADA_PARA_FRAN'
-            ? 'Aprobada e incorporada al lote diario para Fran'
+            ? 'Propuesta aprobada'
             : decision === 'MODIFICADA_Y_APROBADA'
-            ? 'Alcance modificado y aprobado para Fran'
+            ? 'Alcance modificado y aprobado'
             : decision === 'RECHAZADA_DESCARTADA'
             ? 'Propuesta descartada / pospuesta'
             : 'Estado actualizado';
@@ -268,8 +268,8 @@ export function DirectorioMejorasApprovalPanel({
       year: 'numeric',
     });
     const lines: string[] = [
-      `📌 LOTE DIARIO DE MEJORAS APROBADAS POR DIRECTORIO ALMAR (${today})`,
-      `Confirmado para implementación a: Francisco (Fran)`,
+      `📌 RESUMEN DIARIO DE MEJORAS APROBADAS POR DIRECTORIO ALMAR (${today})`,
+      `Estado: Confirmado por Directorio para Implementación`,
       `------------------------------------------------------------`,
     ];
 
@@ -288,10 +288,10 @@ export function DirectorioMejorasApprovalPanel({
             }:`
           );
           lines.push(
-            `    ${wasModified ? '✏️ ALCANCE AJUSTADO POR DIRECTORIO' : '✅ APROBADO DIRECTO'}: "${finalScope}"`
+            `    ${wasModified ? '✏️ ALCANCE AJUSTADO POR DIRECTORIO' : '✅ APROBADA'}: "${finalScope}"`
           );
           if (item.nota_directorio_para_fran) {
-            lines.push(`    💬 Nota de ${item.resuelto_por_nombre || dir.nombre} para Fran: ${item.nota_directorio_para_fran}`);
+            lines.push(`    💬 Observación de ${item.resuelto_por_nombre || dir.nombre}: ${item.nota_directorio_para_fran}`);
           }
         }
       }
@@ -316,7 +316,7 @@ export function DirectorioMejorasApprovalPanel({
       setCopiedDailyBatch(true);
       setTimeout(() => setCopiedDailyBatch(false), 3000);
       toast.success(
-        '¡Lote Diario Confirmado para Fran!',
+        '¡Lote Diario Confirmado!',
         `Se confirmaron ${approvedForFranAllAreas.length} mejoras aprobadas por el Directorio y se copió la minuta al portapapeles.`
       );
       void fetchTickets();
@@ -374,7 +374,7 @@ export function DirectorioMejorasApprovalPanel({
         setNewCarpeta('');
         setShowNewModal(false);
         toast.success(
-          'Mejora agregada al lote de Fran',
+          'Mejora aprobada y registrada',
           `Registrada bajo el área de ${dir.nombre} (${created.ticket_code}).`
         );
       }
@@ -390,17 +390,17 @@ export function DirectorioMejorasApprovalPanel({
       className="rounded-xl border border-slate-200 bg-white shadow-xs overflow-hidden"
       data-testid="directorio-mejoras-approval-panel"
     >
-      {/* 1. Encabezado de Gobernanza del Directorio (Juan, Ale, Vane -> Confirmación Diaria a Fran) */}
+      {/* 1. Encabezado de Gobernanza del Directorio */}
       <div className="p-4 sm:p-5 bg-gradient-to-r from-[#0A2540] via-[#0b2e59] to-[#0072BC] text-white border-b border-slate-200">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
           <div className="space-y-1">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-400/20 text-amber-200 border border-amber-400/30">
                 <ShieldCheck className="h-3.5 w-3.5 text-amber-300" />
-                <span>Circuito Diario Directorio → Desarrollo (Francisco)</span>
+                <span>Gobernanza y Aprobación de Mejoras por Área</span>
               </span>
               <span className="text-[11px] text-sky-200 font-mono">
-                Resolución 1 vez por día por Área (Juan · Ale · Vane)
+                Resolución Diaria del Directorio (Juan · Ale · Vane)
               </span>
             </div>
             <h2 className="text-base sm:text-lg font-bold flex flex-wrap items-center gap-2">
@@ -411,7 +411,7 @@ export function DirectorioMejorasApprovalPanel({
               Las mejoras y ajustes reportados por el equipo desde el botón <strong>Reportar UAT</strong> llegan asignadas al perfil de cada socio según su área:{' '}
               <strong>Juan Andrés Arloro</strong> (Operaciones &amp; Sistemas),{' '}
               <strong>Alejandro Noacco</strong> (Comercial &amp; Pricing) y{' '}
-              <strong>Vanesa Meggiolaro</strong> (Administración &amp; Finanzas). Cada director puede <strong>aprobarlas directo</strong>, <strong>modificarles el alcance</strong> o <strong>descartarlas</strong> antes de confirmar el lote diario a <strong>Fran</strong>.
+              <strong>Vanesa Meggiolaro</strong> (Administración &amp; Finanzas). Cada director puede <strong>aprobarlas</strong>, <strong>modificarles el alcance</strong> o <strong>descartarlas</strong> en la revisión diaria.
             </p>
           </div>
 
@@ -434,7 +434,7 @@ export function DirectorioMejorasApprovalPanel({
             >
               <Send className="h-3.5 w-3.5" />
               <span>
-                Confirmar Lote del Día a Fran ({approvedForFranAllAreas.length} aprobadas)
+                Confirmar Lote Diario ({approvedForFranAllAreas.length} aprobadas)
               </span>
             </button>
           </div>
@@ -450,7 +450,7 @@ export function DirectorioMejorasApprovalPanel({
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-[#0A2540] flex items-center gap-1.5">
               <PlusCircle className="h-4 w-4 text-[#0072BC]" />
-              <span>Agregar Mejora o Requerimiento Directo del Directorio al Lote de Fran</span>
+              <span>Agregar Mejora o Requerimiento Directo del Directorio</span>
             </span>
             <button
               type="button"
@@ -505,7 +505,7 @@ export function DirectorioMejorasApprovalPanel({
                 disabled={isSavingAction || !newMensaje.trim()}
                 className="w-full px-3 py-1.5 rounded-lg bg-[#0072BC] hover:bg-[#005a96] text-white text-xs font-bold cursor-pointer disabled:opacity-50"
               >
-                Guardar y Aprobar para Fran
+                Guardar y Aprobar
               </button>
             </div>
           </div>
@@ -514,14 +514,14 @@ export function DirectorioMejorasApprovalPanel({
               rows={2}
               value={newMensaje}
               onChange={(e) => setNewMensaje(e.target.value)}
-              placeholder="Describí la mejora aprobada por el Directorio para que Fran la implemente..."
+              placeholder="Describí la mejora aprobada por el Directorio para su implementación..."
               className="w-full rounded-lg border border-slate-300 bg-white p-2.5 text-xs text-slate-800"
             />
           </div>
         </form>
       )}
 
-      {/* Resumen / Minuta Diaria para Fran (Desplegable) */}
+      {/* Resumen / Minuta Diaria (Desplegable) */}
       {showBatchModal && (
         <div className="p-4 bg-emerald-50/90 border-b border-emerald-200 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
@@ -529,7 +529,7 @@ export function DirectorioMejorasApprovalPanel({
               <h3 className="text-xs font-bold text-emerald-950 flex items-center gap-1.5">
                 <FileText className="h-4 w-4 text-emerald-700" />
                 <span>
-                  Minuta Diaria Consolidada del Directorio para Francisco ({approvedForFranAllAreas.length} mejoras aprobadas)
+                  Minuta Diaria Consolidada del Directorio ({approvedForFranAllAreas.length} mejoras aprobadas)
                 </span>
               </h3>
               <p className="text-[11px] text-emerald-800">
@@ -545,12 +545,12 @@ export function DirectorioMejorasApprovalPanel({
                 {copiedDailyBatch ? (
                   <>
                     <Check className="h-3.5 w-3.5" />
-                    <span>¡Copiado para enviar a Fran!</span>
+                    <span>¡Minuta Copiada!</span>
                   </>
                 ) : (
                   <>
                     <Copy className="h-3.5 w-3.5" />
-                    <span>Confirmar Cierre Diario y Copiar Minuta para Fran</span>
+                    <span>Confirmar Cierre Diario y Copiar Minuta</span>
                   </>
                 )}
               </button>
@@ -597,7 +597,7 @@ export function DirectorioMejorasApprovalPanel({
                 areaFilter === 'ALL' ? 'text-slate-300' : 'text-slate-500'
               }`}
             >
-              Vista completa de todas las áreas y lote diario unificado para Fran
+              Vista completa de todas las áreas y lote diario unificado
             </p>
           </button>
 
@@ -637,7 +637,7 @@ export function DirectorioMejorasApprovalPanel({
                     ⏳ {pend} pend.
                   </span>
                   <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">
-                    ✅ {aprob} aprob. Fran
+                    ✅ {aprob} aprob.
                   </span>
                 </div>
               </button>
@@ -757,7 +757,7 @@ export function DirectorioMejorasApprovalPanel({
                         {est === 'APROBADA_PARA_FRAN' && (
                           <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1">
                             <CheckCircle2 className="h-3 w-3" />
-                            <span>Aprobada para Fran</span>
+                            <span>Aprobada</span>
                           </span>
                         )}
                         {est === 'MODIFICADA_Y_APROBADA' && (
@@ -798,7 +798,7 @@ export function DirectorioMejorasApprovalPanel({
           <div className="lg:col-span-6 border border-slate-200 rounded-xl bg-white p-4 shadow-2xs">
             {!activeTicket ? (
               <div className="py-12 text-center text-xs text-slate-500">
-                Seleccioná una propuesta de la izquierda para ver su detalle, modificarla o aprobarla para Fran.
+                Seleccioná una propuesta de la izquierda para ver su detalle, modificarla o aprobarla.
               </div>
             ) : (
               <div className="space-y-3.5" data-testid="mejora-detail-editor">
@@ -903,17 +903,17 @@ export function DirectorioMejorasApprovalPanel({
                   />
                 </div>
 
-                {/* Nota Ejecutiva para Fran */}
+                {/* Observación Ejecutiva del Directorio */}
                 <div className="space-y-1.5">
                   <label className="block text-[11px] font-bold text-slate-800">
-                    3. Nota o Instrucción del Directorio para Francisco (Fran):
+                    3. Observación o Criterio de Aprobación del Directorio:
                   </label>
                   <input
                     type="text"
                     value={editNotaFran}
                     onChange={(e) => setEditNotaFran(e.target.value)}
                     data-testid="input-nota-fran"
-                    placeholder="Ej: Aprobado por Juan/Ale/Vane. Priorizar para el corte de hoy..."
+                    placeholder="Ej: Aprobado en revisión diaria. Priorizar implementación..."
                     className="w-full rounded-lg border border-slate-300 bg-white px-2.5 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#0072BC]"
                   />
                 </div>
@@ -927,7 +927,11 @@ export function DirectorioMejorasApprovalPanel({
                         ? ` · Incluida en Lote Diario ${activeTicket.lote_diario_fecha}`
                         : ''}
                     </span>
-                    <span className="font-mono font-bold">{activeTicket.estado_aprobacion}</span>
+                    <span className="font-mono font-bold">
+                      {activeTicket.estado_aprobacion === 'APROBADA_PARA_FRAN'
+                        ? 'APROBADA'
+                        : activeTicket.estado_aprobacion}
+                    </span>
                   </div>
                 )}
 
@@ -944,7 +948,7 @@ export function DirectorioMejorasApprovalPanel({
                       className="px-3 py-2 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-2xs transition-all cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
                     >
                       <CheckCircle2 className="h-3.5 w-3.5" />
-                      <span>Aprobar para Fran</span>
+                      <span>Aprobar</span>
                     </button>
 
                     <button
