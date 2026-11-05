@@ -33,8 +33,8 @@ import { useAuth } from '@/components/auth/RoleGuard';
 import {
   calcularResumenCubicajeDesdeTexto,
   convertirCargoItemsABultos,
-  extraerTextoYMedidasDesdeDocumento,
   formatearResumenCubicajeParaMail,
+  procesarArchivoDocumentoCliente,
 } from '@/lib/calculadora-cubicaje';
 import {
   BultoItem,
@@ -156,14 +156,8 @@ export function CubicajeInteligenteModal({
 
   const processUploadedFile = async (file: File) => {
     try {
-      const rawText = await file.text();
-      const { textoExtraido, resumen: docResumen, documento } = extraerTextoYMedidasDesdeDocumento({
-        fileName: file.name,
-        rawContent: rawText,
-        fileSize: file.size,
-        mimeType: file.type || 'application/octet-stream',
-        defaultPalletHeightM: defaultHeightM,
-      });
+      const { textoExtraido, resumen: docResumen, documento } =
+        await procesarArchivoDocumentoCliente(file, defaultHeightM);
 
       let previewUrl: string | undefined;
       if (typeof URL !== 'undefined' && typeof URL.createObjectURL === 'function') {

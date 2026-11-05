@@ -39,7 +39,7 @@ import {
 import {
   parseCargoDimensionsFromText,
   convertirCargoItemsABultos,
-  extraerTextoYMedidasDesdeDocumento,
+  procesarArchivoDocumentoCliente,
 } from '@/lib/calculadora-cubicaje';
 import { useToast } from '@/components/ui/ToastProvider';
 
@@ -147,13 +147,8 @@ export function CalculadoraModal({
 
   const handleProcessCalcFile = async (file: File) => {
     try {
-      const rawText = await file.text();
-      const { textoExtraido, resumen: docResumen, documento } = extraerTextoYMedidasDesdeDocumento({
-        fileName: file.name,
-        rawContent: rawText,
-        fileSize: file.size,
-        mimeType: file.type || 'application/octet-stream',
-      });
+      const { textoExtraido, resumen: docResumen, documento } =
+        await procesarArchivoDocumentoCliente(file);
 
       let previewUrl: string | undefined;
       if (typeof URL !== 'undefined' && typeof URL.createObjectURL === 'function') {

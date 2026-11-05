@@ -474,6 +474,18 @@ export function extraerTextoYMedidasDesdeDocumento(params: {
       }
     }
 
+    // Detectar si alguna línea de encabezado indica pulgadas (in) o libras (lbs) o peso unitario
+    const fullLower = cleanText.toLowerCase();
+    const headerDimUnit = /\b(?:largo|ancho|alto|length|width|height|dim)[_\s-]*(?:\(?\s*(?:in|inch|inches|pulg))/i.test(fullLower)
+      ? 'in'
+      : /\b(?:largo|ancho|alto|length|width|height|dim)[_\s-]*(?:\(?\s*mm\b)/i.test(fullLower)
+        ? 'mm'
+        : 'cm';
+    const headerWeightUnit = /\b(?:peso|weight)[_\s\w-]*(?:\(?\s*(?:lb|lbs|libras?)\b)/i.test(fullLower)
+      ? 'lbs'
+      : 'kg';
+    const headerWeightIsUnit = /\b(?:peso[_\s-]*unit|unit[_\s-]*weight|kg[_\s-]*c\/u|peso[_\s-]*x[_\s-]*bulto)\b/i.test(fullLower);
+
     const seenNormalized = new Set<string>();
     for (const line of expandedLines) {
       if (!line) continue;
@@ -482,19 +494,48 @@ export function extraerTextoYMedidasDesdeDocumento(params: {
       const normKey = trimmed.toLowerCase().replace(/\s+/g, ' ');
       if (seenNormalized.has(normKey)) continue;
 
-      // Detectar filas de CSV tipo: "4;pallet;120;100;80;280" o "4,caja,80,60,55,180"
-      const csvMatch = trimmed.match(
-        /^(\d+)\s*[,;\t]\s*(pallet|palet|caja|cajon|cajón|bulto|tambor|atado|crate|box|ctn|pkg)s?\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)/i
+      // 1A. Detectar filas de CSV/Excel con Tipo: "4;pallet;120;100;80;280" o "Item1;Repuestos;4;caja;80;60;55;180"
+      const csvWithTypeMatch = trimmed.match(
+        /(?:^|[,;\t]\s*)(\d+)\s*[,;\t]\s*(pallet|palet|plt|caja|cajon|cajón|bulto|tambor|atado|crate|crt|box|ctn|carton|pkg|pieza)s?\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)(?:\s*[,;\t]\s*(cm|mm|m|in|inch|pulg))?(?:\s*[,;\t]\s*(kg|kgs|lbs|lb|ton))?/i
       );
-      if (csvMatch) {
+      if (csvWithTypeMatch) {
         seenNormalized.add(normKey);
+        const dimU = (csvWithTypeMatch[7] || headerDimUnit).toLowerCase();
+        const wtU = (csvWithTypeMatch[8] || headerWeightUnit).toLowerCase();
+        const wtSuffix = headerWeightIsUnit ? `${wtU} c/u` : wtU;
         candidateLines.push(
-          `${csvMatch[1]} ${csvMatch[2]} de ${csvMatch[3]}x${csvMatch[4]}x${csvMatch[5]} cm (${csvMatch[6]} kg)`
+          `${csvWithTypeMatch[1]} ${csvWithTypeMatch[2]} de ${csvWithTypeMatch[3]}x${csvWithTypeMatch[4]}x${csvWithTypeMatch[5]} ${dimU} (${csvWithTypeMatch[6]} ${wtSuffix})`
         );
         continue;
       }
 
-      // Detectar líneas con patrón de medidas (L x W x H) o CBM
+      // 1B. Detectar filas de CSV/Excel donde Tipo va primero: "Pallet;3;120;100;78;210"
+      const csvTypeFirstMatch = trimmed.match(
+        /^(pallet|palet|plt|caja|cajon|cajón|bulto|tambor|atado|crate|crt|box|ctn|carton|pkg|pieza)s?\s*[,;\t]\s*(\d+)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)/i
+      );
+      if (csvTypeFirstMatch) {
+        seenNormalized.add(normKey);
+        const wtSuffix = headerWeightIsUnit ? `${headerWeightUnit} c/u` : headerWeightUnit;
+        candidateLines.push(
+          `${csvTypeFirstMatch[2]} ${csvTypeFirstMatch[1]} de ${csvTypeFirstMatch[3]}x${csvTypeFirstMatch[4]}x${csvTypeFirstMatch[5]} ${headerDimUnit} (${csvTypeFirstMatch[6]} ${wtSuffix})`
+        );
+        continue;
+      }
+
+      // 1C. Detectar filas puramente numéricas de 5 columnas (Cant;Largo;Ancho;Alto;Peso): "4;80;60;55;180"
+      const csvNumeric5Match = trimmed.match(
+        /^(\d+)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)\s*[,;\t]\s*(\d+(?:[.,]\d+)?)$/
+      );
+      if (csvNumeric5Match) {
+        seenNormalized.add(normKey);
+        const wtSuffix = headerWeightIsUnit ? `${headerWeightUnit} c/u` : headerWeightUnit;
+        candidateLines.push(
+          `${csvNumeric5Match[1]} bultos de ${csvNumeric5Match[2]}x${csvNumeric5Match[3]}x${csvNumeric5Match[4]} ${headerDimUnit} (${csvNumeric5Match[5]} ${wtSuffix})`
+        );
+        continue;
+      }
+
+      // 2. Detectar líneas con patrón de medidas (L x W x H) o CBM
       if (
         /\d+(?:[.,]\d+)?\s*(?:[xX*×]|by|por)\s*\d+/i.test(trimmed) ||
         /\d+(?:[.,]\d+)?\s*(?:m3|m³|cbm)\b/i.test(trimmed)
@@ -539,6 +580,60 @@ export function extraerTextoYMedidasDesdeDocumento(params: {
     resumen,
     documento,
   };
+}
+
+/**
+ * Procesa un objeto File desde el navegador enviándolo a /api/cotizaciones/parse-documento
+ * (que soporta descompresión real de Excel .xlsx, PDF FlateDecode, .docx, .eml, .csv, .txt),
+ * con fallback local inmediato.
+ */
+export async function procesarArchivoDocumentoCliente(
+  file: File,
+  defaultPalletHeightM = 1.2
+): Promise<{
+  textoExtraido: string;
+  resumen: ResumenCubicaje;
+  documento: DocumentoCubicajeAdjunto;
+}> {
+  if (typeof fetch !== 'undefined' && typeof FormData !== 'undefined') {
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('defaultPalletHeightM', String(defaultPalletHeightM));
+
+      const res = await fetch('/api/cotizaciones/parse-documento', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (res.ok) {
+        const json = (await res.json()) as {
+          success?: boolean;
+          textoExtraido?: string;
+          resumen?: ResumenCubicaje;
+          documento?: DocumentoCubicajeAdjunto;
+        };
+        if (json.success && json.textoExtraido && json.resumen && json.documento) {
+          return {
+            textoExtraido: json.textoExtraido,
+            resumen: json.resumen,
+            documento: json.documento,
+          };
+        }
+      }
+    } catch {
+      // Fallback local si el endpoint no responde
+    }
+  }
+
+  const rawText = await file.text();
+  return extraerTextoYMedidasDesdeDocumento({
+    fileName: file.name,
+    rawContent: rawText,
+    fileSize: file.size,
+    mimeType: file.type || 'application/octet-stream',
+    defaultPalletHeightM,
+  });
 }
 
 /**

@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import zlib from 'node:zlib';
 import {
   calcularMetricasBultos,
   ejecutarCalculoLogistico,
@@ -7,7 +8,54 @@ import {
   evaluarAptitudCopaAirlines,
   extraerTextoYMedidasDesdeDocumento,
 } from '@/lib/calculadora-logistica';
+import { parsearBufferDocumentoLogistico } from '@/lib/documento-parser-server';
 import { BultoItem, CalculoLogisticoInput, CotizacionRecord } from '@/types/cotizaciones';
+
+/**
+ * Helper para construir un archivo ZIP/XLSX binario real en memoria (con compresión Deflate 8)
+ */
+function buildRealXlsxBuffer(sharedStrings: string[], rows: Array<Array<{ type: 's' | 'n'; val: string | number }>>): Buffer {
+  const ssItems = sharedStrings.map((s) => `<si><t>${s}</t></si>`).join('');
+  const ssXml = `<?xml version="1.0" encoding="UTF-8"?><sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">${ssItems}</sst>`;
+
+  const rowXmls = rows
+    .map((cells, rIdx) => {
+      const cXml = cells
+        .map((c, cIdx) => {
+          const colLetter = String.fromCharCode(65 + cIdx);
+          return c.type === 's'
+            ? `<c r="${colLetter}${rIdx + 1}" t="s"><v>${c.val}</v></c>`
+            : `<c r="${colLetter}${rIdx + 1}"><v>${c.val}</v></c>`;
+        })
+        .join('');
+      return `<row r="${rIdx + 1}">${cXml}</row>`;
+    })
+    .join('');
+
+  const sheetXml = `<?xml version="1.0" encoding="UTF-8"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>${rowXmls}</sheetData></worksheet>`;
+
+  const files = [
+    { name: 'xl/sharedStrings.xml', data: Buffer.from(ssXml, 'utf8') },
+    { name: 'xl/worksheets/sheet1.xml', data: Buffer.from(sheetXml, 'utf8') },
+  ];
+
+  const localChunks: Buffer[] = [];
+  for (const f of files) {
+    const compressed = zlib.deflateRawSync(f.data);
+    const nameBuf = Buffer.from(f.name, 'utf8');
+    const header = Buffer.alloc(30);
+    header.writeUInt32LE(0x04034b50, 0);
+    header.writeUInt16LE(20, 4);
+    header.writeUInt16LE(0, 6);
+    header.writeUInt16LE(8, 8); // Deflate
+    header.writeUInt32LE(compressed.length, 18);
+    header.writeUInt32LE(f.data.length, 22);
+    header.writeUInt16LE(nameBuf.length, 26);
+    header.writeUInt16LE(0, 28);
+    localChunks.push(header, nameBuf, compressed);
+  }
+  return Buffer.concat(localChunks);
+}
 
 describe('Calculadora Logística Canónica & Asistente Comercial ALMAR', () => {
   it('1. Calcula correctamente el volumen y peso de bultos estándar', () => {
@@ -232,5 +280,67 @@ describe('Calculadora Logística Canónica & Asistente Comercial ALMAR', () => {
     });
     expect(pdfDoc.resumen.cantidadBultosTotal).toBe(2);
     expect(pdfDoc.resumen.aptitudCopa?.estado).toBe('NO_APTA');
+  });
+
+  it('11. Descomprime y extrae medidas desde un libro Excel (.xlsx) binario ZIP real y PDF comprimido FlateDecode', () => {
+    // 1. Excel .xlsx binario con 5 cajas de 90x70x60 cm (250 kg total) + 2 pallets de 120x100x75 cm (140 kg total) -> 7 bultos APTA Copa
+    const xlsxBuf = buildRealXlsxBuffer(
+      ['CANTIDAD', 'TIPO', 'LARGO_CM', 'ANCHO_CM', 'ALTO_CM', 'PESO_KG', 'caja', 'pallet'],
+      [
+        [
+          { type: 's', val: 0 },
+          { type: 's', val: 1 },
+          { type: 's', val: 2 },
+          { type: 's', val: 3 },
+          { type: 's', val: 4 },
+          { type: 's', val: 5 },
+        ],
+        [
+          { type: 'n', val: 5 },
+          { type: 's', val: 6 },
+          { type: 'n', val: 90 },
+          { type: 'n', val: 70 },
+          { type: 'n', val: 60 },
+          { type: 'n', val: 250 },
+        ],
+        [
+          { type: 'n', val: 2 },
+          { type: 's', val: 7 },
+          { type: 'n', val: 120 },
+          { type: 'n', val: 100 },
+          { type: 'n', val: 75 },
+          { type: 'n', val: 140 },
+        ],
+      ]
+    );
+
+    const parsedXlsx = parsearBufferDocumentoLogistico({
+      fileName: 'Planilla_Packing_Excel_Real.xlsx',
+      buffer: xlsxBuf,
+      mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    });
+    expect(parsedXlsx.resumen.cantidadBultosTotal).toBe(7);
+    expect(parsedXlsx.resumen.pesoBrutoTotalKg).toBe(390);
+    // 5 * 0.9 * 0.7 * 0.6 = 1.89 m3 + 2 * 1.2 * 1.0 * 0.75 = 1.80 m3 -> 3.69 m3
+    expect(parsedXlsx.resumen.volumenTotalM3).toBeCloseTo(3.69, 2);
+    expect(parsedXlsx.resumen.aptitudCopa?.estado).toBe('APTA');
+
+    // 2. PDF con stream FlateDecode comprimido con zlib
+    const pdfStreamContent = 'BT /F1 12 Tf (3 pallets de 120x100x135 cm 540 kg) Tj ET';
+    const deflated = zlib.deflateSync(Buffer.from(pdfStreamContent, 'latin1'));
+    const pdfBuf = Buffer.concat([
+      Buffer.from('%PDF-1.4\n1 0 obj << /Filter /FlateDecode >>\nstream\n', 'latin1'),
+      deflated,
+      Buffer.from('\nendstream\nendobj\n%%EOF', 'latin1'),
+    ]);
+
+    const parsedPdf = parsearBufferDocumentoLogistico({
+      fileName: 'Documento_Comprimido_FlateDecode.pdf',
+      buffer: pdfBuf,
+      mimeType: 'application/pdf',
+    });
+    expect(parsedPdf.resumen.cantidadBultosTotal).toBe(3);
+    expect(parsedPdf.resumen.pesoBrutoTotalKg).toBe(540);
+    expect(parsedPdf.resumen.aptitudCopa?.estado).toBe('NO_APTA');
   });
 });
