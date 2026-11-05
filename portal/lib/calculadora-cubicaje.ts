@@ -460,13 +460,13 @@ export function extraerTextoYMedidasDesdeDocumento(params: {
       .replace(/\0/g, ' ')
       .replace(/[\x01-\x08\x0B\x0C\x0E-\x1F]/g, ' ');
 
-    // Extraer bloques entre paréntesis solo cuando una línea comprimida PDF contiene múltiples bloques (...)
+    // Extraer bloques entre paréntesis solo cuando una línea PDF contiene dimensiones dentro de (...)
     const rawLines = cleanText.split(/\r?\n/);
     const expandedLines: string[] = [];
     for (const rl of rawLines) {
       const parenBlocks = Array.from(rl.matchAll(/\(([^()]{5,180})\)/g))
         .map((m) => (m[1] || '').trim())
-        .filter(Boolean);
+        .filter((b) => /\d+(?:[.,]\d+)?\s*(?:[xX*×]|by|por)\s*\d+/i.test(b));
       if (parenBlocks.length > 0) {
         expandedLines.push(...parenBlocks);
       } else {

@@ -342,5 +342,27 @@ describe('Calculadora Logística Canónica & Asistente Comercial ALMAR', () => {
     expect(parsedPdf.resumen.cantidadBultosTotal).toBe(3);
     expect(parsedPdf.resumen.pesoBrutoTotalKg).toBe(540);
     expect(parsedPdf.resumen.aptitudCopa?.estado).toBe('NO_APTA');
+
+    // 3. Correo .eml con pesos entre paréntesis (9500 kg) y (4200 kg) -> no debe perder la línea por los paréntesis del peso
+    const emlBuf = Buffer.from(
+      [
+        'From: compras@secco.com.ar',
+        'To: llaje@almarrosario.com',
+        'Subject: Solicitud Cotizacion FCL Shanghai a Rosario',
+        '',
+        '12 pallets de 120x100x160 cm (9500 kg)',
+        '8 cajones de 110x90x120 cm (4200 kg)',
+      ].join('\r\n'),
+      'utf8'
+    );
+    const parsedEml = parsearBufferDocumentoLogistico({
+      fileName: '5_Correo_RFQ_Secco_Shanghai.eml',
+      buffer: emlBuf,
+      mimeType: 'message/rfc822',
+    });
+    expect(parsedEml.resumen.cantidadBultosTotal).toBe(20);
+    expect(parsedEml.resumen.volumenTotalM3).toBeCloseTo(32.544, 3);
+    expect(parsedEml.resumen.pesoBrutoTotalKg).toBe(13700);
+    expect(parsedEml.resumen.sugerenciaFcl.equipoSugerido).toBe('40_STD');
   });
 });
