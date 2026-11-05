@@ -124,7 +124,10 @@ function buildInitialAdminBillingItems(carpetas: CarpetaRecord[]): AdminBillingI
     .slice(0, 24);
 
   return validCarpetas.map((carp, idx) => {
-    const quote = getCotizacionByCarpeta(carp);
+    const quote = getCotizacionByCarpeta(
+      carp.numero_carpeta || carp.id || '',
+      carp as unknown as Record<string, unknown>
+    );
     const ventaPactadaUsd =
       carp.venta_estimada_total && carp.venta_estimada_total > 0
         ? carp.venta_estimada_total

@@ -187,11 +187,19 @@ export function buildLinkedQuoteForFolder(
 }
 
 export function getCotizacionByCarpeta(
-  numeroCarpeta: string,
+  numeroCarpeta: string | Record<string, unknown> | null | undefined,
   carpetaRecord?: Record<string, unknown> | { cotizacion_vinculada?: CotizacionVinculada } | null
 ): CotizacionVinculada | undefined {
-  const clean = (numeroCarpeta || '').trim().toUpperCase();
-  const existing = (carpetaRecord as { cotizacion_vinculada?: CotizacionVinculada } | null | undefined)
+  const effectiveRecord =
+    typeof numeroCarpeta === 'object' && numeroCarpeta !== null
+      ? (numeroCarpeta as Record<string, unknown>)
+      : (carpetaRecord as Record<string, unknown> | null | undefined);
+  const rawCode =
+    typeof numeroCarpeta === 'string'
+      ? numeroCarpeta
+      : String(effectiveRecord?.numero_carpeta || effectiveRecord?.id || '');
+  const clean = (rawCode || '').trim().toUpperCase();
+  const existing = (effectiveRecord as { cotizacion_vinculada?: CotizacionVinculada } | null | undefined)
     ?.cotizacion_vinculada;
   if (
     existing &&
@@ -204,5 +212,5 @@ export function getCotizacionByCarpeta(
   if (CARPETAS_COTIZACIONES_MAP[clean]) {
     return CARPETAS_COTIZACIONES_MAP[clean];
   }
-  return buildLinkedQuoteForFolder(clean, carpetaRecord as Record<string, unknown> | null | undefined);
+  return buildLinkedQuoteForFolder(clean, effectiveRecord);
 }
