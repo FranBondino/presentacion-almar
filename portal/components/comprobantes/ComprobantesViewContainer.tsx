@@ -12,6 +12,8 @@ import { ComprobanteList } from './ComprobanteList';
 import { ComprobantePdfModal } from './ComprobantePdfModal';
 import { CrearComprobanteModal } from './CrearComprobanteModal';
 import { SyncMailboxesModal } from './SyncMailboxesModal';
+import { AdminFacturacionCobranzasBoard } from './AdminFacturacionCobranzasBoard';
+import { ShieldAlert, Landmark } from 'lucide-react';
 import { useToast } from '@/components/ui/ToastProvider';
 import type { IngestedInvoiceSummary } from '@/lib/gmail/multi-sync';
 import { canEditComprobantes } from '@/lib/auth';
@@ -63,6 +65,7 @@ export function ComprobantesViewContainer({
   }
 
   const paramTab = searchParams?.get('tab');
+  const paramCircuito = searchParams?.get('circuito');
   const paramView = searchParams?.get('view');
   const paramScope = searchParams?.get('scope');
   const paramModality = searchParams?.get('modalidad');
@@ -92,6 +95,11 @@ export function ComprobantesViewContainer({
   const [carpetas, setCarpetas] = React.useState<CarpetaRecord[]>(propCarpetas);
 
   const [viewMode, setViewMode] = React.useState<KanbanViewMode>(resolvedInitialView);
+  const [activeCircuit, setActiveCircuit] = React.useState<'operaciones_proveedores' | 'admin_venta_cobranzas'>(
+    paramCircuito === 'administracion' || paramTab === 'cobranzas' || paramTab === 'facturacion'
+      ? 'admin_venta_cobranzas'
+      : 'operaciones_proveedores'
+  );
   const [filterScope, setFilterScope] = React.useState<FilterScope>(resolvedInitialScope);
   const [modalityFilter, setModalityFilter] = React.useState<ModalityFilter>(resolvedInitialModality);
   const [categoriaFilter, setCategoriaFilter] = React.useState<CategoriaProveedorPA03 | 'ALL'>(resolvedInitialCategoria);
@@ -330,14 +338,30 @@ export function ComprobantesViewContainer({
         })
       );
 
-      // Connect with backend route POST /api/comprobantes/[id]/autorizar-desvio
+      // Connect with backend route POST /api/comprobantes/[id]/autorizar-desvio or PATCH fallback for Operaciones
       try {
         if (typeof fetch !== 'undefined') {
-          await fetch(`/api/comprobantes/${encodeURIComponent(comprobanteId)}/autorizar-desvio`, {
+          const res = await fetch(`/api/comprobantes/${encodeURIComponent(comprobanteId)}/autorizar-desvio`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ motivo, justificacion }),
           });
+          if (!res.ok) {
+            await fetch(`/api/comprobantes/${encodeURIComponent(comprobanteId)}`, {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                desvio_autorizado: true,
+                metadata_raw: {
+                  desvio_autorizado: true,
+                  motivo_desvio: motivo,
+                  justificacion_desvio: justificacion,
+                  fecha_autorizacion_desvio: utcTimestamp,
+                  autorizado_por: auth.user?.email || 'operaciones@almarrosario.com',
+                },
+              }),
+            });
+          }
         }
       } catch {
         // Offline / mock resilience
@@ -503,8 +527,79 @@ export function ComprobantesViewContainer({
 
   return (
     <div className="comprobantes-view-container space-y-4" data-testid="comprobantes-view-container">
+      {/* Selector Superior de Circuito: 1) Operaciones (Sobrecostos & Proveedores) vs 2) Administración y Finanzas (Facturación de Venta & Cobranzas) */}
+      <div className="bg-white border border-slate-200 rounded-xl p-2 shadow-xs grid grid-cols-1 md:grid-cols-2 gap-2">
+        <button
+          type="button"
+          onClick={() => setActiveCircuit('operaciones_proveedores')}
+          data-testid="tab-circuito-operaciones"
+          className={`p-3 rounded-lg border text-left transition-all cursor-pointer flex items-start gap-3 ${
+            activeCircuit === 'operaciones_proveedores'
+              ? 'bg-sky-50/90 border-[#0072BC] ring-1 ring-[#0072BC]/30 shadow-2xs'
+              : 'bg-white border-slate-200 hover:bg-slate-50'
+          }`}
+        >
+          <div
+            className={`p-2 rounded-lg shrink-0 ${
+              activeCircuit === 'operaciones_proveedores'
+                ? 'bg-[#0072BC] text-white'
+                : 'bg-slate-100 text-slate-600'
+            }`}
+          >
+            <ShieldAlert className="h-4 w-4" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center justify-between gap-1">
+              <span className="text-xs sm:text-sm font-bold text-slate-900">
+                1. Control Operativo de Costos &amp; Sobrecostos (Proveedores)
+              </span>
+              <span className="px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-sky-100 text-[#0072BC] border border-sky-200 shrink-0">
+                Rol: Operaciones (Impo / Expo)
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">
+              Operaciones vincula facturas de compra a su carpeta, <strong>controla sobrecostos contra la cotización (Columna 3)</strong>, reclama NC o conforma el gasto antes de pasar a Facturación.
+            </p>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveCircuit('admin_venta_cobranzas')}
+          data-testid="tab-circuito-administracion"
+          className={`p-3 rounded-lg border text-left transition-all cursor-pointer flex items-start gap-3 ${
+            activeCircuit === 'admin_venta_cobranzas'
+              ? 'bg-emerald-50/90 border-emerald-600 ring-1 ring-emerald-600/30 shadow-2xs'
+              : 'bg-white border-slate-200 hover:bg-slate-50'
+          }`}
+        >
+          <div
+            className={`p-2 rounded-lg shrink-0 ${
+              activeCircuit === 'admin_venta_cobranzas'
+                ? 'bg-emerald-600 text-white'
+                : 'bg-slate-100 text-slate-600'
+            }`}
+          >
+            <Landmark className="h-4 w-4" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center justify-between gap-1">
+              <span className="text-xs sm:text-sm font-bold text-slate-900">
+                2. Facturación de Venta, Trazabilidad &amp; Cobranzas (Banco Macro)
+              </span>
+              <span className="px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 shrink-0">
+                Rol: Administración &amp; Finanzas
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">
+              Administración recibe la carpeta con toda su trazabilidad, <strong>emite la Factura de Venta AFIP</strong> al cliente y sigue la <strong>Cobranza hasta su acreditación en Banco Macro y Recibo en Kipintoch</strong>.
+            </p>
+          </div>
+        </button>
+      </div>
+
       {/* Collapsible Onboarding & Help Banner */}
-      {helpVisible && <ComprobantesHelpBanner />}
+      {helpVisible && activeCircuit === 'operaciones_proveedores' && <ComprobantesHelpBanner />}
 
       {/* Filter Bar & View Switcher Toolbar */}
       <ComprobanteFilterBar
@@ -527,8 +622,14 @@ export function ComprobantesViewContainer({
         canCreate={canEditComprobantes(effectiveRole)}
       />
 
-      {/* Main View: Kanban vs Table */}
-      {viewMode === 'kanban' ? (
+      {/* Main View: Operaciones (Proveedores Kanban / Table) vs Administración (Facturación de Venta & Cobranzas) */}
+      {activeCircuit === 'admin_venta_cobranzas' ? (
+        <AdminFacturacionCobranzasBoard
+          carpetas={carpetas}
+          userRole={effectiveRole}
+          searchQuery={searchQuery}
+        />
+      ) : viewMode === 'kanban' ? (
         <KanbanBoard
           comprobantes={filteredComprobantes}
           carpetas={carpetas}

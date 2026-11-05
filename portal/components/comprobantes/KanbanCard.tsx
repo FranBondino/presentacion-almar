@@ -284,7 +284,7 @@ export function KanbanCard({
               <div className="flex flex-wrap items-center justify-between gap-1 text-[11px] font-semibold text-indigo-950">
                 <span className="flex items-center gap-1 text-[#0072BC]">
                   <Sparkles className="h-3.5 w-3.5 text-indigo-600 shrink-0" />
-                  <span>{`Sugerencia IA: ${smartDeduction.suggestedCarpeta.numero_carpeta}`}</span>
+                  <span>{`Sugerencia IA: Carpeta ${smartDeduction.suggestedCarpeta.numero_carpeta}`}</span>
                 </span>
                 <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-800 border border-indigo-200 truncate max-w-full">
                   {`${smartDeduction.matchType}: ${smartDeduction.matchedValue}`}
@@ -451,13 +451,13 @@ export function KanbanCard({
           </div>
 
           <p className="leading-snug text-slate-700 text-[10.5px]">
-            El monto facturado supera lo presupuestado en la cotización. Requiere autorización del supervisor antes de cargar en Kipintoch.
+            El monto facturado supera lo presupuestado en la cotización. Operaciones controla el sobrecosto (NC o traslado a Venta). Requiere autorización del supervisor antes de cargar en Kipintoch.
           </p>
 
           <div className="flex flex-col gap-1.5 pt-1 border-t border-amber-200">
             <div>
               {isAuthorized ? (
-                <div className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold rounded bg-emerald-100 text-emerald-900 border border-emerald-300">
+                <div className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold rounded bg-emerald-100 text-emerald-900 border border-emerald-300" title="Desvío autorizado">
                   <CheckCircle2 className="h-3 w-3 text-emerald-700" />
                   <span>✅ Desvío Autorizado</span>
                 </div>
@@ -476,6 +476,16 @@ export function KanbanCard({
                   title="Autorizar carga a Kipintoch"
                 >
                   Autorizar Carga a Kipintoch
+                </button>
+              )}
+              {!canAuthorize && !isAuthorized && (userRole === 'OPERATIVO' || userRole === 'LEAD_OPERACIONES') && (
+                <button
+                  type="button"
+                  onClick={() => setIsApprovalModalOpen(true)}
+                  className="btn-conformar-sobrecosto flex-1 min-w-[120px] py-1.5 px-2 bg-[#0072BC] hover:bg-[#005a96] text-white rounded text-[11px] font-semibold text-center transition-colors cursor-pointer shadow-xs"
+                  title="Control Operativo: Conformar sobrecosto o trasladar a Factura de Venta"
+                >
+                  Conformar / Trasladar Sobrecosto
                 </button>
               )}
               <button

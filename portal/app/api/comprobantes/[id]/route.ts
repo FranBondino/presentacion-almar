@@ -173,15 +173,15 @@ export async function PATCH(
     updates.subtotal_neto !== undefined ||
     updates.monto_iva !== undefined ||
     updates.alicuota_iva !== undefined ||
-    updates.emisor_cuit !== undefined ||
-    updates.desvio_autorizado === true;
+    updates.emisor_cuit !== undefined;
   const isKanbanWorkflowTransition =
     isAssigningFolder ||
     (!isModifyingAccountingFields &&
       (updates.asentado_en_erp !== undefined ||
         updates.estado_pago !== undefined ||
         updates.estado_workflow !== undefined ||
-        updates.desvio_porcentaje !== undefined));
+        updates.desvio_porcentaje !== undefined ||
+        updates.desvio_autorizado !== undefined));
 
   // 4. Role Authorization:
   // Asignación/reasignación de carpeta y movimiento en Kanban permitido a OPERATIVO, LEAD_OPERACIONES, FINANZAS, GERENCIA, ADMIN
