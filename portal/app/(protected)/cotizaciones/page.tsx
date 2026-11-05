@@ -18,7 +18,12 @@ import { CotizacionesTable } from '@/components/cotizaciones/CotizacionesTable';
 import { SmartFollowUpPanel } from '@/components/cotizaciones/SmartFollowUpPanel';
 import { CalculadoraModal } from '@/components/cotizaciones/CalculadoraModal';
 import { CubicajeInteligenteModal } from '@/components/cotizaciones/CubicajeInteligenteModal';
-import { BultoItem, CotizacionRecord, FeedbackComercialRegistro } from '@/types/cotizaciones';
+import {
+  BultoItem,
+  CotizacionRecord,
+  DocumentoCubicajeAdjunto,
+  FeedbackComercialRegistro,
+} from '@/types/cotizaciones';
 
 export default function CotizacionesPage() {
   const { role } = useAuth();
@@ -26,6 +31,7 @@ export default function CotizacionesPage() {
   const [isCalculadoraOpen, setIsCalculadoraOpen] = React.useState(false);
   const [isCubicajeOpen, setIsCubicajeOpen] = React.useState(false);
   const [calculadoraBultos, setCalculadoraBultos] = React.useState<BultoItem[] | undefined>(undefined);
+  const [calculadoraDocumentos, setCalculadoraDocumentos] = React.useState<DocumentoCubicajeAdjunto[] | undefined>(undefined);
 
   React.useEffect(() => {
     if (typeof window === 'undefined' || typeof fetch === 'undefined') return;
@@ -273,9 +279,10 @@ export default function CotizacionesPage() {
       <CubicajeInteligenteModal
         isOpen={isCubicajeOpen}
         onClose={() => setIsCubicajeOpen(false)}
-        onApplyToCalculadora={(bultos) => {
+        onApplyToCalculadora={(bultos, documentos) => {
           setIsCubicajeOpen(false);
           setCalculadoraBultos(bultos);
+          setCalculadoraDocumentos(documentos);
           setIsCalculadoraOpen(true);
         }}
       />
@@ -285,6 +292,10 @@ export default function CotizacionesPage() {
         isOpen={isCalculadoraOpen}
         onClose={() => setIsCalculadoraOpen(false)}
         initialBultos={calculadoraBultos}
+        initialDocumentos={calculadoraDocumentos}
+        onCotizacionCreated={(createdCot) => {
+          setCotizaciones((prev) => [createdCot, ...prev]);
+        }}
       />
     </div>
   );
